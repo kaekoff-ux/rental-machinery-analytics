@@ -1,0 +1,55 @@
+# CLAUDE.md - Rental Machinery Analytics (LocaMaq)
+
+Este arquivo orienta o Claude Code neste repositório. Leia antes de qualquer tarefa.
+
+## O que é este projeto
+Case de portfólio sobre gestão de locação de máquinas pesadas, inspirado em um anúncio público do Workana. **Todos os dados são fictícios** e gerados por script. A empresa fictícia se chama **LocaMaq**.
+
+Objetivo: demonstrar o ciclo entender o problema > consolidar dados > analisar > automatizar > aplicar IA > medir resultado.
+
+## Quem está desenvolvendo
+Carlos, engenheiro mecânico com experiência em manutenção, gestão de ativos, peças e compras. Power Query bom, DAX básico (dificuldade com funções temporais), Python iniciante, GitHub iniciante. Estuda cerca de 1 hora por dia.
+
+## Como trabalhar com ele
+- Passos pequenos, um de cada vez, cada um terminando em algo que ele consegue rodar e ver.
+- Explique o "porquê" de cada comando de Git ou Python na primeira vez que aparecer.
+- Relacione as soluções a problemas reais de manutenção, ativos e operações.
+- Não faça grandes refatorações sem pedir. Mostre o plano antes de mudar muitos arquivos.
+
+## Regras do projeto
+1. Dados fictícios: nunca incluir dados reais de empresas, clientes ou pessoas.
+2. Reprodutibilidade: o gerador de dados usa **seed fixa = 42**. A mesma execução deve gerar os mesmos arquivos.
+3. Sujeira só nos dados brutos (`data/raw/`). Os dados tratados (`data/processed/`) saem limpos, com datas em formato ISO (aaaa-mm-dd).
+4. Nomes de colunas em português, `snake_case`, sem acento. Seguir o dicionário em `docs/dicionario_dados.csv`.
+5. KPIs seguem as definições em `docs/kpis.csv`. Se uma fórmula mudar, atualizar o arquivo.
+6. Textos públicos (README, case, posts) devem dizer que é um case com dados fictícios e não declarar experiência profissional inexistente.
+
+## Estrutura do repositório
+```
+rental-machinery-analytics/
+├── README.md
+├── CLAUDE.md
+├── .gitignore
+├── docs/                  documentação (roadmap, dicionário, KPIs, case)
+├── data/
+│   ├── raw/               CSVs brutos com sujeira (saída do gerador)
+│   └── processed/         dados tratados (referência para validar o Power Query)
+├── src/
+│   ├── gerador_dados/     scripts que geram a base fictícia
+│   ├── ml/                modelo de risco de parada e previsão de demanda
+│   └── agentes/           agentes de IA (preventiva, qualidade de dados, resumo)
+├── powerbi/               arquivos .pbix e anotações
+├── excel/                 versão Excel (Power Query e Power Pivot)
+├── app/                   app de ordens de serviço de manutenção
+└── notebooks/             exploração e estudos
+```
+
+## Fases (resumo)
+0 Fundação | 1 Base fictícia | 2 ETL e modelo | 3 DAX e dashboard | 4 Versão Excel | 5 IA preditiva | 6 App e agentes | 7 Portfólio.
+Detalhes em `docs/roadmap.md`. Fase atual: **0 - Fundação**.
+
+## Tabelas de origem (7)
+cadastro_equipamentos, clientes, contratos_locacao, horimetro_telemetria, ordens_manutencao, abastecimento, faturamento.
+
+## Comandos úteis
+Serão adicionados aqui conforme as fases avançarem (ex.: como rodar o gerador de dados).

@@ -1,0 +1,64 @@
+﻿fonte;campo;tipo;descricao;exemplo;sujeira_prevista_no_raw
+cadastro_equipamentos;id_equipamento;texto;Identificador único da máquina;EQ-0001;Às vezes em minúsculo ou sem hífen (eq0001)
+cadastro_equipamentos;segmento;texto;Categoria da máquina;Escavadeira;Grafias diferentes (Escavadeira/ESCAVADEIRA/Escav.)
+cadastro_equipamentos;modelo;texto;Modelo comercial;320D;Espaços extras
+cadastro_equipamentos;fabricante;texto;Fabricante;Caterpillar;Variações (CAT/Caterpillar)
+cadastro_equipamentos;ano_fabricacao;inteiro;Ano de fabricação;2019;Alguns valores nulos
+cadastro_equipamentos;numero_serie;texto;Número de série;CAT320D-884412;Poucos casos duplicados
+cadastro_equipamentos;data_aquisicao;data;Data de compra;15/03/2020;Formatos mistos (dd/mm/aaaa e aaaa-mm-dd)
+cadastro_equipamentos;valor_aquisicao;decimal;Valor de compra em R$;845000.00;Texto com R$ e ponto de milhar
+cadastro_equipamentos;vida_util_horas;inteiro;Vida útil estimada em horas;12000;Sem sujeira
+cadastro_equipamentos;filial;texto;Filial de origem;Campinas;Acento ausente ou caixa mista
+cadastro_equipamentos;status_cadastro;texto;Situação (Ativo/Vendido/Baixado);Ativo;Caixa mista
+clientes;id_cliente;texto;Identificador do cliente;CL-0001;Sem sujeira
+clientes;razao_social;texto;Nome do cliente;Construtora Alfa Ltda;O mesmo cliente com nomes diferentes (CONSTR. ALFA) - deduplicar pelo CNPJ
+clientes;cnpj;texto;CNPJ do cliente;12.345.678/0001-90;Com e sem máscara
+clientes;segmento_cliente;texto;Setor do cliente;Construção civil;Categorias fora do padrão
+clientes;cidade;texto;Cidade;Campinas;Grafias diferentes
+clientes;uf;texto;Estado;SP;Minúsculo ou nulo
+clientes;limite_credito;decimal;Limite de crédito em R$;500000;Sem sujeira
+clientes;data_cadastro;data;Data de cadastro do cliente;10/06/2021;Formatos mistos
+contratos_locacao;id_contrato;texto;Identificador do contrato;CT-00001;Linhas duplicadas em poucos casos
+contratos_locacao;id_cliente;texto;Cliente do contrato;CL-0001;Sem sujeira
+contratos_locacao;id_equipamento;texto;Máquina locada;EQ-0001;Minúsculo ou com espaço
+contratos_locacao;data_inicio;data;Início da locação;03/02/2025;Formatos mistos
+contratos_locacao;data_fim_prevista;data;Fim previsto;03/05/2025;Formatos mistos
+contratos_locacao;data_devolucao;data;Devolução efetiva;10/05/2025;Nulo se contrato ativo
+contratos_locacao;modalidade;texto;Diária/Semanal/Mensal;Mensal;Caixa mista
+contratos_locacao;valor_diaria;decimal;Valor da diária em R$;1200.00;Nulo quando a modalidade é mensal
+contratos_locacao;valor_mensal;decimal;Valor mensal em R$;28000.00;Nulo quando a modalidade é diária
+contratos_locacao;obra_local;texto;Local da obra;Rodovia dos Bandeirantes km 80;Texto livre
+contratos_locacao;status;texto;Ativo/Encerrado/Cancelado;Encerrado;Caixa mista
+horimetro_telemetria;id_leitura;texto;Identificador da leitura;HR-000001;Sem sujeira
+horimetro_telemetria;id_equipamento;texto;Máquina medida;EQ-0001;Minúsculo
+horimetro_telemetria;data_leitura;data;Data da leitura;01/03/2025;Formatos mistos
+horimetro_telemetria;horimetro_horas;decimal;Horímetro acumulado em horas;4310.5;Leituras que diminuem (erro de digitação) e lacunas
+horimetro_telemetria;fonte_leitura;texto;Manual ou Telemetria;Telemetria;Caixa mista
+horimetro_telemetria;id_contrato;texto;Contrato vigente na leitura;CT-00001;Nulo quando a máquina está no pátio
+ordens_manutencao;id_os;texto;Identificador da ordem de serviço;OS-00001;Sem sujeira
+ordens_manutencao;id_equipamento;texto;Máquina atendida;EQ-0001;Minúsculo
+ordens_manutencao;tipo_manutencao;texto;Preventiva/Corretiva/Preditiva;Preventiva;Escritas diferentes (Prev./preventiva/PREV)
+ordens_manutencao;data_abertura;data;Abertura da OS;12/03/2025;Formatos mistos
+ordens_manutencao;data_conclusao;data;Conclusão da OS;14/03/2025;Nulo se OS aberta
+ordens_manutencao;horimetro_na_os;decimal;Horímetro no momento da OS;4325.0;Nulos
+ordens_manutencao;descricao_falha;texto;Descrição da falha ou serviço;Troca de óleo hidráulico;Texto livre (candidato a classificação com IA)
+ordens_manutencao;horas_parada;decimal;Horas de máquina parada;18.5;Nulos
+ordens_manutencao;custo_pecas;decimal;Custo de peças em R$;3200.00;Texto com R$
+ordens_manutencao;custo_mao_obra;decimal;Custo de mão de obra em R$;1450.00;Texto com R$
+ordens_manutencao;status_os;texto;Aberta/Em andamento/Concluída;Concluída;Caixa mista
+abastecimento;id_abastecimento;texto;Identificador do abastecimento;AB-000001;Sem sujeira
+abastecimento;id_equipamento;texto;Máquina abastecida;EQ-0001;Minúsculo
+abastecimento;data_abastecimento;data;Data do abastecimento;05/03/2025;Formatos mistos
+abastecimento;litros;decimal;Litros abastecidos;180.0;Vírgula como separador decimal
+abastecimento;valor_litro;decimal;Preço por litro em R$;06.05;Vírgula como separador decimal
+abastecimento;valor_total;decimal;Valor total em R$;1089.00;Inconsistente com litros x valor_litro em poucos casos
+abastecimento;horimetro_horas;decimal;Horímetro no abastecimento;4318.2;Nulos
+abastecimento;responsavel;texto;Quem abasteceu;Marcos Silva;Nomes abreviados
+faturamento;id_fatura;texto;Identificador da fatura;FT-000001;Sem sujeira
+faturamento;id_contrato;texto;Contrato faturado;CT-00001;Sem sujeira
+faturamento;competencia;texto;Mês de referência (aaaa-mm);2025-03;Formatos mistos (03/2025)
+faturamento;valor_faturado;decimal;Valor faturado em R$;28000.00;Texto com R$
+faturamento;data_emissao;data;Emissão da fatura;01/04/2025;Formatos mistos
+faturamento;data_vencimento;data;Vencimento;15/04/2025;Formatos mistos
+faturamento;data_pagamento;data;Pagamento efetivo;28/04/2025;Nulo se não paga
+faturamento;status_pagamento;texto;Pago/Em aberto/Vencido;Pago;Caixa mista

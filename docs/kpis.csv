@@ -1,0 +1,19 @@
+﻿kpi;definicao;formula;grao;fontes;nivel_dax_para_estudo
+Taxa de utilização física;Percentual de dias em que a máquina esteve locada;dias locados / dias do período;equipamento-mês;contratos + cadastro;Intermediário (CALCULATE + tabela calendário)
+Disponibilidade física;Percentual do tempo em que a máquina estava apta a operar;(horas do período - horas de parada em manutenção) / horas do período;equipamento-mês;manutenção + cadastro;Intermediário
+Utilização financeira;Receita realizada versus receita potencial;receita faturada / (diária média do segmento x dias do período);equipamento-mês;faturamento + contratos;Intermediário
+Receita por máquina;Receita faturada por equipamento;soma de valor_faturado por id_equipamento;equipamento-mês;faturamento + contratos;Básico (SUM + relacionamento)
+Margem por máquina;Resultado após custos diretos;(receita - custo de manutenção - custo de combustível - depreciação) / receita;equipamento-mês;faturamento + manutenção + abastecimento + cadastro;Avançado
+Depreciação mensal;Desgaste do ativo no mês (linear por horas);valor_aquisicao / vida_util_horas x horas trabalhadas no mês;equipamento-mês;cadastro + horímetro;Intermediário
+Horas trabalhadas;Horas de operação no período;horímetro final - horímetro inicial do período;equipamento-mês;horímetro;Intermediário (MAX/MIN com filtro de data)
+Custo de manutenção por hora;Custo de OS dividido pelas horas trabalhadas;(custo_pecas + custo_mao_obra) / horas trabalhadas;equipamento-mês;manutenção + horímetro;Intermediário (DIVIDE)
+Mix preventiva x corretiva;Participação de cada tipo nas OS;OS preventivas / total de OS (e o complemento para corretivas);segmento-mês;manutenção;Básico (COUNTROWS + CALCULATE)
+MTBF;Tempo médio entre falhas;horas trabalhadas / número de OS corretivas;equipamento-trimestre;manutenção + horímetro;Intermediário
+MTTR;Tempo médio de reparo;soma de horas_parada das corretivas / número de OS corretivas;equipamento-trimestre;manutenção;Básico
+Contratos a vencer;Contratos ativos com fim previsto na janela;contagem de contratos ativos com data_fim_prevista em 30/60/90 dias;contrato;contratos;Intermediário (TODAY + filtro de data)
+Inadimplência;Valor vencido e não pago sobre o faturado;valor vencido em aberto / valor faturado;cliente-mês;faturamento;Intermediário
+Atraso médio de pagamento;Dias médios de atraso das faturas pagas;média de (data_pagamento - data_vencimento) onde positivo;cliente-mês;faturamento;Intermediário
+Consumo de combustível por hora;Litros consumidos por hora trabalhada;litros / horas trabalhadas;equipamento-mês;abastecimento + horímetro;Intermediário
+Receita mês a mês;Variação da receita contra o mês anterior;(receita do mês - receita do mês anterior) / receita do mês anterior;mês;faturamento;Avançado (DATEADD ou PREVIOUSMONTH)
+Receita acumulada no ano;Soma da receita desde janeiro;receita acumulada de 1º de janeiro até a data;mês;faturamento;Avançado (TOTALYTD)
+Receita vs mesmo mês do ano anterior;Comparação anual;receita do mês / receita do mesmo mês do ano anterior - 1;mês;faturamento;Avançado (SAMEPERIODLASTYEAR)
