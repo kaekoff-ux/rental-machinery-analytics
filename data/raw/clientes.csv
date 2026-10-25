@@ -1,0 +1,74 @@
+﻿id_cliente;razao_social;cnpj;segmento_cliente;cidade;uf;limite_credito;data_cadastro
+CL-0001;CONSTR. NORTE FORTE LTDA;18.709.169/0001-96;Infraestrutura;BELO HORIZONTE;MG;1313000.00;22/05/2021
+CL-0002;Infraestrutura Beta Ltda;43282694000143;Mineração;Belo Horizonte;MG;365000.00;16/11/2018
+CL-0003;Construtora Litoral ME;18.618.763/0001-53;Logística;São José dos Campos;SP;66000.00;2020-06-30
+CL-0004;Mineração Serra Azul ME;43488435000137;EVENTOS;são paulo;SP;130000.00;2019-04-02
+CL-0005;EVENTO. PLANAL. ME;49.473.915/0001-15;Mineração;São Paulo;SP;1828000.00;19/10/2017
+CL-0006;Eventos União ME;61.470.324/0001-27;Construção civil;Belo Horizonte;MG;498000.00;18/02/2024
+CL-0007;Infraestrutura Guarani Ltda;45459756000175;Mineracao;Curitiba;PR;979000.00;05/01/2021
+CL-0008;Logística Ipê Dourado ME;81777835000172;Infraestrutura;santos;SP;359000.00;28/08/2015
+CL-0009;Incorporadora Pedra Forte S.A.;48.970.800/0001-86;LOGÍSTICA;São Paulo;SP;414000.00;07/05/2021
+CL-0010;Mineração Paulista ME;16.789.769/0001-92;Construção civil;BELO HORIZONTE;MG;161000.00;21/10/2018
+CL-0011;MINERA. MARCOS ME;61.160.268/0001-58;Infraestrutura;São Paulo;SP;153000.00;2023-10-17
+CL-0012;Eventos Paulista S.A.;45.928.990/0001-10;Construção civil;Ribeirão Preto;SP;702000.00;08/03/2025
+CL-0013;Montagens Vale do Sol Ltda;39.891.396/0001-20;Construção civil;São Paulo;SP;781000.00;06/04/2019
+CL-0051;Construtora Nova Era ME;15.103.441/0001-26;infraestrutura;Piracicaba;SP;1010000.00;25/04/2023
+CL-0014;Logística Omega ME;24.177.807/0001-29;Infraestrutura;Sorocaba;SP;887000.00;13/07/2021
+CL-0010;Mineração Paulista ME;16.789.769/0001-92;construção civil;Belo Horizonte;MG;161000.00;21/10/2018
+CL-0015;Eventos Marcos S.A.;19.830.392/0001-40;Prod. Eventos;campinas;SP;90000.00;2021-01-21
+CL-0016;Construtora Omega Eireli;23.999.237/0001-43;INFRAESTRUTURA;Rio de Janeiro;;306000.00;20/07/2025
+CL-0017;LOGÍST. SERRA AZUL ME;81.709.424/0001-66;INDÚSTRIA;São José dos Campos;SP;529000.00;2020-08-29
+CL-0018;Infraestrutura Ipê Dourado S.A.;79820409000188;Infraestrutura;Ribeirão Preto;sp;1478000.00;2020-12-06
+CL-0019;Infraestrutura Guarani S.A.;53.204.194/0001-58;CONSTRUÇÃO CIVIL;são paulo;SP;159000.00;2021-10-08
+CL-0006;EVENTO. UNIÃO ME;61.470.324/0001-27;Construção civil;Belo Horizonte;MG;498000.00;2024-02-18
+CL-0020;CONSTR. RIO CLARO EIRELI;49.345.159/0001-40;Construção civil;Belo Horizonte;MG;800000.00;17/12/2015
+CL-0021;Engenharia Serra Azul S.A.;98256823000137;Eventos;Campinas;SP;44000.00;31/01/2021
+CL-0022;INCORP. PORTAL LTDA;63773697000182;Infraestrutura;São José dos Campos;SP;856000.00;16/04/2017
+CL-0023;Construtora Bandeirantes ME;99.630.575/0001-16;Indústria;São Paulo;SP;490000.00;2016-05-12
+CL-0024;Incorporadora Trevo Eireli;73505758000168;Obras;são paulo;;197000.00;2025-07-28
+CL-0025;Engenharia Trevo S.A.;42.885.477/0001-31;Logistica;Ribeirão Preto;SP;327000.00;21/01/2023
+CL-0026;Montagens Delta Ltda;17.151.698/0001-71;Infraestrutura;Santos;SP;829000.00;06/10/2016
+CL-0027;MINERA. HORIZO. LTDA;39617716000113;Construção civil;São Paulo;SP;540000.00;12/11/2022
+CL-0028;EVENTO. CENTRA. EIRELI;17.334.941/0001-14;Construção civil;Piracicaba;SP;740000.00;2015-09-29
+CL-0029;Locações Horizonte ME;58180665000147;Construção civil;sorocaba;SP;760000.00;2019-01-21
+CL-0030;INCORP. CAPITA. ME;95.438.738/0001-50;Indústria;SÃO PAULO;SP;564000.00;03/11/2024
+CL-0031;Engenharia Progresso S.A.;67.243.532/0001-33;Construção civil;SÃO PAULO;SP;308000.00;05/11/2015
+CL-0032;Engenharia Beta Eireli;27.854.204/0001-96;Construção civil;Campinas;SP;687000.00;15/08/2021
+CL-0033;LOCAÇÕ. PAULIS. EIRELI;70119867000179;Eventos;piracicaba;;41000.00;07/07/2017
+CL-0034;Mineração Omega ME;70560365000141;Indústria;Belo Horizonte;MG;688000.00;21/09/2023
+CL-0035;Logística Omega Ltda;79.956.115/0001-21;Construção civil;são paulo;SP;840000.00;2016-11-12
+CL-0036;Terraplenagem Nova Aurora S.A.;78.127.503/0001-85;Eventos;CURITIBA;PR;154000.00;2025-10-20
+CL-0037;Mineração Horizonte ME;68.458.412/0001-39;Mineração;campinas;SP;679000.00;2019-06-21
+CL-0038;Mineração Brisa Ltda;48.871.499/0001-63;Eventos;Rio de Janeiro;RJ;148000.00;21/12/2023
+CL-0039;Locações Nova Aurora Eireli;55.314.786/0001-44;Construção civil;São Paulo;SP;655000.00;2015-10-20
+CL-0040;Incorporadora Pedra Forte Eireli;80335702000138;Construção civil;São Paulo;SP;86000.00;30/08/2015
+CL-0041;CONSTR. SUL MINEIR. EIRELI;62921785000141;Mineração;jundiaí;SP;754000.00;18/03/2016
+CL-0042;Terraplenagem Guarani Eireli;53.308.803/0001-91;INFRAESTRUTURA;São José dos Campos;SP;1301000.00;2017-10-25
+CL-0043;Engenharia Litoral ME;29.342.985/0001-30;Mineração;Curitiba;PR;1960000.00;2019-08-16
+CL-0044;INFRAE. GUARAN. EIRELI;76295187000140;Agronegócio;SOROCABA;sp;532000.00;03/07/2023
+CL-0045;Construtora Nova Aurora Ltda;37.618.371/0001-26;Infraestrutura;São Paulo;SP;1410000.00;27/09/2017
+CL-0046;MINERA. ATLÂNT. ME;43.612.880/0001-32;Construção civil;São Paulo;;496000.00;02/10/2025
+CL-0047;Engenharia Vanguarda Eireli;68.824.256/0001-65;Logística;são josé dos campos;SP;138000.00;18/04/2022
+CL-0048;Engenharia Planalto S.A.;64710165000159;Obras;JUNDIAÍ;SP;393000.00;2020-12-07
+CL-0049;Engenharia Atlântica Eireli;13419689000196;logística;SÃO PAULO;SP;460000.00;2023-01-07
+CL-0050;Incorporadora Brisa Ltda;90.689.299/0001-99;Indústria;RIBEIRÃO PRETO;SP;369000.00;27/08/2016
+CL-0051;CONSTR. NOVA ERA ME;15.103.441/0001-26;Infra;Piracicaba;SP;1010000.00;2023-04-25
+CL-0052;INCORP. BRISA ME;12.195.401/0001-38;Agronegócio;Ribeirão Preto;SP;343000.00;12/06/2022
+CL-0053;MONTAG. CENTRA. ME;65.597.129/0001-59;Eventos;são paulo;SP;104000.00;2019-07-15
+CL-0054;Montagens Trevo ME;70926516000134;Construção civil;Campinas;sp;157000.00;2018-12-22
+CL-0055;Locações Omega Ltda;24798649000144;Construção civil;São José dos Campos;SP;710000.00;17/04/2018
+CL-0056;Infraestrutura Nova Aurora ME;37.623.584/0001-31;Indústria;RIBEIRÃO PRETO;SP;561000.00;12/06/2022
+CL-0057;Montagens Gênesis S.A.;41267573000158;Construção civil;sorocaba;SP;301000.00;19/09/2022
+CL-0058;Locações Gênesis S.A.;30652897000177;Construção civil;São Paulo;SP;833000.00;2020-06-24
+CL-0059;LOGÍST. PEDRA FORTE S.A.;70662269000143;Construção civil;São Paulo;sp;513000.00;17/05/2017
+CL-0060;Incorporadora Pedra Forte Ltda;19.626.343/0001-45;Construção civil;Belo Horizonte;MG;629000.00;25/06/2016
+CL-0061;EVENTO. VALE DO SOL EIRELI;95765482000166;Construção civil;RIBEIRÃO PRETO;SP;818000.00;12/10/2017
+CL-0062;Infraestrutura Progresso Eireli;95.760.407/0001-68;Infra;Ribeirão Preto;SP;577000.00;25/10/2015
+CL-0063;Locações Base Firme ME;85.374.430/0001-41;Agronegócio;ribeirão preto;;598000.00;2025-04-06
+CL-0064;Terraplenagem Base Firme Eireli;10.411.393/0001-36;Indústria;RIBEIRÃO PRETO;SP;401000.00;2022-05-05
+CL-0065;Infraestrutura Vanguarda Ltda;83294360000115;Indústria;ribeirão preto;SP;596000.00;2025-07-05
+CL-0066;Logística Paulista Ltda;63.498.888/0001-84;Eventos;São Paulo;SP;238000.00;2025-08-12
+CL-0067;EVENTO. CRUZEI. ME;99402667000126;Indústria;Campinas;SP;234000.00;02/04/2019
+CL-0068;Incorporadora Nova Aurora ME;73971432000133;Agronegócio;Campinas;SP;393000.00;2017-11-24
+CL-0069;Engenharia Átrio Ltda;41304959000112;LOGÍSTICA;Jundiaí;SP;333000.00;2020-04-23
+CL-0070;Montagens Rota Norte Ltda;40788417000138;indústria;Piracicaba;SP;665000.00;17/02/2024
