@@ -1,0 +1,1211 @@
+﻿id_contrato;id_cliente;id_equipamento;data_inicio;data_fim_prevista;data_devolucao;modalidade;valor_diaria;valor_mensal;obra_local;status
+CT-00001;CL-0018;EQ-0094;2024-01-08;2024-01-30;2024-02-07;Semanal;370.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00002;CL-0019;EQ-0133;2025-03-25;2025-08-21;2025-08-23;Mensal;;29000.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00003;CL-0011;EQ-0063;2024-02-19;2024-05-20;2024-05-20;Mensal;;30100.00;Reforma Distrito Industrial Norte;Encerrado
+CT-00004;CL-0048;EQ-0014;2025-09-19;2025-09-21;2025-09-21;Diária;7280.00;;Loteamento Avenida Dom Pedro I;Encerrado
+CT-00005;CL-0035;EQ-0068;2025-01-18;2025-02-08;2025-02-18;Semanal;500.00;;Ampliação Trevo de acesso leste;Encerrado
+CT-00006;CL-0029;EQ-0035;2025-12-14;2025-12-27;;Semanal;400.00;;Condomínio Setor B da mina;Ativo
+CT-00007;CL-0024;EQ-0085;2024-06-14;2024-07-29;2024-07-31;Mensal;;33600.00;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00008;CL-0004;EQ-0112;2024-10-08;2024-11-21;2024-11-29;Mensal;;7000.00;Ampliação Setor B da mina;Encerrado
+CT-00009;CL-0020;EQ-0116;2024-02-16;2024-02-23;2024-02-23;Semanal;2230.00;;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00010;CL-0016;EQ-0056;2024-01-21;2024-06-11;2024-06-10;Mensal;;11100.00;Obra Jardim das Acácias;Encerrado
+CT-00011;CL-0048;EQ-0031;2024-05-26;2024-07-14;2024-07-15;Mensal;;21200.00;Obra Parque Industrial Sul;Encerrado
+CT-00012;CL-0067;EQ-0065;2025-04-30;2025-05-05;;Diária;2360.00;;Reforma Rodovia Anhanguera km 112;Cancelado
+CT-00013;CL-0020;EQ-0059;2024-09-13;2024-09-19;2024-09-15;Diária;1730.00;;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00014;CL-0022;EQ-0067;2025-01-10;2025-01-13;2025-01-23;Diária;410.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00015;CL-0026;EQ-0090;2025-01-05;2025-01-11;2025-01-08;Diária;610.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-00016;CL-0017;EQ-0116;2024-03-04;2024-08-18;2024-08-18;Mensal;;31600.00;Obra Vila Nova;Encerrado
+CT-00017;CL-0028;EQ-0134;2025-08-19;2025-08-25;;Diária;2050.00;;Condomínio Avenida Dom Pedro I;Cancelado
+CT-00018;CL-0041;EQ-0106;2025-08-25;2025-09-15;2025-09-16;Semanal;360.00;;Obra Terminal de cargas;Encerrado
+CT-00019;CL-0027;EQ-0083;2025-07-12;2025-09-24;2025-09-24;Mensal;;4100.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-00020;CL-0068;EQ-0104;2024-04-03;2024-04-26;2024-04-25;Semanal;730.00;;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00021;CL-0035;EQ-0007;2024-04-12;2024-09-05;2024-09-04;Mensal;;22800.00;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00022;CL-0035;EQ-0107;2024-11-30;2025-03-21;2025-03-21;Mensal;;8300.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00023;CL-0070;EQ-0120;2025-01-26;2025-05-19;2025-05-22;Mensal;;43200.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00024;CL-0021;EQ-0129;2024-08-19;2024-09-04;2024-09-04;Semanal;2160.00;;Obra Vila Nova;Encerrado
+CT-00025;CL-0046;EQ-0103;2025-10-07;2025-12-16;2025-12-16;Mensal;;12200.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00026;CL-0031;EQ-0068;2025-03-23;2025-05-29;2025-05-29;Mensal;;4800.00;Condomínio Trevo de acesso leste;Encerrado
+CT-00027;CL-0005;EQ-0002;2025-06-10;2025-07-27;2025-07-23;Mensal;;30000.00;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00028;CL-0049;EQ-0133;2025-10-10;2025-12-31;;Mensal;;30800.00;Reforma Residencial Alto da Serra;Ativo
+CT-00029;CL-0016;EQ-0049;2025-08-05;2025-08-30;2025-08-28;Semanal;290.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00030;CL-0042;EQ-0041;2025-01-03;2025-01-09;2025-01-10;Diária;6820.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00031;CL-0068;EQ-0075;2025-04-19;2025-09-27;2025-10-03;Mensal;;3400.00;Loteamento Jardim das Acácias;Encerrado
+CT-00032;CL-0042;EQ-0057;2025-10-13;2025-10-14;2025-10-14;Diária;830.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00033;CL-0025;EQ-0130;2024-02-04;2024-02-29;2024-03-09;Semanal;2340.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00034;CL-0036;EQ-0019;2025-12-14;2025-12-31;;Mensal;;10600.00;Ampliação Distrito Industrial Norte;Ativo
+CT-00035;CL-0012;EQ-0098;2025-03-29;2025-06-18;2025-06-18;Mensal;;4400.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00036;CL-0003;EQ-0067;2025-10-04;2025-10-29;2025-10-31;Semanal;550.00;;Loteamento Residencial Alto da Serra;Encerrado
+CT-00037;CL-0068;EQ-0110;2024-09-28;2024-11-02;2024-11-02;Mensal;;3100.00;Loteamento Jardim das Acácias;Encerrado
+CT-00038;CL-0033;EQ-0045;2024-09-19;2024-10-11;2024-10-13;Semanal;1030.00;;Pátio industrial Terminal de cargas;Encerrado
+CT-00039;CL-0063;EQ-0037;2024-11-20;2024-12-02;2024-12-02;Semanal;2040.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00040;CL-0041;EQ-0086;2025-08-17;2025-08-28;2025-09-01;Semanal;940.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00041;CL-0009;EQ-0052;2025-01-11;2025-02-12;2025-02-12;Mensal;;21700.00;Pátio industrial Setor B da mina;Encerrado
+CT-00042;CL-0047;EQ-0135;2025-11-07;2025-11-27;2025-11-27;Semanal;960.00;;Condomínio Parque Industrial Sul;Encerrado
+CT-00043;CL-0033;EQ-0105;2025-08-19;2025-08-28;2025-09-05;Semanal;1040.00;;Reforma Terminal de cargas;Encerrado
+CT-00044;CL-0069;EQ-0056;2025-03-25;2025-04-22;2025-04-17;Semanal;700.00;;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-00045;CL-0047;EQ-0065;2024-09-23;2024-09-24;2024-09-24;Diária;2250.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00046;CL-0060;EQ-0056;2025-09-24;2025-12-31;;Mensal;;15300.00;Condomínio Complexo Logístico Oeste;Ativo
+CT-00047;CL-0062;EQ-0017;2025-02-06;2025-02-12;2025-02-12;Diária;860.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00048;CL-0019;EQ-0053;2024-06-17;2024-06-21;2024-06-20;Diária;2160.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00049;CL-0023;EQ-0118;2024-11-28;2025-04-23;2025-04-25;Mensal;;3900.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00050;CL-0050;EQ-0084;2025-08-16;2025-08-17;2025-08-26;Diária;930.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00051;CL-0010;EQ-0024;2024-06-01;2024-06-20;2024-06-20;Semanal;710.00;;Ampliação Trevo de acesso leste;Encerrado
+CT-00052;CL-0037;EQ-0051;2024-02-10;2024-03-19;2024-03-23;Mensal;;32100.00;Condomínio Jardim das Acácias;Encerrado
+CT-00053;CL-0019;EQ-0081;2025-10-08;2025-11-08;2025-11-18;Mensal;;4600.00;Ampliação Marginal do rio;Encerrado
+CT-00054;CL-0048;EQ-0055;2025-05-13;2025-07-10;2025-07-08;Mensal;;13500.00;Obra Avenida Dom Pedro I;Encerrado
+CT-00055;CL-0057;EQ-0038;2024-12-12;2025-04-12;2025-04-09;Mensal;;36600.00;Reforma Vila Nova;Encerrado
+CT-00056;CL-0023;EQ-0119;2024-01-17;2024-02-08;2024-02-08;Semanal;390.00;;Condomínio Setor B da mina;Encerrado
+CT-00057;CL-0008;EQ-0060;2025-12-23;2025-12-31;;Semanal;650.00;;Obra Residencial Alto da Serra;Ativo
+CT-00058;CL-0043;EQ-0089;2024-01-14;2024-02-01;2024-02-08;Semanal;900.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00059;CL-0060;EQ-0079;2025-10-31;2025-12-31;;Mensal;;20700.00;Ampliação Terminal de cargas;Ativo
+CT-00060;CL-0042;EQ-0071;2024-05-28;2024-07-31;2024-07-31;Mensal;;11900.00;Canteiro Terminal de cargas;Encerrado
+CT-00061;CL-0015;EQ-0055;2025-10-04;2025-10-27;2025-10-27;Semanal;600.00;;Reforma Trevo de acesso leste;Encerrado
+CT-00062;CL-0065;EQ-0008;2025-06-17;2025-07-02;2025-07-02;Semanal;920.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00063;CL-0041;EQ-0014;2024-01-14;2024-01-20;2024-01-17;Diária;4750.00;;Loteamento Setor B da mina;Encerrado
+CT-00064;CL-0065;EQ-0080;2024-12-03;2024-12-06;2024-12-01;Diária;6600.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00065;CL-0068;EQ-0122;2024-04-22;2024-08-26;2024-08-28;Mensal;;4100.00;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00066;CL-0064;EQ-0010;2025-01-10;2025-01-24;2025-01-25;Semanal;2240.00;;Loteamento Setor B da mina;Encerrado
+CT-00067;CL-0002;EQ-0105;2025-03-26;2025-05-18;2025-05-19;Mensal;;11400.00;Pátio industrial Marginal do rio;Encerrado
+CT-00068;CL-0013;EQ-0020;2024-05-07;2024-10-04;2024-10-12;Mensal;;14500.00;Ampliação Parque Industrial Sul;Encerrado
+CT-00069;CL-0043;EQ-0014;2024-09-26;2024-10-23;2024-10-23;Semanal;7940.00;;Pátio industrial Terminal de cargas;Encerrado
+CT-00070;CL-0012;EQ-0121;2025-05-22;2025-06-01;2025-05-28;Semanal;3320.00;;Ampliação Terminal de cargas;Encerrado
+CT-00071;CL-0044;EQ-0072;2025-03-24;2025-09-01;2025-09-01;Mensal;;26900.00;Reforma Setor B da mina;Encerrado
+CT-00072;CL-0032;EQ-0118;2025-06-04;2025-08-31;2025-09-06;Mensal;;5500.00;Loteamento Vila Nova;Encerrado
+CT-00073;CL-0052;EQ-0121;2025-07-05;2025-11-19;2025-11-19;Mensal;;50100.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00074;CL-0004;EQ-0078;2024-10-06;2024-11-25;2024-11-21;Mensal;;35800.00;Reforma Distrito Industrial Norte;Encerrado
+CT-00075;CL-0037;EQ-0045;2024-02-17;2024-02-18;;Diária;840.00;;Condomínio Rodovia dos Bandeirantes km 80;Cancelado
+CT-00076;CL-0059;EQ-0010;2025-12-15;2025-12-31;;Mensal;;27500.00;Condomínio Complexo Logístico Oeste;Ativo
+CT-00077;CL-0031;EQ-0106;2025-09-30;2025-11-10;2025-11-10;Mensal;;6600.00;Loteamento Vila Nova;Encerrado
+CT-00078;CL-0053;EQ-0014;2024-06-19;2024-06-23;2024-06-23;Diária;7810.00;;Obra Marginal do rio;Encerrado
+CT-00079;CL-0017;EQ-0037;2025-04-30;2025-05-03;2025-05-08;Diária;1290.00;;Condomínio Parque Industrial Sul;Encerrado
+CT-00080;CL-0027;EQ-0118;2024-06-26;2024-10-13;2024-10-13;Mensal;;4500.00;Pátio industrial Terminal de cargas;Encerrado
+CT-00081;CL-0015;EQ-0065;2025-04-17;2025-04-23;2025-04-23;Diária;2200.00;;Obra Trevo de acesso leste;Encerrado
+CT-00082;CL-0010;EQ-0031;2024-12-13;2025-04-22;2025-04-28;Mensal;;28600.00;Reforma Parque Industrial Sul;Encerrado
+CT-00083;CL-0054;EQ-0123;2024-09-14;2025-02-24;2025-02-24;Mensal;;6400.00;Canteiro Terminal de cargas;Encerrado
+CT-00084;CL-0065;EQ-0011;2025-08-29;2025-09-19;2025-09-19;Semanal;630.00;;Reforma Marginal do rio;Encerrado
+CT-00085;CL-0049;EQ-0022;2024-11-26;2024-12-02;2024-12-05;Diária;2710.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00086;CL-0069;EQ-0062;2025-02-10;2025-03-25;2025-03-25;Mensal;;26500.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00087;CL-0014;EQ-0082;2025-03-14;2025-06-06;2025-06-06;Mensal;;10600.00;Loteamento Setor B da mina;Encerrado
+CT-00088;CL-0066;EQ-0091;2025-05-23;2025-05-30;2025-06-04;Semanal;1880.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00089;CL-0061;EQ-0112;2024-01-12;2024-01-18;2024-01-17;Diária;290.00;;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00090;CL-0056;EQ-0004;2024-08-05;2024-08-22;2024-08-17;Semanal;1740.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00091;CL-0017;EQ-0093;2024-07-02;2024-10-22;2024-11-01;Mensal;;4000.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00092;CL-0061;EQ-0126;2025-07-22;2025-07-26;2025-07-26;Diária;840.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00093;CL-0041;EQ-0055;2025-04-13;2025-04-16;2025-04-24;Diária;810.00;;Obra Avenida Dom Pedro I;Encerrado
+CT-00094;CL-0022;EQ-0005;2025-07-05;2025-11-15;;Mensal;;116300.00;Ampliação Rodovia Washington Luís km 230;Cancelado
+CT-00095;CL-0002;EQ-0036;2024-11-24;2024-11-30;2024-11-30;Diária;310.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00096;CL-0024;EQ-0122;2024-01-08;2024-02-05;;Semanal;330.00;;Pátio industrial Parque Industrial Sul;Cancelado
+CT-00097;CL-0018;EQ-0082;2024-07-24;2024-08-14;2024-08-13;Semanal;720.00;;Canteiro Parque Industrial Sul;Encerrado
+CT-00098;CL-0036;EQ-0006;2024-01-14;2024-02-02;2024-01-28;Semanal;440.00;;Condomínio Trevo de acesso leste;Encerrado
+CT-00099;CL-0013;EQ-0001;2025-03-03;2025-03-05;2025-03-09;Diária;1760.00;;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-00100;CL-0017;EQ-0098;2024-01-06;2024-01-13;2024-01-09;Semanal;420.00;;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-00101;CL-0026;EQ-0128;2025-09-21;2025-10-13;2025-10-14;Semanal;660.00;;Loteamento Avenida Dom Pedro I;Encerrado
+CT-00102;CL-0033;EQ-0092;2024-03-12;2024-03-31;2024-03-31;Semanal;2400.00;;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00103;CL-0054;EQ-0011;2024-05-25;2024-08-02;2024-08-03;Mensal;;12000.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-00104;CL-0031;EQ-0036;2025-07-03;2025-12-12;2025-12-15;Mensal;;6400.00;Pátio industrial Marginal do rio;Encerrado
+CT-00105;CL-0056;EQ-0086;2025-07-12;2025-08-05;2025-08-11;Semanal;820.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00106;CL-0054;EQ-0055;2024-01-07;2024-01-20;2024-01-24;Semanal;700.00;;Ampliação Marginal do rio;Encerrado
+CT-00107;CL-0007;EQ-0126;2025-04-09;2025-04-14;2025-04-14;Diária;1200.00;;Obra Marginal do rio;Encerrado
+CT-00108;CL-0056;EQ-0013;2024-11-13;2024-12-23;2024-12-30;Mensal;;15100.00;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-00109;CL-0007;EQ-0071;2025-05-24;2025-07-31;2025-08-02;Mensal;;7900.00;Condomínio Parque Industrial Sul;Encerrado
+CT-00110;CL-0031;EQ-0010;2025-03-05;2025-03-06;2025-03-04;Diária;1770.00;;Condomínio Terminal de cargas;Encerrado
+CT-00111;CL-0054;EQ-0044;2025-03-27;2025-09-02;2025-09-03;Mensal;;9500.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00112;CL-0049;EQ-0087;2025-08-14;2025-09-10;2025-09-10;Semanal;980.00;;Condomínio Jardim das Acácias;Encerrado
+CT-00113;CL-0013;EQ-0085;2025-12-22;2025-12-28;;Diária;2040.00;;Canteiro Terminal de cargas;Ativo
+CT-00114;CL-0050;EQ-0041;2025-10-12;2025-10-16;2025-10-11;Diária;6570.00;;Condomínio Jardim das Acácias;Encerrado
+CT-00115;CL-0064;EQ-0022;2025-07-21;2025-12-29;;Mensal;;36100.00;Reforma Avenida Dom Pedro I;Ativo
+CT-00116;CL-0017;EQ-0052;2024-01-06;2024-05-26;2024-05-26;Mensal;;26700.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00117;CL-0067;EQ-0044;2024-10-24;2025-01-08;;Mensal;;10100.00;Ampliação Setor B da mina;Cancelado
+CT-00118;CL-0014;EQ-0094;2025-03-12;2025-05-08;;Mensal;;3600.00;Pátio industrial Residencial Alto da Serra;Cancelado
+CT-00119;CL-0061;EQ-0011;2024-01-15;2024-04-13;2024-04-13;Mensal;;8000.00;Ampliação Residencial Alto da Serra;Encerrado
+CT-00120;CL-0012;EQ-0022;2025-02-24;2025-02-27;2025-02-26;Diária;2640.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00121;CL-0027;EQ-0085;2024-01-26;2024-01-29;2024-01-27;Diária;2290.00;;Condomínio Jardim das Acácias;Encerrado
+CT-00122;CL-0066;EQ-0004;2025-05-09;2025-05-25;2025-05-25;Semanal;1830.00;;Obra Trevo de acesso leste;Encerrado
+CT-00123;CL-0068;EQ-0037;2024-08-07;2024-08-11;2024-08-11;Diária;1330.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00124;CL-0043;EQ-0069;2025-06-27;2025-07-14;2025-07-12;Semanal;370.00;;Pátio industrial Terminal de cargas;Encerrado
+CT-00125;CL-0028;EQ-0041;2024-09-08;2024-12-22;2024-12-24;Mensal;;131500.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00126;CL-0060;EQ-0099;2025-10-06;2025-10-07;2025-10-07;Diária;6190.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00127;CL-0066;EQ-0052;2025-02-27;2025-07-04;2025-07-03;Mensal;;29500.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00128;CL-0059;EQ-0081;2025-11-22;2025-12-08;2025-12-08;Semanal;310.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00129;CL-0034;EQ-0079;2025-05-07;2025-08-01;2025-08-04;Mensal;;28600.00;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00130;CL-0045;EQ-0048;2025-12-03;2025-12-31;;Mensal;;4000.00;Reforma Avenida Dom Pedro I;Ativo
+CT-00131;CL-0053;EQ-0002;2025-08-14;2025-12-31;;Mensal;;20500.00;Loteamento Residencial Alto da Serra;Ativo
+CT-00132;CL-0054;EQ-0082;2025-02-14;2025-02-22;2025-02-26;Semanal;820.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00133;CL-0018;EQ-0022;2024-06-06;2024-07-20;2024-07-30;Mensal;;36900.00;Pátio industrial Terminal de cargas;Encerrado
+CT-00134;CL-0059;EQ-0126;2025-03-02;2025-03-10;2025-03-10;Semanal;1170.00;;Loteamento Vila Nova;Encerrado
+CT-00135;CL-0031;EQ-0070;2024-01-05;2024-02-02;2024-02-11;Semanal;1290.00;;Reforma Terminal de cargas;Encerrado
+CT-00136;CL-0064;EQ-0072;2024-01-28;2024-01-30;2024-01-30;Diária;1660.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00137;CL-0060;EQ-0084;2024-09-13;2025-01-18;2025-01-21;Mensal;;10800.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00138;CL-0006;EQ-0066;2024-10-06;2024-10-22;2024-10-22;Semanal;240.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00139;CL-0053;EQ-0035;2024-06-26;2024-09-18;2024-09-17;Mensal;;6100.00;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-00140;CL-0027;EQ-0065;2025-10-07;2025-11-02;;Semanal;2090.00;;Reforma Residencial Alto da Serra;Cancelado
+CT-00141;CL-0028;EQ-0028;2025-06-09;2025-10-26;2025-11-05;Mensal;;8500.00;Condomínio Residencial Alto da Serra;Encerrado
+CT-00142;CL-0038;EQ-0066;2025-12-29;2025-12-31;;Semanal;350.00;;Condomínio Rodovia Washington Luís km 230;Ativo
+CT-00143;CL-0065;EQ-0077;2025-06-29;2025-10-08;2025-10-07;Mensal;;29900.00;Reforma Terminal de cargas;Encerrado
+CT-00144;CL-0056;EQ-0080;2024-06-23;2024-11-19;2024-11-19;Mensal;;91500.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00145;CL-0045;EQ-0131;2024-09-17;2024-09-28;2024-09-30;Semanal;640.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00146;CL-0020;EQ-0123;2025-11-11;2025-12-31;;Mensal;;3900.00;Reforma Residencial Alto da Serra;Ativo
+CT-00147;CL-0013;EQ-0119;2024-09-25;2025-01-10;2025-01-14;Mensal;;8300.00;Reforma Setor B da mina;Encerrado
+CT-00148;CL-0019;EQ-0126;2025-03-14;2025-03-18;2025-03-18;Diária;800.00;;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00149;CL-0010;EQ-0043;2025-08-07;2025-12-31;;Mensal;;28600.00;Canteiro Rodovia Washington Luís km 230;Ativo
+CT-00150;CL-0015;EQ-0091;2024-02-18;2024-03-05;2024-03-02;Semanal;1530.00;;Condomínio Terminal de cargas;Encerrado
+CT-00151;CL-0001;EQ-0042;2025-07-07;2025-07-09;2025-07-06;Diária;1060.00;;Reforma Terminal de cargas;Encerrado
+CT-00152;CL-0028;EQ-0021;2024-02-27;2024-03-26;2024-03-26;Semanal;680.00;;Ampliação Trevo de acesso leste;Encerrado
+CT-00153;CL-0035;EQ-0024;2024-05-16;2024-05-20;2024-05-23;Diária;530.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00154;CL-0019;EQ-0100;2024-11-14;2025-03-05;2025-03-05;Mensal;;37700.00;Loteamento Setor B da mina;Encerrado
+CT-00155;CL-0044;EQ-0125;2025-09-11;2025-09-13;2025-09-13;Diária;280.00;;Loteamento Vila Nova;Encerrado
+CT-00156;CL-0014;EQ-0082;2024-12-28;2025-01-25;;Semanal;690.00;;Obra Complexo Logístico Oeste;Cancelado
+CT-00157;CL-0047;EQ-0095;2024-04-08;2024-07-18;2024-07-23;Mensal;;4800.00;Reforma Marginal do rio;Encerrado
+CT-00158;CL-0060;EQ-0116;2025-05-18;2025-09-10;2025-09-10;Mensal;;37000.00;Obra Distrito Industrial Norte;Encerrado
+CT-00159;CL-0001;EQ-0044;2024-01-15;2024-06-16;2024-06-13;Mensal;;8000.00;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00160;CL-0046;EQ-0050;2025-12-24;2025-12-31;;Mensal;;16700.00;Condomínio Trevo de acesso leste;Ativo
+CT-00161;CL-0036;EQ-0052;2025-08-09;2025-12-31;;Mensal;;27300.00;Loteamento Trevo de acesso leste;Ativo
+CT-00162;CL-0043;EQ-0014;2024-07-08;2024-09-14;2024-09-14;Mensal;;75100.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00163;CL-0013;EQ-0003;2024-01-05;2024-02-01;2024-02-01;Semanal;830.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00164;CL-0056;EQ-0004;2025-02-07;2025-05-01;2025-05-01;Mensal;;28800.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00165;CL-0027;EQ-0041;2025-07-23;2025-09-07;2025-09-07;Mensal;;114800.00;Pátio industrial Setor B da mina;Encerrado
+CT-00166;CL-0008;EQ-0028;2024-01-07;2024-05-21;2024-05-24;Mensal;;10900.00;Canteiro Terminal de cargas;Encerrado
+CT-00167;CL-0011;EQ-0132;2024-04-20;2024-05-10;2024-05-10;Semanal;520.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00168;CL-0037;EQ-0016;2024-03-08;2024-05-25;2024-05-25;Mensal;;23600.00;Pátio industrial Setor B da mina;Encerrado
+CT-00169;CL-0022;EQ-0027;2025-07-13;2025-12-27;;Mensal;;25700.00;Condomínio Complexo Logístico Oeste;Ativo
+CT-00170;CL-0039;EQ-0042;2024-01-13;2024-01-15;2024-01-15;Diária;1340.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00171;CL-0014;EQ-0043;2025-02-14;2025-06-06;2025-06-06;Mensal;;31600.00;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00172;CL-0017;EQ-0040;2025-01-06;2025-02-03;2025-02-05;Semanal;2080.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00173;CL-0063;EQ-0049;2025-12-09;2025-12-31;;Mensal;;5600.00;Ampliação Terminal de cargas;Ativo
+CT-00174;CL-0051;EQ-0110;2024-09-20;2024-09-25;2024-09-25;Diária;300.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00175;CL-0047;EQ-0043;2024-02-02;2024-04-10;2024-04-10;Mensal;;26600.00;Ampliação Terminal de cargas;Encerrado
+CT-00176;CL-0048;EQ-0061;2025-11-14;2025-11-26;2025-12-03;Semanal;790.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00177;CL-0053;EQ-0070;2024-10-25;2024-10-31;2024-11-03;Diária;1720.00;;Loteamento Trevo de acesso leste;Encerrado
+CT-00178;CL-0005;EQ-0120;2025-12-11;2025-12-31;;Mensal;;47400.00;Condomínio Marginal do rio;Ativo
+CT-00179;CL-0017;EQ-0122;2024-11-22;2025-02-28;2025-02-28;Mensal;;4600.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00180;CL-0046;EQ-0113;2025-01-07;2025-03-04;2025-03-07;Mensal;;5600.00;Loteamento Avenida Dom Pedro I;Encerrado
+CT-00181;CL-0003;EQ-0026;2024-01-06;2024-03-05;2024-03-01;Mensal;;27600.00;Reforma Marginal do rio;Encerrado
+CT-00182;CL-0069;EQ-0090;2024-10-07;2024-12-22;2024-12-22;Mensal;;14800.00;Loteamento Setor B da mina;Encerrado
+CT-00183;CL-0052;EQ-0113;2025-05-20;2025-06-11;2025-06-11;Semanal;300.00;;Canteiro Marginal do rio;Encerrado
+CT-00184;CL-0003;EQ-0028;2025-11-09;2025-12-31;;Mensal;;6700.00;Loteamento Avenida Dom Pedro I;Cancelado
+CT-00185;CL-0045;EQ-0135;2025-06-27;2025-10-17;2025-10-20;Mensal;;12000.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00186;CL-0048;EQ-0117;2024-03-02;2024-04-24;2024-04-28;Mensal;;6200.00;Pátio industrial Setor B da mina;Encerrado
+CT-00187;CL-0056;EQ-0079;2025-09-03;2025-09-08;2025-09-08;Diária;1850.00;;Canteiro Parque Industrial Sul;Encerrado
+CT-00188;CL-0020;EQ-0084;2024-02-19;2024-07-08;2024-07-08;Mensal;;14400.00;Obra Marginal do rio;Encerrado
+CT-00189;CL-0034;EQ-0064;2024-03-02;2024-03-23;2024-03-23;Semanal;300.00;;Reforma Jardim das Acácias;Encerrado
+CT-00190;CL-0050;EQ-0131;2025-03-25;2025-05-14;2025-05-24;Mensal;;7700.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00191;CL-0023;EQ-0066;2025-11-03;2025-12-09;2025-12-11;Mensal;;4500.00;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00192;CL-0041;EQ-0097;2025-08-18;2025-08-23;2025-08-23;Diária;850.00;;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-00193;CL-0063;EQ-0049;2025-11-21;2025-12-02;2025-11-30;Semanal;310.00;;Pátio industrial Setor B da mina;Encerrado
+CT-00194;CL-0048;EQ-0037;2024-12-05;2025-02-24;2025-02-24;Mensal;;31700.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00195;CL-0038;EQ-0021;2024-01-13;2024-02-09;2024-02-09;Semanal;500.00;;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00196;CL-0039;EQ-0080;2025-05-25;2025-05-26;2025-06-03;Diária;5390.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00197;CL-0036;EQ-0046;2025-04-16;2025-08-26;2025-08-31;Mensal;;5800.00;Ampliação Setor B da mina;Encerrado
+CT-00198;CL-0025;EQ-0042;2025-05-08;2025-06-24;2025-06-24;Mensal;;15200.00;Ampliação Setor B da mina;Encerrado
+CT-00199;CL-0011;EQ-0052;2024-09-29;2024-10-10;2024-10-10;Semanal;1080.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-00200;CL-0018;EQ-0005;2025-11-18;2025-12-31;;Mensal;;117700.00;Condomínio Distrito Industrial Norte;Ativo
+CT-00201;CL-0006;EQ-0094;2025-08-24;2025-09-15;2025-09-15;Semanal;210.00;;Condomínio Jardim das Acácias;Encerrado
+CT-00202;CL-0043;EQ-0109;2024-01-06;2024-06-13;2024-06-13;Mensal;;24900.00;Ampliação Setor B da mina;Encerrado
+CT-00203;CL-0058;EQ-0002;2024-10-30;2025-04-10;2025-04-10;Mensal;;19500.00;Condomínio Jardim das Acácias;Encerrado
+CT-00204;CL-0043;EQ-0032;2025-09-30;2025-10-30;2025-10-27;Mensal;;32600.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00205;CL-0048;EQ-0063;2025-04-05;2025-04-09;2025-04-07;Diária;2460.00;;Pátio industrial Vila Nova;Encerrado
+CT-00206;CL-0011;EQ-0118;2024-11-10;2024-11-15;2024-11-18;Diária;400.00;;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-00207;CL-0023;EQ-0032;2025-06-24;2025-09-06;2025-09-07;Mensal;;22400.00;Reforma Terminal de cargas;Encerrado
+CT-00208;CL-0027;EQ-0076;2025-12-24;2025-12-29;;Diária;350.00;;Ampliação Parque Industrial Sul;Ativo
+CT-00209;CL-0065;EQ-0015;2024-01-04;2024-05-14;2024-05-16;Mensal;;27000.00;Obra Residencial Alto da Serra;Encerrado
+CT-00210;CL-0046;EQ-0079;2024-02-24;2024-03-18;2024-03-18;Semanal;1610.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00211;CL-0024;EQ-0103;2025-07-30;2025-09-03;2025-09-03;Mensal;;9700.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00212;CL-0055;EQ-0005;2024-03-10;2024-03-11;2024-03-15;Diária;5720.00;;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00213;CL-0028;EQ-0001;2024-05-23;2024-07-31;2024-07-31;Mensal;;36400.00;Obra Distrito Industrial Norte;Encerrado
+CT-00214;CL-0034;EQ-0044;2025-01-30;2025-02-22;2025-02-22;Semanal;450.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00215;CL-0013;EQ-0088;2024-01-17;2024-03-19;2024-03-19;Mensal;;23800.00;Pátio industrial Marginal do rio;Encerrado
+CT-00216;CL-0030;EQ-0026;2024-04-30;2024-09-25;2024-09-26;Mensal;;26900.00;Canteiro Setor B da mina;Encerrado
+CT-00217;CL-0040;EQ-0112;2024-03-19;2024-04-06;2024-04-11;Semanal;440.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00218;CL-0063;EQ-0003;2025-06-18;2025-06-23;2025-06-20;Diária;990.00;;Obra Vila Nova;Encerrado
+CT-00219;CL-0052;EQ-0122;2024-10-18;2024-10-28;2024-11-03;Semanal;300.00;;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00220;CL-0007;EQ-0039;2025-08-11;2025-08-14;2025-08-22;Diária;450.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00221;CL-0055;EQ-0011;2025-09-23;2025-09-27;2025-09-24;Diária;800.00;;Loteamento Vila Nova;Encerrado
+CT-00222;CL-0044;EQ-0074;2025-11-14;2025-11-15;2025-11-18;Diária;300.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-00223;CL-0039;EQ-0099;2025-11-27;2025-12-31;;Mensal;;87100.00;Loteamento Vila Nova;Ativo
+CT-00224;CL-0030;EQ-0043;2024-09-09;2025-02-10;2025-02-10;Mensal;;21200.00;Obra Setor B da mina;Encerrado
+CT-00225;CL-0063;EQ-0053;2024-12-09;2025-04-17;2025-04-22;Mensal;;29300.00;Canteiro Jardim das Acácias;Encerrado
+CT-00226;CL-0048;EQ-0103;2025-09-09;2025-09-13;2025-09-11;Diária;860.00;;Reforma Marginal do rio;Encerrado
+CT-00227;CL-0004;EQ-0107;2024-01-15;2024-04-29;;Mensal;;8100.00;Canteiro Complexo Logístico Oeste;Cancelado
+CT-00228;CL-0039;EQ-0024;2025-06-27;2025-10-03;2025-10-11;Mensal;;10400.00;Canteiro Distrito Industrial Norte;Encerrado
+CT-00229;CL-0026;EQ-0064;2024-12-14;2025-03-25;2025-03-25;Mensal;;3800.00;Loteamento Setor B da mina;Encerrado
+CT-00230;CL-0021;EQ-0007;2025-09-29;2025-11-17;2025-11-22;Mensal;;18300.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00231;CL-0024;EQ-0096;2024-01-17;2024-04-22;2024-04-19;Mensal;;33500.00;Loteamento Residencial Alto da Serra;Encerrado
+CT-00232;CL-0059;EQ-0122;2025-08-03;2025-12-31;;Mensal;;5500.00;Condomínio Marginal do rio;Ativo
+CT-00233;CL-0021;EQ-0119;2025-05-30;2025-06-11;2025-06-11;Semanal;430.00;;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00234;CL-0007;EQ-0037;2025-10-23;2025-11-18;2025-11-18;Semanal;1870.00;;Obra Jardim das Acácias;Encerrado
+CT-00235;CL-0005;EQ-0062;2024-03-30;2024-06-12;2024-06-12;Mensal;;34300.00;Ampliação Vila Nova;Encerrado
+CT-00236;CL-0038;EQ-0087;2024-08-27;2025-01-27;2025-02-02;Mensal;;20400.00;Pátio industrial Terminal de cargas;Encerrado
+CT-00237;CL-0004;EQ-0121;2025-01-06;2025-03-02;2025-03-02;Mensal;;40400.00;Obra Marginal do rio;Encerrado
+CT-00238;CL-0062;EQ-0135;2024-12-27;2025-01-31;2025-01-29;Mensal;;9500.00;Canteiro Vila Nova;Encerrado
+CT-00239;CL-0062;EQ-0087;2025-09-29;2025-12-31;;Mensal;;14400.00;Pátio industrial Complexo Logístico Oeste;Ativo
+CT-00240;CL-0023;EQ-0050;2024-10-08;2024-12-10;2024-12-17;Mensal;;16500.00;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-00241;CL-0050;EQ-0060;2025-06-03;2025-07-12;;Mensal;;7300.00;Loteamento Complexo Logístico Oeste;Cancelado
+CT-00242;CL-0064;EQ-0093;2024-11-11;2025-04-30;2025-05-10;Mensal;;5000.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00243;CL-0011;EQ-0007;2025-02-01;2025-02-04;2025-02-08;Diária;1990.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00244;CL-0005;EQ-0033;2024-03-18;2024-03-23;2024-03-25;Diária;400.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00245;CL-0037;EQ-0106;2025-11-26;2025-12-31;;Mensal;;5700.00;Pátio industrial Residencial Alto da Serra;Ativo
+CT-00246;CL-0002;EQ-0082;2024-10-21;2024-12-09;2024-12-09;Mensal;;12700.00;Condomínio Parque Industrial Sul;Encerrado
+CT-00247;CL-0009;EQ-0104;2024-10-11;2024-10-31;2024-10-31;Semanal;580.00;;Obra Trevo de acesso leste;Encerrado
+CT-00248;CL-0009;EQ-0057;2025-11-14;2025-11-18;2025-11-28;Diária;850.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00249;CL-0069;EQ-0001;2025-05-25;2025-08-26;2025-08-26;Mensal;;25000.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-00250;CL-0068;EQ-0014;2025-03-01;2025-08-16;2025-08-14;Mensal;;72700.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00251;CL-0068;EQ-0013;2024-04-01;2024-09-02;;Mensal;;22900.00;Loteamento Complexo Logístico Oeste;Cancelado
+CT-00252;CL-0033;EQ-0049;2024-10-09;2024-12-27;2024-12-27;Mensal;;5900.00;Obra Marginal do rio;Encerrado
+CT-00253;CL-0066;EQ-0054;2024-01-25;2024-06-01;;Mensal;;4100.00;Ampliação Distrito Industrial Norte;Cancelado
+CT-00254;CL-0021;EQ-0063;2024-05-25;2024-09-10;;Mensal;;32600.00;Reforma Complexo Logístico Oeste;Cancelado
+CT-00255;CL-0008;EQ-0065;2024-09-27;2024-09-29;2024-09-29;Diária;1680.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00256;CL-0037;EQ-0074;2025-09-26;2025-09-29;2025-09-26;Diária;280.00;;Condomínio Terminal de cargas;Encerrado
+CT-00257;CL-0032;EQ-0004;2024-02-08;2024-02-14;2024-02-12;Diária;1500.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00258;CL-0025;EQ-0019;2025-08-17;2025-08-27;2025-09-05;Semanal;550.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-00259;CL-0033;EQ-0038;2024-07-28;2024-09-21;2024-09-24;Mensal;;31400.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00260;CL-0030;EQ-0083;2024-04-01;2024-09-08;;Mensal;;4800.00;Obra Rodovia dos Bandeirantes km 80;Cancelado
+CT-00261;CL-0057;EQ-0038;2025-09-22;2025-09-28;;Diária;1530.00;;Condomínio Complexo Logístico Oeste;Cancelado
+CT-00262;CL-0033;EQ-0014;2025-09-30;2025-10-02;2025-10-02;Diária;4820.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00263;CL-0035;EQ-0005;2024-05-31;2024-06-14;2024-06-17;Semanal;6290.00;;Obra Parque Industrial Sul;Encerrado
+CT-00264;CL-0050;EQ-0034;2024-03-06;2024-08-22;2024-08-22;Mensal;;24500.00;Condomínio Parque Industrial Sul;Encerrado
+CT-00265;CL-0049;EQ-0077;2024-02-02;2024-03-01;2024-02-27;Semanal;2720.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00266;CL-0039;EQ-0093;2024-05-20;2024-05-31;2024-06-05;Semanal;330.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00267;CL-0036;EQ-0104;2024-01-14;2024-03-19;2024-03-26;Mensal;;14300.00;Loteamento Vila Nova;Encerrado
+CT-00268;CL-0003;EQ-0096;2025-08-20;2025-12-21;2025-12-21;Mensal;;25000.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00269;CL-0063;EQ-0086;2025-06-03;2025-06-27;2025-06-27;Semanal;590.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00270;CL-0049;EQ-0110;2024-11-12;2025-01-12;2025-01-12;Mensal;;4300.00;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00271;CL-0006;EQ-0006;2024-07-14;2024-08-08;2024-08-09;Semanal;320.00;;Condomínio Vila Nova;Encerrado
+CT-00272;CL-0002;EQ-0092;2024-01-13;2024-02-26;2024-03-06;Mensal;;34600.00;Condomínio Parque Industrial Sul;Encerrado
+CT-00273;CL-0015;EQ-0095;2025-02-24;2025-07-25;2025-07-25;Mensal;;4600.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00274;CL-0036;EQ-0085;2024-09-08;2024-11-08;2024-11-03;Mensal;;21400.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00275;CL-0062;EQ-0038;2024-03-14;2024-06-05;2024-06-04;Mensal;;26200.00;Reforma Vila Nova;Encerrado
+CT-00276;CL-0026;EQ-0083;2025-10-06;2025-12-31;;Mensal;;4200.00;Obra Residencial Alto da Serra;Ativo
+CT-00277;CL-0039;EQ-0103;2025-09-19;2025-09-26;2025-09-26;Semanal;610.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00278;CL-0063;EQ-0006;2025-09-02;2025-12-31;;Mensal;;5600.00;Loteamento Setor B da mina;Ativo
+CT-00279;CL-0033;EQ-0015;2025-12-18;2025-12-31;;Semanal;2120.00;;Obra Residencial Alto da Serra;Ativo
+CT-00280;CL-0004;EQ-0083;2025-05-15;2025-05-31;2025-06-04;Semanal;280.00;;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00281;CL-0002;EQ-0089;2025-05-09;2025-05-28;2025-05-28;Semanal;970.00;;Reforma Jardim das Acácias;Encerrado
+CT-00282;CL-0041;EQ-0058;2024-09-12;2025-01-20;2025-01-16;Mensal;;15200.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00283;CL-0055;EQ-0105;2025-03-02;2025-03-22;2025-03-19;Semanal;840.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00284;CL-0055;EQ-0054;2025-07-07;2025-10-18;2025-10-18;Mensal;;4100.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00285;CL-0015;EQ-0114;2025-07-12;2025-07-15;2025-07-10;Diária;500.00;;Ampliação Marginal do rio;Encerrado
+CT-00286;CL-0024;EQ-0126;2025-04-23;2025-07-07;2025-07-07;Mensal;;12200.00;Reforma Vila Nova;Encerrado
+CT-00287;CL-0014;EQ-0063;2025-04-21;2025-04-22;2025-05-01;Diária;1430.00;;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00288;CL-0008;EQ-0060;2024-08-22;2024-10-14;2024-10-09;Mensal;;10500.00;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00289;CL-0033;EQ-0054;2024-01-10;2024-01-11;2024-01-06;Diária;240.00;;Reforma Marginal do rio;Encerrado
+CT-00290;CL-0049;EQ-0133;2024-12-06;2025-03-09;2025-03-05;Mensal;;28600.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00291;CL-0004;EQ-0114;2024-06-18;2024-07-13;2024-07-22;Semanal;330.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00292;CL-0048;EQ-0050;2025-05-27;2025-06-16;2025-06-11;Semanal;950.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00293;CL-0005;EQ-0111;2024-10-20;2024-12-18;2024-12-18;Mensal;;15700.00;Reforma Marginal do rio;Encerrado
+CT-00294;CL-0039;EQ-0065;2024-01-21;2024-05-07;2024-05-07;Mensal;;32100.00;Canteiro Jardim das Acácias;Encerrado
+CT-00295;CL-0063;EQ-0109;2025-09-06;2025-09-09;2025-09-09;Diária;1920.00;;Ampliação Residencial Alto da Serra;Encerrado
+CT-00296;CL-0041;EQ-0032;2025-12-15;2025-12-31;;Semanal;1550.00;;Reforma Complexo Logístico Oeste;Ativo
+CT-00297;CL-0029;EQ-0087;2024-03-13;2024-06-04;2024-06-04;Mensal;;18500.00;Pátio industrial Marginal do rio;Encerrado
+CT-00298;CL-0051;EQ-0042;2024-01-21;2024-07-15;2024-07-15;Mensal;;17300.00;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00299;CL-0060;EQ-0103;2024-01-18;2024-06-01;2024-06-11;Mensal;;8900.00;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00300;CL-0068;EQ-0115;2024-06-27;2024-07-11;;Semanal;4090.00;;Condomínio Residencial Alto da Serra;Cancelado
+CT-00301;CL-0062;EQ-0058;2025-04-18;2025-05-27;2025-05-27;Mensal;;15100.00;Loteamento Terminal de cargas;Encerrado
+CT-00302;CL-0018;EQ-0016;2024-01-07;2024-01-24;2024-01-24;Semanal;1270.00;;Pátio industrial Setor B da mina;Encerrado
+CT-00303;CL-0015;EQ-0124;2024-01-05;2024-04-09;2024-04-09;Mensal;;12600.00;Canteiro Terminal de cargas;Encerrado
+CT-00304;CL-0021;EQ-0063;2024-01-11;2024-01-16;2024-01-15;Diária;2300.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-00305;CL-0069;EQ-0064;2024-01-09;2024-01-21;2024-01-21;Semanal;330.00;;Pátio industrial Terminal de cargas;Encerrado
+CT-00306;CL-0012;EQ-0086;2024-10-17;2025-03-23;2025-03-23;Mensal;;9900.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00307;CL-0050;EQ-0084;2025-09-09;2025-10-06;;Semanal;1050.00;;Canteiro Avenida Dom Pedro I;Cancelado
+CT-00308;CL-0036;EQ-0066;2025-10-24;2025-10-29;2025-10-25;Diária;250.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00309;CL-0011;EQ-0126;2025-09-10;2025-12-31;;Mensal;;15100.00;Ampliação Rodovia Anhanguera km 112;Cancelado
+CT-00310;CL-0033;EQ-0070;2024-02-26;2024-07-05;2024-07-05;Mensal;;20600.00;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00311;CL-0006;EQ-0135;2025-02-17;2025-03-22;2025-03-26;Mensal;;13800.00;Condomínio Terminal de cargas;Encerrado
+CT-00312;CL-0026;EQ-0040;2025-07-12;2025-08-05;2025-08-08;Semanal;2010.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00313;CL-0031;EQ-0122;2025-03-08;2025-04-15;2025-04-15;Mensal;;4100.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00314;CL-0016;EQ-0088;2024-09-22;2024-10-09;2024-10-06;Semanal;1310.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00315;CL-0054;EQ-0063;2024-02-12;2024-02-13;2024-02-13;Diária;2220.00;;Loteamento Terminal de cargas;Encerrado
+CT-00316;CL-0063;EQ-0003;2024-06-27;2024-12-16;2024-12-11;Mensal;;12900.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00317;CL-0036;EQ-0077;2025-06-13;2025-06-14;;Diária;2050.00;;Ampliação Rodovia dos Bandeirantes km 80;Cancelado
+CT-00318;CL-0030;EQ-0132;2024-07-02;2024-09-18;2024-09-24;Mensal;;6900.00;Condomínio Distrito Industrial Norte;Encerrado
+CT-00319;CL-0017;EQ-0105;2024-12-19;2024-12-23;2024-12-23;Diária;700.00;;Obra Avenida Dom Pedro I;Encerrado
+CT-00320;CL-0038;EQ-0013;2024-10-06;2024-10-21;2024-10-30;Semanal;1110.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00321;CL-0056;EQ-0085;2024-02-14;2024-05-27;2024-06-05;Mensal;;23200.00;Reforma Parque Industrial Sul;Encerrado
+CT-00322;CL-0026;EQ-0035;2025-04-09;2025-04-15;2025-04-15;Diária;330.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00323;CL-0065;EQ-0043;2024-01-06;2024-01-13;2024-01-13;Semanal;2140.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00324;CL-0033;EQ-0078;2024-03-06;2024-04-01;2024-04-01;Semanal;2190.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00325;CL-0011;EQ-0010;2024-06-07;2024-06-26;2024-07-04;Semanal;2530.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00326;CL-0065;EQ-0025;2025-04-22;2025-10-19;2025-10-21;Mensal;;11400.00;Loteamento Vila Nova;Encerrado
+CT-00327;CL-0070;EQ-0076;2024-06-12;2024-06-15;2024-06-18;Diária;250.00;;Loteamento Terminal de cargas;Encerrado
+CT-00328;CL-0043;EQ-0083;2025-04-08;2025-04-29;;Semanal;240.00;;Pátio industrial Marginal do rio;Cancelado
+CT-00329;CL-0027;EQ-0025;2025-11-04;2025-12-31;;Mensal;;14400.00;Obra Avenida Dom Pedro I;Ativo
+CT-00330;CL-0049;EQ-0124;2025-07-09;2025-07-15;2025-07-10;Diária;530.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00331;CL-0070;EQ-0061;2025-04-21;2025-10-15;2025-10-15;Mensal;;9300.00;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00332;CL-0041;EQ-0001;2025-04-03;2025-05-11;2025-05-18;Mensal;;27300.00;Ampliação Terminal de cargas;Encerrado
+CT-00333;CL-0033;EQ-0082;2024-03-23;2024-06-03;2024-06-03;Mensal;;9600.00;Obra Vila Nova;Encerrado
+CT-00334;CL-0015;EQ-0100;2024-10-22;2024-10-23;2024-10-28;Diária;1550.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-00335;CL-0019;EQ-0129;2025-02-07;2025-02-09;2025-02-09;Diária;2280.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00336;CL-0029;EQ-0124;2025-01-15;2025-06-20;2025-06-20;Mensal;;12400.00;Obra Marginal do rio;Encerrado
+CT-00337;CL-0063;EQ-0024;2024-10-24;2024-11-14;2024-11-13;Semanal;670.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00338;CL-0030;EQ-0125;2024-07-11;2024-12-25;2024-12-25;Mensal;;3900.00;Reforma Vila Nova;Encerrado
+CT-00339;CL-0056;EQ-0096;2024-05-10;2024-07-20;;Mensal;;25900.00;Loteamento Trevo de acesso leste;Cancelado
+CT-00340;CL-0052;EQ-0078;2025-07-12;2025-11-16;2025-11-16;Mensal;;21500.00;Canteiro Trevo de acesso leste;Encerrado
+CT-00341;CL-0006;EQ-0006;2024-02-12;2024-03-10;;Semanal;450.00;;Canteiro Trevo de acesso leste;Cancelado
+CT-00342;CL-0016;EQ-0012;2025-01-01;2025-01-29;2025-01-29;Semanal;1910.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00343;CL-0005;EQ-0065;2025-08-05;2025-10-01;2025-09-28;Mensal;;37600.00;Obra Avenida Dom Pedro I;Encerrado
+CT-00344;CL-0034;EQ-0089;2025-08-31;2025-12-14;2025-12-23;Mensal;;10600.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-00345;CL-0044;EQ-0115;2024-07-17;2024-09-05;;Mensal;;82100.00;Loteamento Distrito Industrial Norte;Cancelado
+CT-00346;CL-0025;EQ-0040;2024-01-17;2024-04-06;2024-04-02;Mensal;;18800.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00347;CL-0009;EQ-0079;2024-06-05;2024-06-18;2024-06-24;Semanal;1580.00;;Reforma Terminal de cargas;Encerrado
+CT-00348;CL-0067;EQ-0041;2024-05-12;2024-07-28;2024-07-28;Mensal;;78800.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00349;CL-0022;EQ-0048;2024-06-15;2024-06-19;2024-06-14;Diária;220.00;;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00350;CL-0054;EQ-0109;2025-08-17;2025-08-25;2025-08-25;Semanal;2130.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00351;CL-0003;EQ-0076;2025-09-21;2025-12-19;2025-12-19;Mensal;;4300.00;Reforma Vila Nova;Encerrado
+CT-00352;CL-0070;EQ-0053;2025-09-26;2025-12-31;;Mensal;;23500.00;Loteamento Jardim das Acácias;Ativo
+CT-00353;CL-0056;EQ-0132;2025-03-13;2025-04-15;2025-04-11;Mensal;;7700.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00354;CL-0004;EQ-0035;2024-10-03;2025-03-16;;Mensal;;4400.00;Canteiro Trevo de acesso leste;Cancelado
+CT-00355;CL-0064;EQ-0080;2025-09-18;2025-10-20;2025-10-20;Mensal;;113700.00;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00356;CL-0058;EQ-0041;2025-01-24;2025-07-03;2025-06-28;Mensal;;103800.00;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00357;CL-0037;EQ-0056;2024-07-01;2024-09-05;2024-09-04;Mensal;;13300.00;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00358;CL-0041;EQ-0032;2025-04-23;2025-05-29;2025-05-29;Mensal;;27800.00;Pátio industrial Marginal do rio;Encerrado
+CT-00359;CL-0032;EQ-0087;2025-07-14;2025-08-02;2025-08-09;Semanal;760.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00360;CL-0013;EQ-0112;2024-09-10;2024-09-27;2024-09-27;Semanal;520.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00361;CL-0069;EQ-0088;2024-04-07;2024-09-16;2024-09-19;Mensal;;29700.00;Obra Marginal do rio;Encerrado
+CT-00362;CL-0016;EQ-0129;2024-10-23;2024-10-28;2024-11-05;Diária;3150.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00363;CL-0024;EQ-0037;2024-02-18;2024-03-13;2024-03-13;Semanal;2260.00;;Reforma Vila Nova;Encerrado
+CT-00364;CL-0032;EQ-0032;2025-06-08;2025-06-09;2025-06-09;Diária;1800.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00365;CL-0003;EQ-0077;2025-01-21;2025-04-17;2025-04-22;Mensal;;34400.00;Reforma Residencial Alto da Serra;Encerrado
+CT-00366;CL-0069;EQ-0121;2024-09-06;2024-12-28;2024-12-25;Mensal;;38700.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00367;CL-0025;EQ-0073;2025-01-27;2025-07-13;2025-07-16;Mensal;;3200.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00368;CL-0012;EQ-0020;2024-10-24;2024-12-08;2024-12-08;Mensal;;14300.00;Reforma Terminal de cargas;Encerrado
+CT-00369;CL-0012;EQ-0134;2024-02-22;2024-02-24;2024-02-24;Diária;1980.00;;Condomínio Vila Nova;Encerrado
+CT-00370;CL-0033;EQ-0111;2024-02-29;2024-08-03;;Mensal;;12200.00;Pátio industrial Parque Industrial Sul;Cancelado
+CT-00371;CL-0024;EQ-0104;2025-12-19;2025-12-22;2025-12-22;Diária;980.00;;Reforma Setor B da mina;Encerrado
+CT-00372;CL-0019;EQ-0096;2024-07-29;2025-01-23;2025-01-20;Mensal;;25400.00;Reforma Terminal de cargas;Encerrado
+CT-00373;CL-0011;EQ-0095;2025-12-25;2025-12-31;;Mensal;;4200.00;Obra Rodovia Anhanguera km 112;Ativo
+CT-00374;CL-0035;EQ-0111;2025-01-15;2025-04-30;2025-04-30;Mensal;;13000.00;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00375;CL-0035;EQ-0028;2024-06-08;2024-12-02;2024-12-02;Mensal;;9100.00;Obra Setor B da mina;Encerrado
+CT-00376;CL-0034;EQ-0060;2025-03-27;2025-04-02;2025-04-03;Diária;390.00;;Ampliação Terminal de cargas;Encerrado
+CT-00377;CL-0037;EQ-0109;2025-03-04;2025-08-08;2025-08-08;Mensal;;22500.00;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00378;CL-0040;EQ-0090;2025-12-17;2025-12-31;;Mensal;;14000.00;Canteiro Residencial Alto da Serra;Ativo
+CT-00379;CL-0005;EQ-0039;2025-03-07;2025-07-20;2025-07-25;Mensal;;5600.00;Obra Marginal do rio;Encerrado
+CT-00380;CL-0045;EQ-0013;2025-08-30;2025-09-02;2025-08-29;Diária;1660.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00381;CL-0028;EQ-0125;2024-01-17;2024-01-24;2024-01-25;Semanal;270.00;;Condomínio Vila Nova;Encerrado
+CT-00382;CL-0037;EQ-0134;2025-10-19;2025-10-23;2025-10-23;Diária;1900.00;;Canteiro Vila Nova;Encerrado
+CT-00383;CL-0029;EQ-0004;2024-02-28;2024-05-26;2024-05-26;Mensal;;18000.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00384;CL-0050;EQ-0063;2025-01-23;2025-01-24;2025-01-24;Diária;1820.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-00385;CL-0025;EQ-0118;2025-12-23;2025-12-31;;Semanal;380.00;;Pátio industrial Avenida Dom Pedro I;Ativo
+CT-00386;CL-0013;EQ-0051;2024-12-20;2025-06-15;2025-06-16;Mensal;;32100.00;Reforma Marginal do rio;Encerrado
+CT-00387;CL-0022;EQ-0087;2025-02-09;2025-06-28;2025-07-07;Mensal;;20600.00;Loteamento Parque Industrial Sul;Encerrado
+CT-00388;CL-0006;EQ-0079;2025-09-24;2025-09-26;2025-09-26;Diária;1960.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00389;CL-0066;EQ-0074;2025-05-20;2025-05-26;2025-05-28;Diária;300.00;;Obra Avenida Dom Pedro I;Encerrado
+CT-00390;CL-0069;EQ-0001;2025-03-14;2025-03-26;2025-03-30;Semanal;2000.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00391;CL-0006;EQ-0010;2025-03-23;2025-04-19;2025-04-19;Semanal;1720.00;;Ampliação Residencial Alto da Serra;Encerrado
+CT-00392;CL-0026;EQ-0032;2024-05-08;2024-06-23;2024-06-20;Mensal;;32400.00;Canteiro Vila Nova;Encerrado
+CT-00393;CL-0039;EQ-0019;2025-02-02;2025-07-26;2025-07-26;Mensal;;11900.00;Condomínio Setor B da mina;Encerrado
+CT-00394;CL-0033;EQ-0124;2024-09-19;2024-12-28;2024-12-25;Mensal;;12700.00;Reforma Trevo de acesso leste;Encerrado
+CT-00395;CL-0049;EQ-0079;2024-08-09;2024-12-01;;Mensal;;21100.00;Obra Residencial Alto da Serra;Cancelado
+CT-00396;CL-0021;EQ-0130;2024-10-15;2025-04-06;2025-04-05;Mensal;;33100.00;Loteamento Vila Nova;Encerrado
+CT-00397;CL-0017;EQ-0004;2024-10-22;2025-02-04;2025-02-04;Mensal;;20400.00;Loteamento Setor B da mina;Encerrado
+CT-00398;CL-0059;EQ-0097;2024-01-14;2024-03-29;2024-04-03;Mensal;;12500.00;Ampliação Parque Industrial Sul;Encerrado
+CT-00399;CL-0056;EQ-0100;2024-06-20;2024-10-10;2024-10-11;Mensal;;27800.00;Reforma Marginal do rio;Encerrado
+CT-00400;CL-0070;EQ-0123;2024-02-14;2024-03-21;2024-03-20;Mensal;;4100.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00401;CL-0023;EQ-0034;2025-04-21;2025-09-12;2025-09-07;Mensal;;37500.00;Canteiro Marginal do rio;Encerrado
+CT-00402;CL-0063;EQ-0132;2025-07-27;2025-10-05;2025-10-05;Mensal;;8400.00;Obra Vila Nova;Encerrado
+CT-00403;CL-0023;EQ-0112;2025-03-07;2025-03-16;2025-03-16;Semanal;350.00;;Canteiro Terminal de cargas;Encerrado
+CT-00404;CL-0028;EQ-0115;2024-09-29;2025-02-27;2025-03-08;Mensal;;75800.00;Reforma Terminal de cargas;Encerrado
+CT-00405;CL-0056;EQ-0037;2025-05-27;2025-06-13;2025-06-16;Semanal;2240.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00406;CL-0068;EQ-0005;2024-04-13;2024-04-19;2024-04-26;Diária;8370.00;;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-00407;CL-0037;EQ-0026;2025-09-29;2025-10-21;;Semanal;1160.00;;Loteamento Complexo Logístico Oeste;Cancelado
+CT-00408;CL-0065;EQ-0101;2025-05-11;2025-05-16;2025-05-16;Diária;460.00;;Obra Vila Nova;Encerrado
+CT-00409;CL-0065;EQ-0107;2024-10-31;2024-11-02;2024-11-11;Diária;870.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00410;CL-0030;EQ-0131;2025-11-12;2025-12-31;;Mensal;;6900.00;Ampliação Rodovia Anhanguera km 112;Ativo
+CT-00411;CL-0019;EQ-0076;2024-01-13;2024-02-19;2024-02-22;Mensal;;3900.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00412;CL-0046;EQ-0003;2025-11-28;2025-12-31;;Mensal;;13400.00;Obra Residencial Alto da Serra;Ativo
+CT-00413;CL-0043;EQ-0054;2025-06-07;2025-06-22;2025-07-02;Semanal;260.00;;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00414;CL-0060;EQ-0018;2025-04-02;2025-07-02;;Mensal;;6900.00;Canteiro Vila Nova;Cancelado
+CT-00415;CL-0039;EQ-0121;2025-03-12;2025-03-25;2025-03-28;Semanal;2330.00;;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00416;CL-0058;EQ-0113;2024-01-15;2024-06-26;2024-06-25;Mensal;;5500.00;Canteiro Jardim das Acácias;Encerrado
+CT-00417;CL-0040;EQ-0110;2024-05-03;2024-06-13;2024-06-13;Mensal;;3900.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00418;CL-0051;EQ-0087;2024-07-05;2024-07-29;2024-07-29;Semanal;810.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00419;CL-0055;EQ-0003;2025-07-04;2025-11-24;2025-11-24;Mensal;;16700.00;Reforma Parque Industrial Sul;Encerrado
+CT-00420;CL-0055;EQ-0074;2025-10-15;2025-10-26;2025-10-26;Semanal;280.00;;Loteamento Trevo de acesso leste;Encerrado
+CT-00421;CL-0055;EQ-0075;2024-12-09;2025-01-23;2025-01-23;Mensal;;5400.00;Loteamento Vila Nova;Encerrado
+CT-00422;CL-0062;EQ-0072;2025-09-13;2025-11-02;2025-11-02;Mensal;;18700.00;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00423;CL-0048;EQ-0012;2025-10-17;2025-12-26;;Mensal;;25300.00;Ampliação Complexo Logístico Oeste;Ativo
+CT-00424;CL-0062;EQ-0100;2025-03-23;2025-03-26;2025-03-30;Diária;1740.00;;Condomínio Terminal de cargas;Encerrado
+CT-00425;CL-0040;EQ-0130;2024-08-23;2024-09-05;2024-09-05;Semanal;2060.00;;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00426;CL-0058;EQ-0044;2025-01-20;2025-01-22;2025-01-20;Diária;560.00;;Loteamento Parque Industrial Sul;Encerrado
+CT-00427;CL-0061;EQ-0059;2025-04-08;2025-08-15;2025-08-22;Mensal;;21400.00;Loteamento Jardim das Acácias;Encerrado
+CT-00428;CL-0050;EQ-0024;2025-04-26;2025-05-13;2025-05-13;Semanal;560.00;;Pátio industrial Vila Nova;Encerrado
+CT-00429;CL-0004;EQ-0117;2025-04-18;2025-07-30;2025-07-30;Mensal;;7200.00;Condomínio Terminal de cargas;Encerrado
+CT-00430;CL-0069;EQ-0015;2025-04-03;2025-09-07;2025-09-07;Mensal;;21000.00;Canteiro Terminal de cargas;Encerrado
+CT-00431;CL-0060;EQ-0106;2024-10-17;2024-10-22;2024-10-30;Diária;470.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00432;CL-0011;EQ-0014;2024-05-03;2024-05-06;2024-05-06;Diária;6080.00;;Canteiro Terminal de cargas;Encerrado
+CT-00433;CL-0027;EQ-0098;2024-06-28;2024-08-16;2024-08-16;Mensal;;5300.00;Condomínio Setor B da mina;Encerrado
+CT-00434;CL-0011;EQ-0111;2024-09-11;2024-09-17;2024-09-17;Diária;1040.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00435;CL-0014;EQ-0086;2025-04-02;2025-05-24;2025-05-28;Mensal;;10700.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00436;CL-0043;EQ-0103;2025-01-09;2025-03-07;2025-03-09;Mensal;;12900.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00437;CL-0014;EQ-0019;2024-01-19;2024-02-20;2024-02-20;Mensal;;11600.00;Reforma Residencial Alto da Serra;Encerrado
+CT-00438;CL-0067;EQ-0049;2025-01-05;2025-02-28;2025-02-28;Mensal;;5500.00;Loteamento Setor B da mina;Encerrado
+CT-00439;CL-0037;EQ-0040;2025-04-24;2025-05-06;2025-05-02;Semanal;1620.00;;Obra Terminal de cargas;Encerrado
+CT-00440;CL-0001;EQ-0085;2025-09-07;2025-11-24;;Mensal;;36400.00;Pátio industrial Residencial Alto da Serra;Cancelado
+CT-00441;CL-0037;EQ-0058;2025-02-03;2025-02-05;2025-02-08;Diária;1190.00;;Canteiro Jardim das Acácias;Encerrado
+CT-00442;CL-0007;EQ-0130;2025-12-21;2025-12-31;;Mensal;;29300.00;Condomínio Avenida Dom Pedro I;Ativo
+CT-00443;CL-0041;EQ-0112;2025-10-05;2025-12-09;2025-12-14;Mensal;;5500.00;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00444;CL-0005;EQ-0094;2024-02-19;2024-04-04;2024-04-04;Mensal;;5000.00;Canteiro Jardim das Acácias;Encerrado
+CT-00445;CL-0053;EQ-0108;2024-03-09;2024-03-13;2024-03-16;Diária;380.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00446;CL-0048;EQ-0127;2024-05-28;2024-06-02;2024-06-02;Diária;450.00;;Canteiro Setor B da mina;Encerrado
+CT-00447;CL-0053;EQ-0010;2024-01-11;2024-01-25;2024-02-02;Semanal;1520.00;;Reforma Marginal do rio;Encerrado
+CT-00448;CL-0013;EQ-0107;2025-11-09;2025-12-01;2025-12-01;Semanal;470.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00449;CL-0059;EQ-0040;2024-04-12;2024-05-03;;Semanal;1890.00;;Canteiro Avenida Dom Pedro I;Cancelado
+CT-00450;CL-0059;EQ-0086;2025-10-24;2025-10-28;2025-10-28;Diária;560.00;;Reforma Setor B da mina;Encerrado
+CT-00451;CL-0050;EQ-0026;2025-10-24;2025-12-31;;Mensal;;29100.00;Loteamento Distrito Industrial Norte;Ativo
+CT-00452;CL-0056;EQ-0092;2024-04-15;2024-07-13;2024-07-09;Mensal;;27000.00;Obra Avenida Dom Pedro I;Encerrado
+CT-00453;CL-0004;EQ-0064;2024-03-31;2024-05-31;2024-06-01;Mensal;;5000.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00454;CL-0008;EQ-0058;2024-08-28;2024-08-31;2024-09-02;Diária;830.00;;Obra Jardim das Acácias;Encerrado
+CT-00455;CL-0018;EQ-0112;2024-01-21;2024-03-04;2024-03-04;Mensal;;5900.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-00456;CL-0013;EQ-0130;2024-08-06;2024-08-14;2024-08-14;Semanal;1890.00;;Obra Trevo de acesso leste;Encerrado
+CT-00457;CL-0017;EQ-0128;2025-04-01;2025-08-23;2025-08-21;Mensal;;12600.00;Reforma Vila Nova;Encerrado
+CT-00458;CL-0030;EQ-0114;2024-08-06;2024-08-12;2024-08-19;Diária;290.00;;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00459;CL-0057;EQ-0134;2025-11-03;2025-11-06;;Diária;1490.00;;Canteiro Vila Nova;Cancelado
+CT-00460;CL-0058;EQ-0077;2024-08-01;2024-08-07;2024-08-06;Diária;1780.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-00461;CL-0044;EQ-0095;2024-01-14;2024-03-17;2024-03-17;Mensal;;4600.00;Loteamento Jardim das Acácias;Encerrado
+CT-00462;CL-0054;EQ-0096;2025-05-27;2025-08-13;2025-08-17;Mensal;;31400.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-00463;CL-0011;EQ-0025;2025-01-16;2025-02-09;2025-02-09;Semanal;690.00;;Reforma Residencial Alto da Serra;Encerrado
+CT-00464;CL-0062;EQ-0134;2024-05-20;2024-08-15;2024-08-15;Mensal;;17600.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00465;CL-0002;EQ-0037;2025-12-06;2025-12-19;2025-12-19;Semanal;1520.00;;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00466;CL-0033;EQ-0007;2024-11-20;2025-01-02;2025-01-02;Mensal;;32100.00;Pátio industrial Vila Nova;Encerrado
+CT-00467;CL-0022;EQ-0067;2025-12-22;2025-12-31;;Mensal;;7200.00;Loteamento Rodovia dos Bandeirantes km 80;Ativo
+CT-00468;CL-0040;EQ-0052;2024-09-13;2024-09-20;2024-09-16;Semanal;1200.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00469;CL-0006;EQ-0127;2024-10-03;2025-02-13;2025-02-15;Mensal;;4800.00;Loteamento Marginal do rio;Encerrado
+CT-00470;CL-0056;EQ-0115;2024-09-16;2024-09-25;2024-09-25;Semanal;5840.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00471;CL-0031;EQ-0078;2025-04-24;2025-04-29;2025-04-27;Diária;2440.00;;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00472;CL-0011;EQ-0013;2024-02-01;2024-02-09;2024-02-13;Semanal;1240.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00473;CL-0022;EQ-0003;2024-06-08;2024-06-10;2024-06-06;Diária;1000.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00474;CL-0036;EQ-0050;2024-01-21;2024-06-18;2024-06-18;Mensal;;16400.00;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00475;CL-0034;EQ-0098;2024-03-02;2024-06-12;2024-06-08;Mensal;;5900.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00476;CL-0027;EQ-0031;2025-09-03;2025-12-31;;Mensal;;26400.00;Pátio industrial Vila Nova;Ativo
+CT-00477;CL-0051;EQ-0053;2024-01-12;2024-05-08;2024-05-08;Mensal;;32400.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00478;CL-0007;EQ-0098;2024-01-28;2024-02-25;2024-02-24;Semanal;300.00;;Reforma Jardim das Acácias;Encerrado
+CT-00479;CL-0051;EQ-0130;2024-03-23;2024-04-05;2024-04-04;Semanal;1300.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-00480;CL-0054;EQ-0093;2025-06-10;2025-08-15;2025-08-22;Mensal;;4100.00;Obra Terminal de cargas;Encerrado
+CT-00481;CL-0063;EQ-0057;2025-12-08;2025-12-31;;Mensal;;10400.00;Condomínio Rodovia Washington Luís km 230;Ativo
+CT-00482;CL-0033;EQ-0080;2024-06-07;2024-06-10;2024-06-10;Diária;6050.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00483;CL-0055;EQ-0015;2024-10-03;2025-03-17;;Mensal;;22600.00;Condomínio Vila Nova;Cancelado
+CT-00484;CL-0036;EQ-0046;2024-04-23;2024-09-30;2024-10-08;Mensal;;5700.00;Canteiro Jardim das Acácias;Encerrado
+CT-00485;CL-0001;EQ-0115;2025-03-16;2025-03-31;2025-03-31;Semanal;3710.00;;Loteamento Setor B da mina;Encerrado
+CT-00486;CL-0017;EQ-0091;2024-07-22;2025-01-09;2025-01-09;Mensal;;25300.00;Condomínio Terminal de cargas;Encerrado
+CT-00487;CL-0063;EQ-0132;2025-11-26;2025-11-30;2025-11-30;Diária;300.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00488;CL-0070;EQ-0044;2025-09-09;2025-11-11;2025-11-11;Mensal;;9500.00;Pátio industrial Setor B da mina;Encerrado
+CT-00489;CL-0051;EQ-0124;2025-07-25;2025-12-09;2025-12-19;Mensal;;13200.00;Reforma Marginal do rio;Encerrado
+CT-00490;CL-0023;EQ-0102;2024-10-25;2024-10-30;2024-10-27;Diária;1800.00;;Condomínio Distrito Industrial Norte;Encerrado
+CT-00491;CL-0040;EQ-0089;2024-07-08;2024-08-29;2024-08-25;Mensal;;12000.00;Obra Setor B da mina;Encerrado
+CT-00492;CL-0003;EQ-0022;2024-01-07;2024-05-23;2024-05-27;Mensal;;31300.00;Ampliação Jardim das Acácias;Encerrado
+CT-00493;CL-0019;EQ-0071;2024-01-10;2024-05-23;2024-05-23;Mensal;;6800.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00494;CL-0056;EQ-0058;2024-04-28;2024-08-13;;Mensal;;15200.00;Obra Complexo Logístico Oeste;Cancelado
+CT-00495;CL-0013;EQ-0097;2024-04-19;2024-05-15;2024-05-14;Semanal;1170.00;;Obra Vila Nova;Encerrado
+CT-00496;CL-0033;EQ-0059;2024-08-09;2024-08-12;;Diária;1230.00;;Pátio industrial Rodovia Anhanguera km 112;Cancelado
+CT-00497;CL-0045;EQ-0029;2025-09-13;2025-10-02;2025-10-02;Semanal;990.00;;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00498;CL-0037;EQ-0108;2024-09-02;2024-11-14;2024-11-10;Mensal;;6400.00;Ampliação Marginal do rio;Encerrado
+CT-00499;CL-0027;EQ-0054;2024-12-17;2025-01-10;;Semanal;170.00;;Reforma Residencial Alto da Serra;Cancelado
+CT-00500;CL-0026;EQ-0024;2025-10-21;2025-11-12;2025-11-19;Semanal;710.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00501;CL-0027;EQ-0129;2024-01-20;2024-02-02;2024-02-02;Semanal;2530.00;;Obra Parque Industrial Sul;Encerrado
+CT-00502;CL-0055;EQ-0090;2025-09-12;2025-09-14;2025-09-13;Diária;710.00;;Pátio industrial Vila Nova;Encerrado
+CT-00503;CL-0017;EQ-0117;2025-08-16;2025-08-27;2025-08-27;Semanal;430.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00504;CL-0035;EQ-0024;2024-11-24;2024-12-03;2024-11-30;Semanal;660.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00505;CL-0009;EQ-0061;2025-01-21;2025-04-04;2025-04-06;Mensal;;13900.00;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00506;CL-0061;EQ-0041;2025-12-02;2025-12-31;;Mensal;;84000.00;Reforma Distrito Industrial Norte;Ativo
+CT-00507;CL-0070;EQ-0031;2024-09-24;2024-09-26;;Diária;1950.00;;Obra Distrito Industrial Norte;Cancelado
+CT-00508;CL-0044;EQ-0049;2025-09-09;2025-11-01;;Mensal;;6200.00;Reforma Jardim das Acácias;Cancelado
+CT-00509;CL-0049;EQ-0095;2025-01-10;2025-01-13;2025-01-13;Diária;270.00;;Obra Rodovia dos Bandeirantes km 80;Encerrado
+CT-00510;CL-0016;EQ-0029;2024-05-24;2024-09-18;2024-09-20;Mensal;;15700.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00511;CL-0050;EQ-0130;2024-05-31;2024-06-06;2024-06-16;Diária;2190.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00512;CL-0029;EQ-0001;2024-01-04;2024-01-18;2024-01-16;Semanal;1390.00;;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00513;CL-0057;EQ-0016;2025-02-14;2025-02-17;2025-02-21;Diária;1980.00;;Ampliação Residencial Alto da Serra;Encerrado
+CT-00514;CL-0067;EQ-0083;2025-06-14;2025-07-03;2025-06-28;Semanal;280.00;;Obra Vila Nova;Encerrado
+CT-00515;CL-0068;EQ-0065;2024-10-13;2025-01-25;2025-02-04;Mensal;;34800.00;Canteiro Marginal do rio;Encerrado
+CT-00516;CL-0017;EQ-0107;2025-12-16;2025-12-19;2025-12-19;Diária;630.00;;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00517;CL-0035;EQ-0020;2024-03-15;2024-03-21;2024-03-21;Diária;700.00;;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00518;CL-0057;EQ-0091;2025-04-17;2025-04-19;2025-04-16;Diária;2060.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00519;CL-0060;EQ-0013;2025-09-07;2025-12-31;;Mensal;;23900.00;Loteamento Setor B da mina;Ativo
+CT-00520;CL-0016;EQ-0021;2025-07-26;2025-11-22;2025-11-23;Mensal;;7100.00;Ampliação Parque Industrial Sul;Encerrado
+CT-00521;CL-0020;EQ-0088;2025-11-27;2025-12-17;2025-12-17;Semanal;1660.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00522;CL-0061;EQ-0064;2024-06-20;2024-10-03;2024-10-03;Mensal;;6400.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00523;CL-0061;EQ-0064;2025-05-19;2025-09-03;2025-09-02;Mensal;;6700.00;Condomínio Vila Nova;Encerrado
+CT-00524;CL-0017;EQ-0067;2025-03-16;2025-04-26;;Mensal;;8100.00;Reforma Complexo Logístico Oeste;Cancelado
+CT-00525;CL-0005;EQ-0045;2025-04-25;2025-05-23;2025-05-29;Semanal;750.00;;Canteiro Vila Nova;Encerrado
+CT-00526;CL-0045;EQ-0107;2024-05-12;2024-10-19;2024-10-26;Mensal;;12500.00;Ampliação Jardim das Acácias;Encerrado
+CT-00527;CL-0044;EQ-0016;2024-06-11;2024-06-15;2024-06-20;Diária;2150.00;;Loteamento Residencial Alto da Serra;Encerrado
+CT-00528;CL-0030;EQ-0019;2025-07-29;2025-08-13;2025-08-12;Semanal;910.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00529;CL-0064;EQ-0073;2025-10-20;2025-11-09;;Semanal;320.00;;Ampliação Rodovia Anhanguera km 112;Cancelado
+CT-00530;CL-0040;EQ-0069;2025-12-05;2025-12-31;;Mensal;;3200.00;Ampliação Jardim das Acácias;Ativo
+CT-00531;CL-0030;EQ-0065;2025-05-15;2025-07-20;2025-07-15;Mensal;;28700.00;Obra Distrito Industrial Norte;Encerrado
+CT-00532;CL-0057;EQ-0016;2024-12-25;2024-12-27;2024-12-25;Diária;1130.00;;Pátio industrial Setor B da mina;Encerrado
+CT-00533;CL-0024;EQ-0049;2024-04-28;2024-04-29;2024-04-24;Diária;400.00;;Canteiro Terminal de cargas;Encerrado
+CT-00534;CL-0038;EQ-0007;2024-11-02;2024-11-07;2024-11-07;Diária;1730.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00535;CL-0011;EQ-0127;2025-10-23;2025-12-31;;Mensal;;5200.00;Condomínio Rodovia Washington Luís km 230;Ativo
+CT-00536;CL-0032;EQ-0061;2024-12-05;2025-01-15;;Mensal;;13100.00;Canteiro Setor B da mina;Cancelado
+CT-00537;CL-0059;EQ-0076;2024-04-30;2024-05-23;2024-06-02;Semanal;390.00;;Canteiro Trevo de acesso leste;Encerrado
+CT-00538;CL-0004;EQ-0108;2025-01-27;2025-04-10;2025-04-18;Mensal;;5400.00;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-00539;CL-0031;EQ-0076;2025-05-31;2025-08-30;2025-08-30;Mensal;;4900.00;Loteamento Vila Nova;Encerrado
+CT-00540;CL-0047;EQ-0112;2025-02-26;2025-02-28;2025-02-23;Diária;420.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00541;CL-0029;EQ-0123;2024-07-28;2024-08-23;2024-08-30;Semanal;430.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00542;CL-0055;EQ-0001;2025-09-01;2025-11-10;2025-11-11;Mensal;;30500.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00543;CL-0019;EQ-0103;2025-03-13;2025-04-05;2025-04-05;Semanal;920.00;;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-00544;CL-0032;EQ-0023;2024-06-12;2024-10-17;2024-10-17;Mensal;;12900.00;Reforma Residencial Alto da Serra;Encerrado
+CT-00545;CL-0047;EQ-0019;2024-06-26;2024-10-20;2024-10-15;Mensal;;13800.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-00546;CL-0016;EQ-0090;2025-03-03;2025-03-06;2025-03-06;Diária;800.00;;Pátio industrial Setor B da mina;Encerrado
+CT-00547;CL-0012;EQ-0045;2025-06-07;2025-07-24;2025-07-24;Mensal;;12300.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00548;CL-0008;EQ-0123;2025-03-08;2025-04-24;2025-05-01;Mensal;;6000.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00549;CL-0048;EQ-0134;2025-02-02;2025-03-24;2025-03-24;Mensal;;24000.00;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-00550;CL-0028;EQ-0064;2025-05-06;2025-05-07;2025-05-14;Diária;390.00;;Loteamento Marginal do rio;Encerrado
+CT-00551;CL-0067;EQ-0022;2024-08-09;2024-10-14;2024-10-14;Mensal;;30900.00;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00552;CL-0041;EQ-0100;2025-06-14;2025-07-07;2025-07-09;Semanal;2400.00;;Loteamento Setor B da mina;Encerrado
+CT-00553;CL-0001;EQ-0012;2025-08-26;2025-08-29;2025-08-31;Diária;1410.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00554;CL-0064;EQ-0066;2025-05-24;2025-10-09;2025-10-09;Mensal;;4200.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00555;CL-0030;EQ-0010;2024-07-29;2024-11-09;2024-11-04;Mensal;;33900.00;Obra Marginal do rio;Encerrado
+CT-00556;CL-0065;EQ-0123;2024-04-07;2024-05-28;2024-05-24;Mensal;;4300.00;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00557;CL-0055;EQ-0080;2025-06-25;2025-09-11;2025-09-11;Mensal;;111400.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00558;CL-0002;EQ-0030;2024-01-06;2024-02-22;2024-03-02;Mensal;;23000.00;Obra Marginal do rio;Encerrado
+CT-00559;CL-0062;EQ-0020;2025-10-04;2025-12-08;2025-12-08;Mensal;;11800.00;Condomínio Distrito Industrial Norte;Encerrado
+CT-00560;CL-0050;EQ-0084;2025-11-18;2025-12-31;;Mensal;;11500.00;Obra Rodovia Washington Luís km 230;Ativo
+CT-00561;CL-0020;EQ-0110;2025-01-28;2025-07-15;2025-07-15;Mensal;;3100.00;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-00562;CL-0013;EQ-0085;2024-11-11;2024-11-19;2024-11-19;Semanal;1660.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00563;CL-0055;EQ-0097;2025-08-27;2025-09-01;2025-08-29;Diária;690.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00564;CL-0055;EQ-0021;2025-12-10;2025-12-31;;Semanal;620.00;;Canteiro Avenida Dom Pedro I;Ativo
+CT-00565;CL-0024;EQ-0006;2025-05-03;2025-08-24;2025-08-24;Mensal;;5400.00;Condomínio Residencial Alto da Serra;Encerrado
+CT-00566;CL-0008;EQ-0069;2025-04-16;2025-05-21;2025-05-27;Mensal;;5400.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00567;CL-0030;EQ-0077;2025-10-13;2025-12-31;;Mensal;;36500.00;Condomínio Rodovia dos Bandeirantes km 80;Ativo
+CT-00568;CL-0002;EQ-0089;2024-05-11;2024-05-26;2024-05-25;Semanal;960.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00569;CL-0003;EQ-0105;2024-01-26;2024-02-12;2024-02-14;Semanal;820.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00570;CL-0044;EQ-0020;2025-07-26;2025-08-02;2025-08-02;Semanal;1020.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00571;CL-0020;EQ-0039;2024-09-16;2025-01-22;;Mensal;;6500.00;Ampliação Jardim das Acácias;Cancelado
+CT-00572;CL-0046;EQ-0050;2025-11-21;2025-12-16;2025-12-16;Semanal;1020.00;;Loteamento Vila Nova;Encerrado
+CT-00573;CL-0008;EQ-0069;2025-08-21;2025-11-24;2025-11-28;Mensal;;4400.00;Obra Residencial Alto da Serra;Encerrado
+CT-00574;CL-0006;EQ-0023;2024-01-10;2024-05-24;2024-06-03;Mensal;;13400.00;Canteiro Jardim das Acácias;Encerrado
+CT-00575;CL-0014;EQ-0095;2025-02-02;2025-02-06;2025-02-04;Diária;280.00;;Loteamento Marginal do rio;Encerrado
+CT-00576;CL-0004;EQ-0072;2024-02-05;2024-02-07;2024-02-17;Diária;1130.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-00577;CL-0024;EQ-0017;2025-02-26;2025-08-16;;Mensal;;14100.00;Ampliação Trevo de acesso leste;Cancelado
+CT-00578;CL-0060;EQ-0037;2024-03-27;2024-07-10;2024-07-10;Mensal;;30300.00;Pátio industrial Setor B da mina;Encerrado
+CT-00579;CL-0042;EQ-0018;2025-07-18;2025-09-26;2025-09-26;Mensal;;10900.00;Canteiro Marginal do rio;Encerrado
+CT-00580;CL-0059;EQ-0090;2024-01-19;2024-02-19;2024-02-19;Mensal;;11300.00;Obra Residencial Alto da Serra;Encerrado
+CT-00581;CL-0034;EQ-0071;2025-05-04;2025-05-07;2025-05-07;Diária;610.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00582;CL-0018;EQ-0114;2024-01-07;2024-04-27;2024-04-27;Mensal;;5500.00;Condomínio Trevo de acesso leste;Encerrado
+CT-00583;CL-0030;EQ-0129;2025-02-13;2025-07-31;2025-08-07;Mensal;;48100.00;Reforma Residencial Alto da Serra;Encerrado
+CT-00584;CL-0006;EQ-0032;2024-01-13;2024-01-19;2024-01-19;Diária;1560.00;;Canteiro Vila Nova;Encerrado
+CT-00585;CL-0059;EQ-0006;2024-08-15;2024-12-15;2024-12-25;Mensal;;6000.00;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00586;CL-0066;EQ-0099;2024-01-06;2024-02-13;2024-02-13;Mensal;;85900.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00587;CL-0042;EQ-0011;2025-05-12;2025-08-10;2025-08-10;Mensal;;8000.00;Canteiro Terminal de cargas;Encerrado
+CT-00588;CL-0034;EQ-0019;2025-10-24;2025-11-21;2025-11-26;Semanal;790.00;;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00589;CL-0003;EQ-0011;2024-10-15;2025-01-07;2025-01-07;Mensal;;8200.00;Canteiro Marginal do rio;Encerrado
+CT-00590;CL-0048;EQ-0071;2024-12-04;2024-12-10;2024-12-10;Diária;530.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00591;CL-0038;EQ-0125;2025-08-21;2025-08-27;2025-08-23;Diária;330.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00592;CL-0052;EQ-0045;2024-10-21;2025-03-30;2025-03-30;Mensal;;14000.00;Ampliação Terminal de cargas;Encerrado
+CT-00593;CL-0063;EQ-0073;2025-11-28;2025-12-24;2025-12-24;Semanal;210.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00594;CL-0010;EQ-0004;2025-06-16;2025-11-14;2025-11-14;Mensal;;24100.00;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00595;CL-0031;EQ-0128;2025-12-22;2025-12-31;;Semanal;710.00;;Reforma Parque Industrial Sul;Ativo
+CT-00596;CL-0066;EQ-0113;2025-06-26;2025-07-08;2025-07-18;Semanal;240.00;;Ampliação Terminal de cargas;Encerrado
+CT-00597;CL-0041;EQ-0119;2025-01-23;2025-05-11;2025-05-21;Mensal;;7700.00;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00598;CL-0059;EQ-0122;2025-04-30;2025-07-23;2025-07-23;Mensal;;5400.00;Obra Terminal de cargas;Encerrado
+CT-00599;CL-0052;EQ-0075;2024-01-20;2024-01-24;2024-01-21;Diária;370.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00600;CL-0008;EQ-0105;2024-12-02;2024-12-08;2024-12-14;Diária;690.00;;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00601;CL-0011;EQ-0106;2024-05-20;2024-06-05;;Semanal;380.00;;Loteamento Avenida Dom Pedro I;Cancelado
+CT-00602;CL-0064;EQ-0032;2025-09-14;2025-09-27;;Semanal;1660.00;;Obra Vila Nova;Cancelado
+CT-00603;CL-0064;EQ-0045;2025-04-12;2025-04-14;2025-04-15;Diária;720.00;;Reforma Marginal do rio;Encerrado
+CT-00604;CL-0010;EQ-0033;2025-09-30;2025-10-02;2025-10-10;Diária;570.00;;Obra Residencial Alto da Serra;Encerrado
+CT-00605;CL-0030;EQ-0029;2024-01-20;2024-05-07;2024-05-07;Mensal;;11800.00;Obra Jardim das Acácias;Encerrado
+CT-00606;CL-0010;EQ-0126;2024-06-30;2024-10-29;2024-10-29;Mensal;;21000.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00607;CL-0032;EQ-0032;2024-07-09;2024-08-04;2024-08-01;Semanal;1880.00;;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00608;CL-0042;EQ-0076;2024-09-01;2025-02-14;2025-02-10;Mensal;;4700.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-00609;CL-0013;EQ-0011;2024-09-21;2024-09-24;2024-09-28;Diária;900.00;;Reforma Residencial Alto da Serra;Encerrado
+CT-00610;CL-0015;EQ-0113;2024-11-26;2025-01-03;2025-01-03;Mensal;;4700.00;Loteamento Parque Industrial Sul;Encerrado
+CT-00611;CL-0060;EQ-0078;2024-04-12;2024-09-21;2024-09-21;Mensal;;27900.00;Obra Terminal de cargas;Encerrado
+CT-00612;CL-0041;EQ-0053;2025-07-08;2025-07-27;2025-07-22;Semanal;2010.00;;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00613;CL-0038;EQ-0127;2024-07-10;2024-07-13;2024-07-08;Diária;280.00;;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-00614;CL-0021;EQ-0003;2025-01-04;2025-01-09;2025-01-09;Diária;790.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00615;CL-0034;EQ-0047;2025-03-27;2025-07-20;2025-07-20;Mensal;;26600.00;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00616;CL-0045;EQ-0045;2024-01-19;2024-02-07;2024-02-02;Semanal;870.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00617;CL-0040;EQ-0042;2025-07-27;2025-11-25;2025-11-28;Mensal;;16800.00;Reforma Complexo Logístico Oeste;Encerrado
+CT-00618;CL-0055;EQ-0068;2025-07-02;2025-11-20;2025-11-25;Mensal;;6500.00;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00619;CL-0040;EQ-0048;2025-05-30;2025-11-12;2025-11-12;Mensal;;5600.00;Canteiro Marginal do rio;Encerrado
+CT-00620;CL-0002;EQ-0003;2025-02-08;2025-03-28;2025-03-27;Mensal;;15700.00;Obra Vila Nova;Encerrado
+CT-00621;CL-0062;EQ-0055;2024-07-25;2024-11-18;2024-11-27;Mensal;;14300.00;Reforma Parque Industrial Sul;Encerrado
+CT-00622;CL-0003;EQ-0008;2025-09-04;2025-09-09;;Diária;1220.00;;Condomínio Complexo Logístico Oeste;Cancelado
+CT-00623;CL-0057;EQ-0122;2024-09-13;2024-09-18;2024-09-16;Diária;270.00;;Reforma Jardim das Acácias;Encerrado
+CT-00624;CL-0044;EQ-0067;2025-09-30;2025-10-01;2025-10-01;Diária;360.00;;Obra Avenida Dom Pedro I;Encerrado
+CT-00625;CL-0034;EQ-0003;2025-04-12;2025-04-14;2025-04-18;Diária;760.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-00626;CL-0061;EQ-0118;2025-10-27;2025-12-17;2025-12-17;Mensal;;4400.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00627;CL-0064;EQ-0095;2024-03-22;2024-03-27;2024-03-22;Diária;240.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00628;CL-0061;EQ-0046;2025-09-15;2025-11-22;2025-12-01;Mensal;;7100.00;Loteamento Parque Industrial Sul;Encerrado
+CT-00629;CL-0058;EQ-0129;2024-11-17;2024-12-06;2024-12-14;Semanal;2890.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00630;CL-0052;EQ-0036;2025-12-27;2025-12-31;;Mensal;;4800.00;Reforma Complexo Logístico Oeste;Ativo
+CT-00631;CL-0030;EQ-0031;2025-05-11;2025-08-18;2025-08-14;Mensal;;20500.00;Pátio industrial Marginal do rio;Encerrado
+CT-00632;CL-0013;EQ-0034;2024-09-29;2024-10-10;2024-10-10;Semanal;1450.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00633;CL-0068;EQ-0050;2024-10-01;2024-10-03;2024-10-01;Diária;1040.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00634;CL-0008;EQ-0121;2025-12-12;2025-12-20;2025-12-27;Semanal;2590.00;;Reforma Setor B da mina;Encerrado
+CT-00635;CL-0059;EQ-0039;2025-03-01;2025-03-02;2025-03-04;Diária;350.00;;Obra Trevo de acesso leste;Encerrado
+CT-00636;CL-0004;EQ-0027;2024-04-22;2024-06-12;2024-06-15;Mensal;;33500.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00637;CL-0056;EQ-0025;2025-02-24;2025-02-27;2025-03-09;Diária;670.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00638;CL-0065;EQ-0050;2024-07-08;2024-08-07;2024-08-07;Mensal;;12600.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00639;CL-0031;EQ-0020;2025-12-11;2025-12-31;;Mensal;;9900.00;Condomínio Parque Industrial Sul;Ativo
+CT-00640;CL-0024;EQ-0046;2025-03-18;2025-04-02;2025-04-02;Semanal;380.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00641;CL-0058;EQ-0072;2024-10-04;2025-03-08;2025-03-08;Mensal;;25800.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00642;CL-0027;EQ-0128;2024-05-02;2024-09-06;2024-09-09;Mensal;;14200.00;Condomínio Jardim das Acácias;Encerrado
+CT-00643;CL-0008;EQ-0133;2024-05-06;2024-05-24;2024-05-24;Semanal;1830.00;;Obra Residencial Alto da Serra;Encerrado
+CT-00644;CL-0061;EQ-0045;2025-12-13;2025-12-31;;Mensal;;10700.00;Ampliação Rodovia Anhanguera km 112;Ativo
+CT-00645;CL-0024;EQ-0076;2025-05-08;2025-05-25;2025-05-25;Semanal;220.00;;Loteamento Vila Nova;Encerrado
+CT-00646;CL-0059;EQ-0073;2024-07-23;2024-12-22;2025-01-01;Mensal;;4700.00;Reforma Complexo Logístico Oeste;Encerrado
+CT-00647;CL-0020;EQ-0054;2024-07-13;2024-08-10;;Semanal;190.00;;Pátio industrial Terminal de cargas;Cancelado
+CT-00648;CL-0014;EQ-0111;2025-12-23;2025-12-31;;Mensal;;10100.00;Reforma Marginal do rio;Ativo
+CT-00649;CL-0034;EQ-0074;2025-01-04;2025-01-07;2025-01-07;Diária;260.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00650;CL-0044;EQ-0131;2024-11-04;2024-12-07;2024-12-13;Mensal;;10400.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00651;CL-0059;EQ-0061;2024-09-11;2024-10-04;2024-09-30;Semanal;1040.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-00652;CL-0032;EQ-0125;2025-12-10;2025-12-31;;Mensal;;5500.00;Loteamento Trevo de acesso leste;Ativo
+CT-00653;CL-0039;EQ-0040;2024-12-02;2024-12-25;2024-12-25;Semanal;1910.00;;Condomínio Terminal de cargas;Encerrado
+CT-00654;CL-0015;EQ-0101;2024-01-07;2024-03-04;;Mensal;;8000.00;Canteiro Rodovia Anhanguera km 112;Cancelado
+CT-00655;CL-0017;EQ-0063;2025-06-17;2025-06-22;;Diária;1860.00;;Reforma Setor B da mina;Cancelado
+CT-00656;CL-0062;EQ-0086;2025-11-03;2025-12-31;;Mensal;;12000.00;Condomínio Terminal de cargas;Ativo
+CT-00657;CL-0063;EQ-0060;2025-02-02;2025-03-21;2025-03-21;Mensal;;10700.00;Loteamento Parque Industrial Sul;Encerrado
+CT-00658;CL-0069;EQ-0107;2025-04-27;2025-05-08;2025-05-13;Semanal;610.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00659;CL-0027;EQ-0034;2024-01-19;2024-02-24;2024-02-24;Mensal;;24300.00;Obra Avenida Dom Pedro I;Encerrado
+CT-00660;CL-0043;EQ-0080;2025-10-24;2025-10-26;2025-10-30;Diária;7020.00;;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00661;CL-0028;EQ-0082;2024-01-21;2024-03-08;2024-03-10;Mensal;;14300.00;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00662;CL-0007;EQ-0046;2025-12-13;2025-12-31;;Mensal;;5700.00;Obra Rodovia dos Bandeirantes km 80;Ativo
+CT-00663;CL-0017;EQ-0131;2024-10-19;2024-10-20;2024-10-30;Diária;610.00;;Obra Parque Industrial Sul;Encerrado
+CT-00664;CL-0035;EQ-0047;2025-12-03;2025-12-31;;Mensal;;30700.00;Loteamento Marginal do rio;Ativo
+CT-00665;CL-0065;EQ-0018;2025-09-29;2025-12-31;;Mensal;;8600.00;Ampliação Residencial Alto da Serra;Cancelado
+CT-00666;CL-0016;EQ-0054;2024-08-27;2024-11-11;2024-11-11;Mensal;;4700.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00667;CL-0031;EQ-0054;2024-11-14;2024-12-06;2024-12-05;Semanal;220.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00668;CL-0069;EQ-0050;2025-08-09;2025-11-06;2025-11-15;Mensal;;12700.00;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00669;CL-0064;EQ-0010;2025-03-10;2025-03-16;2025-03-16;Diária;2530.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00670;CL-0004;EQ-0012;2025-08-09;2025-08-14;;Diária;2050.00;;Reforma Rodovia Anhanguera km 112;Cancelado
+CT-00671;CL-0003;EQ-0115;2025-04-13;2025-07-09;2025-07-09;Mensal;;73900.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00672;CL-0041;EQ-0112;2024-12-24;2025-02-07;2025-02-13;Mensal;;4500.00;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00673;CL-0007;EQ-0054;2025-01-22;2025-03-15;2025-03-25;Mensal;;3000.00;Canteiro Setor B da mina;Encerrado
+CT-00674;CL-0029;EQ-0111;2024-01-21;2024-02-11;2024-02-09;Semanal;800.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00675;CL-0014;EQ-0104;2024-07-02;2024-08-25;2024-08-27;Mensal;;12300.00;Condomínio Marginal do rio;Encerrado
+CT-00676;CL-0011;EQ-0070;2024-07-21;2024-08-05;2024-08-12;Semanal;1980.00;;Loteamento Terminal de cargas;Encerrado
+CT-00677;CL-0009;EQ-0053;2025-06-24;2025-06-26;2025-07-04;Diária;1750.00;;Loteamento Trevo de acesso leste;Encerrado
+CT-00678;CL-0046;EQ-0101;2025-03-27;2025-04-28;2025-04-29;Mensal;;11900.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00679;CL-0002;EQ-0030;2025-02-01;2025-04-07;2025-04-07;Mensal;;21500.00;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-00680;CL-0004;EQ-0105;2025-01-02;2025-02-15;2025-02-15;Mensal;;15600.00;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00681;CL-0022;EQ-0013;2025-01-05;2025-04-28;2025-05-05;Mensal;;24500.00;Pátio industrial Terminal de cargas;Encerrado
+CT-00682;CL-0031;EQ-0034;2025-12-27;2025-12-31;;Mensal;;22200.00;Condomínio Residencial Alto da Serra;Cancelado
+CT-00683;CL-0056;EQ-0081;2025-09-18;2025-09-21;2025-09-21;Diária;380.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00684;CL-0017;EQ-0092;2024-12-12;2024-12-20;2024-12-20;Semanal;1510.00;;Canteiro Setor B da mina;Encerrado
+CT-00685;CL-0050;EQ-0127;2024-09-11;2024-09-15;2024-09-11;Diária;440.00;;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00686;CL-0003;EQ-0073;2025-08-02;2025-08-06;2025-08-06;Diária;340.00;;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00687;CL-0020;EQ-0129;2024-04-04;2024-08-09;2024-08-06;Mensal;;47200.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00688;CL-0004;EQ-0105;2024-11-16;2024-11-19;2024-11-19;Diária;640.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00689;CL-0045;EQ-0027;2024-12-21;2025-06-19;2025-06-23;Mensal;;34500.00;Loteamento Parque Industrial Sul;Encerrado
+CT-00690;CL-0057;EQ-0105;2025-06-12;2025-08-13;2025-08-09;Mensal;;11000.00;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00691;CL-0048;EQ-0091;2025-12-27;2025-12-31;;Mensal;;25200.00;Ampliação Rodovia Anhanguera km 112;Ativo
+CT-00692;CL-0042;EQ-0011;2025-11-26;2025-12-20;2025-12-22;Semanal;690.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00693;CL-0013;EQ-0127;2024-01-21;2024-05-25;;Mensal;;4200.00;Ampliação Jardim das Acácias;Cancelado
+CT-00694;CL-0046;EQ-0059;2025-08-26;2025-12-31;;Mensal;;31300.00;Reforma Trevo de acesso leste;Ativo
+CT-00695;CL-0021;EQ-0033;2025-10-18;2025-11-07;2025-11-12;Semanal;370.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-00696;CL-0017;EQ-0074;2024-05-07;2024-10-03;2024-10-11;Mensal;;5600.00;Loteamento Distrito Industrial Norte;Encerrado
+CT-00697;CL-0031;EQ-0082;2025-02-03;2025-02-06;2025-02-06;Diária;570.00;;Obra Jardim das Acácias;Encerrado
+CT-00698;CL-0046;EQ-0099;2024-04-25;2024-07-11;2024-07-08;Mensal;;85400.00;Condomínio Residencial Alto da Serra;Encerrado
+CT-00699;CL-0038;EQ-0020;2024-03-02;2024-03-04;2024-03-04;Diária;700.00;;Obra Residencial Alto da Serra;Encerrado
+CT-00700;CL-0010;EQ-0003;2024-03-04;2024-06-05;;Mensal;;15600.00;Ampliação Vila Nova;Cancelado
+CT-00701;CL-0002;EQ-0106;2024-11-20;2024-12-16;2024-12-16;Semanal;380.00;;Condomínio Trevo de acesso leste;Encerrado
+CT-00702;CL-0027;EQ-0125;2024-06-13;2024-06-25;2024-06-28;Semanal;320.00;;Reforma Residencial Alto da Serra;Encerrado
+CT-00703;CL-0032;EQ-0025;2024-01-14;2024-06-17;2024-06-17;Mensal;;12800.00;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00704;CL-0022;EQ-0047;2025-09-14;2025-11-20;2025-11-18;Mensal;;31300.00;Loteamento Setor B da mina;Encerrado
+CT-00705;CL-0065;EQ-0021;2024-04-01;2024-09-18;2024-09-20;Mensal;;7200.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00706;CL-0032;EQ-0120;2024-09-24;2024-10-16;2024-10-16;Semanal;2210.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00707;CL-0001;EQ-0039;2025-09-08;2025-12-03;2025-11-30;Mensal;;4900.00;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00708;CL-0034;EQ-0070;2025-04-05;2025-04-07;2025-04-04;Diária;1590.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00709;CL-0019;EQ-0093;2024-06-10;2024-06-21;2024-06-19;Semanal;280.00;;Reforma Marginal do rio;Encerrado
+CT-00710;CL-0037;EQ-0003;2025-04-02;2025-04-05;2025-04-06;Diária;910.00;;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00711;CL-0010;EQ-0019;2024-02-29;2024-06-11;2024-06-10;Mensal;;11300.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00712;CL-0069;EQ-0030;2024-03-17;2024-08-31;2024-08-31;Mensal;;28400.00;Condomínio Vila Nova;Encerrado
+CT-00713;CL-0017;EQ-0044;2024-09-09;2024-10-20;;Mensal;;8400.00;Reforma Rodovia Washington Luís km 230;Cancelado
+CT-00714;CL-0061;EQ-0066;2024-11-07;2024-12-24;2024-12-24;Mensal;;6100.00;Obra Setor B da mina;Encerrado
+CT-00715;CL-0014;EQ-0033;2024-12-01;2025-03-06;2025-03-06;Mensal;;8700.00;Loteamento Terminal de cargas;Encerrado
+CT-00716;CL-0021;EQ-0068;2025-06-09;2025-06-15;2025-06-15;Diária;350.00;;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-00717;CL-0014;EQ-0072;2025-11-27;2025-12-02;2025-12-02;Diária;1380.00;;Loteamento Setor B da mina;Encerrado
+CT-00718;CL-0065;EQ-0074;2025-06-03;2025-06-04;2025-06-09;Diária;240.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00719;CL-0032;EQ-0027;2024-09-05;2024-10-02;2024-10-10;Semanal;1840.00;;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00720;CL-0018;EQ-0029;2024-10-31;2025-02-14;2025-02-14;Mensal;;11500.00;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00721;CL-0022;EQ-0030;2025-05-02;2025-10-24;2025-10-28;Mensal;;24600.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00722;CL-0043;EQ-0053;2024-05-24;2024-05-29;2024-05-29;Diária;1760.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00723;CL-0045;EQ-0035;2025-05-02;2025-09-30;2025-09-25;Mensal;;4900.00;Condomínio Terminal de cargas;Encerrado
+CT-00724;CL-0046;EQ-0088;2025-05-29;2025-06-21;2025-06-16;Semanal;1860.00;;Reforma Vila Nova;Encerrado
+CT-00725;CL-0052;EQ-0075;2024-02-12;2024-02-23;2024-02-29;Semanal;260.00;;Ampliação Complexo Logístico Oeste;Encerrado
+CT-00726;CL-0036;EQ-0091;2025-03-17;2025-03-29;2025-03-29;Semanal;1900.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00727;CL-0008;EQ-0014;2024-02-01;2024-03-11;2024-03-11;Mensal;;91300.00;Reforma Trevo de acesso leste;Encerrado
+CT-00728;CL-0026;EQ-0002;2024-06-24;2024-06-29;2024-06-29;Diária;1390.00;;Ampliação Marginal do rio;Encerrado
+CT-00729;CL-0067;EQ-0108;2024-06-19;2024-07-31;2024-08-06;Mensal;;6200.00;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00730;CL-0068;EQ-0068;2024-01-26;2024-07-19;2024-07-28;Mensal;;5900.00;Pátio industrial Vila Nova;Encerrado
+CT-00731;CL-0064;EQ-0100;2024-01-05;2024-05-30;2024-05-29;Mensal;;39500.00;Obra Trevo de acesso leste;Encerrado
+CT-00732;CL-0010;EQ-0120;2024-10-28;2024-12-31;2024-12-31;Mensal;;33800.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00733;CL-0046;EQ-0093;2024-05-09;2024-05-12;2024-05-11;Diária;230.00;;Condomínio Vila Nova;Encerrado
+CT-00734;CL-0043;EQ-0052;2024-10-22;2024-11-26;2024-11-26;Mensal;;19300.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00735;CL-0010;EQ-0093;2025-09-07;2025-11-03;2025-11-03;Mensal;;4800.00;Canteiro Jardim das Acácias;Encerrado
+CT-00736;CL-0056;EQ-0012;2024-09-10;2024-09-23;2024-09-23;Semanal;1710.00;;Condomínio Trevo de acesso leste;Encerrado
+CT-00737;CL-0049;EQ-0106;2024-06-22;2024-09-12;2024-09-18;Mensal;;5900.00;Obra Setor B da mina;Encerrado
+CT-00738;CL-0002;EQ-0097;2025-11-16;2025-12-31;;Mensal;;13900.00;Obra Complexo Logístico Oeste;Ativo
+CT-00739;CL-0019;EQ-0101;2025-11-25;2025-12-02;2025-12-02;Semanal;840.00;;Reforma Parque Industrial Sul;Encerrado
+CT-00740;CL-0031;EQ-0066;2024-01-15;2024-06-21;2024-06-25;Mensal;;4900.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00741;CL-0043;EQ-0119;2025-06-23;2025-10-09;2025-10-16;Mensal;;7500.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00742;CL-0057;EQ-0102;2025-10-26;2025-12-31;;Mensal;;33800.00;Reforma Terminal de cargas;Ativo
+CT-00743;CL-0002;EQ-0009;2024-12-27;2025-01-12;2025-01-12;Semanal;240.00;;Pátio industrial Vila Nova;Encerrado
+CT-00744;CL-0046;EQ-0119;2025-12-01;2025-12-31;;Mensal;;7200.00;Loteamento Marginal do rio;Ativo
+CT-00745;CL-0053;EQ-0128;2024-10-19;2025-01-26;2025-01-26;Mensal;;12800.00;Loteamento Distrito Industrial Norte;Encerrado
+CT-00746;CL-0047;EQ-0093;2025-05-20;2025-06-03;2025-05-30;Semanal;250.00;;Obra Residencial Alto da Serra;Encerrado
+CT-00747;CL-0019;EQ-0014;2025-10-13;2025-12-31;;Mensal;;117400.00;Canteiro Trevo de acesso leste;Ativo
+CT-00748;CL-0060;EQ-0022;2024-12-15;2025-02-19;2025-02-19;Mensal;;45500.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00749;CL-0004;EQ-0017;2024-07-09;2024-12-12;2024-12-22;Mensal;;11300.00;Loteamento Marginal do rio;Encerrado
+CT-00750;CL-0053;EQ-0014;2025-08-24;2025-09-01;2025-09-01;Semanal;6280.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00751;CL-0065;EQ-0097;2024-06-04;2024-10-25;2024-10-25;Mensal;;13600.00;Condomínio Trevo de acesso leste;Encerrado
+CT-00752;CL-0037;EQ-0048;2024-08-02;2024-11-03;2024-11-09;Mensal;;4400.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00753;CL-0067;EQ-0053;2025-07-31;2025-08-02;2025-08-02;Diária;2200.00;;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00754;CL-0050;EQ-0058;2025-03-14;2025-04-04;2025-04-04;Semanal;770.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00755;CL-0051;EQ-0013;2025-07-02;2025-08-21;2025-08-21;Mensal;;25300.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00756;CL-0022;EQ-0072;2024-01-10;2024-01-12;2024-01-12;Diária;1700.00;;Ampliação Setor B da mina;Encerrado
+CT-00757;CL-0041;EQ-0098;2025-10-06;2025-12-31;;Mensal;;5200.00;Loteamento Rodovia dos Bandeirantes km 80;Ativo
+CT-00758;CL-0059;EQ-0075;2024-09-23;2024-10-24;2024-10-24;Mensal;;4000.00;Reforma Complexo Logístico Oeste;Encerrado
+CT-00759;CL-0006;EQ-0052;2025-07-21;2025-07-28;2025-07-28;Semanal;1320.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00760;CL-0042;EQ-0006;2025-01-12;2025-04-20;2025-04-20;Mensal;;6500.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00761;CL-0042;EQ-0123;2025-07-28;2025-11-05;2025-11-05;Mensal;;3700.00;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00762;CL-0014;EQ-0024;2025-01-12;2025-04-21;2025-04-19;Mensal;;9500.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00763;CL-0035;EQ-0052;2024-06-14;2024-08-01;2024-08-01;Mensal;;26900.00;Ampliação Vila Nova;Encerrado
+CT-00764;CL-0038;EQ-0102;2024-11-30;2024-12-23;2024-12-23;Semanal;2220.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00765;CL-0038;EQ-0120;2024-01-22;2024-04-26;2024-05-05;Mensal;;44600.00;Loteamento Marginal do rio;Encerrado
+CT-00766;CL-0019;EQ-0034;2025-09-21;2025-09-27;2025-09-27;Diária;2230.00;;Reforma Marginal do rio;Encerrado
+CT-00767;CL-0048;EQ-0070;2024-11-15;2025-03-31;2025-03-31;Mensal;;19100.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00768;CL-0026;EQ-0130;2024-06-23;2024-07-18;2024-07-18;Semanal;1370.00;;Canteiro Trevo de acesso leste;Encerrado
+CT-00769;CL-0036;EQ-0055;2025-01-07;2025-03-16;2025-03-16;Mensal;;13800.00;Loteamento Setor B da mina;Encerrado
+CT-00770;CL-0009;EQ-0060;2025-07-30;2025-12-10;2025-12-10;Mensal;;8600.00;Reforma Trevo de acesso leste;Encerrado
+CT-00771;CL-0066;EQ-0090;2024-04-11;2024-09-23;2024-09-23;Mensal;;15400.00;Loteamento Jardim das Acácias;Encerrado
+CT-00772;CL-0048;EQ-0112;2024-12-19;2024-12-20;2024-12-20;Diária;300.00;;Canteiro Terminal de cargas;Encerrado
+CT-00773;CL-0015;EQ-0119;2024-02-27;2024-07-18;2024-07-18;Mensal;;8500.00;Loteamento Jardim das Acácias;Encerrado
+CT-00774;CL-0011;EQ-0001;2024-09-19;2025-01-23;2025-01-19;Mensal;;29800.00;Ampliação Trevo de acesso leste;Encerrado
+CT-00775;CL-0033;EQ-0102;2025-09-27;2025-10-10;2025-10-10;Semanal;1610.00;;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00776;CL-0046;EQ-0066;2024-09-16;2024-09-18;2024-09-18;Diária;400.00;;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00777;CL-0006;EQ-0134;2024-01-05;2024-01-22;2024-01-17;Semanal;1740.00;;Reforma Terminal de cargas;Encerrado
+CT-00778;CL-0061;EQ-0015;2024-05-23;2024-09-03;2024-08-29;Mensal;;32300.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-00779;CL-0017;EQ-0032;2024-02-07;2024-05-03;2024-05-03;Mensal;;21800.00;Reforma Setor B da mina;Encerrado
+CT-00780;CL-0044;EQ-0009;2025-03-26;2025-08-09;2025-08-09;Mensal;;4900.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-00781;CL-0036;EQ-0106;2025-05-13;2025-08-17;2025-08-17;Mensal;;6200.00;Canteiro Setor B da mina;Encerrado
+CT-00782;CL-0051;EQ-0032;2024-07-01;2024-07-05;2024-07-05;Diária;1690.00;;Loteamento Parque Industrial Sul;Encerrado
+CT-00783;CL-0026;EQ-0103;2025-04-08;2025-04-13;2025-04-09;Diária;560.00;;Ampliação Vila Nova;Encerrado
+CT-00784;CL-0056;EQ-0102;2024-11-12;2024-11-13;2024-11-13;Diária;2380.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00785;CL-0054;EQ-0065;2024-05-25;2024-09-05;;Mensal;;26300.00;Reforma Rodovia dos Bandeirantes km 80;Cancelado
+CT-00786;CL-0003;EQ-0055;2025-12-20;2025-12-31;;Semanal;770.00;;Canteiro Residencial Alto da Serra;Ativo
+CT-00787;CL-0052;EQ-0068;2024-08-17;2024-12-31;2025-01-09;Mensal;;5200.00;Reforma Marginal do rio;Encerrado
+CT-00788;CL-0016;EQ-0097;2025-11-06;2025-11-11;2025-11-08;Diária;970.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00789;CL-0039;EQ-0085;2024-01-09;2024-01-12;2024-01-10;Diária;1890.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00790;CL-0030;EQ-0133;2024-01-25;2024-01-28;2024-02-05;Diária;2260.00;;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00791;CL-0034;EQ-0049;2024-02-04;2024-02-06;2024-02-06;Diária;260.00;;Ampliação Marginal do rio;Encerrado
+CT-00792;CL-0049;EQ-0031;2024-09-29;2024-09-30;2024-09-30;Diária;2250.00;;Obra Rodovia dos Bandeirantes km 80;Encerrado
+CT-00793;CL-0064;EQ-0046;2024-04-06;2024-04-12;2024-04-12;Diária;440.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00794;CL-0026;EQ-0061;2024-01-06;2024-01-09;2024-01-09;Diária;570.00;;Loteamento Setor B da mina;Encerrado
+CT-00795;CL-0016;EQ-0077;2024-03-06;2024-07-15;2024-07-21;Mensal;;35700.00;Condomínio Distrito Industrial Norte;Encerrado
+CT-00796;CL-0028;EQ-0022;2025-05-10;2025-06-07;2025-06-11;Semanal;2580.00;;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00797;CL-0042;EQ-0099;2024-07-24;2025-01-15;2025-01-14;Mensal;;122800.00;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00798;CL-0021;EQ-0111;2025-09-22;2025-10-18;2025-10-18;Semanal;660.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00799;CL-0030;EQ-0133;2024-01-10;2024-01-16;2024-01-16;Diária;2640.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-00800;CL-0049;EQ-0025;2024-12-13;2025-01-02;2025-01-02;Semanal;780.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00801;CL-0042;EQ-0109;2025-09-21;2025-12-31;;Mensal;;24400.00;Canteiro Avenida Dom Pedro I;Ativo
+CT-00802;CL-0011;EQ-0076;2024-06-30;2024-07-10;;Semanal;280.00;;Ampliação Marginal do rio;Cancelado
+CT-00803;CL-0061;EQ-0037;2024-01-11;2024-02-07;2024-02-07;Semanal;2120.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00804;CL-0041;EQ-0085;2024-12-05;2025-04-01;2025-04-07;Mensal;;33700.00;Reforma Distrito Industrial Norte;Encerrado
+CT-00805;CL-0018;EQ-0085;2025-04-10;2025-08-20;2025-08-20;Mensal;;20800.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00806;CL-0024;EQ-0014;2024-11-06;2025-02-23;2025-02-19;Mensal;;124200.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-00807;CL-0039;EQ-0128;2024-01-26;2024-03-08;2024-03-08;Mensal;;10800.00;Ampliação Jardim das Acácias;Encerrado
+CT-00808;CL-0070;EQ-0063;2025-01-31;2025-02-02;2025-02-02;Diária;1490.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00809;CL-0018;EQ-0070;2024-09-21;2024-10-18;2024-10-18;Semanal;1030.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-00810;CL-0007;EQ-0056;2024-11-08;2025-03-16;2025-03-16;Mensal;;9800.00;Reforma Complexo Logístico Oeste;Encerrado
+CT-00811;CL-0027;EQ-0025;2024-07-07;2024-12-02;2024-11-30;Mensal;;13800.00;Reforma Vila Nova;Encerrado
+CT-00812;CL-0065;EQ-0107;2025-05-19;2025-10-03;2025-09-29;Mensal;;12800.00;Reforma Marginal do rio;Encerrado
+CT-00813;CL-0048;EQ-0111;2025-11-03;2025-11-19;2025-11-19;Semanal;890.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-00814;CL-0044;EQ-0065;2025-03-09;2025-03-29;2025-03-29;Semanal;2450.00;;Canteiro Parque Industrial Sul;Encerrado
+CT-00815;CL-0048;EQ-0084;2025-02-23;2025-07-31;2025-07-31;Mensal;;12100.00;Loteamento Terminal de cargas;Encerrado
+CT-00816;CL-0036;EQ-0108;2025-11-25;2025-12-31;;Mensal;;5800.00;Condomínio Marginal do rio;Ativo
+CT-00817;CL-0047;EQ-0130;2025-05-30;2025-07-04;2025-07-04;Mensal;;33600.00;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00818;CL-0004;EQ-0081;2024-10-17;2025-03-21;2025-03-18;Mensal;;3900.00;Loteamento Rodovia Anhanguera km 112;Encerrado
+CT-00819;CL-0052;EQ-0126;2024-01-10;2024-06-20;2024-06-20;Mensal;;17900.00;Loteamento Terminal de cargas;Encerrado
+CT-00820;CL-0011;EQ-0037;2024-08-28;2024-11-12;2024-11-12;Mensal;;25000.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-00821;CL-0019;EQ-0101;2024-10-27;2025-03-22;;Mensal;;11800.00;Loteamento Residencial Alto da Serra;Cancelado
+CT-00822;CL-0052;EQ-0090;2025-09-21;2025-11-23;;Mensal;;9200.00;Canteiro Distrito Industrial Norte;Cancelado
+CT-00823;CL-0067;EQ-0117;2025-09-17;2025-12-31;;Mensal;;8100.00;Canteiro Residencial Alto da Serra;Ativo
+CT-00824;CL-0021;EQ-0017;2024-02-25;2024-06-10;2024-06-09;Mensal;;13700.00;Reforma Parque Industrial Sul;Encerrado
+CT-00825;CL-0068;EQ-0092;2024-09-28;2024-09-29;2024-09-27;Diária;1610.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-00826;CL-0024;EQ-0134;2025-07-21;2025-08-03;2025-08-07;Semanal;1200.00;;Obra Terminal de cargas;Encerrado
+CT-00827;CL-0037;EQ-0090;2025-05-20;2025-09-01;2025-09-01;Mensal;;12400.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00828;CL-0048;EQ-0134;2025-12-09;2025-12-15;2025-12-10;Diária;1170.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00829;CL-0004;EQ-0078;2024-12-01;2025-04-20;2025-04-20;Mensal;;29400.00;Condomínio Trevo de acesso leste;Encerrado
+CT-00830;CL-0037;EQ-0135;2025-05-24;2025-06-01;2025-06-07;Semanal;790.00;;Loteamento Trevo de acesso leste;Encerrado
+CT-00831;CL-0003;EQ-0052;2024-12-03;2024-12-31;2024-12-31;Semanal;1540.00;;Ampliação Jardim das Acácias;Encerrado
+CT-00832;CL-0042;EQ-0072;2024-02-21;2024-03-13;2024-03-13;Semanal;1930.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00833;CL-0047;EQ-0120;2025-08-01;2025-08-18;2025-08-18;Semanal;3010.00;;Canteiro Parque Industrial Sul;Encerrado
+CT-00834;CL-0018;EQ-0120;2025-10-23;2025-11-27;2025-11-22;Mensal;;29400.00;Loteamento Marginal do rio;Encerrado
+CT-00835;CL-0031;EQ-0051;2024-01-17;2024-01-20;2024-01-26;Diária;1960.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00836;CL-0005;EQ-0080;2024-01-19;2024-05-30;2024-05-30;Mensal;;80400.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00837;CL-0070;EQ-0063;2024-10-02;2025-01-09;2025-01-09;Mensal;;30400.00;Reforma Vila Nova;Encerrado
+CT-00838;CL-0020;EQ-0041;2025-09-23;2025-10-02;2025-10-02;Semanal;5240.00;;Obra Vila Nova;Encerrado
+CT-00839;CL-0039;EQ-0024;2024-01-11;2024-01-13;2024-01-13;Diária;940.00;;Reforma Trevo de acesso leste;Encerrado
+CT-00840;CL-0055;EQ-0038;2024-10-08;2024-10-11;;Diária;1990.00;;Pátio industrial Jardim das Acácias;Cancelado
+CT-00841;CL-0045;EQ-0123;2025-05-16;2025-05-30;2025-06-09;Semanal;280.00;;Condomínio Parque Industrial Sul;Encerrado
+CT-00842;CL-0033;EQ-0023;2025-10-14;2025-12-31;;Mensal;;15200.00;Loteamento Vila Nova;Ativo
+CT-00843;CL-0042;EQ-0110;2024-04-10;2024-04-18;2024-04-23;Semanal;220.00;;Loteamento Marginal do rio;Encerrado
+CT-00844;CL-0004;EQ-0030;2025-04-18;2025-04-28;2025-04-28;Semanal;1560.00;;Ampliação Vila Nova;Encerrado
+CT-00845;CL-0016;EQ-0117;2024-10-08;2024-10-13;;Diária;640.00;;Ampliação Terminal de cargas;Cancelado
+CT-00846;CL-0022;EQ-0039;2025-02-10;2025-02-14;2025-02-14;Diária;270.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00847;CL-0039;EQ-0029;2024-01-10;2024-01-12;2024-01-12;Diária;710.00;;Condomínio Vila Nova;Encerrado
+CT-00848;CL-0049;EQ-0110;2024-08-07;2024-09-11;2024-09-11;Mensal;;3100.00;Condomínio Marginal do rio;Encerrado
+CT-00849;CL-0063;EQ-0071;2025-08-06;2025-12-31;;Mensal;;9100.00;Reforma Trevo de acesso leste;Ativo
+CT-00850;CL-0069;EQ-0133;2024-06-06;2024-09-24;2024-09-25;Mensal;;24800.00;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00851;CL-0063;EQ-0033;2025-11-18;2025-12-31;;Mensal;;6200.00;Loteamento Vila Nova;Ativo
+CT-00852;CL-0029;EQ-0033;2025-03-26;2025-08-25;2025-08-30;Mensal;;6300.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-00853;CL-0032;EQ-0075;2024-10-31;2024-11-23;2024-11-21;Semanal;220.00;;Canteiro Trevo de acesso leste;Encerrado
+CT-00854;CL-0004;EQ-0032;2024-01-30;2024-02-01;2024-01-27;Diária;2350.00;;Ampliação Terminal de cargas;Encerrado
+CT-00855;CL-0060;EQ-0129;2025-08-24;2025-12-31;;Mensal;;34700.00;Loteamento Parque Industrial Sul;Ativo
+CT-00856;CL-0064;EQ-0075;2025-02-07;2025-02-12;2025-02-10;Diária;340.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-00857;CL-0063;EQ-0074;2025-02-11;2025-05-09;;Mensal;;4000.00;Condomínio Marginal do rio;Cancelado
+CT-00858;CL-0024;EQ-0063;2024-09-17;2024-09-21;2024-09-28;Diária;2180.00;;Loteamento Terminal de cargas;Encerrado
+CT-00859;CL-0047;EQ-0064;2025-04-13;2025-04-19;2025-04-19;Diária;340.00;;Loteamento Residencial Alto da Serra;Encerrado
+CT-00860;CL-0010;EQ-0042;2024-11-09;2025-04-28;2025-04-28;Mensal;;14900.00;Obra Rodovia dos Bandeirantes km 80;Encerrado
+CT-00861;CL-0024;EQ-0060;2024-10-29;2024-11-25;2024-12-03;Semanal;710.00;;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00862;CL-0013;EQ-0081;2025-12-24;2025-12-31;;Mensal;;4500.00;Canteiro Trevo de acesso leste;Ativo
+CT-00863;CL-0001;EQ-0011;2025-02-11;2025-04-19;2025-04-21;Mensal;;9600.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00864;CL-0006;EQ-0041;2025-10-21;2025-11-15;2025-11-12;Semanal;7000.00;;Ampliação Vila Nova;Encerrado
+CT-00865;CL-0014;EQ-0058;2024-01-13;2024-01-14;2024-01-14;Diária;1010.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-00866;CL-0028;EQ-0128;2024-04-21;2024-04-29;2024-04-29;Semanal;640.00;;Canteiro Terminal de cargas;Encerrado
+CT-00867;CL-0018;EQ-0069;2025-06-11;2025-06-17;2025-06-17;Diária;250.00;;Ampliação Vila Nova;Encerrado
+CT-00868;CL-0040;EQ-0134;2025-09-05;2025-10-11;2025-10-11;Mensal;;17200.00;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-00869;CL-0017;EQ-0078;2025-05-03;2025-06-18;2025-06-16;Mensal;;21000.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-00870;CL-0031;EQ-0105;2024-03-24;2024-09-17;2024-09-26;Mensal;;16200.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00871;CL-0033;EQ-0101;2025-06-05;2025-11-06;2025-11-06;Mensal;;8600.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-00872;CL-0030;EQ-0080;2025-06-10;2025-06-12;2025-06-20;Diária;6740.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00873;CL-0021;EQ-0067;2025-02-12;2025-03-06;2025-03-12;Semanal;440.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-00874;CL-0033;EQ-0082;2024-06-12;2024-07-14;2024-07-12;Mensal;;9000.00;Condomínio Setor B da mina;Encerrado
+CT-00875;CL-0061;EQ-0071;2024-08-24;2024-11-22;2024-11-22;Mensal;;11500.00;Reforma Marginal do rio;Encerrado
+CT-00876;CL-0053;EQ-0081;2025-05-14;2025-09-04;2025-09-11;Mensal;;4500.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-00877;CL-0005;EQ-0109;2024-07-02;2024-12-21;2024-12-21;Mensal;;35800.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00878;CL-0002;EQ-0089;2024-11-05;2025-04-10;2025-04-19;Mensal;;16000.00;Ampliação Terminal de cargas;Encerrado
+CT-00879;CL-0007;EQ-0048;2024-07-14;2024-07-18;2024-07-17;Diária;210.00;;Pátio industrial Vila Nova;Encerrado
+CT-00880;CL-0002;EQ-0060;2024-07-12;2024-08-13;2024-08-13;Mensal;;10000.00;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00881;CL-0048;EQ-0129;2024-09-12;2024-09-29;;Semanal;1980.00;;Reforma Rodovia dos Bandeirantes km 80;Cancelado
+CT-00882;CL-0001;EQ-0058;2024-03-12;2024-03-18;2024-03-18;Diária;1060.00;;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00883;CL-0066;EQ-0100;2025-08-22;2025-12-31;;Mensal;;27400.00;Obra Rodovia Anhanguera km 112;Ativo
+CT-00884;CL-0062;EQ-0038;2025-04-29;2025-09-04;2025-08-30;Mensal;;34000.00;Pátio industrial Parque Industrial Sul;Encerrado
+CT-00885;CL-0002;EQ-0040;2025-06-23;2025-06-24;2025-06-28;Diária;1690.00;;Pátio industrial Marginal do rio;Encerrado
+CT-00886;CL-0054;EQ-0121;2025-06-15;2025-07-02;2025-06-29;Semanal;2370.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00887;CL-0060;EQ-0064;2025-09-14;2025-12-31;;Mensal;;5900.00;Canteiro Rodovia dos Bandeirantes km 80;Ativo
+CT-00888;CL-0062;EQ-0106;2025-01-02;2025-05-03;2025-05-08;Mensal;;7700.00;Loteamento Jardim das Acácias;Encerrado
+CT-00889;CL-0031;EQ-0135;2025-05-03;2025-05-05;2025-05-14;Diária;990.00;;Reforma Jardim das Acácias;Encerrado
+CT-00890;CL-0029;EQ-0042;2024-08-03;2024-10-19;2024-10-20;Mensal;;18100.00;Obra Parque Industrial Sul;Encerrado
+CT-00891;CL-0060;EQ-0094;2025-10-15;2025-12-22;2025-12-25;Mensal;;3600.00;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-00892;CL-0002;EQ-0077;2024-08-10;2024-08-17;2024-08-15;Semanal;2130.00;;Reforma Terminal de cargas;Encerrado
+CT-00893;CL-0019;EQ-0056;2025-05-09;2025-08-04;2025-08-04;Mensal;;15400.00;Condomínio Distrito Industrial Norte;Encerrado
+CT-00894;CL-0013;EQ-0035;2024-01-13;2024-06-16;2024-06-21;Mensal;;6800.00;Condomínio Terminal de cargas;Encerrado
+CT-00895;CL-0023;EQ-0117;2024-06-11;2024-06-25;2024-06-25;Semanal;580.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-00896;CL-0067;EQ-0034;2025-10-08;2025-11-10;2025-11-12;Mensal;;34700.00;Canteiro Parque Industrial Sul;Encerrado
+CT-00897;CL-0023;EQ-0045;2025-09-08;2025-09-23;2025-10-02;Semanal;690.00;;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00898;CL-0058;EQ-0005;2024-05-04;2024-05-26;2024-05-26;Semanal;5240.00;;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-00899;CL-0013;EQ-0076;2025-03-01;2025-04-29;2025-05-04;Mensal;;5100.00;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-00900;CL-0025;EQ-0104;2025-06-17;2025-11-29;2025-11-29;Mensal;;9400.00;Reforma Vila Nova;Encerrado
+CT-00901;CL-0027;EQ-0111;2024-08-19;2024-08-22;2024-08-22;Diária;1030.00;;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00902;CL-0045;EQ-0091;2025-02-21;2025-02-26;2025-02-26;Diária;2240.00;;Reforma Vila Nova;Encerrado
+CT-00903;CL-0032;EQ-0083;2024-09-14;2025-01-31;2025-01-31;Mensal;;5100.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-00904;CL-0019;EQ-0010;2025-10-24;2025-12-12;2025-12-12;Mensal;;34100.00;Reforma Terminal de cargas;Encerrado
+CT-00905;CL-0045;EQ-0067;2025-05-09;2025-09-25;2025-09-25;Mensal;;8700.00;Obra Setor B da mina;Encerrado
+CT-00906;CL-0036;EQ-0008;2025-09-27;2025-12-31;;Mensal;;11400.00;Reforma Trevo de acesso leste;Ativo
+CT-00907;CL-0065;EQ-0051;2025-10-25;2025-11-11;2025-11-11;Semanal;2070.00;;Reforma Terminal de cargas;Encerrado
+CT-00908;CL-0015;EQ-0004;2024-06-15;2024-07-22;;Mensal;;30100.00;Ampliação Rodovia Anhanguera km 112;Cancelado
+CT-00909;CL-0023;EQ-0130;2025-07-09;2025-07-10;2025-07-10;Diária;1350.00;;Loteamento Parque Industrial Sul;Encerrado
+CT-00910;CL-0065;EQ-0135;2025-12-05;2025-12-08;2025-12-04;Diária;1140.00;;Canteiro Complexo Logístico Oeste;Encerrado
+CT-00911;CL-0057;EQ-0010;2024-03-31;2024-05-25;2024-05-25;Mensal;;22900.00;Obra Terminal de cargas;Encerrado
+CT-00912;CL-0037;EQ-0091;2024-05-07;2024-05-20;2024-05-20;Semanal;1970.00;;Obra Distrito Industrial Norte;Encerrado
+CT-00913;CL-0025;EQ-0061;2024-01-14;2024-01-18;2024-01-20;Diária;580.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00914;CL-0045;EQ-0036;2024-12-11;2025-04-16;2025-04-16;Mensal;;5100.00;Condomínio Setor B da mina;Encerrado
+CT-00915;CL-0007;EQ-0063;2025-02-21;2025-03-08;2025-03-16;Semanal;1400.00;;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00916;CL-0012;EQ-0072;2024-04-07;2024-08-12;2024-08-07;Mensal;;19900.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00917;CL-0053;EQ-0117;2025-03-03;2025-03-21;2025-03-21;Semanal;570.00;;Canteiro Marginal do rio;Encerrado
+CT-00918;CL-0027;EQ-0019;2025-09-09;2025-10-02;2025-10-10;Semanal;910.00;;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00919;CL-0006;EQ-0076;2024-02-28;2024-04-15;2024-04-23;Mensal;;4700.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00920;CL-0054;EQ-0089;2024-06-09;2024-06-23;2024-06-28;Semanal;870.00;;Condomínio Marginal do rio;Encerrado
+CT-00921;CL-0020;EQ-0102;2025-03-28;2025-04-02;2025-04-02;Diária;2640.00;;Canteiro Terminal de cargas;Encerrado
+CT-00922;CL-0058;EQ-0126;2025-03-25;2025-03-27;2025-03-26;Diária;1020.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-00923;CL-0027;EQ-0108;2024-08-10;2024-08-16;2024-08-13;Diária;310.00;;Ampliação Residencial Alto da Serra;Encerrado
+CT-00924;CL-0003;EQ-0121;2024-06-03;2024-06-23;2024-06-23;Semanal;2360.00;;Ampliação Trevo de acesso leste;Encerrado
+CT-00925;CL-0011;EQ-0135;2025-12-17;2025-12-21;;Diária;1070.00;;Ampliação Rodovia Washington Luís km 230;Cancelado
+CT-00926;CL-0046;EQ-0093;2024-02-05;2024-04-12;2024-04-07;Mensal;;5300.00;Reforma Distrito Industrial Norte;Encerrado
+CT-00927;CL-0062;EQ-0074;2024-10-20;2024-12-11;2024-12-11;Mensal;;3600.00;Ampliação Avenida Dom Pedro I;Encerrado
+CT-00928;CL-0016;EQ-0112;2024-05-01;2024-08-03;;Mensal;;6000.00;Condomínio Parque Industrial Sul;Cancelado
+CT-00929;CL-0049;EQ-0118;2024-01-20;2024-05-24;2024-06-01;Mensal;;6400.00;Canteiro Trevo de acesso leste;Encerrado
+CT-00930;CL-0020;EQ-0134;2024-04-11;2024-04-30;2024-04-30;Semanal;1480.00;;Canteiro Avenida Dom Pedro I;Encerrado
+CT-00931;CL-0028;EQ-0088;2025-09-04;2025-09-06;2025-09-06;Diária;1750.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00932;CL-0055;EQ-0108;2025-05-22;2025-11-14;2025-11-14;Mensal;;5800.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-00933;CL-0025;EQ-0101;2025-12-18;2025-12-31;;Mensal;;11600.00;Obra Rodovia Anhanguera km 112;Ativo
+CT-00934;CL-0045;EQ-0098;2024-08-20;2024-12-15;2024-12-12;Mensal;;4800.00;Ampliação Jardim das Acácias;Encerrado
+CT-00935;CL-0017;EQ-0132;2025-12-19;2025-12-31;;Mensal;;6100.00;Obra Jardim das Acácias;Ativo
+CT-00936;CL-0030;EQ-0054;2025-11-05;2025-12-31;;Mensal;;4300.00;Obra Vila Nova;Cancelado
+CT-00937;CL-0070;EQ-0115;2024-01-13;2024-01-20;2024-01-20;Semanal;3610.00;;Loteamento Jardim das Acácias;Encerrado
+CT-00938;CL-0037;EQ-0133;2025-09-01;2025-09-22;;Semanal;1470.00;;Obra Vila Nova;Cancelado
+CT-00939;CL-0042;EQ-0085;2025-11-28;2025-12-04;2025-12-04;Diária;1960.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-00940;CL-0049;EQ-0079;2025-08-07;2025-08-09;2025-08-15;Diária;1970.00;;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00941;CL-0003;EQ-0132;2025-04-22;2025-07-11;2025-07-11;Mensal;;6600.00;Pátio industrial Trevo de acesso leste;Encerrado
+CT-00942;CL-0020;EQ-0004;2024-01-17;2024-01-23;2024-01-21;Diária;1920.00;;Canteiro Marginal do rio;Encerrado
+CT-00943;CL-0064;EQ-0049;2024-06-02;2024-09-19;2024-09-19;Mensal;;6400.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-00944;CL-0031;EQ-0091;2025-06-12;2025-11-25;2025-11-29;Mensal;;24700.00;Condomínio Parque Industrial Sul;Encerrado
+CT-00945;CL-0054;EQ-0040;2024-06-10;2024-10-16;2024-10-16;Mensal;;30500.00;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-00946;CL-0063;EQ-0102;2025-03-06;2025-03-14;;Semanal;1760.00;;Reforma Trevo de acesso leste;Cancelado
+CT-00947;CL-0054;EQ-0005;2025-02-11;2025-06-20;2025-06-20;Mensal;;99500.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00948;CL-0053;EQ-0053;2024-06-28;2024-07-15;2024-07-18;Semanal;2380.00;;Reforma Trevo de acesso leste;Encerrado
+CT-00949;CL-0023;EQ-0089;2024-03-06;2024-03-16;2024-03-16;Semanal;910.00;;Ampliação Trevo de acesso leste;Encerrado
+CT-00950;CL-0039;EQ-0114;2025-05-17;2025-06-29;2025-06-29;Mensal;;5600.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00951;CL-0010;EQ-0050;2024-12-28;2025-03-24;2025-04-01;Mensal;;9800.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-00952;CL-0047;EQ-0032;2025-11-06;2025-11-29;2025-11-29;Semanal;2140.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00953;CL-0040;EQ-0097;2025-03-30;2025-07-05;2025-07-03;Mensal;;15500.00;Loteamento Setor B da mina;Encerrado
+CT-00954;CL-0042;EQ-0028;2024-12-16;2025-05-19;2025-05-25;Mensal;;8900.00;Pátio industrial Terminal de cargas;Encerrado
+CT-00955;CL-0067;EQ-0045;2024-02-21;2024-03-02;2024-02-28;Semanal;590.00;;Reforma Marginal do rio;Encerrado
+CT-00956;CL-0011;EQ-0075;2024-03-15;2024-03-31;2024-04-09;Semanal;210.00;;Reforma Terminal de cargas;Encerrado
+CT-00957;CL-0036;EQ-0098;2025-06-27;2025-09-15;2025-09-19;Mensal;;6100.00;Pátio industrial Marginal do rio;Encerrado
+CT-00958;CL-0066;EQ-0051;2024-06-04;2024-06-07;;Diária;2260.00;;Canteiro Vila Nova;Cancelado
+CT-00959;CL-0036;EQ-0121;2025-12-04;2025-12-05;2025-12-01;Diária;3200.00;;Obra Parque Industrial Sul;Encerrado
+CT-00960;CL-0067;EQ-0075;2024-04-14;2024-08-01;2024-08-01;Mensal;;4000.00;Obra Jardim das Acácias;Encerrado
+CT-00961;CL-0006;EQ-0031;2024-10-30;2024-11-08;2024-11-16;Semanal;2400.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00962;CL-0064;EQ-0020;2024-12-12;2024-12-16;2024-12-16;Diária;750.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00963;CL-0028;EQ-0068;2024-01-06;2024-01-11;2024-01-13;Diária;320.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-00964;CL-0045;EQ-0009;2025-08-16;2025-12-31;;Mensal;;3500.00;Loteamento Avenida Dom Pedro I;Ativo
+CT-00965;CL-0061;EQ-0063;2024-02-03;2024-02-05;2024-02-05;Diária;2190.00;;Reforma Distrito Industrial Norte;Encerrado
+CT-00966;CL-0013;EQ-0122;2024-10-02;2024-10-08;2024-10-04;Diária;350.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-00967;CL-0066;EQ-0009;2024-07-11;2024-11-21;2024-11-21;Mensal;;4600.00;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-00968;CL-0006;EQ-0128;2024-09-23;2024-09-27;2024-10-07;Diária;630.00;;Ampliação Setor B da mina;Encerrado
+CT-00969;CL-0012;EQ-0112;2025-03-22;2025-09-13;2025-09-13;Mensal;;6000.00;Obra Vila Nova;Encerrado
+CT-00970;CL-0006;EQ-0018;2024-04-05;2024-04-10;2024-04-14;Diária;620.00;;Obra Setor B da mina;Encerrado
+CT-00971;CL-0052;EQ-0114;2025-04-05;2025-05-02;2025-04-30;Semanal;410.00;;Condomínio Parque Industrial Sul;Encerrado
+CT-00972;CL-0025;EQ-0101;2024-05-24;2024-06-13;2024-06-13;Semanal;530.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00973;CL-0068;EQ-0015;2025-10-24;2025-12-14;2025-12-13;Mensal;;37000.00;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-00974;CL-0043;EQ-0079;2024-07-07;2024-07-27;2024-07-31;Semanal;1340.00;;Pátio industrial Jardim das Acácias;Encerrado
+CT-00975;CL-0038;EQ-0018;2024-04-17;2024-10-03;2024-10-03;Mensal;;9500.00;Canteiro Marginal do rio;Encerrado
+CT-00976;CL-0062;EQ-0009;2025-01-31;2025-02-20;2025-03-01;Semanal;310.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-00977;CL-0002;EQ-0094;2025-05-28;2025-08-20;2025-08-20;Mensal;;5400.00;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-00978;CL-0015;EQ-0101;2024-06-23;2024-06-25;2024-06-25;Diária;410.00;;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00979;CL-0039;EQ-0065;2025-02-17;2025-02-23;2025-02-20;Diária;1920.00;;Condomínio Vila Nova;Encerrado
+CT-00980;CL-0015;EQ-0075;2024-08-13;2024-09-05;2024-09-06;Semanal;350.00;;Condomínio Setor B da mina;Encerrado
+CT-00981;CL-0048;EQ-0075;2025-12-17;2025-12-31;;Mensal;;4600.00;Canteiro Vila Nova;Ativo
+CT-00982;CL-0052;EQ-0066;2024-12-29;2025-05-09;2025-05-09;Mensal;;5400.00;Reforma Parque Industrial Sul;Encerrado
+CT-00983;CL-0035;EQ-0048;2024-11-27;2025-05-14;2025-05-14;Mensal;;4700.00;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-00984;CL-0001;EQ-0117;2024-08-11;2024-09-27;2024-09-25;Mensal;;9700.00;Loteamento Trevo de acesso leste;Encerrado
+CT-00985;CL-0029;EQ-0012;2025-02-17;2025-07-20;2025-07-20;Mensal;;33900.00;Ampliação Residencial Alto da Serra;Encerrado
+CT-00986;CL-0023;EQ-0026;2025-02-03;2025-06-30;2025-06-26;Mensal;;27100.00;Condomínio Complexo Logístico Oeste;Encerrado
+CT-00987;CL-0043;EQ-0059;2024-01-20;2024-01-25;2024-02-04;Diária;1710.00;;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-00988;CL-0010;EQ-0058;2025-07-26;2025-12-23;2026-01-01;Mensal;;15000.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-00989;CL-0011;EQ-0058;2025-02-24;2025-02-26;2025-02-26;Diária;750.00;;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-00990;CL-0066;EQ-0079;2024-01-10;2024-01-12;2024-01-15;Diária;1420.00;;Reforma Complexo Logístico Oeste;Encerrado
+CT-00991;CL-0002;EQ-0023;2025-04-29;2025-07-06;2025-07-14;Mensal;;10800.00;Obra Complexo Logístico Oeste;Encerrado
+CT-00992;CL-0059;EQ-0026;2024-11-09;2025-01-28;2025-01-28;Mensal;;17900.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-00993;CL-0055;EQ-0094;2024-04-23;2024-07-20;2024-07-20;Mensal;;5900.00;Obra Rodovia Washington Luís km 230;Encerrado
+CT-00994;CL-0022;EQ-0059;2024-02-15;2024-07-15;2024-07-15;Mensal;;25800.00;Condomínio Marginal do rio;Encerrado
+CT-00995;CL-0024;EQ-0101;2024-09-15;2024-09-25;2024-09-25;Semanal;640.00;;Loteamento Terminal de cargas;Encerrado
+CT-00996;CL-0042;EQ-0031;2024-09-03;2024-09-06;2024-09-06;Diária;1350.00;;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-00997;CL-0053;EQ-0107;2025-03-27;2025-04-17;2025-04-17;Semanal;590.00;;Ampliação Vila Nova;Encerrado
+CT-00998;CL-0062;EQ-0040;2024-05-23;2024-05-28;2024-05-28;Diária;2080.00;;Canteiro Terminal de cargas;Encerrado
+CT-00999;CL-0016;EQ-0016;2025-03-25;2025-08-01;2025-08-01;Mensal;;22200.00;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-01000;CL-0063;EQ-0095;2024-07-30;2024-08-04;2024-08-04;Diária;270.00;;Loteamento Distrito Industrial Norte;Encerrado
+CT-01001;CL-0016;EQ-0103;2025-06-05;2025-07-19;2025-07-24;Mensal;;10800.00;Canteiro Trevo de acesso leste;Encerrado
+CT-01002;CL-0064;EQ-0038;2024-01-07;2024-03-04;2024-03-10;Mensal;;24000.00;Condomínio Trevo de acesso leste;Encerrado
+CT-01003;CL-0021;EQ-0002;2024-01-14;2024-06-03;2024-06-12;Mensal;;24200.00;Reforma Rodovia Anhanguera km 112;Encerrado
+CT-01004;CL-0015;EQ-0064;2024-11-23;2024-11-25;2024-11-20;Diária;300.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-01005;CL-0056;EQ-0070;2025-04-13;2025-09-24;2025-09-20;Mensal;;26900.00;Pátio industrial Setor B da mina;Encerrado
+CT-01006;CL-0041;EQ-0033;2024-06-01;2024-09-27;2024-09-24;Mensal;;6300.00;Obra Trevo de acesso leste;Encerrado
+CT-01007;CL-0008;EQ-0079;2024-03-21;2024-05-27;;Mensal;;21600.00;Ampliação Trevo de acesso leste;Cancelado
+CT-01008;CL-0067;EQ-0063;2025-07-14;2025-07-16;2025-07-16;Diária;2040.00;;Condomínio Setor B da mina;Encerrado
+CT-01009;CL-0006;EQ-0014;2024-03-31;2024-04-06;2024-04-04;Diária;6730.00;;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-01010;CL-0034;EQ-0002;2024-10-14;2024-10-16;2024-10-16;Diária;1700.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-01011;CL-0057;EQ-0092;2024-12-25;2025-05-26;2025-05-26;Mensal;;34500.00;Loteamento Parque Industrial Sul;Encerrado
+CT-01012;CL-0019;EQ-0062;2025-06-24;2025-11-12;2025-11-12;Mensal;;27200.00;Canteiro Distrito Industrial Norte;Encerrado
+CT-01013;CL-0055;EQ-0007;2025-02-25;2025-08-24;2025-08-24;Mensal;;22800.00;Ampliação Terminal de cargas;Encerrado
+CT-01014;CL-0001;EQ-0131;2025-05-28;2025-11-03;2025-11-07;Mensal;;6500.00;Condomínio Parque Industrial Sul;Encerrado
+CT-01015;CL-0042;EQ-0122;2024-03-22;2024-04-06;;Semanal;220.00;;Obra Avenida Dom Pedro I;Cancelado
+CT-01016;CL-0030;EQ-0049;2024-01-04;2024-01-20;2024-01-20;Semanal;390.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-01017;CL-0051;EQ-0128;2025-09-03;2025-09-09;2025-09-16;Diária;640.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-01018;CL-0011;EQ-0116;2025-09-20;2025-12-31;;Mensal;;35900.00;Obra Residencial Alto da Serra;Ativo
+CT-01019;CL-0053;EQ-0116;2024-09-18;2024-10-07;2024-10-09;Semanal;1930.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-01020;CL-0017;EQ-0037;2025-07-01;2025-09-26;2025-10-03;Mensal;;21100.00;Ampliação Parque Industrial Sul;Encerrado
+CT-01021;CL-0060;EQ-0018;2024-10-11;2025-03-13;2025-03-10;Mensal;;7300.00;Condomínio Trevo de acesso leste;Encerrado
+CT-01022;CL-0012;EQ-0121;2024-03-20;2024-03-29;2024-04-08;Semanal;3510.00;;Ampliação Parque Industrial Sul;Encerrado
+CT-01023;CL-0011;EQ-0116;2024-01-05;2024-01-30;2024-01-30;Semanal;2440.00;;Condomínio Vila Nova;Encerrado
+CT-01024;CL-0068;EQ-0123;2024-06-16;2024-06-27;2024-06-27;Semanal;370.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01025;CL-0056;EQ-0121;2024-04-17;2024-05-15;2024-05-15;Semanal;3070.00;;Reforma Parque Industrial Sul;Encerrado
+CT-01026;CL-0045;EQ-0097;2025-01-08;2025-03-10;2025-03-11;Mensal;;16500.00;Loteamento Trevo de acesso leste;Encerrado
+CT-01027;CL-0062;EQ-0045;2025-10-13;2025-11-01;2025-11-01;Semanal;960.00;;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-01028;CL-0070;EQ-0016;2024-06-25;2024-09-09;2024-09-19;Mensal;;22700.00;Condomínio Setor B da mina;Encerrado
+CT-01029;CL-0067;EQ-0111;2025-06-29;2025-07-02;2025-07-02;Diária;890.00;;Canteiro Residencial Alto da Serra;Encerrado
+CT-01030;CL-0030;EQ-0118;2024-10-16;2024-10-21;2024-10-18;Diária;390.00;;Obra Distrito Industrial Norte;Encerrado
+CT-01031;CL-0061;EQ-0134;2025-12-24;2025-12-31;;Mensal;;19400.00;Reforma Rodovia dos Bandeirantes km 80;Ativo
+CT-01032;CL-0057;EQ-0105;2024-01-21;2024-01-22;2024-01-21;Diária;830.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-01033;CL-0024;EQ-0049;2024-02-17;2024-04-04;2024-04-03;Mensal;;4000.00;Loteamento Complexo Logístico Oeste;Encerrado
+CT-01034;CL-0031;EQ-0046;2024-01-10;2024-03-31;2024-03-31;Mensal;;6800.00;Canteiro Rodovia dos Bandeirantes km 80;Encerrado
+CT-01035;CL-0058;EQ-0021;2024-10-08;2025-03-17;2025-03-17;Mensal;;10200.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-01036;CL-0037;EQ-0040;2025-02-21;2025-03-17;2025-03-15;Semanal;1890.00;;Obra Rodovia Washington Luís km 230;Encerrado
+CT-01037;CL-0049;EQ-0006;2024-07-01;2024-07-06;2024-07-08;Diária;350.00;;Obra Complexo Logístico Oeste;Encerrado
+CT-01038;CL-0045;EQ-0132;2024-01-13;2024-04-16;2024-04-12;Mensal;;7500.00;Reforma Setor B da mina;Encerrado
+CT-01039;CL-0061;EQ-0034;2024-10-29;2025-04-14;2025-04-14;Mensal;;31100.00;Condomínio Vila Nova;Encerrado
+CT-01040;CL-0051;EQ-0060;2024-01-07;2024-07-04;2024-07-04;Mensal;;8200.00;Canteiro Terminal de cargas;Encerrado
+CT-01041;CL-0032;EQ-0117;2025-04-07;2025-04-11;2025-04-11;Diária;620.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-01042;CL-0010;EQ-0094;2024-09-04;2025-02-24;2025-02-22;Mensal;;5600.00;Condomínio Setor B da mina;Encerrado
+CT-01043;CL-0008;EQ-0128;2024-01-19;2024-01-22;2024-01-21;Diária;700.00;;Obra Rodovia Anhanguera km 112;Encerrado
+CT-01044;CL-0059;EQ-0131;2024-01-12;2024-02-09;2024-02-10;Semanal;600.00;;Obra Parque Industrial Sul;Encerrado
+CT-01045;CL-0017;EQ-0063;2025-08-05;2025-11-20;2025-11-25;Mensal;;35800.00;Pátio industrial Rodovia Anhanguera km 112;Encerrado
+CT-01046;CL-0054;EQ-0021;2025-05-03;2025-07-06;2025-07-04;Mensal;;8000.00;Loteamento Trevo de acesso leste;Encerrado
+CT-01047;CL-0005;EQ-0016;2024-01-29;2024-02-19;2024-02-19;Semanal;1360.00;;Canteiro Jardim das Acácias;Encerrado
+CT-01048;CL-0026;EQ-0131;2025-01-10;2025-03-16;2025-03-16;Mensal;;10600.00;Canteiro Vila Nova;Encerrado
+CT-01049;CL-0049;EQ-0131;2024-03-26;2024-08-23;2024-09-01;Mensal;;8000.00;Condomínio Terminal de cargas;Encerrado
+CT-01050;CL-0055;EQ-0102;2025-05-15;2025-09-20;2025-09-20;Mensal;;28700.00;Condomínio Rodovia Anhanguera km 112;Encerrado
+CT-01051;CL-0056;EQ-0067;2024-10-01;2024-11-08;2024-11-06;Mensal;;8200.00;Loteamento Residencial Alto da Serra;Encerrado
+CT-01052;CL-0014;EQ-0009;2024-02-13;2024-06-04;2024-06-02;Mensal;;4700.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-01053;CL-0065;EQ-0110;2025-11-07;2025-12-31;;Mensal;;3400.00;Loteamento Terminal de cargas;Ativo
+CT-01054;CL-0028;EQ-0098;2025-01-06;2025-03-16;2025-03-18;Mensal;;5800.00;Canteiro Jardim das Acácias;Encerrado
+CT-01055;CL-0064;EQ-0134;2024-08-30;2024-12-12;2024-12-08;Mensal;;17400.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-01056;CL-0051;EQ-0087;2024-06-12;2024-06-17;2024-06-26;Diária;1030.00;;Condomínio Marginal do rio;Encerrado
+CT-01057;CL-0054;EQ-0005;2024-08-03;2024-12-30;2024-12-30;Mensal;;73000.00;Loteamento Marginal do rio;Encerrado
+CT-01058;CL-0029;EQ-0101;2024-07-10;2024-09-03;2024-09-03;Mensal;;10600.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-01059;CL-0017;EQ-0086;2025-09-14;2025-10-12;2025-10-12;Semanal;760.00;;Canteiro Vila Nova;Encerrado
+CT-01060;CL-0032;EQ-0115;2024-01-24;2024-06-03;2024-06-10;Mensal;;53700.00;Canteiro Terminal de cargas;Encerrado
+CT-01061;CL-0038;EQ-0103;2024-06-30;2024-12-16;2024-12-16;Mensal;;9100.00;Canteiro Distrito Industrial Norte;Encerrado
+CT-01062;CL-0058;EQ-0132;2024-10-09;2025-03-06;2025-03-06;Mensal;;5300.00;Loteamento Distrito Industrial Norte;Encerrado
+CT-01063;CL-0040;EQ-0033;2024-02-28;2024-03-03;;Diária;560.00;;Canteiro Terminal de cargas;Cancelado
+CT-01064;CL-0045;EQ-0034;2025-11-18;2025-12-12;2025-12-10;Semanal;2280.00;;Reforma Avenida Dom Pedro I;Encerrado
+CT-01065;CL-0036;EQ-0040;2025-08-14;2025-12-31;;Mensal;;24800.00;Ampliação Trevo de acesso leste;Ativo
+CT-01066;CL-0039;EQ-0024;2025-12-02;2025-12-31;;Mensal;;10800.00;Canteiro Avenida Dom Pedro I;Ativo
+CT-01067;CL-0028;EQ-0029;2025-04-17;2025-08-14;2025-08-16;Mensal;;13200.00;Loteamento Complexo Logístico Oeste;Encerrado
+CT-01068;CL-0045;EQ-0125;2025-02-08;2025-07-12;2025-07-08;Mensal;;3900.00;Condomínio Marginal do rio;Encerrado
+CT-01069;CL-0040;EQ-0055;2025-07-28;2025-08-20;2025-08-20;Semanal;820.00;;Pátio industrial Vila Nova;Encerrado
+CT-01070;CL-0005;EQ-0114;2024-08-31;2025-01-31;2025-01-31;Mensal;;5100.00;Canteiro Parque Industrial Sul;Encerrado
+CT-01071;CL-0033;EQ-0080;2025-01-08;2025-05-02;2025-05-05;Mensal;;85600.00;Reforma Trevo de acesso leste;Encerrado
+CT-01072;CL-0005;EQ-0054;2025-05-14;2025-06-01;2025-05-30;Semanal;190.00;;Condomínio Distrito Industrial Norte;Encerrado
+CT-01073;CL-0056;EQ-0045;2025-04-04;2025-04-08;2025-04-08;Diária;580.00;;Condomínio Vila Nova;Encerrado
+CT-01074;CL-0024;EQ-0073;2024-03-09;2024-03-21;2024-03-29;Semanal;300.00;;Loteamento Terminal de cargas;Encerrado
+CT-01075;CL-0018;EQ-0011;2024-04-25;2024-05-05;2024-05-05;Semanal;490.00;;Loteamento Vila Nova;Encerrado
+CT-01076;CL-0013;EQ-0089;2024-03-28;2024-04-23;2024-04-23;Semanal;950.00;;Pátio industrial Distrito Industrial Norte;Encerrado
+CT-01077;CL-0030;EQ-0044;2024-08-14;2024-08-24;2024-08-24;Semanal;490.00;;Obra Avenida Dom Pedro I;Encerrado
+CT-01078;CL-0014;EQ-0091;2025-01-18;2025-01-27;2025-01-31;Semanal;1530.00;;Obra Jardim das Acácias;Encerrado
+CT-01079;CL-0031;EQ-0002;2024-08-12;2024-08-15;2024-08-24;Diária;1320.00;;Obra Vila Nova;Encerrado
+CT-01080;CL-0003;EQ-0061;2024-02-07;2024-07-01;;Mensal;;8600.00;Pátio industrial Terminal de cargas;Cancelado
+CT-01081;CL-0028;EQ-0112;2025-09-16;2025-09-23;2025-09-23;Semanal;410.00;;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-01082;CL-0055;EQ-0112;2024-08-20;2024-09-07;2024-09-07;Semanal;330.00;;Canteiro Distrito Industrial Norte;Encerrado
+CT-01083;CL-0062;EQ-0049;2025-04-25;2025-07-28;2025-07-28;Mensal;;5400.00;Obra Trevo de acesso leste;Encerrado
+CT-01084;CL-0066;EQ-0019;2024-11-07;2025-01-14;2025-01-14;Mensal;;9600.00;Condomínio Parque Industrial Sul;Encerrado
+CT-01085;CL-0015;EQ-0038;2025-10-05;2025-12-31;;Mensal;;35400.00;Obra Rodovia Anhanguera km 112;Ativo
+CT-01086;CL-0015;EQ-0027;2024-07-03;2024-08-30;2024-08-30;Mensal;;24800.00;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01087;CL-0064;EQ-0100;2025-04-08;2025-04-17;2025-04-13;Semanal;1460.00;;Canteiro Avenida Dom Pedro I;Encerrado
+CT-01088;CL-0013;EQ-0078;2025-12-02;2025-12-07;2025-12-04;Diária;1820.00;;Pátio industrial Jardim das Acácias;Encerrado
+CT-01089;CL-0009;EQ-0070;2024-08-20;2024-09-12;2024-09-13;Semanal;1430.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-01090;CL-0010;EQ-0010;2025-02-06;2025-02-18;2025-02-18;Semanal;1830.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-01091;CL-0029;EQ-0040;2025-05-12;2025-06-09;2025-06-10;Semanal;1820.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-01092;CL-0049;EQ-0070;2025-10-05;2025-12-31;;Mensal;;18400.00;Ampliação Rodovia dos Bandeirantes km 80;Ativo
+CT-01093;CL-0063;EQ-0106;2024-01-17;2024-02-12;2024-02-17;Semanal;390.00;;Canteiro Trevo de acesso leste;Encerrado
+CT-01094;CL-0022;EQ-0043;2024-05-24;2024-08-23;2024-08-26;Mensal;;32500.00;Canteiro Parque Industrial Sul;Encerrado
+CT-01095;CL-0024;EQ-0113;2025-10-08;2025-11-27;2025-11-26;Mensal;;3900.00;Obra Terminal de cargas;Encerrado
+CT-01096;CL-0014;EQ-0120;2024-05-24;2024-09-01;2024-09-09;Mensal;;28400.00;Reforma Avenida Dom Pedro I;Encerrado
+CT-01097;CL-0068;EQ-0029;2025-12-12;2025-12-21;2025-12-21;Semanal;890.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-01098;CL-0013;EQ-0062;2024-06-21;2024-12-03;2024-11-29;Mensal;;34700.00;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-01099;CL-0061;EQ-0012;2024-10-04;2024-12-12;2024-12-12;Mensal;;21300.00;Obra Distrito Industrial Norte;Encerrado
+CT-01100;CL-0047;EQ-0124;2024-06-15;2024-07-11;2024-07-09;Semanal;710.00;;Loteamento Trevo de acesso leste;Encerrado
+CT-01101;CL-0032;EQ-0130;2025-04-24;2025-05-09;2025-05-12;Semanal;2340.00;;Canteiro Avenida Dom Pedro I;Encerrado
+CT-01102;CL-0001;EQ-0066;2024-07-03;2024-07-08;2024-07-14;Diária;370.00;;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-01103;CL-0048;EQ-0108;2024-04-04;2024-05-05;2024-05-10;Mensal;;5600.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-01104;CL-0055;EQ-0045;2024-03-13;2024-08-27;2024-09-05;Mensal;;12400.00;Reforma Distrito Industrial Norte;Encerrado
+CT-01105;CL-0051;EQ-0116;2024-10-22;2025-04-06;2025-04-09;Mensal;;28600.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-01106;CL-0012;EQ-0016;2025-08-26;2025-12-31;;Mensal;;30300.00;Condomínio Setor B da mina;Ativo
+CT-01107;CL-0049;EQ-0104;2024-11-08;2025-04-02;2025-04-10;Mensal;;9800.00;Ampliação Rodovia dos Bandeirantes km 80;Encerrado
+CT-01108;CL-0006;EQ-0117;2024-10-17;2025-02-25;2025-02-23;Mensal;;7900.00;Ampliação Setor B da mina;Encerrado
+CT-01109;CL-0037;EQ-0007;2024-09-16;2024-10-09;2024-10-10;Semanal;2300.00;;Condomínio Rodovia dos Bandeirantes km 80;Encerrado
+CT-01110;CL-0003;EQ-0032;2024-10-15;2025-04-02;2025-04-08;Mensal;;33700.00;Condomínio Avenida Dom Pedro I;Encerrado
+CT-01111;CL-0003;EQ-0130;2025-07-15;2025-12-18;2025-12-18;Mensal;;28800.00;Canteiro Residencial Alto da Serra;Encerrado
+CT-01112;CL-0003;EQ-0023;2025-09-07;2025-09-14;2025-09-12;Semanal;820.00;;Condomínio Jardim das Acácias;Encerrado
+CT-01113;CL-0015;EQ-0096;2025-01-30;2025-05-21;2025-05-21;Mensal;;32900.00;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01114;CL-0030;EQ-0053;2024-08-19;2024-11-25;2024-11-25;Mensal;;31400.00;Obra Residencial Alto da Serra;Encerrado
+CT-01115;CL-0068;EQ-0105;2025-09-25;2025-12-26;;Mensal;;16500.00;Ampliação Rodovia Washington Luís km 230;Ativo
+CT-01116;CL-0020;EQ-0074;2025-06-27;2025-07-07;2025-07-14;Semanal;320.00;;Canteiro Vila Nova;Encerrado
+CT-01117;CL-0058;EQ-0077;2024-01-17;2024-01-22;2024-01-18;Diária;1550.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-01118;CL-0027;EQ-0009;2024-12-09;2024-12-17;2024-12-15;Semanal;210.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-01119;CL-0062;EQ-0110;2024-01-15;2024-01-26;2024-01-26;Semanal;340.00;;Ampliação Distrito Industrial Norte;Encerrado
+CT-01120;CL-0019;EQ-0059;2024-09-23;2024-11-13;2024-11-13;Mensal;;26200.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-01121;CL-0063;EQ-0079;2025-10-07;2025-10-12;2025-10-12;Diária;1280.00;;Loteamento Marginal do rio;Encerrado
+CT-01122;CL-0058;EQ-0089;2025-06-16;2025-06-24;2025-06-24;Semanal;1090.00;;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-01123;CL-0036;EQ-0106;2024-11-06;2024-11-09;2024-11-09;Diária;340.00;;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-01124;CL-0063;EQ-0023;2024-10-31;2025-04-18;2025-04-19;Mensal;;10600.00;Reforma Jardim das Acácias;Encerrado
+CT-01125;CL-0042;EQ-0060;2024-12-19;2025-01-16;2025-01-22;Semanal;510.00;;Condomínio Marginal do rio;Encerrado
+CT-01126;CL-0068;EQ-0020;2025-01-27;2025-07-15;2025-07-15;Mensal;;13100.00;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-01127;CL-0032;EQ-0022;2025-06-17;2025-07-09;2025-07-09;Semanal;2810.00;;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-01128;CL-0061;EQ-0126;2025-01-08;2025-01-14;2025-01-23;Diária;1030.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-01129;CL-0037;EQ-0062;2024-01-22;2024-03-14;2024-03-14;Mensal;;30900.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-01130;CL-0013;EQ-0111;2024-02-18;2024-02-19;2024-02-19;Diária;820.00;;Loteamento Complexo Logístico Oeste;Encerrado
+CT-01131;CL-0028;EQ-0021;2025-03-20;2025-04-19;2025-04-21;Mensal;;9100.00;Condomínio Terminal de cargas;Encerrado
+CT-01132;CL-0027;EQ-0113;2024-07-12;2024-10-23;2024-10-23;Mensal;;4200.00;Ampliação Trevo de acesso leste;Encerrado
+CT-01133;CL-0038;EQ-0010;2024-11-12;2024-12-26;2024-12-22;Mensal;;27300.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-01134;CL-0064;EQ-0089;2025-08-06;2025-08-10;2025-08-19;Diária;760.00;;Obra Residencial Alto da Serra;Encerrado
+CT-01135;CL-0052;EQ-0007;2024-01-04;2024-03-30;2024-03-30;Mensal;;28400.00;Ampliação Residencial Alto da Serra;Encerrado
+CT-01136;CL-0012;EQ-0113;2025-08-29;2025-09-06;2025-09-02;Semanal;290.00;;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-01137;CL-0006;EQ-0082;2025-08-18;2025-12-20;2025-12-29;Mensal;;8700.00;Condomínio Marginal do rio;Encerrado
+CT-01138;CL-0022;EQ-0099;2025-03-04;2025-07-27;;Mensal;;105800.00;Canteiro Complexo Logístico Oeste;Cancelado
+CT-01139;CL-0007;EQ-0024;2024-06-25;2024-10-21;2024-10-21;Mensal;;9200.00;Obra Residencial Alto da Serra;Encerrado
+CT-01140;CL-0046;EQ-0125;2024-02-05;2024-06-02;;Mensal;;5500.00;Loteamento Marginal do rio;Cancelado
+CT-01141;CL-0003;EQ-0090;2025-03-21;2025-05-17;2025-05-17;Mensal;;9900.00;Obra Marginal do rio;Encerrado
+CT-01142;CL-0013;EQ-0110;2025-07-27;2025-10-16;2025-10-20;Mensal;;3500.00;Loteamento Distrito Industrial Norte;Encerrado
+CT-01143;CL-0008;EQ-0062;2025-11-21;2025-12-29;;Mensal;;28400.00;Loteamento Avenida Dom Pedro I;Ativo
+CT-01144;CL-0009;EQ-0132;2024-05-24;2024-06-19;2024-06-19;Semanal;470.00;;Condomínio Avenida Dom Pedro I;Encerrado
+CT-01145;CL-0033;EQ-0134;2025-04-12;2025-07-02;2025-06-29;Mensal;;21600.00;Condomínio Distrito Industrial Norte;Encerrado
+CT-01146;CL-0003;EQ-0076;2024-07-19;2024-08-11;2024-08-15;Semanal;280.00;;Canteiro Jardim das Acácias;Encerrado
+CT-01147;CL-0002;EQ-0115;2025-07-22;2025-12-20;2025-12-20;Mensal;;60100.00;Pátio industrial Avenida Dom Pedro I;Encerrado
+CT-01148;CL-0035;EQ-0008;2025-03-29;2025-06-05;2025-06-05;Mensal;;16500.00;Canteiro Marginal do rio;Encerrado
+CT-01149;CL-0028;EQ-0113;2025-12-24;2025-12-31;;Mensal;;5700.00;Pátio industrial Avenida Dom Pedro I;Ativo
+CT-01150;CL-0047;EQ-0010;2025-04-28;2025-10-13;2025-10-18;Mensal;;30300.00;Pátio industrial Parque Industrial Sul;Encerrado
+CT-01151;CL-0020;EQ-0111;2025-07-05;2025-09-18;2025-09-18;Mensal;;12600.00;Obra Rodovia Anhanguera km 112;Encerrado
+CT-01152;CL-0011;EQ-0101;2024-03-21;2024-05-20;2024-05-20;Mensal;;8600.00;Loteamento Rodovia Washington Luís km 230;Encerrado
+CT-01153;CL-0017;EQ-0073;2025-01-16;2025-01-17;2025-01-17;Diária;210.00;;Pátio industrial Jardim das Acácias;Encerrado
+CT-01154;CL-0030;EQ-0051;2025-07-02;2025-08-31;2025-08-31;Mensal;;34800.00;Obra Setor B da mina;Encerrado
+CT-01155;CL-0033;EQ-0088;2025-09-14;2025-11-04;2025-11-08;Mensal;;29200.00;Canteiro Rodovia Washington Luís km 230;Encerrado
+CT-01156;CL-0044;EQ-0091;2025-02-05;2025-02-10;2025-02-06;Diária;1630.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-01157;CL-0043;EQ-0080;2025-12-14;2025-12-31;;Mensal;;100400.00;Condomínio Vila Nova;Ativo
+CT-01158;CL-0020;EQ-0072;2024-08-24;2024-09-20;2024-09-17;Semanal;1090.00;;Loteamento Terminal de cargas;Encerrado
+CT-01159;CL-0011;EQ-0003;2025-01-19;2025-01-27;2025-01-27;Semanal;1030.00;;Ampliação Residencial Alto da Serra;Encerrado
+CT-01160;CL-0013;EQ-0094;2025-09-30;2025-10-11;2025-10-11;Semanal;310.00;;Ampliação Vila Nova;Encerrado
+CT-01161;CL-0019;EQ-0084;2025-10-09;2025-11-05;2025-11-15;Semanal;690.00;;Reforma Parque Industrial Sul;Encerrado
+CT-01162;CL-0054;EQ-0099;2025-01-20;2025-02-16;2025-02-16;Semanal;7180.00;;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-01163;CL-0031;EQ-0030;2024-09-05;2025-01-24;2025-01-24;Mensal;;19900.00;Loteamento Vila Nova;Encerrado
+CT-01164;CL-0005;EQ-0106;2024-04-01;2024-04-12;2024-04-12;Semanal;630.00;;Reforma Marginal do rio;Encerrado
+CT-01165;CL-0064;EQ-0062;2025-01-02;2025-01-24;2025-01-24;Semanal;1810.00;;Obra Jardim das Acácias;Encerrado
+CT-01166;CL-0046;EQ-0016;2024-11-07;2024-12-17;2024-12-17;Mensal;;27400.00;Reforma Marginal do rio;Encerrado
+CT-01167;CL-0042;EQ-0017;2025-09-15;2025-11-25;2025-11-25;Mensal;;15300.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-01168;CL-0030;EQ-0045;2025-11-16;2025-11-30;2025-11-30;Semanal;910.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01169;CL-0032;EQ-0051;2024-06-14;2024-12-10;2024-12-12;Mensal;;25800.00;Obra Complexo Logístico Oeste;Encerrado
+CT-01170;CL-0050;EQ-0031;2024-01-11;2024-05-13;2024-05-13;Mensal;;33700.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-01171;CL-0068;EQ-0071;2024-12-27;2025-04-17;2025-04-22;Mensal;;9000.00;Condomínio Jardim das Acácias;Encerrado
+CT-01172;CL-0034;EQ-0007;2025-12-09;2025-12-31;;Mensal;;29800.00;Reforma Marginal do rio;Ativo
+CT-01173;CL-0026;EQ-0004;2024-09-11;2024-10-09;2024-10-09;Semanal;1370.00;;Reforma Residencial Alto da Serra;Encerrado
+CT-01174;CL-0028;EQ-0006;2024-04-08;2024-06-06;2024-06-09;Mensal;;5300.00;Condomínio Parque Industrial Sul;Encerrado
+CT-01175;CL-0069;EQ-0047;2025-07-29;2025-08-25;2025-09-02;Semanal;1640.00;;Condomínio Residencial Alto da Serra;Encerrado
+CT-01176;CL-0022;EQ-0024;2024-01-31;2024-03-03;2024-03-12;Mensal;;9100.00;Reforma Marginal do rio;Encerrado
+CT-01177;CL-0032;EQ-0125;2025-10-18;2025-11-27;2025-12-01;Mensal;;4400.00;Condomínio Jardim das Acácias;Encerrado
+CT-01178;CL-0019;EQ-0051;2025-12-29;2025-12-31;;Mensal;;24100.00;Ampliação Terminal de cargas;Cancelado
+CT-01179;CL-0028;EQ-0073;2024-04-09;2024-06-25;2024-06-25;Mensal;;3500.00;Ampliação Rodovia Anhanguera km 112;Encerrado
+CT-01180;CL-0065;EQ-0095;2024-08-17;2024-12-30;2025-01-03;Mensal;;5100.00;Reforma Jardim das Acácias;Encerrado
+CT-01181;CL-0007;EQ-0059;2024-11-21;2025-03-19;2025-03-19;Mensal;;26800.00;Obra Jardim das Acácias;Encerrado
+CT-01182;CL-0058;EQ-0074;2024-03-01;2024-03-04;2024-03-04;Diária;310.00;;Condomínio Terminal de cargas;Encerrado
+CT-01183;CL-0069;EQ-0017;2025-12-02;2025-12-28;;Semanal;640.00;;Ampliação Complexo Logístico Oeste;Ativo
+CT-01184;CL-0037;EQ-0036;2025-06-18;2025-06-21;2025-06-21;Diária;280.00;;Obra Residencial Alto da Serra;Encerrado
+CT-01185;CL-0056;EQ-0114;2025-07-26;2025-12-19;2025-12-20;Mensal;;4400.00;Obra Trevo de acesso leste;Encerrado
+CT-01186;CL-0066;EQ-0026;2025-07-08;2025-09-12;2025-09-21;Mensal;;21500.00;Ampliação Distrito Industrial Norte;Encerrado
+CT-01187;CL-0031;EQ-0117;2024-07-05;2024-07-26;2024-08-01;Semanal;720.00;;Ampliação Setor B da mina;Encerrado
+CT-01188;CL-0026;EQ-0001;2024-03-11;2024-04-04;2024-04-05;Semanal;2230.00;;Loteamento Rodovia dos Bandeirantes km 80;Encerrado
+CT-01189;CL-0059;EQ-0046;2024-11-20;2025-02-02;2025-02-02;Mensal;;7600.00;Loteamento Residencial Alto da Serra;Encerrado
+CT-01190;CL-0029;EQ-0039;2024-03-05;2024-08-29;2024-08-29;Mensal;;6900.00;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01191;CL-0028;EQ-0106;2024-10-01;2024-10-04;2024-10-05;Diária;520.00;;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-01192;CL-0042;EQ-0055;2024-01-29;2024-07-06;2024-07-16;Mensal;;13400.00;Condomínio Residencial Alto da Serra;Encerrado
+CT-01193;CL-0001;EQ-0026;2024-10-13;2024-11-01;2024-10-27;Semanal;1590.00;;Pátio industrial Terminal de cargas;Encerrado
+CT-01194;CL-0056;EQ-0095;2025-08-09;2025-12-09;;Mensal;;6700.00;Canteiro Trevo de acesso leste;Cancelado
+CT-01195;CL-0050;EQ-0083;2024-01-07;2024-02-03;2024-01-31;Semanal;380.00;;Reforma Parque Industrial Sul;Encerrado
+CT-01196;CL-0042;EQ-0133;2024-02-11;2024-04-18;2024-04-25;Mensal;;22800.00;Ampliação Terminal de cargas;Encerrado
+CT-01197;CL-0060;EQ-0053;2025-08-14;2025-08-30;2025-09-07;Semanal;1520.00;;Obra Terminal de cargas;Encerrado
+CT-01198;CL-0040;EQ-0092;2024-07-21;2024-07-28;2024-07-23;Semanal;1450.00;;Loteamento Setor B da mina;Encerrado
+CT-01199;CL-0004;EQ-0121;2025-04-03;2025-04-07;2025-04-07;Diária;2660.00;;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-01200;CL-0038;EQ-0092;2025-08-07;2025-12-31;;Mensal;;22600.00;Loteamento Parque Industrial Sul;Cancelado
+CT-01201;CL-0023;EQ-0127;2024-06-09;2024-07-04;2024-07-04;Semanal;440.00;;Pátio industrial Parque Industrial Sul;Encerrado
+CT-01202;CL-0022;EQ-0088;2024-11-18;2025-05-06;2025-05-11;Mensal;;25300.00;Obra Rodovia dos Bandeirantes km 80;Encerrado
+CT-01203;CL-0016;EQ-0077;2024-08-22;2025-01-12;2025-01-08;Mensal;;27500.00;Pátio industrial Complexo Logístico Oeste;Encerrado
+CT-01204;CL-0039;EQ-0029;2025-10-14;2025-10-21;2025-10-21;Semanal;690.00;;Canteiro Terminal de cargas;Encerrado
+CT-01205;CL-0057;EQ-0113;2025-03-24;2025-04-28;2025-05-06;Mensal;;5400.00;Ampliação Terminal de cargas;Encerrado
+CT-01206;CL-0057;EQ-0079;2024-12-21;2025-04-04;;Mensal;;21000.00;Pátio industrial Residencial Alto da Serra;Cancelado
+CT-01207;CL-0067;EQ-0055;2024-12-13;2024-12-14;2024-12-24;Diária;710.00;;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01208;CL-0007;EQ-0041;2024-01-08;2024-04-29;2024-04-29;Mensal;;120900.00;Pátio industrial Setor B da mina;Encerrado
+CT-01209;CL-0069;EQ-0127;2025-04-18;2025-09-29;2025-10-07;Mensal;;5300.00;Reforma Rodovia dos Bandeirantes km 80;Encerrado
+CT-01210;CL-0030;EQ-0062;2025-04-03;2025-04-20;2025-04-27;Semanal;2390.00;;Obra Rodovia dos Bandeirantes km 80;Encerrado
