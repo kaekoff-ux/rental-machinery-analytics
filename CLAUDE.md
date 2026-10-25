@@ -52,4 +52,6 @@ Detalhes em `docs/roadmap.md`. Fase atual: **0 - Fundação**.
 cadastro_equipamentos, clientes, contratos_locacao, horimetro_telemetria, ordens_manutencao, abastecimento, faturamento.
 
 ## Comandos úteis
-Serão adicionados aqui conforme as fases avançarem (ex.: como rodar o gerador de dados).
+Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as fases avançarem.
+- `python src/gerador_dados/gerar_cadastro_equipamentos.py` gera `cadastro_equipamentos.csv` em `data/raw/` (com sujeira, 139 linhas) e em `data/processed/` (limpo, 135 linhas). Só usa a biblioteca padrão do Python.
+- Janela de histórico: 2024-01-01 a 2025-12-31 (24 meses). Todas as tabelas devem usar a mesma janela.
