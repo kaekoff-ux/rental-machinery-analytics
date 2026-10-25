@@ -31,7 +31,7 @@ import random
 from datetime import date, timedelta
 from pathlib import Path
 
-from utils import gravar_csv
+from utils import construir_intervalos_contrato, contrato_vigente, gravar_csv
 
 SEED = 42
 
@@ -68,27 +68,6 @@ P_HORIMETRO_DIMINUI = 0.04     # erro de digitação: leitura menor que a anteri
 def carregar_csv(caminho):
     with open(caminho, encoding="utf-8-sig", newline="") as arquivo:
         return list(csv.DictReader(arquivo, delimiter=";"))
-
-
-# --- Passo 1: para cada equipamento, janelas de uso efetivo (contratos não cancelados) ----
-def construir_intervalos_contrato(contratos):
-    intervalos = {}
-    for contrato in contratos:
-        if contrato["status"] == "Cancelado":
-            continue  # a máquina nunca saiu do pátio nesse caso
-        inicio = date.fromisoformat(contrato["data_inicio"])
-        fim = date.fromisoformat(contrato["data_devolucao"] or contrato["data_fim_prevista"])
-        intervalos.setdefault(contrato["id_equipamento"], []).append((inicio, fim, contrato["id_contrato"]))
-    for lista in intervalos.values():
-        lista.sort()
-    return intervalos
-
-
-def contrato_vigente(intervalos_equipamento, dia):
-    for inicio, fim, id_contrato in intervalos_equipamento:
-        if inicio <= dia <= fim:
-            return id_contrato
-    return None
 
 
 def horas_iniciais(equipamento, rng):

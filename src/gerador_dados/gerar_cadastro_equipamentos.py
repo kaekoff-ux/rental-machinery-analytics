@@ -15,7 +15,7 @@ import unicodedata
 from datetime import date, timedelta
 from pathlib import Path
 
-from utils import gravar_csv, sortear_ponderado
+from utils import formatar_real, gravar_csv, sortear_ponderado
 
 SEED = 42
 
@@ -120,13 +120,6 @@ ALIASES_FABRICANTE = {
 def sem_acento(texto):
     """'São José' -> 'Sao Jose' (separa a letra do acento e descarta o acento)."""
     return "".join(c for c in unicodedata.normalize("NFD", texto) if unicodedata.category(c) != "Mn")
-
-
-def formatar_real(valor):
-    """845000.0 -> 'R$ 845.000,00' (padrão brasileiro de planilha)."""
-    texto = f"{valor:,.2f}"  # '845,000.00'
-    texto = texto.replace(",", "#").replace(".", ",").replace("#", ".")
-    return f"R$ {texto}"
 
 
 # --- Passo 1: gerar a frota limpa ---------------------------------------------------------
