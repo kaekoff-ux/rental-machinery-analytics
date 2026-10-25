@@ -34,7 +34,14 @@ import random
 from datetime import date, timedelta
 from pathlib import Path
 
-from utils import construir_intervalos_contrato, contrato_vigente, formatar_real, gravar_csv
+from utils import (
+    construir_historico_horimetro,
+    construir_intervalos_contrato,
+    contrato_vigente,
+    formatar_real,
+    gravar_csv,
+    horimetro_na_data,
+)
 
 SEED = 42
 
@@ -106,28 +113,6 @@ VARIANTES_TIPO = {
 def carregar_csv(caminho):
     with open(caminho, encoding="utf-8-sig", newline="") as arquivo:
         return list(csv.DictReader(arquivo, delimiter=";"))
-
-
-def construir_historico_horimetro(leituras):
-    """{id_equipamento: [(data, horas), ...]} ordenado - para achar o horímetro na data de uma OS."""
-    historico = {}
-    for leitura in leituras:
-        historico.setdefault(leitura["id_equipamento"], []).append(
-            (date.fromisoformat(leitura["data_leitura"]), float(leitura["horimetro_horas"]))
-        )
-    for lista in historico.values():
-        lista.sort()
-    return historico
-
-
-def horimetro_na_data(historico_equipamento, dia):
-    """Última leitura conhecida em ou antes de `dia`. None se não há leitura anterior."""
-    valor = None
-    for data_leitura, horas in historico_equipamento:
-        if data_leitura > dia:
-            break
-        valor = horas
-    return valor
 
 
 def montar_os(rng, id_equipamento, tipo, data_abertura, historico_equipamento, descricao_extra=""):

@@ -47,6 +47,30 @@ def contrato_vigente(intervalos_equipamento, dia):
     return None
 
 
+def construir_historico_horimetro(leituras):
+    """A partir de horimetro_telemetria (processed), retorna {id_equipamento: [(data, horas)]}
+    ordenado - usado para achar o horimetro aproximado em qualquer data (abastecimento, OS).
+    """
+    historico = {}
+    for leitura in leituras:
+        historico.setdefault(leitura["id_equipamento"], []).append(
+            (date.fromisoformat(leitura["data_leitura"]), float(leitura["horimetro_horas"]))
+        )
+    for lista in historico.values():
+        lista.sort()
+    return historico
+
+
+def horimetro_na_data(historico_equipamento, dia):
+    """Ultima leitura conhecida em ou antes de `dia`. None se nao ha leitura anterior."""
+    valor = None
+    for data_leitura, horas in historico_equipamento:
+        if data_leitura > dia:
+            break
+        valor = horas
+    return valor
+
+
 def gravar_csv(caminho, colunas, linhas):
     """Grava um CSV no padrao dos geradores: separador ';', utf-8-sig (Excel e Power Query
     reconhecem os acentos), uma linha por dicionario em `linhas`.
