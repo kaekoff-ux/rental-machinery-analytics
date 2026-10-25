@@ -19,7 +19,7 @@ Carlos, engenheiro mecânico com experiência em manutenção, gestão de ativos
 ## Regras do projeto
 1. Dados fictícios: nunca incluir dados reais de empresas, clientes ou pessoas.
 2. Reprodutibilidade: o gerador de dados usa **seed fixa = 42**. A mesma execução deve gerar os mesmos arquivos.
-3. Sujeira só nos dados brutos (`data/raw/`). Os dados tratados (`data/processed/`) saem limpos, com datas em formato ISO (aaaa-mm-dd).
+3. Sujeira só nos dados brutos (`data/raw/`). Os dados tratados (`data/processed/`) saem limpos, com datas em formato ISO (aaaa-mm-dd). Exceção: um valor realmente ausente na vida real (ex.: `ano_fabricacao` que nunca foi registrado) pode ficar vazio também no `processed` — isso não é "sujeira" (inconsistência de formatação/grafia), é ausência legítima do dado. Se usar essa exceção num gerador, comentar no código qual campo e por quê.
 4. Nomes de colunas em português, `snake_case`, sem acento. Seguir o dicionário em `docs/dicionario_dados.csv`.
 5. KPIs seguem as definições em `docs/kpis.csv`. Se uma fórmula mudar, atualizar o arquivo.
 6. Textos públicos (README, case, posts) devem dizer que é um case com dados fictícios e não declarar experiência profissional inexistente.

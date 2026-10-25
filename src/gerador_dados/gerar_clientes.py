@@ -10,10 +10,11 @@ Como rodar, a partir da raiz do repositorio:
 Reprodutibilidade: a seed e fixa (42). Rodar de novo gera exatamente os mesmos arquivos.
 Colunas e sujeira prevista: docs/dicionario_dados.csv.
 """
-import csv
 import random
 from datetime import date, timedelta
 from pathlib import Path
+
+from utils import gravar_csv, sortear_ponderado
 
 SEED = 42
 
@@ -84,13 +85,6 @@ VARIANTES_SEGMENTO = {
     "Logística": ["LOGÍSTICA", "Logistica", "logística"],
     "Agronegócio": ["AGRONEGÓCIO", "Agronegocio", "Agro"],
 }
-
-
-def sortear_ponderado(rng, opcoes):
-    """Sorteia um item de uma lista [(item, peso), ...]."""
-    itens = [item for item, _ in opcoes]
-    pesos = [peso for _, peso in opcoes]
-    return rng.choices(itens, weights=pesos)[0]
 
 
 def gerar_cnpj(rng):
@@ -207,19 +201,18 @@ def sujar_linha(rng, linha):
 
 def gerar_raw(rng, clientes):
     raw = [sujar_linha(rng, linha) for linha in clientes]
-    # Duplicados: o mesmo cliente (mesmo CNPJ) cadastrado de novo com outra grafia da razao social.
-    for linha in rng.sample(clientes, N_CLIENTES_DUPLICADOS):
-        duplicata = sujar_linha(rng, linha)
-        raw.insert(rng.randrange(len(raw) + 1), duplicata)
+    # Duplicados: o mesmo cliente (mesmo CNPJ) cadastrado de novo sob um id_cliente diferente,
+    # porque quem cadastrou de novo nao percebeu que o cliente ja existia (a razao social
+    # tambem costuma vir escrita diferente). O id_cliente tem que ser NOVO aqui - se repetisse
+    # o id original, bastaria deduplicar pelo id, e o exercicio de deduplicar pelo CNPJ
+    # (como o dicionario de dados pede) deixaria de fazer sentido.
+    proximo_id = len(clientes) + 1
+    for linha_original in rng.sample(clientes, N_CLIENTES_DUPLICADOS):
+        duplicata = dict(linha_original)
+        duplicata["id_cliente"] = f"CL-{proximo_id:04d}"
+        proximo_id += 1
+        raw.insert(rng.randrange(len(raw) + 1), sujar_linha(rng, duplicata))
     return raw
-
-
-def gravar_csv(caminho, linhas):
-    # utf-8-sig: o Excel e o Power Query reconhecem os acentos. Separador ';' como no dicionário.
-    with open(caminho, "w", encoding="utf-8-sig", newline="") as arquivo:
-        escritor = csv.DictWriter(arquivo, fieldnames=COLUNAS, delimiter=";", lineterminator="\n")
-        escritor.writeheader()
-        escritor.writerows(linhas)
 
 
 def main():
@@ -230,8 +223,8 @@ def main():
 
     ARQ_RAW.parent.mkdir(parents=True, exist_ok=True)
     ARQ_PROCESSED.parent.mkdir(parents=True, exist_ok=True)
-    gravar_csv(ARQ_RAW, raw)
-    gravar_csv(ARQ_PROCESSED, processed)
+    gravar_csv(ARQ_RAW, COLUNAS, raw)
+    gravar_csv(ARQ_PROCESSED, COLUNAS, processed)
 
     print(f"raw:       {len(raw)} linhas ({N_CLIENTES_DUPLICADOS} duplicadas) -> {ARQ_RAW.relative_to(RAIZ)}")
     print(f"processed: {len(processed)} linhas -> {ARQ_PROCESSED.relative_to(RAIZ)}")

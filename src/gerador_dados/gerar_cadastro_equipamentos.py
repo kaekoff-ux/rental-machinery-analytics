@@ -10,11 +10,12 @@ Como rodar, a partir da raiz do repositório:
 Reprodutibilidade: a seed é fixa (42). Rodar de novo gera exatamente os mesmos arquivos.
 Colunas e sujeira prevista: docs/dicionario_dados.csv.
 """
-import csv
 import random
 import unicodedata
 from datetime import date, timedelta
 from pathlib import Path
+
+from utils import gravar_csv, sortear_ponderado
 
 SEED = 42
 
@@ -119,13 +120,6 @@ ALIASES_FABRICANTE = {
 def sem_acento(texto):
     """'São José' -> 'Sao Jose' (separa a letra do acento e descarta o acento)."""
     return "".join(c for c in unicodedata.normalize("NFD", texto) if unicodedata.category(c) != "Mn")
-
-
-def sortear_ponderado(rng, opcoes):
-    """Sorteia um item de uma lista [(item, peso), ...]."""
-    itens = [item for item, _ in opcoes]
-    pesos = [peso for _, peso in opcoes]
-    return rng.choices(itens, weights=pesos)[0]
 
 
 def formatar_real(valor):
@@ -265,14 +259,6 @@ def gerar_raw(rng, frota):
     return raw
 
 
-def gravar_csv(caminho, linhas):
-    # utf-8-sig: o Excel e o Power Query reconhecem os acentos. Separador ';' como no dicionário.
-    with open(caminho, "w", encoding="utf-8-sig", newline="") as arquivo:
-        escritor = csv.DictWriter(arquivo, fieldnames=COLUNAS, delimiter=";", lineterminator="\n")
-        escritor.writeheader()
-        escritor.writerows(linhas)
-
-
 def main():
     rng = random.Random(SEED)  # gerador de números aleatórios próprio, sempre iniciado com 42
     frota = gerar_frota_limpa(rng)
@@ -281,8 +267,8 @@ def main():
 
     ARQ_RAW.parent.mkdir(parents=True, exist_ok=True)
     ARQ_PROCESSED.parent.mkdir(parents=True, exist_ok=True)
-    gravar_csv(ARQ_RAW, raw)
-    gravar_csv(ARQ_PROCESSED, processed)
+    gravar_csv(ARQ_RAW, COLUNAS, raw)
+    gravar_csv(ARQ_PROCESSED, COLUNAS, processed)
 
     print(f"raw:       {len(raw)} linhas ({N_DUPLICADOS} duplicadas) -> {ARQ_RAW.relative_to(RAIZ)}")
     print(f"processed: {len(processed)} linhas -> {ARQ_PROCESSED.relative_to(RAIZ)}")
