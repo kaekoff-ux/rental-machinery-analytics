@@ -46,7 +46,7 @@ rental-machinery-analytics/
 
 ## Fases (resumo)
 0 Fundação | 1 Base fictícia | 2 ETL e modelo | 3 DAX e dashboard | 4 Versão Excel | 5 IA preditiva | 6 App e agentes | 7 Portfólio.
-Detalhes em `docs/roadmap.md`. Fase atual: **0 - Fundação**.
+Detalhes em `docs/roadmap.md`. Fase atual: **1 - Base fictícia (completa, as 7 fontes geradas) → prestes a iniciar Fase 2**.
 
 ## Tabelas de origem (7)
 cadastro_equipamentos, clientes, contratos_locacao, horimetro_telemetria, ordens_manutencao, abastecimento, faturamento.
@@ -59,5 +59,7 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
 - `python src/gerador_dados/gerar_horimetro_telemetria.py` gera `horimetro_telemetria.csv` em `data/raw/` e em `data/processed/` (11792 linhas nas duas — "lacunas" entre leituras são naturais da amostragem periódica, não é sujeira só do raw). Depende de `cadastro_equipamentos.csv` e `contratos_locacao.csv` (processed). Simula o horímetro dia a dia (mais uso quando há contrato vigente) e sorteia leituras periódicas; ~35% da frota tem fonte_leitura=Telemetria (leituras frequentes), o resto é Manual (esparsas).
 - `python src/gerador_dados/gerar_ordens_manutencao.py` gera `ordens_manutencao.csv` (3922 linhas). **Módulo de controle de oficina** — `status_os` (Aberta/Em andamento/Concluída) é o board Kanban. Depende de `cadastro_equipamentos.csv`, `contratos_locacao.csv` e `horimetro_telemetria.csv` (processed). Três origens de OS: Preventiva (limiar de horímetro, a cada 250h), Corretiva (falha aleatória, mais provável em uso), Preditiva (regra comercial→oficina: toda devolução de contrato abre uma inspeção automática — validado: 1033 de 1034 devoluções geraram OS).
 - `python src/gerador_dados/gerar_abastecimento.py` gera `abastecimento.csv` (22263 linhas). Depende de `cadastro_equipamentos.csv`, `contratos_locacao.csv` e `horimetro_telemetria.csv` (processed). Consumo por segmento (litros/hora) e capacidade de tanque disparam o abastecimento; preço do diesel sobe com inflação simples ao longo da janela.
+- `python src/gerador_dados/gerar_faturamento.py` gera `faturamento.csv` (2487 linhas). Depende de `contratos_locacao.csv` (processed). Contratos Mensal geram 1 fatura por mês de duração; Semanal/Diária geram 1 fatura única. Contratos Cancelado não faturam. `status_pagamento` (Pago/Vencido/Em aberto) é decidido comparando a data de vencimento com o fim da janela de histórico (o "hoje" fictício do case).
+- **As 7 fontes de dados do roadmap estão geradas.** Fase 1 (Base fictícia) completa — próxima é a Fase 2 (ETL e modelo no Power Query).
 - Funções repetidas entre os geradores (sorteio ponderado, gravação de CSV) ficam em `src/gerador_dados/utils.py`.
 - Janela de histórico: 2024-01-01 a 2025-12-31 (24 meses). Todas as tabelas devem usar a mesma janela.
