@@ -6,6 +6,10 @@ PRD do projeto (dor do usuário, proposta de valor, funcionalidades, MVP, person
 arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico de mudanças em
 `CHANGELOG.md`.
 
+**Próximo passo prioritário: Camada 1 (site do cliente).** Passo a passo detalhado em
+`docs/plano_camada1_site.md` — comece por lá antes de qualquer outra camada (Power BI segue
+em paralelo, sem depender disso).
+
 ## O que é este projeto
 Case de portfólio sobre gestão de locação de máquinas pesadas, inspirado em um anúncio público do Workana. **Todos os dados são fictícios** e gerados por script. A empresa fictícia se chama **LocaMaq**.
 
