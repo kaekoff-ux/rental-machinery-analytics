@@ -2,6 +2,10 @@
 
 Este arquivo orienta o Claude Code neste repositório. Leia antes de qualquer tarefa.
 
+PRD do projeto (dor do usuário, proposta de valor, funcionalidades, MVP, personas,
+arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico de mudanças em
+`CHANGELOG.md`.
+
 ## O que é este projeto
 Case de portfólio sobre gestão de locação de máquinas pesadas, inspirado em um anúncio público do Workana. **Todos os dados são fictícios** e gerados por script. A empresa fictícia se chama **LocaMaq**.
 
