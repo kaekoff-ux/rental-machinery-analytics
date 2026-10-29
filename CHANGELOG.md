@@ -17,6 +17,15 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
   via Kling AI (image-to-image) — gerações ainda não concluídas por falta de créditos na
   conta Kling.
 
+### Pendências (do usuário)
+- `docs/quem_somos.md` + `docs/imagens/` (história, missão, visão, valores da LocaMaq) —
+  ainda não commitado no repositório. Falta concluir a correção das duas imagens (placa de
+  `02_barracao_1992.jpg` e cor das máquinas de `03_unidade_atual.jpg` via Kling AI, aguardando
+  recarga de créditos) antes de publicar.
+- `data/raw/Dashboard_Rental_Machinery.pbix` — ainda não commitado. Power BI (Fases 2-4 do
+  roadmap: ETL/modelo estrela, DAX, dashboard) não construído; arquivo é só o placeholder
+  vazio criado pelo Power BI Desktop.
+
 ### Verified
 - Números de `docs/quem_somos.md` (135 equipamentos, 117 ativos, distribuição por filial,
   aquisição mais antiga em fevereiro/2016) conferidos contra
