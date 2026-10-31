@@ -5,6 +5,13 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Changed (31/10/2026, Apps Script)
+- `src/apps_script/receber_orcamento.gs` passou a usar `LockService`: dois pedidos ao mesmo
+  tempo não gravam o cabeçalho duas vezes nem se sobrepõem. Testado só em simulação (Node, com
+  planilha, trava e resposta falsas); o Google de verdade não foi testado.
+- `docs/plano_camada1_site.md`: passo 5 com os rótulos do Apps Script conferidos na documentação
+  oficial em 31/10/2026 e com a lista do que ainda não foi testado.
+
 ### Added (31/10/2026, publicação)
 - Site publicado no GitHub Pages (branch `main`, pasta raiz):
   <https://kaekoff-ux.github.io/rental-machinery-analytics/site/>. Link no `README.md` e no

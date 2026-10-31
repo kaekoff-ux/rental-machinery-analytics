@@ -15,12 +15,19 @@ function doPost(e) {
   const pedido = (e && e.parameter) || {};
   if (pedido.site) return responder({ ok: true }); // campo-isca do formulário preenchido: robô
 
-  const planilha = SpreadsheetApp.getActiveSpreadsheet();
-  const aba = planilha.getSheetByName(NOME_DA_ABA) || planilha.insertSheet(NOME_DA_ABA);
-  if (aba.getLastRow() === 0) aba.appendRow(COLUNAS);
+  // Dois pedidos ao mesmo tempo não podem gravar o cabeçalho duas vezes nem se sobrepor.
+  const trava = LockService.getScriptLock();
+  trava.waitLock(10000);
+  try {
+    const planilha = SpreadsheetApp.getActiveSpreadsheet();
+    const aba = planilha.getSheetByName(NOME_DA_ABA) || planilha.insertSheet(NOME_DA_ABA);
+    if (aba.getLastRow() === 0) aba.appendRow(COLUNAS);
 
-  const valores = COLUNAS.slice(1).map((coluna) => limpar(pedido[coluna]));
-  aba.appendRow([new Date(), ...valores]);
+    const valores = COLUNAS.slice(1).map((coluna) => limpar(pedido[coluna]));
+    aba.appendRow([new Date(), ...valores]);
+  } finally {
+    trava.releaseLock();
+  }
   return responder({ ok: true });
 }
 

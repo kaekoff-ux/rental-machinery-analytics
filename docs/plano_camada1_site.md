@@ -28,7 +28,7 @@ tecnologias — passos pequenos, cada um terminando em algo visível no navegado
 | 2. Estrutura completa | Feito (capítulos em pop-ups com slides) | Pop-ups abertos e conferidos no Chrome |
 | 3. Formulário | Feito (pop-up em dois passos) | Validação testada: campos obrigatórios e "telefone ou e-mail" |
 | 4. Captura local | Feito | Envio mostra confirmação com resumo e imprime os dados no console (F12) |
-| 5. Apps Script | **Código pronto, falta publicar** (precisa da sua conta Google) | Não testado |
+| 5. Apps Script | **Código pronto, falta publicar** (precisa da sua conta Google) | Lógica testada só em simulação (Node); Google de verdade não testado |
 | 6. Visual | Feito, revisado três vezes | 320, 390, 768, 1024, 1120, 1200, 1366×657, 1440 e 1920 px: sem rolagem lateral e cabeçalho em uma linha; também sem JavaScript. Pop-ups cabem sem rolar em tablet e notebook; no celular (folha que sobe de baixo) alguns rolam por dentro, de propósito. Mais 12 telas de tablet, em pé e deitado (ver abaixo) |
 | 7. GitHub Pages | Feito em 31/10/2026 (opção A: branch `main`, pasta raiz) | Build sem erro; página, CSS, JS, 7 imagens e vídeo respondendo 200; no Chrome do computador, vídeo tocando, 9 pop-ups abrindo e console sem erros. Não testado em celular ou tablet de verdade |
 | 8. Link no CLAUDE/README | Feito em 31/10/2026 | Link em `README.md` e `CLAUDE.md` |
@@ -162,9 +162,16 @@ rental-machinery-analytics/
 
 ## Passo 5 em detalhe: ligar o formulário à planilha
 
-Feito por você, porque usa a sua conta Google. Os nomes de menu abaixo foram escritos de
-memória, sem conferir a documentação do Google nesta data; se algum mudou, procure a função
-equivalente.
+Feito por você, porque usa a sua conta Google; o Claude não entra nela, e o clique de
+autorização do Google tem de ser seu.
+
+Conferido em 31/10/2026 na documentação oficial do Google ("Web Apps", atualizada em
+03/09/2026, e "Create and manage deployments", atualizada em 15/09/2026): o caminho
+Deploy > New deployment > Web app, a opção "Execute the app as me" e a regra de que editar a
+implantação para usar uma nova versão mantém a mesma URL. Essas páginas **não** trazem as opções
+de "Quem pode acessar" (aqui é recomendação minha [P]: "Qualquer pessoa", em inglês "Anyone") e
+só mostram `/exec` num exemplo. Os nomes em português abaixo são tradução minha da interface; se
+algum for diferente, procure o equivalente.
 
 1. No Google Drive, crie uma planilha nova chamada `LocaMaq - Leads`.
 2. Em Arquivo > Configurações, deixe o fuso horário em "(GMT-03:00) São Paulo": a coluna
@@ -175,13 +182,22 @@ equivalente.
    "Qualquer pessoa". Autorize o acesso à planilha (o aviso de "app não verificado" aparece
    porque o script é seu; siga por "Avançado").
 5. Copie a URL que termina em `/exec` e abra no navegador: deve aparecer `{"ok":true,...}`.
-6. Cole a URL em `URL_APPS_SCRIPT`, no topo de `site/script.js`.
-7. Envie um pedido pelo site com dados fictícios e confira a linha nova na aba `Leads`.
+6. Passe a URL ao Claude, ou cole você mesmo em `URL_APPS_SCRIPT`, no topo de `site/script.js`,
+   e faça commit e push; o site atualiza em 1 a 2 minutos (Ctrl+F5 mostra a versão nova).
+7. Envie um pedido pelo site publicado com dados fictícios e confira a linha nova na aba
+   `Leads`. Confira também se um contato que começa com `+` aparece sem o apóstrofo na célula:
+   a proteção contra fórmulas coloca um apóstrofo antes, e o esperado é que o Sheets o esconda.
 
 Cuidados: depois de mudar o código do Apps Script, publique uma nova versão em "Gerenciar
 implantações" (a URL continua a mesma). A URL fica visível no `script.js`, então qualquer pessoa
 pode mandar linhas para essa planilha; o campo-isca e o limite de tamanho reduzem o lixo, mas
 não guarde nada sensível nela.
+
+O que foi testado no script (31/10/2026): só uma simulação em Node, com planilha, trava e
+resposta falsas. Conferiu cabeçalho gravado uma vez, robô (campo-isca) descartado sem gravar,
+texto que começa com `=` ou `+` protegido com apóstrofo, corte em 1000 caracteres e trava pedida
+e liberada a cada pedido. **Não testado no Google de verdade** (planilha, autorização, URL
+publicada e envio pelo site); o passo 7 acima é esse teste.
 
 ## Passo 7 em detalhe: publicar no GitHub Pages
 
