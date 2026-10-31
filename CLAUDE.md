@@ -6,10 +6,11 @@ PRD do projeto (dor do usuário, proposta de valor, funcionalidades, MVP, person
 arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico de mudanças em
 `CHANGELOG.md`.
 
-**Camada 1 (site do cliente) em andamento.** Passo a passo e status em
-`docs/plano_camada1_site.md`. Em 31/10/2026 a página `site/index.html` estava pronta (passos 1 a 4
-e 6, já revisada três vezes); faltam publicar o Apps Script (passo 5, conta Google do usuário),
-publicar no GitHub Pages (passo 7) e pôr o link aqui e no README (passo 8). Fotos da frota:
+**Camada 1 (site do cliente) publicada em 31/10/2026:**
+<https://kaekoff-ux.github.io/rental-machinery-analytics/site/> (GitHub Pages, branch `main`,
+pasta raiz). Cada push na `main` republica no mesmo endereço em 1 a 2 minutos. Passo a passo e
+status em `docs/plano_camada1_site.md`. Falta publicar o Apps Script (passo 5, conta Google do
+usuário); até lá o formulário funciona em modo de teste. Fotos da frota:
 `docs/prompts_imagens_frota.md`. Power BI segue em paralelo, sem depender disso.
 
 **Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem

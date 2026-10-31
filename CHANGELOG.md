@@ -5,6 +5,15 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (31/10/2026, publicação)
+- Site publicado no GitHub Pages (branch `main`, pasta raiz):
+  <https://kaekoff-ux.github.io/rental-machinery-analytics/site/>. Link no `README.md` e no
+  `CLAUDE.md` (passos 7 e 8 do plano da Camada 1).
+
+### Changed (31/10/2026, publicação)
+- `README.md`: status atualizado (dizia "Fase 0 em andamento"; agora Fase 1 completa e Fase 2
+  em andamento), site na lista de entregas e HTML/CSS/JavaScript na stack.
+
 ### Changed (31/10/2026, site, tablets)
 - Limite entre celular e tablet de 768 px (48rem) para 736 px (46rem), no CSS e nas imagens do
   Quem somos: o iPad mini em pé (744 px) caía no layout de celular e o pop-up Unidades rolava.

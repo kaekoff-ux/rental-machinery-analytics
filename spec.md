@@ -43,10 +43,11 @@ missão, visão, valores, frota em destaque) + formulário de orçamento, public
 Pages, com captura real de leads via Google Apps Script → Google Sheet. Sem backend de
 orquestração ainda — esse é o ponto exato onde a Camada 3 vai plugar depois.
 
-Situação em 31/10/2026: a página está pronta localmente (`site/`), com animação no topo,
-capítulos em pop-ups com slides, simulador de locação dentro do pedido de orçamento e botões
-de Telegram e Área do cliente que ainda abrem avisos de "em breve". Faltam publicar o Apps
-Script (passo 5) e o GitHub Pages (passo 7). Detalhes em `docs/plano_camada1_site.md`.
+Situação em 31/10/2026: a página (`site/`) está publicada no GitHub Pages, em
+<https://kaekoff-ux.github.io/rental-machinery-analytics/site/>, com animação no topo, capítulos
+em pop-ups com slides, simulador de locação dentro do pedido de orçamento e botões de Telegram
+e Área do cliente que ainda abrem avisos de "em breve". Falta publicar o Apps Script (passo 5);
+até lá o formulário funciona em modo de teste. Detalhes em `docs/plano_camada1_site.md`.
 
 ## 5. Público-alvo e perfis
 
@@ -106,9 +107,10 @@ só com texto. Referência de estrutura: scarpantiempilhadeiras.com.br.
   talvez contratos e faturas); como entra (e-mail e senha, link mágico, conta Google); onde
   ficam os pedidos com status (ver seção 6); e o cuidado com dados pessoais, mesmo num case
   fictício. Hoje o site só tem um botão que abre um aviso de "em planejamento".
-- **Publicação no GitHub Pages** — pela raiz do repositório (endereço termina em `/site/`) ou
-  por GitHub Actions publicando só `site/`. A prévia de link (`og:image` no `index.html`) foi
-  escrita para a primeira opção.
+- **Endereço mais curto** — o site foi publicado em 31/10/2026 pela raiz do repositório
+  (endereço termina em `/site/`). Um workflow do GitHub Actions publicando só `site/` tiraria o
+  `/site/` do endereço; nesse caso, trocar `/site/img/` por `/img/` no `og:image` do
+  `index.html`.
 - **Bot do Telegram** — nome de usuário do bot (campo `telegram` no topo de `site/script.js`),
   quando a Camada 3 existir.
 - **Vídeo do topo** — está sem recompressão (4 MB, MP4 do Gemini), porque não há ffmpeg nesta
