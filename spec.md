@@ -31,6 +31,7 @@ só, permitindo mostrar progresso de portfólio ao longo do caminho.
 |---|---|
 | 1 | Site institucional + formulário de orçamento/contato |
 | 2 | Fluxo interno: recebido → vendedor → atendimento → oficina → contratação |
+| 2 (cliente) | Área do cliente com login: o cliente acompanha os próprios pedidos e requisições (planejada em 31/10/2026; escopo a discutir, ver seção 9) |
 | 3 | Orquestração via N8N e canal Telegram (ferramenta exata a decidir módulo por módulo) |
 | 4 | Dashboard Power BI com os 18 KPIs de `docs/kpis.csv` |
 | 5 | Camada de inteligência: DuckDB + RAG (dicionário/KPIs) + servidor MCP + agente de texto-para-SQL + app Streamlit (gráficos + chat) + agentes de regra (preventiva, qualidade de dados, resumo semanal) |
@@ -41,6 +42,11 @@ Primeiro incremento (Camada 1, em construção): página institucional da LocaMa
 missão, visão, valores, frota em destaque) + formulário de orçamento, publicados no GitHub
 Pages, com captura real de leads via Google Apps Script → Google Sheet. Sem backend de
 orquestração ainda — esse é o ponto exato onde a Camada 3 vai plugar depois.
+
+Situação em 31/10/2026: a página está pronta localmente (`site/`), com animação no topo,
+capítulos em pop-ups com slides, simulador de locação dentro do pedido de orçamento e botões
+de Telegram e Área do cliente que ainda abrem avisos de "em breve". Faltam publicar o Apps
+Script (passo 5) e o GitHub Pages (passo 7). Detalhes em `docs/plano_camada1_site.md`.
 
 ## 5. Público-alvo e perfis
 
@@ -59,6 +65,7 @@ orquestração ainda — esse é o ponto exato onde a Camada 3 vai plugar depois
 |---|---|
 | 1 | HTML + CSS + JavaScript puro, hospedagem GitHub Pages |
 | 1 (backend do form) | Google Apps Script (Web App) → Google Sheet |
+| 2 (área do cliente) | A definir. O site no GitHub Pages é estático: a área precisa de login e de um lugar onde os pedidos tenham status. Opções a comparar na discussão: Google Apps Script + Sheets (mesma base do formulário), Supabase (login + Postgres) ou Firebase (login + Firestore) |
 | 3 | N8N (Community Edition self-hosted, gratuito) + API do Telegram — decisão de escopo exato em aberto |
 | 4 | Power BI Desktop, modelo estrela (3 dimensões + 5 fatos) sobre `data/processed/*.csv` |
 | 5 | DuckDB (camada de consulta) + servidor MCP em Python + RAG por contexto fixo (sem embeddings) sobre `docs/dicionario_dados.csv`/`docs/kpis.csv`/`docs/modelo_dados.md` + Streamlit + modelo Claude Haiku (custo-benefício) |
@@ -70,6 +77,12 @@ Paleta definida em `docs/quem_somos.md`: verde-musgo `#4A5D3A` (principal), lara
 `#2F5D62` (complementar). Tom documental e caloroso, ancorado na história fictícia da
 LocaMaq (Seu José, 1992 → unidade atual). Usar a skill de design de páginas ao construir
 qualquer página pública, para evitar visual genérico.
+
+Padrão pedido pelo usuário em 31/10/2026, que vale mais que as regras da skill de design onde
+as duas discordam: visual moderno e contido (textos e espaços menores), botões em pílula com
+transparência, vidro e brilho suaves, chamadas de ação que abrem pop-ups com slides laterais,
+página inicial enxuta (topo, números, chamada de orçamento e rodapé) e, no celular, Quem somos
+só com texto. Referência de estrutura: scarpantiempilhadeiras.com.br.
 
 ## 8. Processo
 
@@ -84,6 +97,22 @@ qualquer página pública, para evitar visual genérico.
   poucos.
 - Honestidade de portfólio: todo texto público deve identificar a LocaMaq como case
   fictício, sem insinuar experiência profissional ou operação real.
+
+## 9. Decisões em aberto
+
+- **Área do cliente (logada)** — pedido do usuário em 31/10/2026, para discutir depois. O
+  objetivo dado: o cliente acompanha os próprios pedidos e requisições. Falta decidir: o que
+  ele vê (status do pedido nas etapas da Camada 2, requisições como troca, revisão ou retirada,
+  talvez contratos e faturas); como entra (e-mail e senha, link mágico, conta Google); onde
+  ficam os pedidos com status (ver seção 6); e o cuidado com dados pessoais, mesmo num case
+  fictício. Hoje o site só tem um botão que abre um aviso de "em planejamento".
+- **Publicação no GitHub Pages** — pela raiz do repositório (endereço termina em `/site/`) ou
+  por GitHub Actions publicando só `site/`. A prévia de link (`og:image` no `index.html`) foi
+  escrita para a primeira opção.
+- **Bot do Telegram** — nome de usuário do bot (campo `telegram` no topo de `site/script.js`),
+  quando a Camada 3 existir.
+- **Vídeo do topo** — está sem recompressão (4 MB, MP4 do Gemini), porque não há ffmpeg nesta
+  máquina. Recomprimir reduziria o peso para o celular, que hoje recebe só a foto.
 
 ---
 > Consolidado a partir das decisões tomadas em sessão de planejamento com Claude Code.

@@ -167,7 +167,8 @@ venv.bak/
 .ropeproject
 
 # mkdocs/Zensical documentation
-/site
+# /site desativado: aqui site/ é a landing page da LocaMaq (Camada 1) e precisa ir para o Git.
+# /site
 
 # mypy
 .mypy_cache/

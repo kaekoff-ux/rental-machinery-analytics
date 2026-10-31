@@ -6,9 +6,19 @@ PRD do projeto (dor do usuário, proposta de valor, funcionalidades, MVP, person
 arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico de mudanças em
 `CHANGELOG.md`.
 
-**Próximo passo prioritário: Camada 1 (site do cliente).** Passo a passo detalhado em
-`docs/plano_camada1_site.md` — comece por lá antes de qualquer outra camada (Power BI segue
-em paralelo, sem depender disso).
+**Camada 1 (site do cliente) em andamento.** Passo a passo e status em
+`docs/plano_camada1_site.md`. Em 31/10/2026 a página `site/index.html` estava pronta (passos 1 a 4
+e 6, já revisada três vezes); faltam publicar o Apps Script (passo 5, conta Google do usuário),
+publicar no GitHub Pages (passo 7) e pôr o link aqui e no README (passo 8). Fotos da frota:
+`docs/prompts_imagens_frota.md`. Power BI segue em paralelo, sem depender disso.
+
+**Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem
+pedidos e requisições. Ainda não construída e com escopo a discutir: ver `spec.md`, seção 9. No
+site há só um botão que abre um aviso de "em planejamento".
+
+**Padrão visual das páginas públicas:** o do usuário (moderno, pop-ups com slides, vidro e brilho
+suaves, página inicial enxuta, celular sem imagens no Quem somos) vale mais que as regras da
+skill de design; ver `spec.md`, seção 7.
 
 ## O que é este projeto
 Case de portfólio sobre gestão de locação de máquinas pesadas, inspirado em um anúncio público do Workana. **Todos os dados são fictícios** e gerados por script. A empresa fictícia se chama **LocaMaq**.
@@ -73,3 +83,14 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
 - **Fase 2 (ETL e modelo) em andamento.** Modelo estrela rascunhado em `docs/modelo_dados.md` (3 dimensões + 5 fatos). Checklist de limpeza por fonte em `powerbi/checklist_power_query.md`. Nenhum dos dois foi testado no Power BI ainda — são planos, não resultado. O trabalho de Power Query em si acontece na interface do Power BI Desktop, fora do que o Claude Code executa diretamente.
 - Funções repetidas entre os geradores (sorteio ponderado, gravação de CSV) ficam em `src/gerador_dados/utils.py`.
 - Janela de histórico: 2024-01-01 a 2025-12-31 (24 meses). Todas as tabelas devem usar a mesma janela.
+- **Site (Camada 1):** abrir `site/index.html` direto no navegador, ou rodar
+  `python -m http.server 8765` dentro de `site/` e abrir `http://127.0.0.1:8765` (igual ao GitHub
+  Pages). Telefones/endereços genéricos ficam no objeto `CONTATO` e a URL do formulário em
+  `URL_APPS_SCRIPT`, ambos no topo de `site/script.js`. Os números do site (frota, unidades,
+  preventivas, telemetria) foram tirados de `data/processed/`; se os geradores mudarem,
+  atualizar `site/index.html` também.
+- `python src/site/otimizar_imagens.py` gera as imagens leves de `site/img/` a partir de
+  `docs/imagens/` (e de `docs/imagens/frota/`, quando as fotos existirem), atualiza a lista
+  `site/img/frota/disponiveis.js` e copia o vídeo `docs/videos/01_hero_animacao.mp4` para
+  `site/video/hero.mp4` (sem recompressão: não há ffmpeg). Precisa do Pillow. Rodar sempre que
+  uma imagem ou o vídeo mudar.

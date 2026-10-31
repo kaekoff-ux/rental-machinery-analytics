@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LocaMaq · Locação de máquinas pesadas (case fictício)</title>
+  <meta name="description" content="Case de portfólio: site da LocaMaq, locadora fictícia de máquinas pesadas no interior paulista e na Grande São Paulo. Dados e imagens ilustrativos.">
+  <!-- A LocaMaq é fictícia: noindex evita que o site apareça em buscas misturado a empresas reais. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#4a5d3a">
+  <!-- Prévia ao compartilhar o link (LinkedIn, WhatsApp). A imagem precisa de endereço completo:
+       este vale para a publicação pela raiz do repositório no GitHub Pages (docs/plano_camada1_site.md, passo 7). -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="LocaMaq · Locação de máquinas pesadas (case fictício)">
+  <meta property="og:description" content="Case de portfólio: locadora fictícia de máquinas pesadas, com frota, unidades e pedido de orçamento. Dados e imagens ilustrativos.">
+  <meta property="og:image" content="https://kaekoff-ux.github.io/rental-machinery-analytics/site/img/unidade-atual.jpg">
+  <meta property="og:image:alt" content="Pátio da LocaMaq com máquinas pesadas (imagem ilustrativa, gerada por IA)">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234a5d3a'/%3E%3Crect x='18' y='18' width='9' height='9' rx='2' fill='%23c8651b'/%3E%3Cpath d='M8 6h4v16h7v4H8z' fill='%23e8dcc4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+  <link rel="stylesheet" href="estilo.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <!-- Lista das fotos da frota que existem, gerada por src/site/otimizar_imagens.py -->
+  <script src="img/frota/disponiveis.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Regra do projeto: todo texto público deixa claro que é um case com dados fictícios. -->
+  <div class="aviso">
+    <p class="envoltorio">Case de portfólio: a LocaMaq é uma empresa fictícia e os dados deste site são ilustrativos.
+      <a href="https://github.com/kaekoff-ux/rental-machinery-analytics" data-abrir="modal-case">Entenda o projeto</a></p>
+  </div>
+
+  <!-- Os itens do menu abrem pop-ups com slides; sem JavaScript, levam ao mesmo conteúdo mais abaixo. -->
+  <header class="topo">
+    <div class="envoltorio topo-barra">
+      <a class="marca" href="#inicio" aria-label="LocaMaq, voltar ao início"><span class="marca-loca">Loca</span><span class="marca-maq">Maq</span></a>
+      <nav class="topo-nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="#modal-servicos" data-abrir="modal-servicos">Serviços</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota">Frota</a></li>
+          <li><a href="#modal-como" data-abrir="modal-como">Como funciona</a></li>
+          <li><a href="#modal-quem-somos" data-abrir="modal-quem-somos">Quem somos</a></li>
+          <li><a href="#modal-unidades" data-abrir="modal-unidades">Unidades</a></li>
+        </ul>
+        <!-- Telefones, e-mail, endereços e Telegram: edite o objeto CONTATO no topo do script.js. -->
+        <a class="topo-telefone" href="tel:+551500000000">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          <span data-contato="telefone">(15) 0000-0000</span>
+        </a>
+        <!-- Área do cliente: planejada (spec.md); por enquanto abre um aviso. -->
+        <button class="topo-cliente so-js" type="button" data-abrir="modal-cliente" aria-label="Área do cliente" title="Área do cliente">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>
+          <span class="topo-cliente-rotulo">Área do cliente</span>
+        </button>
+      </nav>
+      <a class="botao botao-topo" href="#modal-orcamento" data-abrir="modal-orcamento"><span class="rotulo-longo">Pedir orçamento</span><span class="rotulo-curto">Orçamento</span></a>
+      <button class="topo-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <!-- A animação (docs/videos/01_hero_animacao.mp4) só carrega em telas largas, sem economia de dados
+           e sem "reduzir movimento"; nos outros casos fica a foto, que é igual ao primeiro quadro do vídeo. -->
+      <div class="hero-foto">
+        <img src="img/unidade-atual.jpg" width="1376" height="768" fetchpriority="high"
+             alt="Fachada envidraçada da LocaMaq, com escavadeiras, retroescavadeiras e um guindaste no pátio">
+        <video class="hero-video" data-src="video/hero.mp4" muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+      </div>
+      <button class="hero-pausa so-js" type="button" aria-pressed="false" data-pausar-movimento>
+        <svg class="icone-pausa" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+        <svg class="icone-tocar" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4l13 8-13 8z"/></svg>
+        <span data-pausar-rotulo>Pausar animação</span>
+      </button>
+      <div class="envoltorio hero-conteudo">
+        <h1 id="hero-titulo"><span class="linha" data-entrada>A máquina certa,</span> <span class="linha" data-entrada>na hora certa.</span></h1>
+        <p class="hero-texto" data-entrada>Locação de máquinas pesadas desde 1992, com 117 equipamentos em cinco unidades paulistas.</p>
+        <div class="hero-acoes" data-entrada>
+          <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento">Pedir orçamento</a>
+          <a class="botao botao-vidro" href="#modal-frota" data-abrir="modal-frota">Conhecer a frota</a>
+        </div>
+        <ul class="hero-destaques" data-entrada>
+          <li>Manutenção incluída</li>
+          <li>Revisão a cada 250 horas</li>
+          <li>Diária, semanal ou mensal</li>
+        </ul>
+        <p class="hero-legenda">Unidade atual da LocaMaq. Imagem e animação ilustrativas, geradas por IA.</p>
+      </div>
+    </section>
+
+    <!-- Letreiro de LED com os 7 segmentos de data/processed/cadastro_equipamentos.csv -->
+    <div class="letreiro">
+      <div class="letreiro-trilho">
+        <ul class="letreiro-lista">
+          <li>Escavadeiras</li>
+          <li>Retroescavadeiras</li>
+          <li>Pás-carregadeiras</li>
+          <li>Guindastes</li>
+          <li>Empilhadeiras</li>
+          <li>Plataformas elevatórias</li>
+          <li>Geradores</li>
+        </ul>
+        <ul class="letreiro-lista" aria-hidden="true">
+          <li>Escavadeiras</li>
+          <li>Retroescavadeiras</li>
+          <li>Pás-carregadeiras</li>
+          <li>Guindastes</li>
+          <li>Empilhadeiras</li>
+          <li>Plataformas elevatórias</li>
+          <li>Geradores</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cada número abre o pop-up do assunto dele. -->
+    <section class="numeros" aria-labelledby="numeros-titulo">
+      <div class="envoltorio">
+        <h2 id="numeros-titulo" class="oculto">A LocaMaq em números</h2>
+        <ul class="numeros-lista">
+          <li data-entrada>
+            <a class="numero" href="#modal-quem-somos" data-abrir="modal-quem-somos">
+              <span class="numero-valor">1992</span>
+              <span class="numero-rotulo">o ano em que o seu José abriu o barracão, em Sorocaba</span>
+              <span class="numero-link">Nossa história</span>
+            </a>
+          </li>
+          <li data-entrada>
+            <a class="numero" href="#modal-frota" data-abrir="modal-frota">
+              <span class="numero-valor" data-contar="117">117</span>
+              <span class="numero-rotulo">equipamentos ativos na frota</span>
+              <span class="numero-link">Ver a frota</span>
+            </a>
+          </li>
+          <li data-entrada>
+            <a class="numero" href="#modal-servicos" data-abrir="modal-servicos">
+              <span class="numero-valor" data-contar="7">7</span>
+              <span class="numero-rotulo">tipos de máquina, da empilhadeira ao guindaste</span>
+              <span class="numero-link">O que está incluído</span>
+            </a>
+          </li>
+          <li data-entrada>
+            <a class="numero" href="#modal-unidades" data-abrir="modal-unidades">
+              <span class="numero-valor" data-contar="5">5</span>
+              <span class="numero-rotulo">unidades no interior paulista e na Grande São Paulo</span>
+              <span class="numero-link">Ver unidades</span>
+            </a>
+          </li>
+        </ul>
+        <p class="nota numeros-nota">Números do case fictício, tirados do cadastro de equipamentos do projeto.</p>
+      </div>
+    </section>
+
+    <!-- ===== Capítulos em pop-up com slides laterais. Sem JavaScript, aparecem aqui como seções comuns. ===== -->
+
+    <dialog class="modal modal-capitulo" id="modal-servicos" aria-labelledby="servicos-titulo">
+      <div class="modal-cabeca">
+        <div>
+          <h2 id="servicos-titulo">A máquina fica por nossa conta.</h2>
+          <p>Você cuida da obra. A gente entrega, revisa e recebe a máquina de volta.</p>
+        </div>
+        <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-corpo">
+        <div class="carrossel carrossel-2" data-carrossel>
+          <div class="slides" tabindex="0" aria-label="Serviços">
+            <article class="slide slide-servico">
+              <p class="slide-destaque">1 a 180 dias</p>
+              <h3>Diária, semanal ou mensal</h3>
+              <p>O contrato acompanha o tamanho da obra: de um dia a seis meses, com a máquina reservada para você.</p>
+              <p class="nota">No case: 642 contratos mensais, 307 semanais e 261 diários em 2024 e 2025.</p>
+            </article>
+            <article class="slide slide-servico">
+              <p class="slide-destaque">250 h</p>
+              <h3>Revisão programada</h3>
+              <p>O horímetro avisa quando a revisão chega, e a oficina agenda a preventiva no horário que menos atrapalha a sua obra.</p>
+              <p class="nota">2.039 revisões preventivas registradas no case.</p>
+            </article>
+            <article class="slide slide-servico">
+              <p class="slide-destaque">1.033</p>
+              <h3>Inspeção em toda devolução</h3>
+              <p>Máquina devolvida passa pela oficina antes de voltar ao pátio. Assim o próximo cliente recebe a máquina como você recebeu.</p>
+              <p class="nota">Inspeções de devolução registradas no case.</p>
+            </article>
+            <article class="slide slide-servico">
+              <p class="slide-destaque">40 de 117</p>
+              <h3>Horas acompanhadas de perto</h3>
+              <p>Parte da frota envia o horímetro sozinha, por telemetria; o restante tem leitura manual periódica.</p>
+              <p class="nota">Máquinas ativas com telemetria no case.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Frota: consumo e tanque vêm de src/gerador_dados/gerar_abastecimento.py; "Onde está", do cadastro. -->
+    <dialog class="modal modal-capitulo" id="modal-frota" aria-labelledby="frota-titulo">
+      <div class="modal-cabeca">
+        <div>
+          <h2 id="frota-titulo">A frota, máquina por máquina.</h2>
+          <p>117 máquinas ativas em sete tipos. Veja onde cada uma está e quanto consome.</p>
+        </div>
+        <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-corpo">
+        <div class="carrossel" data-carrossel data-rotulos>
+          <div class="slides" tabindex="0" aria-label="Tipos de máquina">
+            <article class="slide slide-maquina maquina" id="slide-escavadeira" data-rotulo="Escavadeira" data-nome="Escavadeira" data-consumo="18" data-tanque="400">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/escavadeira.jpg" width="1200" height="900" alt="Escavadeira hidráulica laranja sobre esteiras em um canteiro de obras (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Escavadeira <span class="pilula">26 na frota</span></h3>
+                <p>Hidráulica, sobre esteiras, de cerca de 20 toneladas. Para fundação, vala e terraplenagem.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>18 L/h</strong> consumo médio</li>
+                  <li><strong>400 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Escavadeira">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 8"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">8</span></li>
+                  <li style="--n: 7"><span>São Paulo</span><span class="barra"></span><span class="qtd">7</span></li>
+                  <li style="--n: 5"><span>Sorocaba</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 3"><span>Campinas</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>São José dos Campos</span><span class="barra"></span><span class="qtd">3</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-retroescavadeira" data-rotulo="Retroescavadeira" data-nome="Retroescavadeira" data-consumo="14" data-tanque="300">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/retroescavadeira.jpg" width="1200" height="900" alt="Retroescavadeira laranja abrindo vala em uma rua de bairro (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Retroescavadeira <span class="pilula">17 na frota</span></h3>
+                <p>Pá carregadeira na frente e braço escavador atrás. Abre vala, carrega e nivela na mesma visita.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>14 L/h</strong> consumo médio</li>
+                  <li><strong>300 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Retroescavadeira">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 6"><span>Sorocaba</span><span class="barra"></span><span class="qtd">6</span></li>
+                  <li style="--n: 5"><span>São Paulo</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 4"><span>Campinas</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 1"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">1</span></li>
+                  <li style="--n: 1"><span>São José dos Campos</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-pa-carregadeira" data-rotulo="Pá-carregadeira" data-nome="Pá-carregadeira" data-consumo="16" data-tanque="350">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/pa-carregadeira.jpg" width="1200" height="900" alt="Pá-carregadeira laranja carregando brita em uma pedreira (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Pá-carregadeira <span class="pilula">15 na frota</span></h3>
+                <p>Carregadeira de rodas articulada. Move terra, brita e areia em volume, do monte ao caminhão.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>16 L/h</strong> consumo médio</li>
+                  <li><strong>350 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Pá-carregadeira">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 5"><span>São Paulo</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 4"><span>Campinas</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>Sorocaba</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">3</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-guindaste" data-rotulo="Guindaste" data-nome="Guindaste" data-consumo="22" data-tanque="450">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/guindaste.jpg" width="1200" height="900" alt="Guindaste móvel laranja içando uma viga metálica em obra de galpão (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Guindaste <span class="pilula">10 na frota</span></h3>
+                <p>Móvel, com lança telescópica, de 25 a 50 toneladas. Iça estruturas, vigas e equipamentos.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>22 L/h</strong> consumo médio</li>
+                  <li><strong>450 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Guindaste">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 4"><span>São Paulo</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 2"><span>São José dos Campos</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 1"><span>Campinas</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-empilhadeira" data-rotulo="Empilhadeira" data-nome="Empilhadeira" data-consumo="6" data-tanque="100">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/empilhadeira.jpg" width="1200" height="900" alt="Empilhadeira laranja levando um palete de sacos de cimento (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Empilhadeira <span class="pilula">14 na frota</span></h3>
+                <p>A combustão, de 2,5 a 8 toneladas. Para pátio, depósito e canteiro de obras.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>6 L/h</strong> consumo médio</li>
+                  <li><strong>100 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Empilhadeira">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 5"><span>Campinas</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 3"><span>Sorocaba</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 2"><span>São Paulo</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 2"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 2"><span>São José dos Campos</span><span class="barra"></span><span class="qtd">2</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-plataforma-elevatoria" data-rotulo="Plataforma elevatória" data-nome="Plataforma elevatória" data-consumo="4" data-tanque="80">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/plataforma-elevatoria.jpg" width="1200" height="900" alt="Plataforma elevatória articulada laranja com o cesto erguido junto a uma fachada (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Plataforma elevatória <span class="pilula">12 na frota</span></h3>
+                <p>Articulada, de 16 a 21 metros de altura de trabalho. Para fachada, cobertura e manutenção em altura.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>4 L/h</strong> consumo médio</li>
+                  <li><strong>80 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Plataforma elevatória">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 5"><span>Sorocaba</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 5"><span>São Paulo</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 1"><span>Campinas</span><span class="barra"></span><span class="qtd">1</span></li>
+                  <li style="--n: 1"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-maquina maquina" id="slide-gerador" data-rotulo="Gerador" data-nome="Gerador" data-consumo="8" data-tanque="200">
+              <figure class="maquina-foto" hidden>
+                <img data-src="img/frota/gerador.jpg" width="1200" height="900" alt="Gerador a diesel em cabine laranja sobre carreta, ao lado de um evento ao ar livre (imagem ilustrativa, gerada por IA)">
+              </figure>
+              <div class="maquina-info">
+                <h3>Gerador <span class="pilula">23 na frota</span></h3>
+                <p>A diesel, de 125 a 250 kVA, em cabine silenciada. Para obra sem rede elétrica e eventos.</p>
+                <ul class="maquina-fatos">
+                  <li><strong>8 L/h</strong> consumo médio</li>
+                  <li><strong>200 L</strong> de tanque</li>
+                  <li><strong>250 h</strong> entre revisões</li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-equipamento="Gerador">Simular e pedir orçamento</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Onde está</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 7"><span>Sorocaba</span><span class="barra"></span><span class="qtd">7</span></li>
+                  <li style="--n: 6"><span>Campinas</span><span class="barra"></span><span class="qtd">6</span></li>
+                  <li style="--n: 4"><span>Ribeirão Preto</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>São Paulo</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>São José dos Campos</span><span class="barra"></span><span class="qtd">3</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Fluxo da Camada 2 do spec.md: recebido > vendedor > atendimento > oficina > contratação -->
+    <dialog class="modal modal-capitulo" id="modal-como" aria-labelledby="como-titulo">
+      <div class="modal-cabeca">
+        <div>
+          <h2 id="como-titulo">Do pedido à máquina na obra.</h2>
+          <p>Todo pedido segue o mesmo caminho, e o atendimento avisa você a cada etapa.</p>
+        </div>
+        <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-corpo">
+        <div class="carrossel carrossel-3" data-carrossel>
+          <ol class="slides" tabindex="0" aria-label="Etapas do pedido">
+            <li class="slide slide-etapa">
+              <p class="etapa-marca">Etapa 1</p>
+              <h3>Recebido</h3>
+              <p>Seu pedido chega pelo site e é registrado na hora, com a máquina, a cidade e o prazo.</p>
+            </li>
+            <li class="slide slide-etapa">
+              <p class="etapa-marca">Etapa 2</p>
+              <h3>Vendedor</h3>
+              <p>Um vendedor confere a disponibilidade na unidade mais perto da obra e monta a proposta.</p>
+            </li>
+            <li class="slide slide-etapa">
+              <p class="etapa-marca">Etapa 3</p>
+              <h3>Atendimento</h3>
+              <p>O atendimento acompanha o pedido entre as etapas e responde às suas dúvidas.</p>
+            </li>
+            <li class="slide slide-etapa">
+              <p class="etapa-marca">Etapa 4</p>
+              <h3>Oficina</h3>
+              <p>A oficina revisa e prepara a máquina antes de ela sair do pátio.</p>
+            </li>
+            <li class="slide slide-etapa slide-etapa-final">
+              <p class="etapa-marca">Etapa 5</p>
+              <h3>Contratação</h3>
+              <p>Contrato assinado, máquina entregue na obra. Na devolução, nova inspeção.</p>
+              <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento">Começar meu pedido</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- "Sobre a LocaMaq", com o texto de docs/quem_somos.md -->
+    <dialog class="modal modal-capitulo modal-escuro" id="modal-quem-somos" aria-labelledby="quem-somos-titulo">
+      <div class="modal-cabeca">
+        <div>
+          <h2 id="quem-somos-titulo">Começou com uma furadeira emprestada.</h2>
+          <p>A história da LocaMaq, de Sorocaba para cinco unidades.</p>
+        </div>
+        <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-corpo">
+        <div class="carrossel" data-carrossel>
+          <!-- No celular, cada <picture> entrega um ponto transparente no lugar da foto: os slides ficam
+               só com texto e as fotos nem são baixadas. -->
+          <div class="slides" tabindex="0" aria-label="História da LocaMaq">
+            <article class="slide slide-historia slide-lado">
+              <figure class="slide-foto foto-retrato">
+                <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img src="img/seu-jose.jpg?v=2" width="976" height="976" loading="lazy"
+                     alt="Retrato em preto e branco do seu José da Cunha, senhor de cabelos grisalhos, sorrindo"></picture>
+              </figure>
+              <div class="slide-texto">
+                <p class="slide-ano">Sorocaba</p>
+                <p>Em Sorocaba, todo mundo conhecia o seu José da Cunha. Cumprimentava a vizinhança pelo nome e nunca deixava ninguém ir embora sem um cafezinho. Tinha uma caixa de ferramentas de dar gosto, e quando o vizinho pedia a furadeira emprestada, a resposta era sempre a mesma:</p>
+                <blockquote class="citacao"><p>“Pode levar, mas devolve inteira!”</p></blockquote>
+                <p class="legenda">Seu José da Cunha, fundador. Personagem fictício<span class="so-com-imagem">, imagem gerada por IA</span>.</p>
+              </div>
+            </article>
+
+            <article class="slide slide-historia slide-larga">
+              <figure class="slide-foto foto-larga">
+                <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img src="img/barracao-1992.jpg?v=2" width="1374" height="588" loading="lazy"
+                     alt="Fregueses na porta de um barracão de madeira em rua de terra vermelha, com uma bancada de ferramentas em primeiro plano"></picture>
+              </figure>
+              <div class="slide-texto">
+                <p class="slide-ano">1992</p>
+                <p>De tanto o povo bater no portão, o seu José montou um barracão pequeno só para aquilo. Passou a cobrar uns trocados por dia e a guardar tudo para comprar mais ferramenta. Furadeira, parafusadeira, martelete: o que o freguês pedia, ele dava um jeito de ter.</p>
+                <p class="legenda so-com-imagem">O barracão de Sorocaba. Imagem ilustrativa, gerada por IA.</p>
+              </div>
+            </article>
+
+            <!-- Mural de 2016 (docs/imagens/07_2016.jpeg): faixa larga em cima, como no slide de 1992, e ampliável. -->
+            <article class="slide slide-historia slide-larga slide-colagem">
+              <figure class="slide-foto foto-larga foto-colagem">
+                <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img src="img/mural-2016.jpg" width="1400" height="1045" loading="lazy"
+                     alt="Mural de recordações da LocaMaq: o começo em Sorocaba, geradores, empilhadeiras e plataformas, a primeira máquina pesada em maio de 2016 e um mapa da expansão para Campinas, Ribeirão Preto, São José dos Campos e São Paulo"></picture>
+                <a class="foto-ampliar" href="img/mural-2016.jpg" target="_blank" rel="noopener" data-ampliar>
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l4.8 4.8-1.4 1.4-4.8-4.8A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm-1 2.5h2v2h2v2h-2v2h-2v-2h-2v-2h2z" fill="currentColor"/></svg>
+                  Ver o mural inteiro
+                </a>
+              </figure>
+              <div class="slide-texto">
+                <p class="slide-ano">2016</p>
+                <p>O negócio foi crescendo no boca a boca. Vieram os geradores, as empilhadeiras, as plataformas elevatórias. Em 2016 chegou a primeira máquina pesada, e dali em diante a frota não parou mais. Foi aí que a LocaMaq saiu de Sorocaba rumo a Campinas, Ribeirão Preto, São José dos Campos e São Paulo.</p>
+                <p class="legenda">No cadastro do case, a primeira máquina pesada é uma escavadeira comprada em maio de 2016.<span class="so-com-imagem"> Mural ilustrativo, gerado por IA.</span></p>
+              </div>
+            </article>
+
+            <article class="slide slide-historia slide-larga">
+              <figure class="slide-foto foto-larga">
+                <img src="img/unidade-atual.jpg" width="1376" height="768" loading="lazy"
+                     alt="Pátio da unidade atual da LocaMaq com máquinas pesadas estacionadas">
+              </figure>
+              <div class="slide-texto">
+                <p class="slide-ano">Hoje</p>
+                <p>São 5 unidades e 117 equipamentos ativos, de escavadeiras a guindastes. O tamanho mudou, mas o jeito é o do primeiro empréstimo: equipamento certo, na hora certa e devolvido do jeito que a gente entregou.</p>
+                <p class="legenda so-com-imagem">Unidade atual. Imagem ilustrativa, gerada por IA.</p>
+              </div>
+            </article>
+
+            <!-- Missão, Visão e Valores: figura de fundo sob um véu translúcido (docs/imagens/04 a 06). -->
+            <article class="slide slide-historia slide-com-fundo">
+              <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img class="slide-fundo" src="img/missao.jpg" width="1400" height="1045" loading="lazy" alt=""></picture>
+              <div class="slide-texto">
+                <p class="slide-ano">Missão</p>
+                <p class="slide-frase">Oferecer equipamentos e máquinas pesadas em locação, com qualidade, segurança e pontualidade, para que nossos clientes executem suas obras e operações com tranquilidade.</p>
+              </div>
+            </article>
+
+            <article class="slide slide-historia slide-com-fundo">
+              <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img class="slide-fundo" src="img/visao.jpg" width="1400" height="1045" loading="lazy" alt=""></picture>
+              <div class="slide-texto">
+                <p class="slide-ano">Visão</p>
+                <p class="slide-frase">Ser a locadora de máquinas pesadas mais confiável do interior paulista e da Grande São Paulo, pela disponibilidade da frota e pela excelência na gestão de ativos.</p>
+              </div>
+            </article>
+
+            <article class="slide slide-historia slide-com-fundo">
+              <picture><source media="(max-width: 45.99rem)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img class="slide-fundo" src="img/valores.jpg" width="1400" height="1045" loading="lazy" alt=""></picture>
+              <div class="slide-texto">
+                <p class="slide-ano">Valores</p>
+                <dl class="valores">
+                  <div><dt>Confiança</dt><dd>Nossa palavra vale tanto quanto o contrato.</dd></div>
+                  <div><dt>Pontualidade</dt><dd>A obra do cliente não pode esperar.</dd></div>
+                  <div><dt>Cuidado com o equipamento</dt><dd>Máquina bem mantida rende mais e é mais segura.</dd></div>
+                  <div><dt>Segurança</dt><dd>De quem opera, de quem trabalha ao redor e de quem contrata.</dd></div>
+                  <div><dt>Relacionamento próximo</dt><dd>Atenção de vizinho a cada cliente.</dd></div>
+                  <div><dt>Melhoria contínua</dt><dd>Medimos, aprendemos e evoluímos.</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="nota modal-nota">A LocaMaq é uma empresa fictícia, criada para um case de portfólio. Pessoas, fatos e imagens são ilustrativos; as imagens foram geradas por IA.</p>
+      </div>
+    </dialog>
+
+    <!-- Máquinas ativas por unidade e por tipo: data/processed/cadastro_equipamentos.csv -->
+    <dialog class="modal modal-capitulo" id="modal-unidades" aria-labelledby="unidades-titulo">
+      <div class="modal-cabeca">
+        <div>
+          <h2 id="unidades-titulo">Cinco unidades, uma frota só.</h2>
+          <p>Matriz em Sorocaba e quatro unidades ligadas pelas grandes rodovias paulistas.</p>
+        </div>
+        <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-corpo">
+        <div class="carrossel" data-carrossel data-rotulos>
+          <div class="slides" tabindex="0" aria-label="Unidades">
+            <article class="slide slide-mapa" data-rotulo="Mapa">
+              <figure class="mapa">
+                <svg viewBox="0 0 480 390" role="img" aria-labelledby="mapa-titulo mapa-desc">
+                  <title id="mapa-titulo">Esquema das unidades da LocaMaq</title>
+                  <desc id="mapa-desc">Sorocaba, a matriz, liga-se a São Paulo pela Castello Branco. São Paulo liga-se a Campinas pela Bandeirantes e a São José dos Campos pela Dutra. Campinas liga-se a Ribeirão Preto pela Anhanguera.</desc>
+                  <g class="rodovias">
+                    <line x1="130" y1="60" x2="250" y2="180"/>
+                    <line x1="250" y1="180" x2="250" y2="300"/>
+                    <line x1="90" y1="300" x2="250" y2="300"/>
+                    <line x1="250" y1="300" x2="335" y2="215"/>
+                  </g>
+                  <g class="rodovia-nomes">
+                    <text x="178" y="128" text-anchor="end">Anhanguera</text>
+                    <text x="240" y="247" text-anchor="end">Bandeirantes</text>
+                    <text x="170" y="289" text-anchor="middle">Castello Branco</text>
+                    <text x="300" y="275">Dutra</text>
+                  </g>
+                  <g class="pontos">
+                    <circle cx="130" cy="60" r="17"/>
+                    <circle cx="250" cy="180" r="18"/>
+                    <circle cx="250" cy="300" r="20"/>
+                    <circle class="matriz" cx="90" cy="300" r="19"/>
+                    <circle cx="335" cy="215" r="12"/>
+                  </g>
+                  <g class="cidades">
+                    <text x="157" y="67">Ribeirão Preto</text>
+                    <text x="222" y="188" text-anchor="end">Campinas</text>
+                    <text x="250" y="347" text-anchor="middle">São Paulo</text>
+                    <text x="90" y="346" text-anchor="middle">Sorocaba</text>
+                    <text class="matriz-rotulo" x="90" y="369" text-anchor="middle">matriz</text>
+                    <text x="355" y="210">São José</text>
+                    <text x="355" y="234">dos Campos</text>
+                  </g>
+                </svg>
+              </figure>
+              <div>
+                <p>Escolha uma unidade acima para ver endereço, telefone e as máquinas que ela tem hoje.</p>
+                <p class="nota">Esquema fora de escala. O tamanho de cada círculo acompanha o número de máquinas ativas da unidade.</p>
+              </div>
+            </article>
+
+            <article class="slide slide-unidade" data-rotulo="Sorocaba">
+              <div class="unidade-dados">
+                <h3>Sorocaba <span class="pilula pilula-laranja">matriz</span></h3>
+                <p class="unidade-frota"><strong>29</strong> máquinas ativas</p>
+                <ul class="unidade-contato">
+                  <li><span>Endereço</span> <strong data-contato="unidades.sorocaba.endereco">Av. Exemplo, 1000 · Sorocaba/SP</strong></li>
+                  <li><span>Telefone</span> <a href="tel:+551500000000" data-contato="unidades.sorocaba.telefone">(15) 0000-0000</a></li>
+                  <li><span>Horário</span> <strong data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</strong></li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-observacao="Unidade de preferência: Sorocaba.">Pedir orçamento nesta unidade</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Máquinas nesta unidade</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 7"><span>Gerador</span><span class="barra"></span><span class="qtd">7</span></li>
+                  <li style="--n: 6"><span>Retroescavadeira</span><span class="barra"></span><span class="qtd">6</span></li>
+                  <li style="--n: 5"><span>Escavadeira</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 5"><span>Plataforma elevatória</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 3"><span>Pá-carregadeira</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>Empilhadeira</span><span class="barra"></span><span class="qtd">3</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-unidade" data-rotulo="São Paulo">
+              <div class="unidade-dados">
+                <h3>São Paulo</h3>
+                <p class="unidade-frota"><strong>31</strong> máquinas ativas</p>
+                <ul class="unidade-contato">
+                  <li><span>Endereço</span> <strong data-contato="unidades.sao_paulo.endereco">Rua Exemplo, 200 · São Paulo/SP</strong></li>
+                  <li><span>Telefone</span> <a href="tel:+551100000000" data-contato="unidades.sao_paulo.telefone">(11) 0000-0000</a></li>
+                  <li><span>Horário</span> <strong data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</strong></li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-observacao="Unidade de preferência: São Paulo.">Pedir orçamento nesta unidade</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Máquinas nesta unidade</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 7"><span>Escavadeira</span><span class="barra"></span><span class="qtd">7</span></li>
+                  <li style="--n: 5"><span>Retroescavadeira</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 5"><span>Pá-carregadeira</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 5"><span>Plataforma elevatória</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 4"><span>Guindaste</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>Gerador</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 2"><span>Empilhadeira</span><span class="barra"></span><span class="qtd">2</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-unidade" data-rotulo="Campinas">
+              <div class="unidade-dados">
+                <h3>Campinas</h3>
+                <p class="unidade-frota"><strong>24</strong> máquinas ativas</p>
+                <ul class="unidade-contato">
+                  <li><span>Endereço</span> <strong data-contato="unidades.campinas.endereco">Rua Exemplo, 300 · Campinas/SP</strong></li>
+                  <li><span>Telefone</span> <a href="tel:+551900000000" data-contato="unidades.campinas.telefone">(19) 0000-0000</a></li>
+                  <li><span>Horário</span> <strong data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</strong></li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-observacao="Unidade de preferência: Campinas.">Pedir orçamento nesta unidade</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Máquinas nesta unidade</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 6"><span>Gerador</span><span class="barra"></span><span class="qtd">6</span></li>
+                  <li style="--n: 5"><span>Empilhadeira</span><span class="barra"></span><span class="qtd">5</span></li>
+                  <li style="--n: 4"><span>Retroescavadeira</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 4"><span>Pá-carregadeira</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>Escavadeira</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 1"><span>Guindaste</span><span class="barra"></span><span class="qtd">1</span></li>
+                  <li style="--n: 1"><span>Plataforma elevatória</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-unidade" data-rotulo="Ribeirão Preto">
+              <div class="unidade-dados">
+                <h3>Ribeirão Preto</h3>
+                <p class="unidade-frota"><strong>22</strong> máquinas ativas</p>
+                <ul class="unidade-contato">
+                  <li><span>Endereço</span> <strong data-contato="unidades.ribeirao_preto.endereco">Rua Exemplo, 400 · Ribeirão Preto/SP</strong></li>
+                  <li><span>Telefone</span> <a href="tel:+551600000000" data-contato="unidades.ribeirao_preto.telefone">(16) 0000-0000</a></li>
+                  <li><span>Horário</span> <strong data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</strong></li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-observacao="Unidade de preferência: Ribeirão Preto.">Pedir orçamento nesta unidade</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Máquinas nesta unidade</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 8"><span>Escavadeira</span><span class="barra"></span><span class="qtd">8</span></li>
+                  <li style="--n: 4"><span>Gerador</span><span class="barra"></span><span class="qtd">4</span></li>
+                  <li style="--n: 3"><span>Pá-carregadeira</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>Guindaste</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 2"><span>Empilhadeira</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 1"><span>Retroescavadeira</span><span class="barra"></span><span class="qtd">1</span></li>
+                  <li style="--n: 1"><span>Plataforma elevatória</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="slide slide-unidade" data-rotulo="São José dos Campos">
+              <div class="unidade-dados">
+                <h3>São José dos Campos</h3>
+                <p class="unidade-frota"><strong>11</strong> máquinas ativas</p>
+                <ul class="unidade-contato">
+                  <li><span>Endereço</span> <strong data-contato="unidades.sao_jose_dos_campos.endereco">Rua Exemplo, 500 · São José dos Campos/SP</strong></li>
+                  <li><span>Telefone</span> <a href="tel:+551200000000" data-contato="unidades.sao_jose_dos_campos.telefone">(12) 0000-0000</a></li>
+                  <li><span>Horário</span> <strong data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</strong></li>
+                </ul>
+                <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento" data-observacao="Unidade de preferência: São José dos Campos.">Pedir orçamento nesta unidade</a>
+              </div>
+              <div class="maquina-onde-bloco">
+                <p class="maquina-onde-titulo">Máquinas nesta unidade</p>
+                <ul class="maquina-onde">
+                  <li style="--n: 3"><span>Escavadeira</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 3"><span>Gerador</span><span class="barra"></span><span class="qtd">3</span></li>
+                  <li style="--n: 2"><span>Empilhadeira</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 2"><span>Guindaste</span><span class="barra"></span><span class="qtd">2</span></li>
+                  <li style="--n: 1"><span>Retroescavadeira</span><span class="barra"></span><span class="qtd">1</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Orçamento: a chamada fica na página; o pedido em si abre no pop-up de dois passos. -->
+    <section class="secao orcamento" id="orcamento" aria-labelledby="orcamento-titulo">
+      <div class="envoltorio grade">
+        <div class="orcamento-cabeca">
+          <h2 id="orcamento-titulo" data-entrada>A obra não pode esperar.</h2>
+          <p class="declaracao" data-entrada>Conte o que você precisa e um vendedor responde com a proposta.</p>
+          <ul class="contatos" data-entrada>
+            <li><span class="contato-rotulo">Telefone</span> <a href="tel:+551500000000" data-contato="telefone">(15) 0000-0000</a></li>
+            <li data-so-com="whatsapp" hidden><span class="contato-rotulo">WhatsApp</span> <a href="#orcamento" data-contato="whatsapp" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><span class="contato-rotulo">E-mail</span> <a href="mailto:contato@locamaq.example" data-contato="email">contato@locamaq.example</a></li>
+            <li><span class="contato-rotulo">Horário</span> <span data-contato="horario">Segunda a sexta, das 7h às 18h. Sábado, das 7h às 12h.</span></li>
+          </ul>
+        </div>
+
+        <div class="orcamento-lado">
+          <div class="orcamento-cartao so-js" data-entrada>
+            <h3>Pedido em menos de um minuto</h3>
+            <p>Escolha a máquina, veja as horas e o diesel estimados para a sua obra e mande o pedido.</p>
+            <div class="orcamento-cartao-acoes">
+              <a class="botao" href="#modal-orcamento" data-abrir="modal-orcamento">Abrir pedido de orçamento</a>
+              <a class="botao botao-vidro" href="#modal-telegram" data-telegram>Falar no Telegram</a>
+            </div>
+          </div>
+
+          <!-- Pop-up do pedido: passo 1 (máquina e simulação), passo 2 (dados), passo 3 (confirmação). -->
+          <dialog class="modal modal-assistente" id="modal-orcamento" aria-labelledby="orc-titulo">
+            <div class="modal-cabeca">
+              <div>
+                <h2 id="orc-titulo">Pedido de orçamento</h2>
+                <p class="so-js" data-passo-texto>Passo 1 de 2: a máquina e o prazo.</p>
+              </div>
+              <button class="modal-fechar so-js" type="button" data-fechar aria-label="Fechar">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="modal-corpo">
+              <div class="progresso so-js" aria-hidden="true"><span data-progresso></span></div>
+              <form class="formulario" id="form-orcamento" method="post" data-form-orcamento>
+                <div class="passos">
+                  <div class="passos-trilho" data-passos>
+                    <!-- Simulação: revisão a cada 250 h (gerar_ordens_manutencao.py) e modalidade por prazo (gerar_contratos_locacao.py). -->
+                    <fieldset class="passo">
+                      <legend class="oculto">Máquina e prazo</legend>
+                      <div class="campo">
+                        <label for="f-equipamento">Tipo de equipamento</label>
+                        <select id="f-equipamento" name="equipamento" required>
+                          <option value="">Escolha um tipo</option>
+                          <option>Escavadeira</option>
+                          <option>Retroescavadeira</option>
+                          <option>Pá-carregadeira</option>
+                          <option>Guindaste</option>
+                          <option>Empilhadeira</option>
+                          <option>Plataforma elevatória</option>
+                          <option>Gerador</option>
+                          <option>Ainda não sei</option>
+                        </select>
+                      </div>
+                      <div class="sim-campo">
+                        <label for="sim-dias">Dias de obra</label>
+                        <output for="sim-dias" data-sim="dias">30 dias</output>
+                        <input type="range" id="sim-dias" name="dias" min="1" max="180" step="1" value="30">
+                      </div>
+                      <div class="sim-campo">
+                        <label for="sim-horas">Horas de uso por dia</label>
+                        <output for="sim-horas" data-sim="horas">8 h</output>
+                        <input type="range" id="sim-horas" name="horas_dia" min="1" max="24" step="1" value="8">
+                      </div>
+                      <div class="sim-resultado so-js" aria-live="polite">
+                        <p class="sim-total"><strong data-sim="total">240</strong> horas de máquina</p>
+                        <ul class="sim-lista">
+                          <li><span>Modalidade</span> <strong data-sim="modalidade">Mensal</strong></li>
+                          <li><span>Revisões preventivas</span> <strong data-sim="revisoes">nenhuma</strong></li>
+                          <li><span>Diesel estimado</span> <strong data-sim="diesel">escolha a máquina</strong></li>
+                          <li><span>Tanques cheios</span> <strong data-sim="tanques">—</strong></li>
+                        </ul>
+                      </div>
+                      <p class="nota so-js">Estimativa com os parâmetros do case fictício: consumo médio de cada tipo de máquina e revisão a cada 250 horas de uso.</p>
+                      <div class="passo-acoes so-js">
+                        <button class="botao" type="button" data-avancar>Continuar</button>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="passo">
+                      <legend class="oculto">Seus dados</legend>
+                      <div class="campos-duplos">
+                        <div class="campo">
+                          <label for="f-nome">Nome</label>
+                          <input id="f-nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
+                        </div>
+                        <div class="campo">
+                          <label for="f-contato">Telefone ou e-mail</label>
+                          <input id="f-contato" name="contato" type="text" maxlength="120" required>
+                        </div>
+                      </div>
+                      <div class="campo">
+                        <label for="f-cidade">Cidade da obra</label>
+                        <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" maxlength="80">
+                      </div>
+                      <div class="campo">
+                        <label for="f-observacao">Observação <span>(opcional)</span></label>
+                        <textarea id="f-observacao" name="observacao" rows="3" maxlength="1000"></textarea>
+                      </div>
+                      <!-- Campo-isca contra robôs: pessoas não veem; se vier preenchido, o envio é descartado. -->
+                      <div class="campo-isca" aria-hidden="true">
+                        <label for="f-site">Deixe em branco</label>
+                        <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
+                      </div>
+                      <input type="hidden" name="prazo" value="">
+                      <p class="nota">Site de demonstração: use dados fictícios. Os pedidos vão para uma planilha de teste e ninguém entra em contato.</p>
+                      <p class="form-status" role="status" aria-live="polite" hidden></p>
+                      <div class="passo-acoes">
+                        <button class="botao botao-claro so-js" type="button" data-voltar>Voltar</button>
+                        <button class="botao" type="submit">Enviar pedido</button>
+                      </div>
+                    </fieldset>
+
+                    <div class="passo passo-sucesso so-js" tabindex="-1">
+                      <p class="sucesso-titulo">Pedido registrado</p>
+                      <p data-sucesso-texto></p>
+                      <ul class="sucesso-resumo" data-sucesso-resumo></ul>
+                      <div class="passo-acoes">
+                        <button class="botao" type="button" data-fechar>Fechar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </dialog>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="envoltorio rodape-linha">
+      <div class="rodape-sobre">
+        <a class="marca" href="#inicio"><span class="marca-loca">Loca</span><span class="marca-maq">Maq</span></a>
+        <p>Locação de máquinas pesadas desde 1992, em Sorocaba, São Paulo, Campinas, Ribeirão Preto e São José dos Campos.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <ul class="rodape-links">
+          <li><a href="#modal-servicos" data-abrir="modal-servicos">Serviços</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota">Frota</a></li>
+          <li><a href="#modal-como" data-abrir="modal-como">Como funciona</a></li>
+          <li><a href="#modal-quem-somos" data-abrir="modal-quem-somos">Quem somos</a></li>
+          <li><a href="#modal-unidades" data-abrir="modal-unidades">Unidades</a></li>
+          <li><a href="https://github.com/kaekoff-ux/rental-machinery-analytics" data-abrir="modal-case">Sobre o case</a></li>
+          <li class="so-js"><a href="#modal-cliente" data-abrir="modal-cliente">Área do cliente</a></li>
+        </ul>
+      </nav>
+      <ul class="rodape-contatos">
+        <li><a href="tel:+551500000000" data-contato="telefone">(15) 0000-0000</a></li>
+        <li><a href="mailto:contato@locamaq.example" data-contato="email">contato@locamaq.example</a></li>
+        <li data-contato="unidades.sorocaba.endereco">Av. Exemplo, 1000 · Sorocaba/SP</li>
+      </ul>
+    </div>
+    <div class="envoltorio rodape-base">
+      <p>© <span data-ano>2026</span> LocaMaq. Empresa fictícia, criada para um case de portfólio; todos os dados são ilustrativos.</p>
+      <p><a href="https://github.com/kaekoff-ux/rental-machinery-analytics">Projeto no GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Canto inferior: Telegram (chat bot de atendimento) e, se preenchido no script.js, WhatsApp. -->
+  <div class="flutuantes">
+    <a class="whatsapp-flutuante" href="#orcamento" data-so-com="whatsapp" data-contato="whatsapp" data-manter-texto
+       target="_blank" rel="noopener" aria-label="Conversar com a LocaMaq no WhatsApp" hidden>
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+    </a>
+    <a class="telegram-flutuante so-js" href="#modal-telegram" data-telegram aria-label="Atendimento pelo Telegram">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.1 2.9 11.3c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.5zM8.7 14l9-5.7c.4-.3.8-.1.5.2l-7.4 6.7-.3 3.2z"/></svg>
+      <span>Atendimento</span>
+    </a>
+  </div>
+
+  <!-- Pop-ups que só fazem sentido com JavaScript -->
+
+  <!-- Área do cliente: funcionalidade planejada (spec.md, seção 3). Ainda sem login; o escopo será discutido. -->
+  <dialog class="modal modal-pequeno so-js" id="modal-cliente" aria-labelledby="cliente-titulo">
+    <div class="modal-cabeca">
+      <div>
+        <h2 id="cliente-titulo">Área do cliente</h2>
+        <p>Em planejamento, ainda sem login.</p>
+      </div>
+      <button class="modal-fechar" type="button" data-fechar aria-label="Fechar">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-corpo modal-texto">
+      <p>Em breve, quem aluga com a LocaMaq vai entrar com login próprio para acompanhar:</p>
+      <ul>
+        <li>o andamento de cada pedido, do recebimento à máquina entregue na obra;</li>
+        <li>as requisições feitas à LocaMaq, como troca, revisão ou retirada de máquina.</li>
+      </ul>
+      <p>Enquanto a área não está no ar, o pedido pode ser feito pelo site.</p>
+      <div class="modal-acoes">
+        <button class="botao" type="button" data-abrir="modal-orcamento">Fazer um pedido</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal-pequeno so-js" id="modal-telegram" aria-labelledby="telegram-titulo">
+    <div class="modal-cabeca">
+      <div>
+        <h2 id="telegram-titulo">Atendimento pelo Telegram</h2>
+        <p>Canal de chat da LocaMaq.</p>
+      </div>
+      <button class="modal-fechar" type="button" data-fechar aria-label="Fechar">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-corpo modal-texto">
+      <p>Em breve, um chat bot da LocaMaq vai atender pelo Telegram: tirar dúvidas sobre a frota, informar a unidade mais perto e registrar pedidos de orçamento.</p>
+      <p>Ele faz parte da próxima etapa do projeto (N8N com a API do Telegram) e ainda não está no ar. Enquanto isso, o pedido pode ser feito pelo site.</p>
+      <div class="modal-acoes">
+        <button class="botao" type="button" data-abrir="modal-orcamento">Fazer o pedido pelo site</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal-pequeno so-js" id="modal-case" aria-labelledby="case-titulo">
+    <div class="modal-cabeca">
+      <div>
+        <h2 id="case-titulo">Sobre este case</h2>
+        <p>Projeto de estudo aplicado, com dados fictícios.</p>
+      </div>
+      <button class="modal-fechar" type="button" data-fechar aria-label="Fechar">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="modal-corpo modal-texto">
+      <p>A LocaMaq não existe: é uma locadora fictícia criada para um case de portfólio. Pessoas, números e imagens deste site são ilustrativos, e as imagens foram geradas por IA.</p>
+      <p>O projeto mostra, em camadas, a gestão de uma locadora de máquinas pesadas:</p>
+      <ul>
+        <li>base de dados fictícia gerada em Python, com 7 fontes, do cadastro de equipamentos ao faturamento;</li>
+        <li>este site, com formulário de orçamento ligado a uma planilha;</li>
+        <li>dashboard em Power BI com os indicadores da frota (em construção);</li>
+        <li>próximas camadas: fluxo interno de atendimento, área do cliente para acompanhar pedidos, N8N com Telegram e agentes de IA sobre os dados.</li>
+      </ul>
+      <p>Os números do site, como a frota por unidade e as revisões preventivas, saem dessa base.</p>
+      <div class="modal-acoes">
+        <a class="botao" href="https://github.com/kaekoff-ux/rental-machinery-analytics">Ver o projeto no GitHub</a>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
