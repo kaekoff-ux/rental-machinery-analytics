@@ -409,7 +409,7 @@ function iniciarPedido() {
     const horasDia = Number(campos.horas_dia.value);
     const horas = dias * horasDia;
     const revisoes = Math.floor(horas / INTERVALO_PREVENTIVA_HORAS);
-    // Consumo e tanque de cada máquina ficam nos data-* dos slides da Frota.
+    // Energia (data-energia), descrição e dados técnicos de cada máquina vêm do slide dela, na Frota.
     const ficha = document.querySelector(`.maquina[data-nome="${campos.equipamento.value}"]`);
     simulacao = { dias, horasDia, horas, modalidade: modalidadePorDias(dias) };
 
@@ -418,14 +418,13 @@ function iniciarPedido() {
     saida("total").textContent = numeroBR.format(horas);
     saida("modalidade").textContent = simulacao.modalidade;
     saida("revisoes").textContent = revisoes === 0 ? "nenhuma" : numeroBR.format(revisoes);
-    if (ficha) {
-      const litros = horas * Number(ficha.dataset.consumo);
-      saida("diesel").textContent = `${numeroBR.format(litros)} L`;
-      saida("tanques").textContent = `cerca de ${numeroBR.format(Math.ceil(litros / Number(ficha.dataset.tanque)))}`;
-    } else {
-      saida("diesel").textContent = "escolha a máquina";
-      saida("tanques").textContent = "—";
-    }
+    saida("energia").textContent = ficha ? ficha.dataset.energia : "escolha a máquina";
+    saida("ficha").textContent = ficha
+      ? [ficha.querySelector(".maquina-info p").textContent,
+        // O 1º item do card é a energia, que já aparece na coluna "Energia".
+        ...[...ficha.querySelectorAll(".maquina-fatos li:not(:first-child)")].map((item) => item.textContent)].join(" · ")
+      : "";
+    saida("ficha").hidden = !ficha;
   }
 
   function acrescentarObservacao(texto) {

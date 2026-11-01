@@ -12,18 +12,18 @@ Locadora de máquinas pesadas com filiais em SP.
 Segmentos: escavadeiras, retroescavadeiras, pás-carregadeiras, guindastes, geradores, empilhadeiras e plataformas elevatórias.
 Frota sugerida: 120 a 150 equipamentos, 24 meses de histórico, 60 a 80 clientes.
 
-3. FONTES DE DADOS (7)
+3. FONTES DE DADOS (6)
 1) Cadastro de equipamentos
 2) Clientes
 3) Contratos de locação
 4) Horímetro / telemetria
 5) Ordens de manutenção
-6) Abastecimento
-7) Faturamento e inadimplência
+6) Faturamento e inadimplência
+(Abastecimento foi retirado do escopo em 01/11/2026: não faz parte do controle de frota do case.)
 Os arquivos "brutos" terão sujeira realista de propósito: datas em formatos diferentes, duplicidades, nomes de cliente divergentes, tipos de manutenção escritos de várias formas, leituras de horímetro que diminuem. Isso dá sentido ao Power Query.
 
 4. INDICADORES (KPIs)
-Utilização física, disponibilidade física, utilização financeira, receita por máquina, margem por máquina, custo de manutenção por hora, mix preventiva x corretiva, MTBF, MTTR, contratos a vencer, inadimplência, consumo de combustível por hora e comparações temporais (mês anterior, acumulado no ano, mesmo mês do ano anterior). Definições e fórmulas na pasta 03_KPIs.
+Utilização física, disponibilidade física, utilização financeira, receita por máquina, margem por máquina, custo de manutenção por hora, mix preventiva x corretiva, MTBF, MTTR, contratos a vencer, inadimplência e comparações temporais (mês anterior, acumulado no ano, mesmo mês do ano anterior). Definições e fórmulas na pasta 03_KPIs.
 
 5. STACK
 - Power BI Desktop (gratuito): entregável principal
@@ -39,7 +39,7 @@ Entregas: repositório no GitHub, dicionário de dados, lista de KPIs, CLAUDE.md
 Aprende: Git/GitHub básico, documentação.
 
 FASE 1 - Base fictícia (semanas 2-3)
-Entrega: script Python (feito com Claude Code) que gera as 7 fontes com sujeira realista, com seed fixa para ser reprodutível.
+Entrega: script Python (feito com Claude Code) que gera as 6 fontes com sujeira realista, com seed fixa para ser reprodutível.
 Aprende: Claude Code na prática, Python básico.
 
 FASE 2 - ETL e modelo (semanas 4-5)

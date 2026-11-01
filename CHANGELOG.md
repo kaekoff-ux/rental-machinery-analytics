@@ -5,6 +5,44 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Removed (01/11/2026, abastecimento)
+- Fonte `abastecimento` retirada do projeto por decisão do usuário: não faz parte do controle de
+  frota do case, e "diesel por hora" não vale para toda a frota (empilhadeiras são a GLP,
+  plataformas são elétricas). Apagados `src/gerador_dados/gerar_abastecimento.py`,
+  `data/raw/abastecimento.csv` e `data/processed/abastecimento.csv` (recuperáveis pelo histórico
+  do Git). O projeto passa a ter 6 fontes e o modelo estrela, 4 fatos.
+- KPI "Consumo de combustível por hora" removido de `docs/kpis.csv`; "Margem por máquina" perdeu
+  o termo de custo de combustível. Ajustados também `docs/dicionario_dados.csv`,
+  `docs/modelo_dados.md`, `docs/roadmap.md`, `powerbi/checklist_power_query.md`, `README.md`,
+  `spec.md`, `CLAUDE.md` e o docstring de `src/gerador_dados/utils.py`.
+- Pendente fora do Claude Code: o `.pbix` do dashboard ainda tem a tabela `f_abastecimento`;
+  excluir a consulta no Power BI Desktop antes de atualizar, senão a atualização falha.
+
+### Changed (01/11/2026, cadastro)
+- Empilhadeiras a GLP e plataformas elétricas: os modelos que eram a diesel viraram a versão
+  GLP/elétrica da mesma marca (Yale GDP50VX → GLP50VX, Clark C25 → C25L, JLG 600AJ → E600JP,
+  Genie Z45 → Z45DC, Skyjack SJ63AJ → SJ45AJE+, Haulotte HA16 → HA16E) e o guindaste Liebherr
+  passou a ter o nome oficial `LTM 1050-3.1`. Só mudaram as colunas `modelo` e `numero_serie` do
+  cadastro (26 linhas no processed); os outros CSVs saíram idênticos ao regenerar (seed 42).
+
+### Changed (01/11/2026, site)
+- Cards da frota: saíram consumo (L/h) e tanque, que vinham do gerador de abastecimento. Entraram
+  o tipo de energia (Diesel, GLP na empilhadeira, elétrica a bateria na plataforma), o tanque do
+  modelo mais comum (escavadeira, retro, pá-carregadeira, guindaste) e o consumo do gerador a 75%
+  de carga, todos de ficha de fabricante, e a lista "Modelos na frota" (do cadastro, só ativos).
+  Empilhadeira sem a faixa "2,5 a 8 toneladas"; guindaste cita o Liebherr LTM 1050-3.1.
+- Simulador do pedido de orçamento: saíram "Diesel estimado" e "Tanques cheios"; entraram a
+  energia e a ficha técnica da máquina escolhida (descrição e dados do card dela na Frota).
+
+### Added (01/11/2026, documentação e testes)
+- `docs/fichas_tecnicas_frota.md`: fontes (consultadas em 01/11/2026) de cada dado técnico do
+  site e da troca de modelos, com o tipo de fonte (fabricante, revenda ou base de dados).
+- `tests/conferir_site.py`: confere os números do site contra `data/processed/` (frota por
+  segmento, modelos de cada card, unidades, 117 ativas, contratos, preventivas, inspeções e
+  telemetria).
+- Fora do repositório: os 4 arquivos de `00_Fase_0_Fundacao` que citavam abastecimento foram
+  ajustados, com cópia em `00_Fase_0_Fundacao/_backup_2026-11-01_antes_de_tirar_abastecimento/`.
+
 ### Changed (31/10/2026, Apps Script)
 - `src/apps_script/receber_orcamento.gs` passou a usar `LockService`: dois pedidos ao mesmo
   tempo não gravam o cabeçalho duas vezes nem se sobrepõem. Testado só em simulação (Node, com

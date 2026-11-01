@@ -1,7 +1,7 @@
 """Funcoes compartilhadas pelos geradores de dados da LocaMaq.
 
 Usado por todos os scripts em src/gerador_dados/. Mantem a logica de sorteio ponderado,
-intervalos de contrato e gravacao de CSV iguais entre as 7 fontes (cadastro_equipamentos,
+intervalos de contrato e gravacao de CSV iguais entre as 6 fontes (cadastro_equipamentos,
 clientes, etc.) - evita copiar a mesma funcao em cada gerador novo.
 """
 import csv
@@ -49,7 +49,7 @@ def contrato_vigente(intervalos_equipamento, dia):
 
 def construir_historico_horimetro(leituras):
     """A partir de horimetro_telemetria (processed), retorna {id_equipamento: [(data, horas)]}
-    ordenado - usado para achar o horimetro aproximado em qualquer data (abastecimento, OS).
+    ordenado - usado para achar o horimetro aproximado em qualquer data (ex.: abertura de OS).
     """
     historico = {}
     for leitura in leituras:

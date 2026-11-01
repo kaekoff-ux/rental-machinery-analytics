@@ -46,14 +46,6 @@ ordens_manutencao;horas_parada;decimal;Horas de máquina parada;18.5;Nulos
 ordens_manutencao;custo_pecas;decimal;Custo de peças em R$;3200.00;Texto com R$
 ordens_manutencao;custo_mao_obra;decimal;Custo de mão de obra em R$;1450.00;Texto com R$
 ordens_manutencao;status_os;texto;Aberta/Em andamento/Concluída;Concluída;Caixa mista
-abastecimento;id_abastecimento;texto;Identificador do abastecimento;AB-000001;Sem sujeira
-abastecimento;id_equipamento;texto;Máquina abastecida;EQ-0001;Minúsculo
-abastecimento;data_abastecimento;data;Data do abastecimento;05/03/2025;Formatos mistos
-abastecimento;litros;decimal;Litros abastecidos;180.0;Vírgula como separador decimal
-abastecimento;valor_litro;decimal;Preço por litro em R$;06.05;Vírgula como separador decimal
-abastecimento;valor_total;decimal;Valor total em R$;1089.00;Inconsistente com litros x valor_litro em poucos casos
-abastecimento;horimetro_horas;decimal;Horímetro no abastecimento;4318.2;Nulos
-abastecimento;responsavel;texto;Quem abasteceu;Marcos Silva;Nomes abreviados
 faturamento;id_fatura;texto;Identificador da fatura;FT-000001;Sem sujeira
 faturamento;id_contrato;texto;Contrato faturado;CT-00001;Sem sujeira
 faturamento;competencia;texto;Mês de referência (aaaa-mm);2025-03;Formatos mistos (03/2025)

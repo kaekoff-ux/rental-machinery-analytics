@@ -5,7 +5,7 @@ Projeto de estudo aplicado em dados, automação e IA para **gestão de locaçã
 > **Aviso:** todos os dados deste repositório são **fictícios**, gerados por script. O projeto foi inspirado em um anúncio público de vaga e não representa um cliente real.
 
 ## Problema
-Locadoras de máquinas pesadas costumam ter dados espalhados em várias planilhas e sistemas (contratos, manutenção, horímetro, abastecimento, faturamento). Isso dificulta enxergar utilização, custo por máquina, risco de parada e inadimplência.
+Locadoras de máquinas pesadas costumam ter dados espalhados em várias planilhas e sistemas (contratos, manutenção, horímetro, faturamento). Isso dificulta enxergar utilização, custo por máquina, risco de parada e inadimplência.
 
 ## O que o projeto entrega
 - Base fictícia realista, com sujeira proposital, de uma locadora (LocaMaq)

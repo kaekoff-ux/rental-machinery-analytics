@@ -58,7 +58,7 @@ CATALOGO = {
     "Guindaste": (10, [
         ("Grove", "RT540E", "GRO", 1950000, 15000),
         ("Tadano", "GR500EX", "TAD", 1700000, 15000),
-        ("Liebherr", "LTM1050", "LIE", 2900000, 15000),
+        ("Liebherr", "LTM 1050-3.1", "LIE", 2900000, 15000),  # nome oficial do fabricante
         ("XCMG", "QY25K", "XCM", 1100000, 15000),
     ]),
     "Gerador": (25, [
@@ -67,17 +67,21 @@ CATALOGO = {
         ("Caterpillar", "XQ125", "CAT", 190000, 20000),
         ("Atlas Copco", "QAS150", "ATL", 140000, 20000),
     ]),
+    # Frota de empilhadeiras a GLP e de plataformas elétricas (decisão do usuário, 01/11/2026).
+    # Modelos trocados pelas versões GLP/elétricas da mesma marca: GDP50VX (diesel) -> GLP50VX,
+    # C25 -> C25L, 600AJ -> E600JP, Z45 -> Z45DC, SJ63AJ -> SJ45AJE+, HA16 (RTJ, diesel) -> HA16E.
+    # Fontes em docs/fichas_tecnicas_frota.md. Trocar só o texto não muda o sorteio (seed 42).
     "Empilhadeira": (18, [
         ("Toyota", "8FGU25", "TOY", 140000, 12000),
         ("Hyster", "H80FT", "HYS", 150000, 12000),
-        ("Yale", "GDP50VX", "YAL", 130000, 12000),
-        ("Clark", "C25", "CLK", 110000, 12000),
+        ("Yale", "GLP50VX", "YAL", 130000, 12000),
+        ("Clark", "C25L", "CLK", 110000, 12000),
     ]),
     "Plataforma elevatória": (12, [
-        ("JLG", "600AJ", "JLG", 380000, 12000),
-        ("Genie", "Z45", "GEN", 290000, 12000),
-        ("Skyjack", "SJ63AJ", "SKY", 340000, 12000),
-        ("Haulotte", "HA16", "HAU", 260000, 12000),
+        ("JLG", "E600JP", "JLG", 380000, 12000),
+        ("Genie", "Z45DC", "GEN", 290000, 12000),
+        ("Skyjack", "SJ45AJE+", "SKY", 340000, 12000),
+        ("Haulotte", "HA16E", "HAU", 260000, 12000),
     ]),
 }
 
@@ -147,7 +151,8 @@ def gerar_frota_limpa(rng):
                 ano = None
 
             while True:  # garante número de série único
-                numero_serie = f"{sigla}{modelo}-{rng.randint(100000, 999999)}"
+                # Sem espaço no número de série ("LTM 1050-3.1" vira "LTM1050-3.1").
+                numero_serie = f"{sigla}{modelo.replace(' ', '')}-{rng.randint(100000, 999999)}"
                 if numero_serie not in series_usadas:
                     series_usadas.add(numero_serie)
                     break

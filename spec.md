@@ -68,7 +68,7 @@ até lá o formulário funciona em modo de teste. Detalhes em `docs/plano_camada
 | 1 (backend do form) | Google Apps Script (Web App) → Google Sheet |
 | 2 (área do cliente) | A definir. O site no GitHub Pages é estático: a área precisa de login e de um lugar onde os pedidos tenham status. Opções a comparar na discussão: Google Apps Script + Sheets (mesma base do formulário), Supabase (login + Postgres) ou Firebase (login + Firestore) |
 | 3 | N8N (Community Edition self-hosted, gratuito) + API do Telegram — decisão de escopo exato em aberto |
-| 4 | Power BI Desktop, modelo estrela (3 dimensões + 5 fatos) sobre `data/processed/*.csv` |
+| 4 | Power BI Desktop, modelo estrela (3 dimensões + 4 fatos) sobre `data/processed/*.csv` |
 | 5 | DuckDB (camada de consulta) + servidor MCP em Python + RAG por contexto fixo (sem embeddings) sobre `docs/dicionario_dados.csv`/`docs/kpis.csv`/`docs/modelo_dados.md` + Streamlit + modelo Claude Haiku (custo-benefício) |
 
 ## 7. Direção visual

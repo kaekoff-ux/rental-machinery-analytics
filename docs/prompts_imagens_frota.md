@@ -15,9 +15,9 @@ A coluna "referência" serve apenas para você pesquisar como a máquina é; **n
 | 2 | Gerador | 23 | Gerador a diesel em cabine silenciada, 125 a 250 kVA | Atlas Copco QAS150, Cummins C150D5 e C250D5, Caterpillar XQ125 | `gerador.jpg` |
 | 3 | Retroescavadeira | 17 | Trator com pá carregadeira na frente e braço escavador atrás | JCB 3CX, Caterpillar 416F, Case 580N, New Holland B95B | `retroescavadeira.jpg` |
 | 4 | Pá-carregadeira | 15 | Carregadeira de rodas articulada, porte médio | Volvo L60H, XCMG LW500, Case 821F, Caterpillar 950H | `pa-carregadeira.jpg` |
-| 5 | Empilhadeira | 14 | Empilhadeira a combustão contrabalançada, 2,5 a 8 t | Yale GDP50VX, Hyster H80FT, Toyota 8FGU25, Clark C25 | `empilhadeira.jpg` |
-| 6 | Plataforma elevatória | 12 | Plataforma articulada de lança (não há tesoura no cadastro), 16 a 21 m | Skyjack SJ63AJ, Genie Z45, Haulotte HA16, JLG 600AJ | `plataforma-elevatoria.jpg` |
-| 7 | Guindaste | 10 | Guindaste móvel sobre rodas com lança telescópica, 25 a 50 t | Liebherr LTM1050, XCMG QY25K, Grove RT540E | `guindaste.jpg` |
+| 5 | Empilhadeira | 14 | Empilhadeira contrabalançada a combustão, movida a GLP | Yale GLP50VX, Hyster H80FT, Toyota 8FGU25, Clark C25L | `empilhadeira.jpg` |
+| 6 | Plataforma elevatória | 12 | Plataforma articulada de lança, elétrica a bateria (não há tesoura no cadastro), cerca de 16 a 20 m | Skyjack SJ45 AJE+, Genie Z-45 DC, Haulotte HA16 E, JLG E600JP | `plataforma-elevatoria.jpg` |
+| 7 | Guindaste | 10 | Guindaste móvel sobre rodas com lança telescópica, 25 a 50 t | Liebherr LTM 1050-3.1, XCMG QY25K, Grove RT540E | `guindaste.jpg` |
 
 ## Regras para as 7 imagens parecerem um conjunto
 
@@ -56,8 +56,8 @@ eventos, mineração, logística), para a imagem combinar com os dados do case.
 | Gerador | um gerador a diesel dentro de uma cabine metálica fechada e silenciada, montado sobre uma carreta de dois eixos | ao lado da tenda branca de um evento ao ar livre, com cabos grossos no chão |
 | Retroescavadeira | uma retroescavadeira, trator com pá carregadeira na frente e braço escavador atrás, com as sapatas estabilizadoras apoiadas no chão | abrindo uma vala para rede de esgoto em uma rua de bairro |
 | Pá-carregadeira | uma pá-carregadeira de rodas articulada, de porte médio, com a caçamba erguida | carregando pedra britada em uma pedreira |
-| Empilhadeira | uma empilhadeira a combustão contrabalançada, com garfos e torre de elevação | levando um palete de sacos de cimento no pátio de um depósito de materiais |
-| Plataforma elevatória | uma plataforma elevatória articulada sobre rodas, com lança dobrada e cesto com guarda-corpo | com o cesto erguido junto à fachada de um galpão em construção |
+| Empilhadeira | uma empilhadeira a combustão contrabalançada, movida a GLP, com o cilindro de gás preso atrás do banco, garfos e torre de elevação | levando um palete de sacos de cimento no pátio de um depósito de materiais |
+| Plataforma elevatória | uma plataforma elevatória articulada elétrica sobre rodas, sem escapamento, com lança dobrada e cesto com guarda-corpo | com o cesto erguido junto à fachada de um galpão em construção |
 | Guindaste | um guindaste móvel sobre rodas, com lança telescópica estendida e patolas abertas e apoiadas no chão | içando uma viga metálica na obra de um galpão industrial |
 
 ## Onde salvar

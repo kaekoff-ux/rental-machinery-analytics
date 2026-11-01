@@ -7,7 +7,7 @@ Rascunho **[P]**, não testado no Power BI. Um checklist por fonte, derivado de
 
 Separador dos CSVs: `;`. Codificação: UTF-8 (com BOM — o Power Query detecta sozinho).
 
-## Técnicas gerais (reaproveita nas 7 fontes)
+## Técnicas gerais (reaproveita nas 6 fontes)
 
 | Problema | Onde aparece | Ação sugerida no Power Query |
 |---|---|---|
@@ -15,7 +15,6 @@ Separador dos CSVs: `;`. Codificação: UTF-8 (com BOM — o Power Query detecta
 | Abreviação (`Prev.`/`PREV` → `Preventiva`) | tipo_manutencao, segmento, fabricante | **Merge** com uma tabela pequena "de-para" (mais fácil de manter que vários `Replace Values` soltos) |
 | ID com minúsculo/espaço/sem hífen | id_equipamento, id_cliente (quando sujo) | `Texto.Trim` + `Texto.Maiúscula`, depois confirme contra `dim_equipamento`/`dim_cliente` |
 | Datas em formato misto (ISO vs `dd/mm/aaaa`) | toda coluna de data | `Transformar coluna > Data > Usando Localidade`, com `try` em `pt-BR` `otherwise` tentar ISO — ou duas colunas de tentativa + `Table.CombineColumns` |
-| Decimal com vírgula | litros, valor_litro (abastecimento) | Ao definir tipo **Usando Localidade**, escolha `Portuguese (Brazil)` |
 | Valor com `R$` e ponto de milhar | valor_aquisicao, custo_pecas, custo_mao_obra, valor_faturado | Remover `"R$ "` (Texto.Substituir), depois **Usando Localidade** `Portuguese (Brazil)` para o ponto/vírgula |
 | Nulo legítimo (não é sujeira, é ausência real) | ano_fabricacao, horimetro_na_os, horas_parada | **Não** preencher com 0 nem com média — deixe `null`. Documentado em `CLAUDE.md` do projeto |
 
@@ -75,17 +74,6 @@ Separador dos CSVs: `;`. Codificação: UTF-8 (com BOM — o Power Query detecta
 - `custo_pecas`, `custo_mao_obra`: `R$`/milhar
 - `status_os`: caixa mista — **são as 3 colunas do seu board de oficina**
 
-## abastecimento
-
-- `id_equipamento`: minúsculo
-- `data_abastecimento`: formato misto
-- `litros`, `valor_litro`: vírgula decimal
-- `valor_total`: numa fração dos casos **não bate** com `litros × valor_litro` (erro de
-  digitação simulado) — vale criar uma coluna de verificação (`valor_total` calculado vs.
-  informado) para decidir qual usar
-- `horimetro_horas`: nulo legítimo em parte dos casos
-- `responsavel`: nome abreviado (`M. Silva` vs `Marcos Silva`)
-
 ## faturamento
 
 - `competencia`: formato misto (`2025-03` vs `03/2025`)
@@ -94,7 +82,7 @@ Separador dos CSVs: `;`. Codificação: UTF-8 (com BOM — o Power Query detecta
   vazia é legítimo (status Vencido/Em aberto)
 - `status_pagamento`: caixa mista
 
-## Depois de limpar as 7 fontes
+## Depois de limpar as 6 fontes
 
 Ver `docs/modelo_dados.md` para como relacioná-las (dimensões, fatos, chaves) e o ponto de
 atenção sobre trazer `id_equipamento` para dentro de `fato_faturamento` via merge.

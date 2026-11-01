@@ -1,6 +1,6 @@
 # Modelo de dados — modelo estrela LocaMaq
 
-Rascunho **[P]** para a Fase 2 (ETL e modelo). Baseado nos KPIs em `docs/kpis.csv` e nas 7
+Rascunho **[P]** para a Fase 2 (ETL e modelo). Baseado nos KPIs em `docs/kpis.csv` e nas 6
 fontes + calendário geradas na Fase 1. Ainda não construído no Power BI — isto é o plano,
 não o resultado.
 
@@ -17,11 +17,11 @@ não o resultado.
 faturas com vencimento depois do fim do histórico. **Marcar como tabela de datas no Power
 BI** (coluna `data`) antes de usar TOTALYTD, SAMEPERIODLASTYEAR, DATEADD, PREVIOUSMONTH.
 
-## Fatos (5)
+## Fatos (4)
 
 O roadmap cita 3 fatos (locação, manutenção, faturamento); na prática os KPIs também
-precisam de horímetro e abastecimento como fatos próprios — ambos têm data + métricas
-numéricas + `id_equipamento`, então modelá-los como dimensão não se aplica.
+precisam do horímetro como fato próprio — tem data + métricas numéricas +
+`id_equipamento`, então modelá-lo como dimensão não se aplica.
 
 | Fato | Fonte | Grão | Data que liga ao calendário |
 |---|---|---|---|
@@ -29,7 +29,6 @@ numéricas + `id_equipamento`, então modelá-los como dimensão não se aplica.
 | `fato_manutencao` | `ordens_manutencao.csv` | 1 linha por OS | `data_abertura` |
 | `fato_faturamento` | `faturamento.csv` | 1 linha por fatura | `data_emissao` |
 | `fato_horimetro` | `horimetro_telemetria.csv` | 1 linha por leitura | `data_leitura` |
-| `fato_abastecimento` | `abastecimento.csv` | 1 linha por abastecimento | `data_abastecimento` |
 
 ## Relacionamentos
 
@@ -37,9 +36,8 @@ numéricas + `id_equipamento`, então modelá-los como dimensão não se aplica.
 dim_equipamento ──1───N── fato_locacao
 dim_equipamento ──1───N── fato_manutencao
 dim_equipamento ──1───N── fato_horimetro
-dim_equipamento ──1───N── fato_abastecimento
 dim_cliente     ──1───N── fato_locacao
-dim_calendario  ──1───N── (todas as 5 tabelas de fato, pela coluna de data acima)
+dim_calendario  ──1───N── (todas as 4 tabelas de fato, pela coluna de data acima)
 ```
 
 ## Atenção — `fato_faturamento` não tem `id_equipamento`
