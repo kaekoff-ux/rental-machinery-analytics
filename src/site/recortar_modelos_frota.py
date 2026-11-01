@@ -141,6 +141,24 @@ def borrar_logos(quadro, areas):
     return quadro
 
 
+def enquadrar(imagem, folga=0.04):
+    """Corta o excesso de fundo em volta da máquina (imagens avulsas vêm com muito cenário).
+
+    Máquina = pixel colorido (pintura) ou escuro (pneu, cabine); o fundo é cinza-claro e a sombra no
+    chão é cinza médio, então ficam de fora. Mantém uma folga de 4% em volta.
+    """
+    hsv = imagem.convert("HSV")
+    _, saturacao, brilho = hsv.split()
+    mascara = Image.eval(saturacao, lambda s: 255 if s > 60 else 0)
+    escuro = Image.eval(brilho, lambda v: 255 if v < 110 else 0)
+    caixa = Image.composite(escuro, mascara, escuro).getbbox()
+    if not caixa:
+        return imagem
+    x0, y0, x1, y1 = caixa
+    dx, dy = int(imagem.width * folga), int(imagem.height * folga)
+    return imagem.crop((max(0, x0 - dx), max(0, y0 - dy), min(imagem.width, x1 + dx), min(imagem.height, y1 + dy)))
+
+
 def salvar(imagem, nome, origem):
     imagem.save(DESTINO / f"{nome}.jpg", "JPEG", quality=QUALIDADE, optimize=True, progressive=True)
     print(f"site/img/frota/modelos/{nome}.jpg  {imagem.width}x{imagem.height}  ({origem})")
@@ -161,7 +179,7 @@ def main():
         if arquivo.suffix.lower() not in EXTENSOES:
             continue
         with Image.open(arquivo) as imagem:
-            imagem = imagem.convert("RGB")
+            imagem = enquadrar(imagem.convert("RGB"))
             imagem.thumbnail(TAMANHO_MAXIMO, Image.LANCZOS)
             salvar(imagem, arquivo.stem.lower(), f"avulsa: {arquivo.name}")
 

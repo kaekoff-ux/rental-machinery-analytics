@@ -21,6 +21,9 @@ os logotipos são borrados pelo script de recorte; imagens novas já devem vir s
 4. Se a imagem vier com letras ou logotipo na máquina, peça de novo no Gemini ("sem nenhum texto,
    letra ou logotipo na máquina"), ou avise para borrar a área no script.
 
+Situação em 01/11/2026: 27 dos 28 modelos já têm imagem do Gemini nessa pasta. Falta só o
+Caterpillar 320GC (`caterpillar-320gc.jpg`), que ainda usa o quadro do painel com o logo borrado.
+
 Modelo de prompt (troque só o trecho entre colchetes):
 
 ```text

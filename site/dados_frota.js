@@ -84,7 +84,7 @@ window.FROTA = {
      "350 L"
     ]
    ],
-   "foto": null
+   "foto": "img/frota/modelos/volvo-ec210b.jpg"
   },
   {
    "fabricante": "Hyundai",
@@ -110,7 +110,7 @@ window.FROTA = {
      "1,34 m³"
     ]
    ],
-   "foto": null
+   "foto": "img/frota/modelos/hyundai-hx220l.jpg"
   },
   {
    "fabricante": "Komatsu",
@@ -131,7 +131,7 @@ window.FROTA = {
      "123 kW"
     ]
    ],
-   "foto": null
+   "foto": "img/frota/modelos/komatsu-pc210.jpg"
   }
  ],
  "Pá-carregadeira": [
@@ -654,7 +654,7 @@ window.FROTA = {
      "26,1 L/h"
     ]
    ],
-   "foto": null
+   "foto": "img/frota/modelos/atlas-copco-qas150.jpg"
   },
   {
    "fabricante": "Cummins",
