@@ -112,9 +112,9 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
   fontes não batem fica de fora. As fotos são de IA: logotipos e textos das máquinas são borrados
   no recorte (lista `LOGOS` do script); o site mostra só o equipamento. Imagem nova (o usuário usa
   o Gemini) vai em `docs/imagens/frota/modelos/<fabricante-modelo>.jpg` e substitui o quadro do
-  painel; prompts e nomes em `docs/prompts_imagens_frota.md`. Desde 01/11/2026, 27 dos 28 modelos
-  usam imagem avulsa do Gemini (enquadrada automaticamente em volta da máquina); só o Caterpillar
-  320GC ainda usa o quadro do painel. Versões que sobraram ficam em `docs/imagens/frota/modelos/alternativas/`.
+  painel; prompts e nomes em `docs/prompts_imagens_frota.md`. Desde 01/11/2026, os 28 modelos usam
+  imagem avulsa do Gemini (enquadrada automaticamente em volta da máquina); o painel ficou só como
+  reserva. Versões que sobraram ficam em `docs/imagens/frota/modelos/alternativas/`.
 - **Contrato mínimo de 30 dias só no site** (decisão do usuário, 01/11/2026: abaixo disso a
   logística custa mais que a locação). O pedido do site vai de 30 a 360 dias. **Não mexer nos
   dados por causa disso:** `contratos_locacao.csv` continua com contratos diários e semanais;

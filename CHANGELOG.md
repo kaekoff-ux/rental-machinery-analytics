@@ -8,8 +8,8 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 ### Changed (01/11/2026, fotos do Gemini)
 - 27 dos 28 modelos passaram a usar a imagem feita pelo usuário no Gemini, em
   `docs/imagens/frota/modelos/` (as imagens tinham sido salvas na raiz de `docs/imagens/` e foram
-  movidas e renomeadas). O recorte agora enquadra a imagem avulsa em volta da máquina. Só o
-  Caterpillar 320GC, sem imagem nova, continua com o quadro do painel. Todos os modelos têm foto.
+  movidas e renomeadas). O recorte agora enquadra a imagem avulsa em volta da máquina. Depois o
+  usuário incluiu o Caterpillar 320GC: os 28 modelos usam imagem do Gemini.
 - Versões que sobraram foram para `docs/imagens/frota/modelos/alternativas/`, inclusive
   `volvo-ec210b.jpg`, que mostrava uma pá-carregadeira (o site usa a outra, `VolvoEC210B`).
 
