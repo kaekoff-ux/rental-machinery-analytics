@@ -98,13 +98,15 @@ rental-machinery-analytics/
 ├── site/                         o que vai para o GitHub Pages
 │   ├── index.html                conteúdo e estrutura
 │   ├── estilo.css                visual (cores e tamanhos no topo, em variáveis)
-│   ├── script.js                 contatos, pop-ups, carrossel, pedido, animação do topo
-│   ├── img/                      imagens leves geradas pelo script abaixo
-│   │   └── frota/disponiveis.js  lista das fotos da frota que existem (gerada pelo script)
+│   ├── script.js                 contatos, pop-ups, carrossel, filtro de modelo, pedido, animação do topo
+│   ├── dados_frota.js            modelos da frota: quantidade, unidades, ficha e foto (gerado)
+│   ├── img/                      imagens leves geradas pelos scripts abaixo
+│   │   └── frota/modelos/        uma foto por modelo (recortada do painel de docs/imagens/frota/)
 │   └── video/hero.mp4            animação do topo (cópia de docs/videos/01_hero_animacao.mp4)
 ├── src/site/otimizar_imagens.py  docs/imagens -> site/img (máx. 1400 px, JPEG 80): história,
-│                                 mural de 2016, Missão/Visão/Valores, fotos da frota quando
-│                                 existirem, a lista disponiveis.js e a cópia do vídeo
+│                                 mural de 2016, Missão/Visão/Valores e a cópia do vídeo
+├── src/site/recortar_modelos_frota.py  painel de modelos -> site/img/frota/modelos/
+├── src/site/gerar_dados_frota.py cadastro + docs/fichas_tecnicas_modelos.csv + fotos -> site/dados_frota.js
 ├── docs/videos/                  vídeos originais (o do topo veio do Gemini em 31/10/2026)
 ├── src/apps_script/receber_orcamento.gs   backend do formulário (passo 5)
 └── docs/prompts_imagens_frota.md lista dos 7 equipamentos e prompts das fotos da frota
@@ -124,9 +126,13 @@ rental-machinery-analytics/
 - **Telegram:** campo `telegram` do `CONTATO` (nome do bot, sem @). Vazio, o botão
   "Atendimento" abre o aviso de "em breve"; preenchido, abre o chat em `t.me`.
 - **Cores e tamanhos:** variáveis no topo de `site/estilo.css`.
-- **Fotos da frota:** salvar em `docs/imagens/frota/` com os nomes de
-  `docs/prompts_imagens_frota.md` e rodar `python src/site/otimizar_imagens.py`. O script
-  atualiza a lista `site/img/frota/disponiveis.js`, e o site passa a mostrar as fotos novas.
+- **Fotos e fichas da frota (por modelo):** as fotos saem do painel
+  `docs/imagens/frota/painel_modelos.jpeg` com `python src/site/recortar_modelos_frota.py`; as
+  fichas técnicas ficam em `docs/fichas_tecnicas_modelos.csv` (com a fonte de cada valor, que não
+  vai para o site). Depois de mudar foto, ficha ou cadastro, rodar
+  `python src/site/gerar_dados_frota.py` e `python tests/conferir_site.py`.
+- **Prazo do pedido:** 30 a 360 dias (regra comercial de 01/11/2026), no `<input id="sim-dias">`
+  de `site/index.html`.
 - **Animação do topo:** trocar `docs/videos/01_hero_animacao.mp4` e rodar o mesmo script. O
   vídeo deve começar no mesmo enquadramento de `docs/imagens/03_unidade_atual.jpg`, que fica
   por baixo dele.

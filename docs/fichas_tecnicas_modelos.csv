@@ -1,0 +1,84 @@
+﻿segmento;fabricante;modelo;campo;valor;fonte;tipo_fonte;consultado_em;observacao
+Escavadeira;Caterpillar;320GC;Peso operacional;cerca de 20,4 t;https://kz.borusancat.com/en/equipment/new/464/Excavators/126515/320-GC;Concessionária do fabricante;2026-11-01;
+Escavadeira;Caterpillar;320GC;Potência líquida;107 kW;https://kz.borusancat.com/en/equipment/new/464/Excavators/126515/320-GC;Concessionária do fabricante;2026-11-01;ISO 9249
+Escavadeira;Caterpillar;320GC;Profundidade máx. de escavação;6,63 m;https://kz.borusancat.com/en/equipment/new/464/Excavators/126515/320-GC;Concessionária do fabricante;2026-11-01;
+Escavadeira;Caterpillar;320GC;Tanque de combustível;345 L;https://www.cat.com/en_IN/products/new/equipment/excavators/medium-excavators/126515.html;Fabricante;2026-11-01;
+Escavadeira;Caterpillar;320D;Peso operacional;cerca de 21,6 t;https://www.scribd.com/document/507495438/320D;Catálogo do fabricante (cópia em terceiros);2026-11-01;Configuração 320D L, outras fontes dão 21,9 t
+Escavadeira;Caterpillar;320D;Potência líquida;103 kW;https://machine.market/specs/caterpillar-cat/320d-l;Base de especificações;2026-11-01;ISO 9249, a concessionária Trakindo dá o mesmo valor
+Escavadeira;Caterpillar;320D;Tanque de combustível;410 L;https://trakindo.dev.webarq.net/320d-l-16929051;Concessionária do fabricante;2026-11-01;
+Escavadeira;Volvo;EC210B;Peso operacional;21,3 a 22,3 t;https://www.scribd.com/document/326541302/EC210B;Catálogo do fabricante (cópia em terceiros);2026-11-01;Versão LC
+Escavadeira;Volvo;EC210B;Potência líquida;107 kW;https://www.aucto.com/data/volvo-ec210bnlc;Base de especificações;2026-11-01;
+Escavadeira;Volvo;EC210B;Tanque de combustível;350 L;https://www.constructionequipmentguide.com/used-equipment/volvo/excavators/ec210b_lc/id/88821835;Revenda;2026-11-01;
+Escavadeira;Hyundai;HX220L;Peso operacional;cerca de 22,1 t;https://www.directindustry.com/prod/hyundai-heayy-industries/product-161869-1667871.html;Vitrine do fabricante;2026-11-01;
+Escavadeira;Hyundai;HX220L;Potência líquida;129 kW;https://www.constructionequipmentguide.com/charts/excavators/hyundai/hx220l/813057;Base de especificações;2026-11-01;Motor Cummins QSB6.7
+Escavadeira;Hyundai;HX220L;Caçamba;1,34 m³;https://www.directindustry.com/prod/hyundai-heayy-industries/product-161869-1667871.html;Vitrine do fabricante;2026-11-01;
+Escavadeira;Komatsu;PC210;Peso operacional;22,0 a 22,6 t;https://res.cloudinary.com/bia-group/image/upload/v1656575914/Komatsu/Brochures/Crawler%20Excavators/PC210210LC_10M0_EENSB12400_2203_ybtyuy.pdf;Catálogo do fabricante (cópia em revenda);2026-11-01;Versão PC210-10
+Escavadeira;Komatsu;PC210;Potência do motor;123 kW;https://res.cloudinary.com/bia-group/image/upload/v1656575914/Komatsu/Brochures/Crawler%20Excavators/PC210210LC_10M0_EENSB12400_2203_ybtyuy.pdf;Catálogo do fabricante (cópia em revenda);2026-11-01;Profundidade e tanque ficaram de fora: as fontes não batem
+Retroescavadeira;JCB;3CX;Potência bruta;68,6 kW;https://cdn.shopify.com/s/files/1/0760/9257/1931/files/JCB_3CX_Spec_Sheet.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;Varia com a versão (63 a 74 kW)
+Retroescavadeira;JCB;3CX;Caçamba da carregadeira;cerca de 1,0 m³;https://cdn.shopify.com/s/files/1/0760/9257/1931/files/JCB_3CX_Spec_Sheet.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;
+Retroescavadeira;JCB;3CX;Tanque de combustível;cerca de 160 L;https://www.plantandequipment.com/equipment-items/2018-jcb-3cx-1218498;Revenda;2026-11-01;As fontes vão de 150 a 173 L conforme a versão
+Retroescavadeira;Caterpillar;416F;Peso operacional;cerca de 6,8 t;https://files.machine.market/specs/caterpillar--cat--416f-loaders---skid-steers(1).pdf;Ficha do fabricante (cópia em base);2026-11-01;
+Retroescavadeira;Caterpillar;416F;Potência líquida;65 kW;https://files.machine.market/specs/caterpillar--cat--416f-loaders---skid-steers(1).pdf;Ficha do fabricante (cópia em base);2026-11-01;SAE J1349
+Retroescavadeira;Case;580N;Motor;diesel 3,4 L turbo;https://www.scribd.com/document/715319941/580N-2013;Catálogo do fabricante (cópia em terceiros);2026-11-01;Potência e peso ficaram de fora: as fontes não batem
+Retroescavadeira;Case;580N;Profundidade de escavação;cerca de 4,4 m;https://brokentractor.com/p/case-580n-backhoe-information-580n;Revenda;2026-11-01;Outra fonte dá 4,39 m
+Retroescavadeira;New Holland;B95B;Peso operacional;cerca de 6,9 t;https://www.manytractors.com/backhoe-loader/new-holland-b95b-backhoe-loader-8035/specs;Base de especificações;2026-11-01;Fabricação 2008 a 2015
+Retroescavadeira;New Holland;B95B;Potência;68 kW;https://www.manytractors.com/backhoe-loader/new-holland-b95b-backhoe-loader-8035/specs;Base de especificações;2026-11-01;
+Retroescavadeira;New Holland;B95B;Tanque de combustível;134 L;https://www.manytractors.com/backhoe-loader/new-holland-b95b-backhoe-loader-8035/specs;Base de especificações;2026-11-01;
+Pá-carregadeira;Volvo;L60H;Peso operacional;11,0 a 13,6 t;https://www.tdxltd.co.nz/volvo-wheel-loader-l60h/model/949/126/34;Distribuidor do fabricante;2026-11-01;
+Pá-carregadeira;Volvo;L60H;Potência líquida;123 kW;https://www.tdxltd.co.nz/volvo-wheel-loader-l60h/model/949/126/34;Distribuidor do fabricante;2026-11-01;ISO 9249
+Pá-carregadeira;Volvo;L60H;Caçamba;1,6 a 5 m³;https://www.tdxltd.co.nz/volvo-wheel-loader-l60h/model/949/126/34;Distribuidor do fabricante;2026-11-01;
+Pá-carregadeira;Volvo;L60H;Tanque de combustível;222 L;https://power-equip.com/p/volvo-l60h-wheel-loader/;Revenda;2026-11-01;
+Pá-carregadeira;Caterpillar;950H;Peso operacional;cerca de 18,3 t;https://www.scribd.com/doc/209309704/E1-3373-1-950H-specalog;Catálogo do fabricante (cópia em terceiros);2026-11-01;
+Pá-carregadeira;Caterpillar;950H;Potência bruta;162 kW;https://www.scribd.com/doc/209309704/E1-3373-1-950H-specalog;Catálogo do fabricante (cópia em terceiros);2026-11-01;SAE J1995
+Pá-carregadeira;Caterpillar;950H;Caçamba;2,7 a 4,0 m³;https://www.lectura-specs.com/en/model/construction-machinery/wheel-loaders-caterpillar/950h-1030878;Base de especificações;2026-11-01;
+Pá-carregadeira;Caterpillar;950H;Tanque de combustível;314 L;https://www.manualsdir.com/manuals/63453/cat-wheel-loader.html?page=24;Manual do fabricante (cópia em terceiros);2026-11-01;
+Pá-carregadeira;Case;821F;Peso operacional;cerca de 17,6 t;https://cegltd.com/charts/wheel-loaders/case/821f/2828;Base de especificações;2026-11-01;
+Pá-carregadeira;Case;821F;Potência líquida;153 kW;https://cegltd.com/charts/wheel-loaders/case/821f/2828;Base de especificações;2026-11-01;
+Pá-carregadeira;Case;821F;Caçamba;2,8 a 3,4 m³;https://www.casece.com/apac/bu-mm/products/wheel-loaders/wheel-loaders/models/821f;Fabricante;2026-11-01;
+Pá-carregadeira;Case;821F;Tanque de combustível;288 L;https://www.sonsraymachinery.com/wp-content/uploads/2021/04/Wheel-Loader-821F-Specs.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;
+Pá-carregadeira;XCMG;LW500;Carga nominal;5 t;https://www.lectura-specs.com/en/model/construction-machinery/wheel-loaders-xcmg/lw500fn-11707164;Base de especificações;2026-11-01;Versão LW500FN
+Pá-carregadeira;XCMG;LW500;Peso;cerca de 16,9 t;https://www.lectura-specs.com/en/model/construction-machinery/wheel-loaders-xcmg/lw500fn-11707164;Base de especificações;2026-11-01;Versão LW500FN
+Pá-carregadeira;XCMG;LW500;Caçamba;2,5 a 4,5 m³;https://www.machmall.com/item-detail/XCMG-LW500FN-5702.html;Revenda;2026-11-01;Versão LW500FN
+Guindaste;Liebherr;LTM 1050-3.1;Capacidade máxima;50 t;https://www.liebherr.com/zh-cn/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E5%92%8C%E5%B1%A5%E5%B8%A6%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm-1050-3-1-4043648;Fabricante;2026-11-01;A 3 m de raio
+Guindaste;Liebherr;LTM 1050-3.1;Lança telescópica;11,4 a 38 m;https://www.liebherr.com/zh-cn/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E5%92%8C%E5%B1%A5%E5%B8%A6%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm-1050-3-1-4043648;Fabricante;2026-11-01;
+Guindaste;Liebherr;LTM 1050-3.1;Motor;270 kW;https://www.liebherr.com/zh-cn/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E5%92%8C%E5%B1%A5%E5%B8%A6%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm%E7%A7%BB%E5%8A%A8%E5%BC%8F%E8%B5%B7%E9%87%8D%E6%9C%BA/ltm-1050-3-1-4043648;Fabricante;2026-11-01;Seis cilindros a diesel
+Guindaste;Liebherr;LTM 1050-3.1;Tanque do chassi;350 L;https://www.codeready.org/cranes/liebherr-cranes/liebherr-ltm-1050-3-1-crane;Base de especificações;2026-11-01;
+Guindaste;XCMG;QY25K;Capacidade máxima;25 t;https://www.cranemarket.com/specs/xcmg/qy25k5-i?sold=1;Base de especificações;2026-11-01;Lança e motor ficaram de fora: variam com a versão (QY25K5-I, QY25K5D)
+Guindaste;Grove;RT540E;Capacidade máxima;35 t;https://manitowoc.com/media/12009/download;Fabricante;2026-11-01;Guia do produto
+Guindaste;Grove;RT540E;Lança principal;9,8 a 31 m;https://www.bigge.com/crane-information/grove-rt540e;Locadora;2026-11-01;
+Guindaste;Grove;RT540E;Motor;Cummins QSB6.7 a diesel;https://www.bigge.com/crane-information/grove-rt540e;Locadora;2026-11-01;
+Empilhadeira;Yale;GLP50VX;Capacidade nominal;5.000 kg;https://www.lectura-specs.com/en/model/forklifts/lpg-forklifts-yale/glp50vx6-productivity-11762228;Base de especificações;2026-11-01;Versão GLP50VX6, carga a 600 mm
+Empilhadeira;Yale;GLP50VX;Combustível;GLP;https://www.lectura-specs.com/en/model/forklifts/lpg-forklifts-yale/glp50vx6-productivity-11762228;Base de especificações;2026-11-01;
+Empilhadeira;Hyster;H80FT;Capacidade nominal;cerca de 3.600 kg;https://www.scribd.com/document/493225423/H80-120FT-TechGuide-1;Ficha do fabricante (cópia em terceiros);2026-11-01;8.000 lb
+Empilhadeira;Hyster;H80FT;Combustível;GLP (motor Kubota 3,8 L);https://www.scribd.com/document/493225423/H80-120FT-TechGuide-1;Ficha do fabricante (cópia em terceiros);2026-11-01;
+Empilhadeira;Toyota;8FGU25;Capacidade nominal;cerca de 2.300 kg;https://www.eliftruck.com/details/1016325-33/year-2022-fuel-lp-gas-make-toyota-model-8fgu25/HTTP:/WWW.ATLASD2D.COM;Revenda;2026-11-01;5.000 lb
+Empilhadeira;Toyota;8FGU25;Combustível;GLP;https://www.eliftruck.com/details/1016325-33/year-2022-fuel-lp-gas-make-toyota-model-8fgu25/HTTP:/WWW.ATLASD2D.COM;Revenda;2026-11-01;O modelo aceita GLP ou gasolina, a frota é a GLP
+Empilhadeira;Clark;C25L;Capacidade nominal;cerca de 2.300 kg;https://www.liftstoday.com/listing/for-sale/228643835/2015-clark-c25l-pneumatic-tire-forklifts?print=1;Revenda;2026-11-01;5.000 lb
+Empilhadeira;Clark;C25L;Combustível;GLP;https://www.liftstoday.com/listing/for-sale/228643835/2015-clark-c25l-pneumatic-tire-forklifts?print=1;Revenda;2026-11-01;
+Plataforma elevatória;Skyjack;SJ45AJE+;Altura de trabalho;15,72 m;https://www.skyjack.com/sites/default/files/literature-library/CE_ENG_SJ45_60AJE_Plus_TEAR_SHEET.pdf;Fabricante;2026-11-01;Ficha marcada como preliminar
+Plataforma elevatória;Skyjack;SJ45AJE+;Alcance horizontal;6,93 m;https://www.skyjack.com/sites/default/files/literature-library/CE_ENG_SJ45_60AJE_Plus_TEAR_SHEET.pdf;Fabricante;2026-11-01;
+Plataforma elevatória;Skyjack;SJ45AJE+;Capacidade do cesto;300 kg;https://www.skyjack.com/sites/default/files/literature-library/CE_ENG_SJ45_60AJE_Plus_TEAR_SHEET.pdf;Fabricante;2026-11-01;
+Plataforma elevatória;Skyjack;SJ45AJE+;Energia;elétrica, baterias AGM de 415 Ah;https://www.skyjack.com/sites/default/files/literature-library/NA_ENG_SJ45_60_AJEPlus_TEAR_SHEET.pdf;Fabricante;2026-11-01;
+Plataforma elevatória;Genie;Z45DC;Altura de trabalho;15,92 m;https://access-lift.com/wp-content/uploads/2023/11/ZBOOMSPEC_Z45_DC_Z45_FE_EN-US_NA_LR.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;
+Plataforma elevatória;Genie;Z45DC;Alcance horizontal;6,94 m;https://issuu.com/protruck/docs/genie_z45;Ficha do fabricante (cópia em terceiros);2026-11-01;
+Plataforma elevatória;Genie;Z45DC;Capacidade do cesto;300 kg;https://issuu.com/protruck/docs/genie_z45;Ficha do fabricante (cópia em terceiros);2026-11-01;
+Plataforma elevatória;Genie;Z45DC;Energia;elétrica, bateria de 48 V e 390 Ah;https://www.wimverhuur.be/storage/navision/product_manuals/Technische%20fiche%20hoogtewerker%20Genie%20Z-45%20FE.pdf;Ficha do fabricante (cópia em locadora);2026-11-01;
+Plataforma elevatória;Haulotte;HA16E;Altura de trabalho;16 m;https://www.unitedequipment.com.au/product/haulotte-electric-articulating-boom-lift-ha16-e-pro;Revenda;2026-11-01;
+Plataforma elevatória;Haulotte;HA16E;Alcance horizontal;7,94 m;https://www.unitedequipment.com.au/product/haulotte-electric-articulating-boom-lift-ha16-e-pro;Revenda;2026-11-01;
+Plataforma elevatória;Haulotte;HA16E;Capacidade do cesto;300 kg;https://www.unitedequipment.com.au/product/haulotte-electric-articulating-boom-lift-ha16-e-pro;Revenda;2026-11-01;
+Plataforma elevatória;Haulotte;HA16E;Energia;elétrica (bateria);https://www.unitedequipment.com.au/product/haulotte-electric-articulating-boom-lift-ha16-e-pro;Revenda;2026-11-01;
+Plataforma elevatória;JLG;E600JP;Altura da plataforma;18,39 m;https://www.jlg.com/en-au/equipment/boom-lifts/articulating/electric-hybrid/e600-and-m600-series/e600jp;Fabricante;2026-11-01;
+Plataforma elevatória;JLG;E600JP;Alcance horizontal;13,54 m;https://www.jlg.com/en-au/equipment/boom-lifts/articulating/electric-hybrid/e600-and-m600-series/e600jp;Fabricante;2026-11-01;
+Plataforma elevatória;JLG;E600JP;Capacidade do cesto;227 kg;https://www.doggett.com/images/doggett-toyotalift/brands-equipment/05_JLG/02_Electric-Hybrid-Boom-Lift/03_Telescopic-Boom-Lifts/01_E600J/E600-Series-Spec-Sheet.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;
+Plataforma elevatória;JLG;E600JP;Energia;elétrica (bateria);https://www.jlg.com/en-au/equipment/boom-lifts/articulating/electric-hybrid/e600-and-m600-series/e600jp;Fabricante;2026-11-01;
+Gerador;Atlas Copco;QAS150;Potência prime (60 Hz);150 kVA;https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/ptna-usa/generators/QAS%20150-200%20JD%20T4F%20Product%20Reference.pdf;Fabricante;2026-11-01;Versão QAS 150 JD
+Gerador;Atlas Copco;QAS150;Potência standby (60 Hz);165 kVA;https://manuals.plus/atlas-copco/qas-150-jd-mobile-generator-manual;Manual do fabricante (cópia em terceiros);2026-11-01;
+Gerador;Atlas Copco;QAS150;Consumo a 75% de carga (60 Hz);26,1 L/h;https://cdn.shopify.com/s/files/1/0403/8898/4990/files/QAS_150_200_Datasheet.pdf;Ficha do fabricante (cópia em revenda);2026-11-01;21,9 L/h em 50 Hz
+Gerador;Cummins;C150D5;Potência prime (50 Hz);136 kVA;https://www.cummins.com/en-eu/generators/products/c150d5;Fabricante;2026-11-01;Consumo a 75% ficou de fora: tabela ilegível na cópia encontrada
+Gerador;Cummins;C150D5;Potência standby (50 Hz);150 kVA;https://www.cummins.com/en-eu/generators/products/c150d5;Fabricante;2026-11-01;
+Gerador;Cummins;C250D5;Potência prime (50 Hz);227 kVA;https://www.cummins.com/en-in/generators/products/c250d5;Fabricante;2026-11-01;
+Gerador;Cummins;C250D5;Potência standby (50 Hz);250 kVA;https://www.cummins.com/en-in/generators/products/c250d5;Fabricante;2026-11-01;
+Gerador;Cummins;C250D5;Consumo a 75% de carga (prime, 50 Hz);39 L/h;https://abyaran.com/pdf/cummins/genset/DS-C250-D5.pdf;Ficha do fabricante (cópia em terceiros);2026-11-01;A tabela não traz a unidade, 39 corresponde aos 10,3 gal/h da linha de cima (10,3 × 3,785 = 39 L)
+Gerador;Caterpillar;XQ125;Potência prime (60 Hz);125 kVA;https://www.cat.com/en_IN/products/new/power-systems/electric-power/mobile-generator-sets/1000032453.html;Fabricante;2026-11-01;Consumo ficou de fora: as fontes não batem (4,8 a 6 gal/h)
+Gerador;Caterpillar;XQ125;Potência standby (60 Hz);137 kVA;https://www.cat.com/en_IN/products/new/power-systems/electric-power/mobile-generator-sets/1000032453.html;Fabricante;2026-11-01;
+Gerador;Caterpillar;XQ125;Motor;Cat C4.4 a diesel;https://www.cat.com/en_IN/products/new/power-systems/electric-power/mobile-generator-sets/1000032453.html;Fabricante;2026-11-01;

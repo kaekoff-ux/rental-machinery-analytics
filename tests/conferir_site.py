@@ -1,7 +1,8 @@
 """Confere se os numeros do site (site/index.html) batem com data/processed/.
 
 Verifica: frota por segmento, modelos de cada card, unidades (total e por segmento), 117 ativas,
-contratos por modalidade, revisoes preventivas, inspecoes de devolucao e telemetria.
+site/dados_frota.js (modelos, unidades, fichas e fotos), prazo do pedido (30 a 360 dias),
+revisoes preventivas, inspecoes de devolucao e telemetria.
 Nao altera nenhum arquivo.
 
 Como rodar, a partir da raiz do repositorio:
@@ -10,9 +11,10 @@ Como rodar, a partir da raiz do repositorio:
 Sai com codigo 0 se tudo bate e 1 se algum numero diverge.
 """
 import csv
+import json
 import re
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -45,7 +47,6 @@ def para_int(texto):
 # --- Dados (data/processed/) ---------------------------------------------------------------
 equipamentos = ler_csv("cadastro_equipamentos.csv")
 ativos = [e for e in equipamentos if e["status_cadastro"] == "Ativo"]
-contratos = ler_csv("contratos_locacao.csv")
 ordens = ler_csv("ordens_manutencao.csv")
 leituras = ler_csv("horimetro_telemetria.csv")
 
@@ -98,15 +99,37 @@ soma_unidades = sum(
 )
 conferir("soma das unidades = ativos", soma_unidades, len(ativos))
 
-# --- Contratos (pop-up "Diária, semanal ou mensal") -----------------------------------------
-# Ex.: No case: 642 contratos mensais, 307 semanais e 261 diários em 2024 e 2025.
-modalidades = Counter(c["modalidade"] for c in contratos)
-contratos_site = re.search(
-    r"No case: ([\d.]+) contratos mensais, ([\d.]+) semanais e ([\d.]+) diários", html
+# --- Modelos da frota (site/dados_frota.js, usado no filtro dos cards e no pedido) -----------
+# Tem de bater com o cadastro (quantidade e unidades de cada modelo ativo), com as fichas técnicas
+# de docs/fichas_tecnicas_modelos.csv e com as fotos que existem em site/img/frota/modelos/.
+texto_js = (RAIZ / "site" / "dados_frota.js").read_text(encoding="utf-8")
+frota_js = json.loads(texto_js.split("window.FROTA = ", 1)[1].rstrip().rstrip(";"))
+fichas = defaultdict(list)
+with open(RAIZ / "docs" / "fichas_tecnicas_modelos.csv", encoding="utf-8-sig", newline="") as arq:
+    for linha in csv.DictReader(arq, delimiter=";"):
+        fichas[f'{linha["fabricante"]} {linha["modelo"]}'].append([linha["campo"], linha["valor"]])
+
+modelos_js = {m["nome"]: m for lista in frota_js.values() for m in lista}
+conferir(
+    "dados_frota.js: modelos e quantidades",
+    {nome: m["quantidade"] for nome, m in modelos_js.items()},
+    dict(Counter(f'{e["fabricante"]} {e["modelo"]}' for e in ativos)),
 )
-conferir("contratos mensais", para_int(contratos_site.group(1)), modalidades["Mensal"])
-conferir("contratos semanais", para_int(contratos_site.group(2)), modalidades["Semanal"])
-conferir("contratos diários", para_int(contratos_site.group(3)), modalidades["Diária"])
+conferir(
+    "dados_frota.js: unidades de cada modelo",
+    {nome: m["unidades"] for nome, m in modelos_js.items()},
+    {nome: dict(Counter(e["filial"] for e in ativos if f'{e["fabricante"]} {e["modelo"]}' == nome))
+     for nome in modelos_js},
+)
+conferir("dados_frota.js: fichas iguais ao CSV", {n: m["ficha"] for n, m in modelos_js.items()},
+         {n: fichas.get(n, []) for n in modelos_js})
+conferir("dados_frota.js: todo modelo ativo tem ficha", [n for n, m in modelos_js.items() if not m["ficha"]], [])
+conferir("dados_frota.js: fotos citadas existem",
+         [m["foto"] for m in modelos_js.values() if m["foto"] and not (RAIZ / "site" / m["foto"]).exists()], [])
+
+# --- Prazo do pedido de orçamento: 30 a 360 dias ---------------------------------------------
+dias = re.search(r'<input type="range" id="sim-dias" name="dias" min="(\d+)" max="(\d+)"', html)
+conferir("pedido: prazo mínimo e máximo (dias)", (int(dias.group(1)), int(dias.group(2))), (30, 360))
 
 # --- Revisoes preventivas (pop-up "Revisão programada") -------------------------------------
 preventivas = Counter(o["tipo_manutencao"] for o in ordens)["Preventiva"]

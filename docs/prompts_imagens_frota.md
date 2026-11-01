@@ -1,8 +1,52 @@
 # Imagens da frota: lista de equipamentos e prompts
 
-> A LocaMaq é uma empresa fictícia (case de portfólio). Estas imagens serão geradas por IA, e o
-> site informa isso. Não citar marcas nem modelos reais no prompt: os geradores erram letras e
-> logotipos, e uma marca real na imagem sugeriria parceria que não existe.
+> A LocaMaq é uma empresa fictícia (case de portfólio). As imagens são geradas por IA, e o site
+> informa isso.
+
+## Fotos por modelo (regra atual, decidida pelo usuário em 01/11/2026)
+
+O site mostra **uma foto por modelo** no card da Frota e no pedido de orçamento. Como são imagens
+de IA, a máquina pode ter as cores e o formato do modelo real, mas **sem logotipo nem texto**: o
+site mostra só o equipamento. Nas fotos que vêm do painel (`docs/imagens/frota/painel_modelos.jpeg`)
+os logotipos são borrados pelo script de recorte; imagens novas já devem vir sem logotipo.
+
+### Como refazer uma foto no Gemini
+
+1. No Gemini (gemini.google.com), peça a imagem com o prompt do modelo (lista abaixo).
+2. Baixe a imagem e salve em `docs/imagens/frota/modelos/` com o nome exato da lista (pode ser
+   `.jpg` ou `.png`). A imagem dessa pasta substitui o quadro do painel.
+3. Na raiz do repositório, rode:
+   `python src/site/recortar_modelos_frota.py`, depois `python src/site/gerar_dados_frota.py` e
+   `python tests/conferir_site.py`.
+4. Se a imagem vier com letras ou logotipo na máquina, peça de novo no Gemini ("sem nenhum texto,
+   letra ou logotipo na máquina"), ou avise para borrar a área no script.
+
+Modelo de prompt (troque só o trecho entre colchetes):
+
+```text
+Fotografia de estúdio realista de [MÁQUINA], inteira no quadro, vista em três quartos pela
+frente, sobre fundo cinza-claro liso e uniforme, com sombra suave no chão. Sem nenhum texto,
+letra, número, logotipo ou adesivo na máquina. Iluminação difusa de estúdio, cores fiéis ao
+fabricante. Formato horizontal 16:9.
+```
+
+| Arquivo (em `docs/imagens/frota/modelos/`) | [MÁQUINA] | Por quê |
+|---|---|---|
+| `volvo-ec210b.jpg` | uma escavadeira hidráulica sobre esteiras de cerca de 21 toneladas, como a Volvo EC210B, pintura amarela com cabine e contrapeso cinza-escuros | o quadro do painel mostra um gerador |
+| `hyundai-hx220l.jpg` | uma escavadeira hidráulica sobre esteiras de cerca de 22 toneladas, como a Hyundai HX220L, pintura amarela com detalhes cinza-escuros | o quadro do painel mostra uma escavadeira Volvo |
+| `komatsu-pc210.jpg` | uma escavadeira hidráulica sobre esteiras de cerca de 22 toneladas, como a Komatsu PC210, pintura amarela com detalhes pretos | não tem quadro no painel |
+| `atlas-copco-qas150.jpg` | um gerador a diesel móvel de 150 kVA em cabine metálica silenciada, montado sobre carreta de dois eixos com engate, como o Atlas Copco QAS 150 | o quadro do painel mostra um guindaste |
+| `grove-rt540e.jpg` | um guindaste para terreno acidentado de cerca de 35 toneladas, dois eixos, uma cabine só e lança telescópica de quatro seções, como o Grove RT540E, pintura vermelha e cinza | o quadro do painel saiu com "GFOVE" na lança (hoje borrado) |
+
+Opcional: as plataformas (JLG E600JP, Genie Z-45 DC, Skyjack SJ45 AJE+, Haulotte HA16 E) e duas
+empilhadeiras (Yale GLP50VX, Clark C25L) usam a foto da versão antiga da mesma marca. Para refazer,
+use o nome de arquivo da foto atual em `site/img/frota/modelos/` (ex.: `jlg-e600jp.jpg`) e
+descreva a versão elétrica ou a GLP.
+
+## Primeira versão: uma foto por tipo de máquina (substituída em 01/11/2026)
+
+O que segue é o plano original, com uma foto por tipo de máquina e sem marcas no prompt. Ficou como
+referência das cenas.
 
 ## A lista (7 segmentos, 117 equipamentos ativos)
 
@@ -62,13 +106,8 @@ eventos, mineração, logística), para a imagem combinar com os dados do case.
 
 ## Onde salvar
 
-1. Salve cada imagem em `docs/imagens/frota/` com o nome exato da tabela (minúsculas, sem
-   acento, com hífen).
-2. Rode `python src/site/otimizar_imagens.py` na raiz do repositório. Ele grava versões leves em
-   `site/img/frota/`, que é a pasta que o site usa.
-3. Abra `site/index.html` no navegador e clique em Frota no menu: a foto aparece no topo do
-   slide daquele segmento. Enquanto uma imagem não existir, o slide mostra só o nome e os
-   números do segmento, sem quebrar.
+Ver "Fotos por modelo", no início deste documento: as fotos do site agora são por modelo e ficam
+em `docs/imagens/frota/modelos/` (imagens avulsas) ou no painel `docs/imagens/frota/painel_modelos.jpeg`.
 
 ## Imagens da história que ainda pedem ajuste
 

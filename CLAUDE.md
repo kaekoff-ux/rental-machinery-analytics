@@ -99,7 +99,22 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
   preventivas, telemetria) foram tirados de `data/processed/`; se os geradores mudarem,
   atualizar `site/index.html` também.
 - `python src/site/otimizar_imagens.py` gera as imagens leves de `site/img/` a partir de
-  `docs/imagens/` (e de `docs/imagens/frota/`, quando as fotos existirem), atualiza a lista
-  `site/img/frota/disponiveis.js` e copia o vídeo `docs/videos/01_hero_animacao.mp4` para
+  `docs/imagens/` (história) e copia o vídeo `docs/videos/01_hero_animacao.mp4` para
   `site/video/hero.mp4` (sem recompressão: não há ffmpeg). Precisa do Pillow. Rodar sempre que
   uma imagem ou o vídeo mudar.
+- **Frota por modelo (01/11/2026):** cada card da Frota tem filtro de modelo, foto e ficha
+  técnica; o pedido de orçamento também escolhe o modelo. Fluxo:
+  `python src/site/recortar_modelos_frota.py` (fotos de `docs/imagens/frota/painel_modelos.jpeg`
+  para `site/img/frota/modelos/`; precisa do Pillow) e `python src/site/gerar_dados_frota.py`
+  (junta cadastro ativo + `docs/fichas_tecnicas_modelos.csv` + fotos em `site/dados_frota.js`).
+  Regra do usuário: ficha só com dado de manual/ficha do fabricante (ou fonte de referência
+  quando não houver), nunca inventado; a fonte fica no CSV e não aparece no site. Valor em que as
+  fontes não batem fica de fora. As fotos são de IA: logotipos e textos das máquinas são borrados
+  no recorte (lista `LOGOS` do script); o site mostra só o equipamento. Imagem nova (o usuário usa
+  o Gemini) vai em `docs/imagens/frota/modelos/<fabricante-modelo>.jpg` e substitui o quadro do
+  painel; prompts e nomes em `docs/prompts_imagens_frota.md`. Sem foto hoje: Volvo EC210B, Hyundai
+  HX220L, Atlas Copco QAS150 e Komatsu PC210 (quadros errados ou ausentes no painel).
+- **Contrato mínimo de 30 dias só no site** (decisão do usuário, 01/11/2026: abaixo disso a
+  logística custa mais que a locação). O pedido do site vai de 30 a 360 dias. **Não mexer nos
+  dados por causa disso:** `contratos_locacao.csv` continua com contratos diários e semanais;
+  outros prazos são atendimento conforme a demanda, pelo Telegram (Camada 3).

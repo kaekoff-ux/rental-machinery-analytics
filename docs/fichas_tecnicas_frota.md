@@ -1,8 +1,12 @@
 # Fichas técnicas da frota (fontes dos dados do site)
 
-Consulta feita em **01/11/2026** pelo Claude Code, por busca na web. Os dados abaixo alimentam os
-cards da Frota em `site/index.html` (tanque, consumo e tipo de energia) e a escolha de modelos em
-`src/gerador_dados/gerar_cadastro_equipamentos.py`.
+Consulta feita em **01/11/2026** pelo Claude Code, por busca na web.
+
+**A ficha de cada modelo usada no site fica em `docs/fichas_tecnicas_modelos.csv`** (um valor por
+linha, com fonte, tipo de fonte e data). O site mostra só os valores; a fonte fica no CSV. Este
+documento registra a troca dos modelos para GLP/elétricos (em
+`src/gerador_dados/gerar_cadastro_equipamentos.py`) e a primeira versão dos cards, por tipo de
+máquina, que já foi substituída pela ficha por modelo.
 
 **Cuidado:** parte das fontes é de revendas, locadoras ou bases de especificações, não do
 fabricante. A coluna "Tipo de fonte" diz qual é qual. Antes de usar num material de venda,
@@ -12,7 +16,7 @@ Regra do projeto (decisão do usuário, 01/11/2026): consumo e tanque vêm de fi
 fabricante, não da base fictícia. Quando o fabricante não publica o consumo, o site não mostra
 consumo.
 
-## Usados no site
+## Primeira versão dos cards (por tipo de máquina; substituída pela ficha por modelo)
 
 | Card | Modelo de referência (o mais comum na frota) | Dado no site | Fonte | Tipo de fonte |
 |---|---|---|---|---|

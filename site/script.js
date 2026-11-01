@@ -205,22 +205,97 @@ function iniciarModais() {
   });
 
   document.querySelectorAll("[data-carrossel]").forEach(iniciarCarrossel);
+}
 
-  // Fotos da frota: só as que existem (lista gerada por src/site/otimizar_imagens.py), e só quando
-  // o pop-up da frota abre pela primeira vez. Assim o site não pede arquivos que dariam erro 404.
-  const fotosDisponiveis = window.FOTOS_FROTA || [];
-  preparadores["modal-frota"] = () => {
-    document.querySelectorAll("#modal-frota img[data-src]").forEach((foto) => {
-      const chave = foto.dataset.src.split("/").pop().replace(".jpg", "");
-      if (foto.dataset.pedida || !fotosDisponiveis.includes(chave)) return;
-      foto.dataset.pedida = "sim";
-      foto.addEventListener("load", () => {
-        foto.closest("figure").hidden = false;
-      }, { once: true });
-      foto.src = foto.dataset.src;
-    });
-    return null;
-  };
+// ---------- Frota: filtro de modelo, foto e ficha técnica ----------
+// window.FROTA vem de site/dados_frota.js (gerado por src/site/gerar_dados_frota.py): para cada tipo
+// de máquina, os modelos ativos com quantidade, unidades, ficha técnica e foto.
+
+const FROTA = window.FROTA || {};
+
+function buscarModelo(segmento, nome) {
+  return (FROTA[segmento] || []).find((modelo) => modelo.nome === nome) || null;
+}
+
+function mostrarFoto(img, modelo) {
+  const figura = img.closest("figure");
+  if (modelo && modelo.foto) {
+    img.src = modelo.foto;
+    img.alt = `${modelo.nome} (imagem ilustrativa, gerada por IA)`;
+    figura.hidden = false;
+  } else {
+    figura.hidden = true;
+    img.removeAttribute("src");
+    img.alt = "";
+  }
+}
+
+function linhaUnidade(unidade, quantidade) {
+  const item = document.createElement("li");
+  item.style.setProperty("--n", quantidade);
+  const nome = document.createElement("span");
+  nome.textContent = unidade;
+  const barra = document.createElement("span");
+  barra.className = "barra";
+  const qtd = document.createElement("span");
+  qtd.className = "qtd";
+  qtd.textContent = quantidade;
+  item.append(nome, barra, qtd);
+  return item;
+}
+
+function iniciarFiltroModelos() {
+  document.querySelectorAll("#modal-frota .maquina").forEach((card) => {
+    const segmento = card.dataset.nome;
+    const modelos = FROTA[segmento] || [];
+    const filtro = card.querySelector("[data-modelo-filtro]");
+    if (!filtro || !modelos.length) return;
+
+    const total = modelos.reduce((soma, modelo) => soma + modelo.quantidade, 0);
+    filtro.append(
+      new Option(`Todos os modelos (${total})`, ""),
+      ...modelos.map((modelo) => new Option(`${modelo.nome} (${modelo.quantidade})`, modelo.nome)),
+    );
+
+    const foto = card.querySelector("[data-foto-modelo]");
+    const ficha = card.querySelector("[data-ficha]");
+    const tituloOnde = card.querySelector(".maquina-onde-titulo");
+    const listaOnde = card.querySelector(".maquina-onde");
+    const ondeDoTipo = [...listaOnde.children];  // "Onde está" de todos os modelos, como veio no HTML
+    const botao = card.querySelector('[data-abrir="modal-orcamento"]');
+
+    function mostrar() {
+      const modelo = buscarModelo(segmento, filtro.value);
+      mostrarFoto(foto, modelo);
+
+      ficha.replaceChildren(...(modelo ? modelo.ficha : []).map(([campo, valor]) => {
+        const linha = document.createElement("div");
+        const termo = document.createElement("dt");
+        termo.textContent = campo;
+        const dado = document.createElement("dd");
+        dado.textContent = valor;
+        linha.append(termo, dado);
+        return linha;
+      }));
+      ficha.hidden = !ficha.children.length;
+
+      tituloOnde.textContent = !modelo ? "Onde está"
+        : modelo.quantidade === 1 ? `Onde está o ${modelo.nome}`
+          : `Onde estão os ${modelo.quantidade} ${modelo.nome}`;
+      listaOnde.replaceChildren(...(modelo
+        ? Object.entries(modelo.unidades).map(([unidade, qtd]) => linhaUnidade(unidade, qtd))
+        : ondeDoTipo));
+
+      // O "Simular e pedir orçamento" do card leva o modelo escolhido para o pedido.
+      if (modelo) botao.dataset.modelo = modelo.nome;
+      else delete botao.dataset.modelo;
+    }
+
+    filtro.addEventListener("change", mostrar);
+    // Começa no modelo que a frota mais tem, entre os que têm foto.
+    filtro.value = (modelos.find((modelo) => modelo.foto) || modelos[0]).nome;
+    mostrar();
+  });
 }
 
 // ---------- Animação do topo e botão "Pausar animação" ----------
@@ -357,9 +432,19 @@ function iniciarMenu() {
 
 function modalidadePorDias(dias) {
   // Mesmas faixas de src/gerador_dados/gerar_contratos_locacao.py (Diária 1-6, Semanal 7-28, Mensal 30+).
+  // No site o contrato vai de 30 a 360 dias (regra comercial de 01/11/2026), então sai sempre "Mensal".
   if (dias <= 6) return "Diária";
   if (dias < 30) return "Semanal";
   return "Mensal";
+}
+
+function textoPrazo(dias) {
+  // 45 -> "1 mês e 15 dias"; 360 -> "12 meses" (mês comercial de 30 dias).
+  const meses = Math.floor(dias / 30);
+  const resto = dias % 30;
+  const textoMeses = meses === 1 ? "1 mês" : `${meses} meses`;
+  if (!resto) return textoMeses;
+  return `${textoMeses} e ${resto === 1 ? "1 dia" : `${resto} dias`}`;
 }
 
 function contatoValido(valor) {
@@ -404,27 +489,43 @@ function iniciarPedido() {
     ajustarAltura();
   }
 
+  // Lista de modelos do tipo escolhido (window.FROTA); "Qualquer modelo" deixa a escolha para a proposta.
+  function atualizarModelos(modeloPedido = "") {
+    const modelos = FROTA[campos.equipamento.value] || [];
+    campos.modelo.replaceChildren(
+      new Option(campos.equipamento.value ? "Qualquer modelo" : "Escolha o tipo antes", ""),
+      ...modelos.map((modelo) => new Option(modelo.nome, modelo.nome)),
+    );
+    campos.modelo.disabled = !modelos.length;
+    if (modelos.some((modelo) => modelo.nome === modeloPedido)) campos.modelo.value = modeloPedido;
+  }
+
   function simular() {
     const dias = Number(campos.dias.value);
     const horasDia = Number(campos.horas_dia.value);
     const horas = dias * horasDia;
     const revisoes = Math.floor(horas / INTERVALO_PREVENTIVA_HORAS);
-    // Energia (data-energia), descrição e dados técnicos de cada máquina vêm do slide dela, na Frota.
-    const ficha = document.querySelector(`.maquina[data-nome="${campos.equipamento.value}"]`);
-    simulacao = { dias, horasDia, horas, modalidade: modalidadePorDias(dias) };
+    // Energia (data-energia) e descrição do tipo de máquina vêm do slide dela, na Frota; a ficha
+    // técnica e a foto do modelo, de window.FROTA.
+    const tipo = document.querySelector(`.maquina[data-nome="${campos.equipamento.value}"]`);
+    const modelo = buscarModelo(campos.equipamento.value, campos.modelo.value);
+    simulacao = { dias, horasDia, horas, modalidade: modalidadePorDias(dias), modelo: modelo ? modelo.nome : "" };
 
-    saida("dias").textContent = dias === 1 ? "1 dia" : `${dias} dias`;
+    saida("dias").textContent = `${dias} dias`;
     saida("horas").textContent = `${horasDia} h`;
     saida("total").textContent = numeroBR.format(horas);
-    saida("modalidade").textContent = simulacao.modalidade;
+    saida("prazo").textContent = textoPrazo(dias);
     saida("revisoes").textContent = revisoes === 0 ? "nenhuma" : numeroBR.format(revisoes);
-    saida("energia").textContent = ficha ? ficha.dataset.energia : "escolha a máquina";
-    saida("ficha").textContent = ficha
-      ? [ficha.querySelector(".maquina-info p").textContent,
-        // O 1º item do card é a energia, que já aparece na coluna "Energia".
-        ...[...ficha.querySelectorAll(".maquina-fatos li:not(:first-child)")].map((item) => item.textContent)].join(" · ")
-      : "";
-    saida("ficha").hidden = !ficha;
+    saida("energia").textContent = tipo ? tipo.dataset.energia : "escolha a máquina";
+    saida("ficha").textContent = modelo
+      ? [modelo.nome, ...modelo.ficha.map(([campo, valor]) => `${campo}: ${valor}`)].join(" · ")
+      : tipo
+        ? [tipo.querySelector(".maquina-info p").textContent,
+          // O 1º item do card é a energia, que já aparece na coluna "Energia".
+          ...[...tipo.querySelectorAll(".maquina-fatos li:not(:first-child)")].map((item) => item.textContent)].join(" · ")
+        : "";
+    saida("ficha").hidden = !saida("ficha").textContent;
+    mostrarFoto(form.querySelector("[data-sim-foto]"), modelo);
   }
 
   function acrescentarObservacao(texto) {
@@ -433,7 +534,8 @@ function iniciarPedido() {
     campo.value = campo.value.trim() ? `${campo.value.trim()}\n${texto}` : texto;
   }
 
-  [campos.equipamento, campos.dias, campos.horas_dia].forEach((campo) => campo.addEventListener("input", simular));
+  campos.equipamento.addEventListener("input", () => atualizarModelos());
+  [campos.equipamento, campos.modelo, campos.dias, campos.horas_dia].forEach((campo) => campo.addEventListener("input", simular));
 
   form.querySelector("[data-avancar]").addEventListener("click", () => {
     if (!campos.equipamento.reportValidity()) return;
@@ -454,6 +556,7 @@ function iniciarPedido() {
     if (atual === 2) form.reset();
     status.hidden = true;
     if (dados.equipamento) campos.equipamento.value = dados.equipamento;
+    atualizarModelos(dados.modelo);  // o card da Frota manda o modelo escolhido no filtro
     if (dados.observacao) acrescentarObservacao(dados.observacao);
     irParaPasso(0);
     simular();
@@ -482,6 +585,9 @@ function iniciarPedido() {
     const s = simulacao;
     campos.prazo.value = `${s.modalidade}, ${s.dias} dias`;
     const dados = Object.fromEntries(new FormData(form));
+    // A planilha não tem coluna de modelo: ele vai junto com o tipo de máquina ("Escavadeira – Caterpillar 320GC").
+    delete dados.modelo;
+    if (s.modelo) dados.equipamento = `${dados.equipamento} – ${s.modelo}`;
 
     // Robôs preenchem o campo-isca; pessoas não o veem. Finge sucesso e não envia nada.
     if (dados.site) {
@@ -584,6 +690,7 @@ iniciarEntradas();
 iniciarAnimacaoTopo();
 preencherContatos();
 iniciarModais();
+iniciarFiltroModelos();
 iniciarAmpliacao();
 iniciarMenu();
 iniciarPedido();

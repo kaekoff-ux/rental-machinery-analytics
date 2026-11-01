@@ -1576,11 +1576,46 @@ h3 {
   font-stretch: 85%;
 }
 
-.maquina-foto img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+/* Foto do modelo escolhido: no tamanho dela (máquina inteira, sem cortar), centralizada. */
+.maquina-foto img,
+.sim-foto img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 10.5rem;
+  margin-inline: auto;
   border-radius: var(--raio-m);
+}
+
+.maquina-modelo {
+  margin-top: 0.9rem;
+  max-width: 22rem;
+}
+
+.maquina-ficha {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--raio-m);
+  background: rgb(232 220 196 / 0.6);
+}
+
+.maquina-ficha div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.maquina-ficha dt {
+  font-size: 0.75rem;
+  color: var(--tinta-suave);
+}
+
+.maquina-ficha dd {
+  font-size: 0.9375rem;
+  font-weight: 700;
 }
 
 .maquina-info > p {
@@ -1747,8 +1782,21 @@ h3 {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 
+  /* Texto, filtro e ficha à esquerda; foto do modelo e "Onde está" à direita (colunas de altura parecida). */
+  .slide-maquina .maquina-info {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
   .slide-maquina .maquina-foto {
-    grid-column: 1 / -1;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .slide-maquina .maquina-onde-bloco {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
   }
 
   .slide-mapa {
@@ -2268,6 +2316,29 @@ h3 {
   color: var(--papel);
 }
 
+/* Miniatura do modelo no canto vazio, à direita do total de horas: não aumenta a altura do passo. */
+.sim-resultado {
+  position: relative;
+}
+
+.sim-foto {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+
+.sim-foto img {
+  max-width: 11rem;
+  max-height: 4.75rem;
+}
+
+/* No celular o pedido fica só com os campos e o resultado: a foto empurrava tudo para baixo. */
+@media (max-width: 45.99rem) {
+  .sim-foto {
+    display: none;
+  }
+}
+
 .sim-ficha {
   margin-top: 0.9rem;
   padding-top: 0.75rem;
@@ -2456,6 +2527,14 @@ html:not(.js) .passo + .passo {
 @media (max-height: 50rem) and (min-width: 46rem) {
   .modal {
     max-height: calc(100svh - 1.5rem);
+  }
+
+  .maquina-foto img {
+    max-height: 8rem;
+  }
+
+  .sim-foto {
+    display: none;
   }
 
   .modal-cabeca {

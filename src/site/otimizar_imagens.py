@@ -1,17 +1,15 @@
 """Gera as versões leves das imagens e o vídeo usados pelo site (pastas site/img/ e site/video/).
 
-Lê as originais em docs/imagens/ (história), docs/imagens/frota/ (equipamentos) e docs/videos/,
-reduz as imagens para no máximo 1400 px de largura e salva em JPEG de qualidade 80, sem
-metadados. O vídeo é só copiado: não há ffmpeg nesta máquina para recomprimir.
-Foto da frota que ainda não existe é só avisada; o site funciona sem ela. A lista das fotos
-que existem vai para site/img/frota/disponiveis.js, para o site não pedir arquivos inexistentes.
+Lê as originais em docs/imagens/ (história) e docs/videos/, reduz as imagens para no máximo
+1400 px de largura e salva em JPEG de qualidade 80, sem metadados. O vídeo é só copiado: não há
+ffmpeg nesta máquina para recomprimir.
+As fotos da frota são por modelo e saem de outro script: src/site/recortar_modelos_frota.py.
 
 Rodar a partir da raiz do repositório:
     python src/site/otimizar_imagens.py
 Depende do Pillow (pip install pillow).
 """
 
-import json
 import shutil
 from pathlib import Path
 
@@ -44,18 +42,6 @@ VIDEOS = {
     RAIZ / "docs" / "videos" / "01_hero_animacao.mp4": RAIZ / "site" / "video" / "hero.mp4",
 }
 
-# Mesmos nomes de docs/prompts_imagens_frota.md e de site/index.html.
-FROTA = [
-    "escavadeira",
-    "retroescavadeira",
-    "pa-carregadeira",
-    "guindaste",
-    "empilhadeira",
-    "plataforma-elevatoria",
-    "gerador",
-]
-EXTENSOES = (".jpg", ".jpeg", ".png", ".webp")
-
 
 def otimizar(origem, destino, recorte=None):
     with Image.open(origem) as imagem:
@@ -72,38 +58,9 @@ def otimizar(origem, destino, recorte=None):
     print(f"ok  {origem.relative_to(RAIZ)} -> {destino.relative_to(RAIZ)} ({largura}x{altura}, {kb} KB)")
 
 
-def achar_original_frota(nome):
-    for extensao in EXTENSOES:
-        caminho = ORIGEM / "frota" / f"{nome}{extensao}"
-        if caminho.exists():
-            return caminho
-    return None
-
-
-def gravar_lista_frota(disponiveis):
-    destino = DESTINO / "frota" / "disponiveis.js"
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    destino.write_text(
-        "// Gerado por src/site/otimizar_imagens.py: fotos da frota que existem em site/img/frota/.\n"
-        f"window.FOTOS_FROTA = {json.dumps(disponiveis)};\n",
-        encoding="utf-8",
-    )
-    print(f"ok  lista da frota -> {destino.relative_to(RAIZ)} ({len(disponiveis)} de {len(FROTA)} fotos)")
-
-
 def main():
     for nome_origem, (nome_destino, recorte) in HISTORIA.items():
         otimizar(ORIGEM / nome_origem, DESTINO / nome_destino, recorte)
-
-    disponiveis = []
-    for nome in FROTA:
-        original = achar_original_frota(nome)
-        if original:
-            otimizar(original, DESTINO / "frota" / f"{nome}.jpg")
-            disponiveis.append(nome)
-        else:
-            print(f"--  ainda sem foto: docs/imagens/frota/{nome}.jpg")
-    gravar_lista_frota(disponiveis)
 
     for origem, destino in VIDEOS.items():
         if not origem.exists():

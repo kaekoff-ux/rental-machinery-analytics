@@ -5,6 +5,45 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (01/11/2026, frota por modelo)
+- Cards da Frota com filtro de modelo: ao escolher o modelo aparecem a foto, a ficha técnica e
+  "Onde estão" as máquinas daquele modelo; "Todos os modelos" volta à visão do tipo de máquina. O
+  card começa no modelo mais comum que tem foto.
+- `docs/fichas_tecnicas_modelos.csv`: 83 valores de ficha técnica dos 28 modelos ativos, tirados
+  de manual/ficha do fabricante ou de fonte de referência (concessionária, revenda, base de
+  especificações), com fonte e tipo de fonte em cada linha. Valor em que as fontes não batem
+  ficou de fora (ex.: consumo do Cat XQ125, lança do XCMG QY25K). A fonte não aparece no site.
+- `src/site/recortar_modelos_frota.py`: recorta do painel enviado pelo usuário
+  (`docs/imagens/frota/painel_modelos.jpeg`) uma foto por modelo, apagando o nome escrito no
+  canto. Não usa os quadros errados ("Volvo EC210B" mostra um gerador, "Hyundai HX220L" uma
+  escavadeira Volvo, "Atlas Copco QAS150" um guindaste) nem os dois que não existem no cadastro;
+  o Komatsu PC210 não tem quadro. Esses 4 modelos ficam sem foto. Logotipos e textos pintados nas
+  máquinas são borrados (as imagens são de IA; o site mostra só o equipamento). Uma imagem avulsa
+  em `docs/imagens/frota/modelos/<fabricante-modelo>.jpg` (ex.: feita no Gemini) substitui o quadro.
+- `docs/prompts_imagens_frota.md`: regra nova das fotos (por modelo, sem logotipo), passo a passo
+  para refazer no Gemini e prompts dos 5 modelos a refazer.
+- `src/site/gerar_dados_frota.py`: junta cadastro ativo, fichas e fotos em `site/dados_frota.js`.
+- `tests/conferir_site.py`: confere `dados_frota.js` contra o cadastro, o CSV de fichas e as fotos,
+  e o prazo do pedido (30 a 360 dias). Saiu a conferência dos contratos por modalidade, que o site
+  não mostra mais.
+
+### Changed (01/11/2026, contrato mínimo de 30 dias)
+- Decisão do usuário: locação a partir de 30 dias (abaixo disso, frete e mobilização custam mais
+  que o aluguel). Pedido de orçamento de 30 a 360 dias, com o prazo em meses ("1 mês e 15 dias");
+  topo da página e slide de serviços passaram a dizer "Contratos de 30 a 360 dias".
+- Pedido de orçamento: escolhe também o modelo (lista do tipo de máquina, ou "Qualquer modelo") e
+  mostra a ficha técnica e a miniatura do modelo (a miniatura não aparece no celular nem em tela
+  baixa). O modelo vai junto no campo `equipamento` ("Escavadeira – Caterpillar 320GC"), porque a
+  planilha do Apps Script não tem coluna de modelo.
+- Decisão do usuário: o mínimo de 30 dias vale só para o site; os dados não mudam
+  (`contratos_locacao.csv` segue com contratos diários e semanais). Outros prazos são atendimento
+  conforme a demanda, pelo Telegram.
+
+### Removed (01/11/2026, fotos por tipo de máquina)
+- `site/img/frota/disponiveis.js`, a lista `FROTA` de `src/site/otimizar_imagens.py` e o trecho do
+  `script.js` que a lia: o site nunca teve essas fotos (a lista estava vazia) e agora usa as fotos
+  por modelo.
+
 ### Removed (01/11/2026, abastecimento)
 - Fonte `abastecimento` retirada do projeto por decisão do usuário: não faz parte do controle de
   frota do case, e "diesel por hora" não vale para toda a frota (empilhadeiras são a GLP,
