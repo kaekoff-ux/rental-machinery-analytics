@@ -11,6 +11,9 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
   planilha, trava e resposta falsas); o Google de verdade não foi testado.
 - `docs/plano_camada1_site.md`: passo 5 com os rótulos do Apps Script conferidos na documentação
   oficial em 31/10/2026 e com a lista do que ainda não foi testado.
+- Planilha `LocaMaq - Leads` e projeto `LocaMaq - Receber orçamento` criados na conta Google do
+  usuário (passos 1 a 3 do plano). A implantação foi preparada e parou na autorização do Google;
+  nenhuma implantação existe ainda, e o formulário do site segue em modo de teste.
 
 ### Added (31/10/2026, publicação)
 - Site publicado no GitHub Pages (branch `main`, pasta raiz):
@@ -116,9 +119,10 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ### Pendências (do usuário)
 - `docs/quem_somos.md` + `docs/imagens/` (história, missão, visão, valores da LocaMaq) —
-  ainda não commitado no repositório. Falta concluir a correção das duas imagens (placa de
-  `02_barracao_1992.jpg` e cor das máquinas de `03_unidade_atual.jpg` via Kling AI, aguardando
-  recarga de créditos) antes de publicar.
+  commitados em 31/10/2026 (226fdac) e já usados no site publicado. Resta corrigir duas
+  imagens: `03_unidade_atual.jpg` (máquinas ainda amarelas; via Kling AI, aguardando recarga de
+  créditos) e `02_barracao_1992.jpg` (o letreiro saiu com o erro "Equipamontos", que o script
+  de imagens corta fora).
 - `data/raw/Dashboard_Rental_Machinery.pbix` — ainda não commitado. Power BI (Fases 2-4 do
   roadmap: ETL/modelo estrela, DAX, dashboard) não construído; arquivo é só o placeholder
   vazio criado pelo Power BI Desktop.

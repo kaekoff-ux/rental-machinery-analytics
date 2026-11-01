@@ -9,8 +9,9 @@ arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico
 **Camada 1 (site do cliente) publicada em 31/10/2026:**
 <https://kaekoff-ux.github.io/rental-machinery-analytics/site/> (GitHub Pages, branch `main`,
 pasta raiz). Cada push na `main` republica no mesmo endereço em 1 a 2 minutos. Passo a passo e
-status em `docs/plano_camada1_site.md`. Falta publicar o Apps Script (passo 5, conta Google do
-usuário); até lá o formulário funciona em modo de teste. Fotos da frota:
+status em `docs/plano_camada1_site.md`. Falta concluir o Apps Script (passo 5): a planilha e o
+projeto já foram criados na conta Google do usuário em 31/10/2026, mas falta autorizar e
+implantar (ver o plano); até lá o formulário funciona em modo de teste. Fotos da frota:
 `docs/prompts_imagens_frota.md`. Power BI segue em paralelo, sem depender disso.
 
 **Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem
