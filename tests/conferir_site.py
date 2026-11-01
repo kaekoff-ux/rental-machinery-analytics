@@ -103,7 +103,7 @@ conferir("soma das unidades = ativos", soma_unidades, len(ativos))
 # Tem de bater com o cadastro (quantidade e unidades de cada modelo ativo), com as fichas técnicas
 # de docs/fichas_tecnicas_modelos.csv e com as fotos que existem em site/img/frota/modelos/.
 texto_js = (RAIZ / "site" / "dados_frota.js").read_text(encoding="utf-8")
-frota_js = json.loads(texto_js.split("window.FROTA = ", 1)[1].rstrip().rstrip(";"))
+frota_js = json.loads(texto_js.split("window.FROTA = ", 1)[1].split("window.MANUTENCAO = ")[0].rstrip().rstrip(";"))
 fichas = defaultdict(list)
 with open(RAIZ / "docs" / "fichas_tecnicas_modelos.csv", encoding="utf-8-sig", newline="") as arq:
     for linha in csv.DictReader(arq, delimiter=";"):
@@ -126,6 +126,25 @@ conferir("dados_frota.js: fichas iguais ao CSV", {n: m["ficha"] for n, m in mode
 conferir("dados_frota.js: todo modelo ativo tem ficha", [n for n, m in modelos_js.items() if not m["ficha"]], [])
 conferir("dados_frota.js: fotos citadas existem",
          [m["foto"] for m in modelos_js.values() if m["foto"] and not (RAIZ / "site" / m["foto"]).exists()], [])
+
+# --- Manutenção recomendada pelo fabricante (docs/manutencao_fabricante.csv) -----------------
+manutencao_js = json.loads(texto_js.split("window.MANUTENCAO = ", 1)[1].rstrip().rstrip(";"))
+plano_csv, notas_csv, simulador_csv = defaultdict(list), defaultdict(list), {}
+with open(RAIZ / "docs" / "manutencao_fabricante.csv", encoding="utf-8-sig", newline="") as arq:
+    for linha in csv.DictReader(arq, delimiter=";"):
+        item = [linha["intervalo"], linha["servico"]]
+        if linha["modelo"]:
+            notas_csv[linha["modelo"]].append(item)
+        else:
+            plano_csv[linha["segmento"]].append(item)
+            if linha["conta_no_simulador"] == "sim":
+                simulador_csv[linha["segmento"]] = int(linha["horas"])
+conferir("manutenção: todo tipo de máquina tem plano", sorted(manutencao_js), sorted(por_segmento))
+conferir("manutenção: plano igual ao CSV", {s: m["plano"] for s, m in manutencao_js.items()}, dict(plano_csv))
+conferir("manutenção: intervalo do simulador", {s: m["revisao_horas"] for s, m in manutencao_js.items()}, simulador_csv)
+conferir("manutenção: notas de modelo iguais ao CSV",
+         {n: m["manutencao"] for n, m in modelos_js.items() if m["manutencao"]}, dict(notas_csv))
+conferir("manutenção: o site não fala mais em revisão a cada 250 h", re.findall(r"250 h entre revisões|a cada 250 horas", html), [])
 
 # --- Prazo do pedido de orçamento: 30 a 360 dias ---------------------------------------------
 dias = re.search(r'<input type="range" id="sim-dias" name="dias" min="(\d+)" max="(\d+)"', html)

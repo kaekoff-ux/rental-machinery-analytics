@@ -1603,6 +1603,44 @@ h3 {
   background: rgb(232 220 196 / 0.6);
 }
 
+.maquina-manutencao {
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--raio-m);
+  background: rgb(232 220 196 / 0.6);
+  font-size: 0.8125rem;
+}
+
+/* Fechado por padrão (o card não cresce); o título abre a lista. */
+.maquina-manutencao-titulo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.maquina-manutencao[open] .maquina-manutencao-titulo {
+  margin-bottom: 0.45rem;
+}
+
+.maquina-manutencao ul {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.maquina-manutencao li strong {
+  margin-right: 0.2rem;
+}
+
+.maquina-manutencao .maquina-manutencao-modelo {
+  margin-top: 0.35rem;
+  font-weight: 700;
+}
+
+.maquina-manutencao .nota {
+  margin-top: 0.55rem;
+  font-size: 0.75rem;
+}
+
 .maquina-ficha div {
   display: grid;
   gap: 0.1rem;
@@ -1782,7 +1820,12 @@ h3 {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 
-  /* Texto, filtro e ficha à esquerda; foto do modelo e "Onde está" à direita (colunas de altura parecida). */
+  /* Texto, filtro e ficha à esquerda; foto do modelo e "Onde está" à direita (colunas de altura parecida).
+     A 1ª linha fica com a altura da foto; o que sobrar da coluna da esquerda vai para a 2ª. */
+  .slide-maquina {
+    grid-template-rows: auto 1fr;
+  }
+
   .slide-maquina .maquina-info {
     grid-column: 1;
     grid-row: 1 / span 2;

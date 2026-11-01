@@ -5,6 +5,18 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Changed (01/11/2026, manutenção pelo fabricante)
+- O site deixou de dizer "revisão a cada 250 h" (topo, slide de serviços, cards e pedido). Cada card
+  da Frota ganhou o bloco "Manutenção recomendada pelo fabricante" (fechado; abre ao toque), com o
+  plano do tipo de máquina e, quando há, o que o fabricante do modelo diz de diferente (ex.: Cat
+  320GC com óleo do motor até 1.000 h usando óleo Cat e análise de óleo).
+- Pedido de orçamento: "Revisões preventivas" agora conta pelo intervalo do plano do tipo de
+  máquina (150 h nas plataformas, 250 h em escavadeiras e empilhadeiras, 500 h nas demais).
+- `docs/manutencao_fabricante.csv`: plano e notas, com fonte, tipo de fonte e data (01/11/2026).
+  Os manuais completos dos modelos quase nunca são públicos; o plano usa fichas e manuais de modelos
+  da mesma classe, e o que só aparecia em blogs genéricos ficou de fora.
+- A base de dados não muda: as ordens de manutenção continuam com preventiva a cada 250 h.
+
 ### Changed (01/11/2026, fotos do Gemini)
 - 27 dos 28 modelos passaram a usar a imagem feita pelo usuário no Gemini, em
   `docs/imagens/frota/modelos/` (as imagens tinham sido salvas na raiz de `docs/imagens/` e foram

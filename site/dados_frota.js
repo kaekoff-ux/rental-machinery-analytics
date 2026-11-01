@@ -1,5 +1,6 @@
 // Gerado por src/site/gerar_dados_frota.py a partir do cadastro (só Ativo), de
-// docs/fichas_tecnicas_modelos.csv e das fotos em site/img/frota/modelos/. Não edite à mão.
+// docs/fichas_tecnicas_modelos.csv, docs/manutencao_fabricante.csv e das fotos em
+// site/img/frota/modelos/. Não edite à mão.
 window.FROTA = {
  "Escavadeira": [
   {
@@ -31,6 +32,16 @@ window.FROTA = {
      "345 L"
     ]
    ],
+   "manutencao": [
+    [
+     "Até 1.000 h",
+     "Troca de óleo e filtro do motor estendida para 1.000 h com óleo e filtros Cat e análise de óleo (S·O·S)"
+    ],
+    [
+     "3.000 h",
+     "Troca do filtro do hidráulico"
+    ]
+   ],
    "foto": "img/frota/modelos/caterpillar-320gc.jpg"
   },
   {
@@ -58,6 +69,7 @@ window.FROTA = {
      "410 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/caterpillar-320d.jpg"
   },
   {
@@ -84,6 +96,7 @@ window.FROTA = {
      "350 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/volvo-ec210b.jpg"
   },
   {
@@ -110,6 +123,7 @@ window.FROTA = {
      "1,34 m³"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/hyundai-hx220l.jpg"
   },
   {
@@ -129,6 +143,12 @@ window.FROTA = {
     [
      "Potência do motor",
      "123 kW"
+    ]
+   ],
+   "manutencao": [
+    [
+     "250 · 500 · 1.000 · 1.500 h",
+     "Revisões do programa de manutenção da Komatsu (KOMCARE), com análise de óleo"
     ]
    ],
    "foto": "img/frota/modelos/komatsu-pc210.jpg"
@@ -163,6 +183,12 @@ window.FROTA = {
      "222 L"
     ]
    ],
+   "manutencao": [
+    [
+     "Até 1.000 h",
+     "Troca de óleo do motor estendida para 1.000 h com os filtros de intervalo estendido Volvo, de fábrica"
+    ]
+   ],
    "foto": "img/frota/modelos/volvo-l60h.jpg"
   },
   {
@@ -189,6 +215,7 @@ window.FROTA = {
      "2,5 a 4,5 m³"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/xcmg-lw500.jpg"
   },
   {
@@ -218,6 +245,7 @@ window.FROTA = {
      "288 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/case-821f.jpg"
   },
   {
@@ -248,6 +276,7 @@ window.FROTA = {
      "314 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/caterpillar-950h.jpg"
   }
  ],
@@ -280,6 +309,7 @@ window.FROTA = {
      "350 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/liebherr-ltm-1050-3-1.jpg"
   },
   {
@@ -298,6 +328,7 @@ window.FROTA = {
      "25 t"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/xcmg-qy25k.jpg"
   },
   {
@@ -322,6 +353,7 @@ window.FROTA = {
      "Cummins QSB6.7 a diesel"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/grove-rt540e.jpg"
   }
  ],
@@ -347,6 +379,7 @@ window.FROTA = {
      "GLP"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/yale-glp50vx.jpg"
   },
   {
@@ -368,6 +401,12 @@ window.FROTA = {
     [
      "Combustível",
      "GLP (motor Kubota 3,8 L)"
+    ]
+   ],
+   "manutencao": [
+    [
+     "250 h ou 6 meses",
+     "Óleo e filtro do motor, regulador e conversor do GLP, marcha lenta e correia"
     ]
    ],
    "foto": "img/frota/modelos/hyster-h80ft.jpg"
@@ -392,6 +431,7 @@ window.FROTA = {
      "GLP"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/toyota-8fgu25.jpg"
   },
   {
@@ -412,6 +452,7 @@ window.FROTA = {
      "GLP"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/clark-c25l.jpg"
   }
  ],
@@ -439,6 +480,7 @@ window.FROTA = {
      "cerca de 160 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/jcb-3cx.jpg"
   },
   {
@@ -463,6 +505,7 @@ window.FROTA = {
      "65 kW"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/caterpillar-416f.jpg"
   },
   {
@@ -485,6 +528,7 @@ window.FROTA = {
      "cerca de 4,4 m"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/case-580n.jpg"
   },
   {
@@ -509,6 +553,7 @@ window.FROTA = {
      "134 L"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/new-holland-b95b.jpg"
   }
  ],
@@ -540,6 +585,7 @@ window.FROTA = {
      "elétrica, baterias AGM de 415 Ah"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/skyjack-sj45aje.jpg"
   },
   {
@@ -567,6 +613,12 @@ window.FROTA = {
     [
      "Energia",
      "elétrica, bateria de 48 V e 390 Ah"
+    ]
+   ],
+   "manutencao": [
+    [
+     "Diária a cada 2 anos",
+     "Inspeções diária, trimestral, semestral, anual e a cada 2 anos, pelo relatório de manutenção da Genie"
     ]
    ],
    "foto": "img/frota/modelos/genie-z45dc.jpg"
@@ -598,6 +650,7 @@ window.FROTA = {
      "elétrica (bateria)"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/haulotte-ha16e.jpg"
   },
   {
@@ -626,6 +679,7 @@ window.FROTA = {
      "elétrica (bateria)"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/jlg-e600jp.jpg"
   }
  ],
@@ -654,6 +708,7 @@ window.FROTA = {
      "26,1 L/h"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/atlas-copco-qas150.jpg"
   },
   {
@@ -676,6 +731,7 @@ window.FROTA = {
      "150 kVA"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/cummins-c150d5.jpg"
   },
   {
@@ -702,6 +758,7 @@ window.FROTA = {
      "39 L/h"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/cummins-c250d5.jpg"
   },
   {
@@ -727,7 +784,109 @@ window.FROTA = {
      "Cat C4.4 a diesel"
     ]
    ],
+   "manutencao": [],
    "foto": "img/frota/modelos/caterpillar-xq125.jpg"
   }
  ]
+};
+window.MANUTENCAO = {
+ "Escavadeira": {
+  "plano": [
+   [
+    "250 h",
+    "Revisão periódica do programa do fabricante"
+   ],
+   [
+    "500 h",
+    "Troca de óleo e filtro do motor e dos filtros de combustível"
+   ],
+   [
+    "1.000 h",
+    "Troca do filtro piloto do hidráulico e do óleo do redutor de giro"
+   ],
+   [
+    "2.000 h",
+    "Troca do filtro de retorno do hidráulico"
+   ],
+   [
+    "Até 6.000 h",
+    "Troca do óleo hidráulico, conforme análise de óleo"
+   ]
+  ],
+  "revisao_horas": 250
+ },
+ "Retroescavadeira": {
+  "plano": [
+   [
+    "500 h",
+    "Troca de óleo e filtro do motor e do filtro do óleo hidráulico"
+   ],
+   [
+    "2.000 h",
+    "Troca do óleo hidráulico"
+   ]
+  ],
+  "revisao_horas": 500
+ },
+ "Pá-carregadeira": {
+  "plano": [
+   [
+    "500 h",
+    "Troca de óleo e filtro do motor e do filtro do hidráulico (250 h se o óleo recomendado ou as condições de uso não forem atendidos)"
+   ],
+   [
+    "1.000 h",
+    "Troca do óleo e do filtro da transmissão"
+   ],
+   [
+    "2.000 h",
+    "Troca do óleo hidráulico"
+   ]
+  ],
+  "revisao_horas": 500
+ },
+ "Guindaste": {
+  "plano": [
+   [
+    "500 h ou 1 vez por ano",
+    "Troca de óleo e filtros do motor (o que vier primeiro)"
+   ]
+  ],
+  "revisao_horas": 500
+ },
+ "Empilhadeira": {
+  "plano": [
+   [
+    "250 h ou 6 semanas",
+    "Troca de óleo e filtro do motor, filtro de combustível e óleo e filtro do conversor de torque"
+   ]
+  ],
+  "revisao_horas": 250
+ },
+ "Plataforma elevatória": {
+  "plano": [
+   [
+    "Antes de cada uso",
+    "Inspeção pré-operação"
+   ],
+   [
+    "3 meses ou 150 h",
+    "Inspeção frequente (o que vier primeiro)"
+   ],
+   [
+    "1 vez por ano",
+    "Inspeção anual por técnico certificado pela fábrica (no máximo 13 meses entre uma e outra)"
+   ]
+  ],
+  "revisao_horas": 150
+ },
+ "Gerador": {
+  "plano": [
+   [
+    "500 h ou 12 meses",
+    "Troca de óleo e filtro do motor em uso contínuo, como na locação (o que vier primeiro)"
+   ]
+  ],
+  "revisao_horas": 500
+ }
 };

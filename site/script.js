@@ -28,7 +28,6 @@ const CONTATO = {
 const URL_APPS_SCRIPT = "";
 
 const MENSAGEM_WHATSAPP = "Olá! Vim pelo site da LocaMaq e quero um orçamento.";
-const INTERVALO_PREVENTIVA_HORAS = 250; // mesma regra de src/gerador_dados/gerar_ordens_manutencao.py
 const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const numeroBR = new Intl.NumberFormat("pt-BR");
 
@@ -207,11 +206,21 @@ function iniciarModais() {
   document.querySelectorAll("[data-carrossel]").forEach(iniciarCarrossel);
 }
 
-// ---------- Frota: filtro de modelo, foto e ficha técnica ----------
+// ---------- Frota: filtro de modelo, foto, ficha técnica e manutenção ----------
 // window.FROTA vem de site/dados_frota.js (gerado por src/site/gerar_dados_frota.py): para cada tipo
-// de máquina, os modelos ativos com quantidade, unidades, ficha técnica e foto.
+// de máquina, os modelos ativos com quantidade, unidades, ficha técnica, foto e notas de manutenção.
+// window.MANUTENCAO, do mesmo arquivo: plano do fabricante por tipo e o intervalo usado no pedido.
 
 const FROTA = window.FROTA || {};
+const MANUTENCAO = window.MANUTENCAO || {};
+
+function itemManutencao(intervalo, servico) {
+  const item = document.createElement("li");
+  const quando = document.createElement("strong");
+  quando.textContent = intervalo;
+  item.append(quando, ` ${servico}`);
+  return item;
+}
 
 function buscarModelo(segmento, nome) {
   return (FROTA[segmento] || []).find((modelo) => modelo.nome === nome) || null;
@@ -263,6 +272,9 @@ function iniciarFiltroModelos() {
     const listaOnde = card.querySelector(".maquina-onde");
     const ondeDoTipo = [...listaOnde.children];  // "Onde está" de todos os modelos, como veio no HTML
     const botao = card.querySelector('[data-abrir="modal-orcamento"]');
+    const blocoManutencao = card.querySelector("[data-manutencao]");
+    const planoManutencao = card.querySelector("[data-manutencao-plano]");
+    const plano = (MANUTENCAO[segmento] || {}).plano || [];
 
     function mostrar() {
       const modelo = buscarModelo(segmento, filtro.value);
@@ -278,6 +290,18 @@ function iniciarFiltroModelos() {
         return linha;
       }));
       ficha.hidden = !ficha.children.length;
+
+      // Plano do fabricante para o tipo de máquina, mais o que o fabricante do modelo diz de diferente.
+      const notas = modelo ? modelo.manutencao : [];
+      const tituloNotas = document.createElement("li");
+      tituloNotas.className = "maquina-manutencao-modelo";
+      tituloNotas.textContent = `No ${modelo ? modelo.nome : ""}:`;
+      planoManutencao.replaceChildren(
+        ...plano.map(([intervalo, servico]) => itemManutencao(intervalo, servico)),
+        ...(notas.length ? [tituloNotas] : []),
+        ...notas.map(([intervalo, servico]) => itemManutencao(intervalo, servico)),
+      );
+      blocoManutencao.hidden = !plano.length;
 
       tituloOnde.textContent = !modelo ? "Onde está"
         : modelo.quantidade === 1 ? `Onde está o ${modelo.nome}`
@@ -504,7 +528,8 @@ function iniciarPedido() {
     const dias = Number(campos.dias.value);
     const horasDia = Number(campos.horas_dia.value);
     const horas = dias * horasDia;
-    const revisoes = Math.floor(horas / INTERVALO_PREVENTIVA_HORAS);
+    // Revisões pelo intervalo do plano do fabricante do tipo de máquina (docs/manutencao_fabricante.csv).
+    const intervaloRevisao = (MANUTENCAO[campos.equipamento.value] || {}).revisao_horas;
     // Energia (data-energia) e descrição do tipo de máquina vêm do slide dela, na Frota; a ficha
     // técnica e a foto do modelo, de window.FROTA.
     const tipo = document.querySelector(`.maquina[data-nome="${campos.equipamento.value}"]`);
@@ -515,7 +540,12 @@ function iniciarPedido() {
     saida("horas").textContent = `${horasDia} h`;
     saida("total").textContent = numeroBR.format(horas);
     saida("prazo").textContent = textoPrazo(dias);
-    saida("revisoes").textContent = revisoes === 0 ? "nenhuma" : numeroBR.format(revisoes);
+    if (intervaloRevisao) {
+      const revisoes = Math.floor(horas / intervaloRevisao);
+      saida("revisoes").textContent = `${revisoes === 0 ? "nenhuma" : numeroBR.format(revisoes)} · a cada ${numeroBR.format(intervaloRevisao)} h`;
+    } else {
+      saida("revisoes").textContent = "escolha a máquina";
+    }
     saida("energia").textContent = tipo ? tipo.dataset.energia : "escolha a máquina";
     saida("ficha").textContent = modelo
       ? [modelo.nome, ...modelo.ficha.map(([campo, valor]) => `${campo}: ${valor}`)].join(" · ")

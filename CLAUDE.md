@@ -115,6 +115,14 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
   painel; prompts e nomes em `docs/prompts_imagens_frota.md`. Desde 01/11/2026, os 28 modelos usam
   imagem avulsa do Gemini (enquadrada automaticamente em volta da máquina); o painel ficou só como
   reserva. Versões que sobraram ficam em `docs/imagens/frota/modelos/alternativas/`.
+- **Manutenção recomendada pelo fabricante (01/11/2026):** cada card da Frota tem o bloco
+  "Manutenção recomendada pelo fabricante" (abre ao toque), e o pedido conta as revisões pelo
+  intervalo do tipo de máquina. Dados em `docs/manutencao_fabricante.csv`: plano por tipo de máquina
+  (linhas sem modelo) e notas de modelo (com modelo), cada um com fonte; a coluna
+  `conta_no_simulador` marca o intervalo do pedido. Os manuais completos quase nunca são públicos,
+  então o plano usa fichas e manuais de modelos da mesma classe; o que só aparecia em blogs ficou de
+  fora. O site deixou de dizer "revisão a cada 250 h"; **a base de dados não muda** (o gerador de
+  ordens continua com preventiva a cada 250 h, regra do case).
 - **Contrato mínimo de 30 dias só no site** (decisão do usuário, 01/11/2026: abaixo disso a
   logística custa mais que a locação). O pedido do site vai de 30 a 360 dias. **Não mexer nos
   dados por causa disso:** `contratos_locacao.csv` continua com contratos diários e semanais;
