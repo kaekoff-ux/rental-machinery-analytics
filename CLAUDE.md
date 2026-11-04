@@ -95,7 +95,7 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
 - **Site (Camada 1):** abrir `site/index.html` direto no navegador, ou rodar
   `python -m http.server 8765` dentro de `site/` e abrir `http://127.0.0.1:8765` (igual ao GitHub
   Pages). Telefones/endereços genéricos ficam no objeto `CONTATO` e a URL do formulário em
-  `URL_APPS_SCRIPT`, ambos no topo de `site/script.js`. Os números do site (frota, unidades,
+  `URL_WEBHOOK` (webhook do n8n), ambos no topo de `site/script.js`. Os números do site (frota, unidades,
   preventivas, telemetria) foram tirados de `data/processed/`; se os geradores mudarem,
   atualizar `site/index.html` também.
 - `python src/site/otimizar_imagens.py` gera as imagens leves de `site/img/` a partir de

@@ -22,10 +22,10 @@ const CONTATO = {
   },
 };
 
-// ---------- Configuração 2: destino do formulário (passo 5 do plano) ----------
-// Cole aqui a URL do Web App do Google Apps Script (termina em /exec).
+// ---------- Configuração 2: destino do formulário ----------
+// URL de produção do Webhook do n8n (termina em /webhook/orcamento), exposta pelo túnel do ngrok.
 // Vazia, o formulário fica em modo local: confirma na tela e imprime os dados no console (F12).
-const URL_APPS_SCRIPT = "";
+const URL_WEBHOOK = "https://sandlot-rants-overdress.ngrok-free.dev/webhook/orcamento";
 
 const MENSAGEM_WHATSAPP = "Olá! Vim pelo site da LocaMaq e quero um orçamento.";
 const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -595,7 +595,7 @@ function iniciarPedido() {
 
   function mostrarSucesso(nome, resumo) {
     form.querySelector("[data-sucesso-texto]").textContent =
-      URL_APPS_SCRIPT
+      URL_WEBHOOK
         ? `Obrigado, ${nome}! Seu pedido foi enviado. Como este site é uma demonstração, ninguém vai entrar em contato.`
         : `Obrigado, ${nome}! Pedido registrado em modo de teste: os dados só aparecem no console do navegador (F12).`;
     form.querySelector("[data-sucesso-resumo]").replaceChildren(...resumo.map(([rotulo, valor]) => {
@@ -634,7 +634,7 @@ function iniciarPedido() {
     console.log("Pedido de orçamento (LocaMaq):", dados);
 
     const resumo = [["Máquina", dados.equipamento], ["Prazo", dados.prazo], ["Uso estimado", `${numeroBR.format(s.horas)} h`]];
-    if (!URL_APPS_SCRIPT) {
+    if (!URL_WEBHOOK) {
       mostrarSucesso(dados.nome, resumo);
       return;
     }
@@ -643,9 +643,9 @@ function iniciarPedido() {
     botao.disabled = true;
     botao.textContent = "Enviando...";
     try {
-      // O Apps Script não devolve os cabeçalhos que o navegador exige para ler a resposta (CORS).
+      // O navegador não deixa o site ler a resposta de outro domínio sem CORS.
       // "no-cors" envia mesmo assim; a confirmação de verdade é a linha nova na planilha.
-      await fetch(URL_APPS_SCRIPT, { method: "POST", mode: "no-cors", body: new URLSearchParams(dados) });
+      await fetch(URL_WEBHOOK,{ method: "POST", mode: "no-cors", body: new URLSearchParams(dados) });
       mostrarSucesso(dados.nome, resumo);
     } catch (erro) {
       console.error("Falha no envio do pedido:", erro);
