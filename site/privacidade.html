@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidade · LocaMaq (case fictício)</title>
+  <meta name="description" content="Política de privacidade do site da LocaMaq, um case de portfólio: quais dados o formulário de orçamento coleta, para que servem, onde ficam e como pedir a exclusão.">
+  <!-- A LocaMaq é fictícia: noindex evita que a página apareça em buscas misturada a empresas reais. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#4a5d3a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234a5d3a'/%3E%3Crect x='18' y='18' width='9' height='9' rx='2' fill='%23c8651b'/%3E%3Cpath d='M8 6h4v16h7v4H8z' fill='%23e8dcc4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    /* Só desta página: cartão de texto corrido no mesmo vidro claro do resto do site. */
+    .politica { padding-block: clamp(2rem, 1rem + 4vw, 4rem) clamp(3rem, 2rem + 4vw, 5rem); }
+    .politica-cartao {
+      max-width: 46rem;
+      margin-inline: auto;
+      padding: clamp(1.25rem, 0.8rem + 2vw, 2.25rem);
+      border: 1px solid var(--vidro-borda);
+      border-radius: var(--raio);
+      background: var(--vidro);
+      box-shadow: var(--sombra);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    .politica h1 { font-size: var(--t-l); }
+    .politica h2 { margin-top: 2rem; font-size: var(--t-m); line-height: 1.2; }
+    .politica p,
+    .politica li { margin-top: 0.75rem; max-width: 65ch; text-wrap: pretty; }
+    .politica ul { padding-left: 1.25rem; list-style: disc; }
+    .politica li { margin-top: 0.35rem; }
+    .politica .atualizado { margin-top: 0.75rem; font-size: var(--t-xs); color: var(--tinta-suave); }
+    .politica a { color: var(--laranja-texto); }
+  </style>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Regra do projeto: todo texto público deixa claro que é um case com dados fictícios. -->
+  <div class="aviso">
+    <p class="envoltorio">Case de portfólio: a LocaMaq é uma empresa fictícia e os dados deste site são ilustrativos.</p>
+  </div>
+
+  <header class="topo">
+    <div class="envoltorio topo-barra">
+      <a class="marca" href="index.html" aria-label="LocaMaq, voltar ao início"><span class="marca-loca">Loca</span><span class="marca-maq">Maq</span></a>
+      <a class="botao botao-claro" href="index.html">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main id="conteudo" class="politica">
+    <div class="envoltorio">
+      <article class="politica-cartao">
+        <h1>Política de privacidade</h1>
+        <p class="atualizado">Última atualização: 5 de novembro de 2026.</p>
+
+        <p>A LocaMaq é uma empresa fictícia e este site é um <strong>case de portfólio</strong>. O formulário de orçamento funciona de verdade, como demonstração de uma automação, e por isso esta página explica com clareza o que acontece com os dados enviados nele. <strong>Se você só quer testar, use dados fictícios.</strong></p>
+
+        <h2>Quem é o responsável</h2>
+        <p>O autor do case, identificado no GitHub como <a href="https://github.com/kaekoff-ux/rental-machinery-analytics">kaekoff-ux</a>. Para qualquer assunto desta página, escreva para <a href="mailto:kae.koff@gmail.com">kae.koff@gmail.com</a>.</p>
+
+        <h2>Quais dados o formulário coleta</h2>
+        <ul>
+          <li>nome;</li>
+          <li>e-mail ou telefone de contato;</li>
+          <li>cidade (opcional);</li>
+          <li>equipamento escolhido e, se houver, o modelo;</li>
+          <li>prazo desejado e o resumo da simulação (dias e horas de uso por dia);</li>
+          <li>observações escritas por você (opcional);</li>
+          <li>data e hora do envio.</li>
+        </ul>
+        <p>O formulário não pede CPF, endereço completo, dados de pagamento nem documentos. Evite escrevê-los no campo de observações.</p>
+
+        <h2>Para que os dados são usados</h2>
+        <p>Apenas para registrar o pedido de orçamento e demonstrar o fluxo de atendimento do case. Os dados não são vendidos, não são usados para publicidade e não são compartilhados com terceiros além dos serviços descritos abaixo.</p>
+
+        <h2>Onde os dados ficam e quem os processa</h2>
+        <ul>
+          <li><strong>Automação (n8n):</strong> o formulário envia os dados a um fluxo de automação que roda em um servidor na Amazon Web Services, nos Estados Unidos.</li>
+          <li><strong>Planilha (Google Sheets):</strong> o fluxo grava cada pedido em uma planilha privada do autor, no Google Drive.</li>
+          <li><strong>Avisos internos (Slack):</strong> o pedido pode ser repassado a um canal interno de Slack, só para avisar a equipe.</li>
+          <li><strong>Fontes de letra:</strong> a página carrega fontes do Google Fonts, o que faz o seu navegador contatar o Google e revelar o seu endereço IP.</li>
+        </ul>
+
+        <h2>Uso de dados do Google</h2>
+        <p>A automação acessa o Google Sheets e o Google Drive <strong>somente com a conta do autor</strong>, para gravar os pedidos na planilha dele. Os visitantes do site não entram com a conta Google e a automação não lê dados pessoais de visitantes no Google.</p>
+
+        <h2>Por quanto tempo os dados ficam</h2>
+        <p>Enquanto o case estiver no ar, ou até você pedir a exclusão, o que ocorrer primeiro.</p>
+
+        <h2>Seus direitos</h2>
+        <p>Conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode pedir a confirmação de que tratamos seus dados, o acesso a eles, a correção, a exclusão ou a oposição ao uso. Envie o pedido para <a href="mailto:kae.koff@gmail.com">kae.koff@gmail.com</a>, informando o nome e o contato que usou no formulário.</p>
+
+        <h2>Segurança</h2>
+        <p>Os dados viajam por conexão segura (HTTPS) e o acesso à planilha e à automação é restrito ao autor, com senha. Nenhum sistema é totalmente imune a falhas, por isso não envie informações que você não queira compartilhar.</p>
+
+        <h2>Mudanças nesta política</h2>
+        <p>Se algo mudar, a data de atualização no topo desta página muda junto.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="envoltorio rodape-base">
+      <p>© 2026 LocaMaq. Empresa fictícia, criada para um case de portfólio; todos os dados são ilustrativos.</p>
+      <p><a href="index.html">Voltar ao site</a> · <a href="https://github.com/kaekoff-ux/rental-machinery-analytics">Projeto no GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>
