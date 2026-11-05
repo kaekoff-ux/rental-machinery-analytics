@@ -1,0 +1,300 @@
+{
+  "name": "Leads_LocaMaq",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "orcamento",
+        "options": {
+          "allowedOrigins": "https://kaekoff-ux.github.io"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        -640,
+        -208
+      ],
+      "id": "24b84fc8-331b-460c-b91d-a0eab06402fa",
+      "name": "Webhook",
+      "webhookId": "338ea421-01f5-4628-9888-72b316dbf45f"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f5a2c9ef-5c30-4add-a2b2-ab12d9e150b4",
+              "name": "=data_envio",
+              "value": "=  {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm:ss') }}",
+              "type": "string"
+            },
+            {
+              "id": "cf9635c1-e159-4de3-93bf-d7ab09411a02",
+              "name": "nome",
+              "value": "={{ $json.body.nome }}",
+              "type": "string"
+            },
+            {
+              "id": "60f92409-d03a-4854-8dfa-9575061bd699",
+              "name": "contato",
+              "value": "={{ $json.body.contato }}",
+              "type": "string"
+            },
+            {
+              "id": "a1939288-75d9-44af-8d21-0d0b34899c02",
+              "name": "cidade",
+              "value": "={{ $json.body.cidade }}",
+              "type": "string"
+            },
+            {
+              "id": "dcd67691-669a-43df-bdc5-96003f9cd3ad",
+              "name": "equipamento",
+              "value": "={{ $json.body.equipamento }}",
+              "type": "string"
+            },
+            {
+              "id": "41a97f4d-5ff1-47e8-a78f-53ec7026e4cc",
+              "name": "prazo",
+              "value": "={{ $json.body.prazo }}",
+              "type": "string"
+            },
+            {
+              "id": "158acb61-b9d2-4be4-872f-f3ba53aa8310",
+              "name": "observacao",
+              "value": "={{ $json.body.observacao }}",
+              "type": "string"
+            },
+            {
+              "id": "4ff536d0-faca-4680-ace8-7bce3b0fe161",
+              "name": "origem",
+              "value": "={{ $json.body.origem }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -256,
+        -96
+      ],
+      "id": "51766bd7-c6ef-4216-afaa-aa21682d2a96",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 4
+          },
+          "conditions": [
+            {
+              "id": "a8f372f6-ab93-4182-8447-56ab65c6ae40",
+              "leftValue": "={{ $json.body.site }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        -416,
+        -208
+      ],
+      "id": "d70c31f6-66a0-4bcc-b0e8-7fdc4fb550e8",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "ID_DA_PLANILHA",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/ID_DA_PLANILHA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "data_envio": "={{ $json.data_envio }}",
+            "nome": "={{ $json.nome }}",
+            "contato": "={{ $json.contato }}",
+            "cidade": "={{ $json.cidade }}",
+            "equipamento": "={{ $json.equipamento }}",
+            "prazo": "={{ $json.prazo }}",
+            "observacao": "={{ $json.observacao }}",
+            "origem": "={{ $json.origem }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "data_envio",
+              "displayName": "data_envio",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "nome",
+              "displayName": "nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "contato",
+              "displayName": "contato",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cidade",
+              "displayName": "cidade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "equipamento",
+              "displayName": "equipamento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "prazo",
+              "displayName": "prazo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "observacao",
+              "displayName": "observacao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "origem",
+              "displayName": "origem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -32,
+        -96
+      ],
+      "id": "fcaa67f1-7818-45b4-a6d2-9ee65d80fe83",
+      "name": "LocaMaq_Leads",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "LocaMaq_Leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": true
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "nodeGroups": [],
+  "tags": []
+}
