@@ -5,6 +5,66 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (05/11/2026, extensão 2026: contratos, faturas e leads)
+- `src/gerador_dados/gerar_extensao_2026.py` (semente 42, só biblioteca padrão): 35 contratos fechados
+  em 2026 (5 por categoria, `CT-01211` a `CT-01245`), 76 faturas e 66 leads, em
+  `data/processed/extensao_2026/`. Os 6 CSVs de 2024-2025 não mudaram. Pedido do usuário: mostrar
+  leads ganhos e perdidos em 2026, coerentes com a disponibilidade das máquinas.
+- Disponibilidade: contrato novo só entra com máquina ativa e livre (sem sobreposição, fora das 76 OS
+  abertas no fim de 2025). Em cada categoria, o modelo com menos unidades fica todo alugado numa
+  janela, e 14 leads são perdidos por "Indisponibilidade de máquina" dentro dela (2 por categoria).
+- 66 leads: 35 Fechado (ligados ao contrato), 21 Perdidos (14 por indisponibilidade, 5 por preço, 1
+  obra adiada, 1 crédito) e 10 em aberto (4 Novo, 3 Em Contato, 3 Orçado). Contatos fictícios
+  (`.example` ou telefone inexistente) e observações marcadas com `[histórico fictício]`. A taxa de
+  conversão do histórico (62,5%) é amostra, não resultado real.
+- `tests/conferir_extensao_2026.py`: confere a extensão sem usar o gerador (base intacta, ids,
+  sobreposição, categorias, leads e a prova de cada perda por indisponibilidade). Passou em
+  05/11/2026, junto com `tests/conferir_site.py`.
+- `docs/extensao_2026_leads.md`: regras, premissas, o que é da base e o que é inventado, e o que não
+  foi gerado em 2026 (telemetria, OS e inspeção de devolução).
+- Planilha `LocaMaq - Leads`: colunas novas `data_desfecho`, `id_contrato` e `motivo_perda`. Os 66
+  leads foram colados na aba e a conferência por hash (SHA-256 das 66 linhas) bateu com
+  `leads_2026_planilha.csv`. Sobrou uma coluna vazia "Coluna 1" (M), criada pela colagem.
+
+### Added (05/11/2026, indicadores de leads)
+- 5 KPIs em `docs/kpis.csv`: taxa de conversão de leads, tempo médio de fechamento, leads por origem,
+  perdas por motivo e perda por indisponibilidade. Tabela `leads` em `docs/dicionario_dados.csv`.
+- Aba `Indicadores` na planilha `LocaMaq - Leads`: resumo (total, etapas do funil, conversão, tempo
+  médio de fechamento e perda por indisponibilidade), leads por origem, perdas por motivo e por
+  categoria de máquina, em quatro fórmulas de matriz (células A4, A15, A23 e A32) que se atualizam
+  sozinhas. Conferida contra os valores do arquivo `leads_2026.csv`: 35 Fechado, 21 Perdidos, conversão
+  62,5%, tempo médio 11,1 dias, 14 perdas por indisponibilidade. Pedido do site sem `status` conta
+  como "Novo". Ainda não implementado no Power BI.
+- Diretriz de leads e indicadores no `CLAUDE.md` (seção "Leads e indicadores"), no `spec.md` e no
+  `README.md`.
+
+### Added (04 e 05/11/2026, formulário no n8n, servidor na AWS e política de privacidade)
+- Fluxo n8n `Leads_LocaMaq` (Webhook POST `orcamento` → If do campo-isca → Edit Fields → Google
+  Sheets Append Row). O formulário passou a enviar para ele (`3c4984c`, 04/11/2026) e o script do
+  Apps Script foi removido (`7370dbd`, 02/11/2026).
+- `src/n8n/leads_locamaq.json`: cópia do fluxo exportada do n8n do PC em 05/11/2026, sem os IDs da
+  planilha, da instância e da credencial, e com `active: false`. Não traz o Cell Format "RAW" do nó
+  do Sheets, aplicado à mão depois no servidor (sem ele, contato começando com `+` vira `#ERROR!`).
+  Defeito conhecido, ainda não corrigido: o valor de `data_envio` no Edit Fields tem dois espaços
+  antes do `{{`, então a data entra na planilha como texto com dois espaços na frente. O fluxo também
+  não preenche `status` (a coluna fica vazia).
+- n8n e ngrok em Docker numa instância EC2 da AWS, com o domínio fixo gratuito do ngrok: o endereço
+  do formulário não depende do PC ligado. A documentação e o script de instalação ficam só no
+  computador do usuário, fora do GitHub (decisão dele).
+- `site/privacidade.html` e link no rodapé (`ea0d3fd`, 05/11/2026), exigência do Google para publicar o
+  app OAuth. O app do Google Cloud foi para "Em produção" (em modo de teste o acesso expira em 7
+  dias) e a credencial foi reconectada no n8n.
+- Teste de ponta a ponta com pedidos fictícios: o webhook de produção respondeu 200 e a linha entrou
+  na aba `Leads`, com acentos, contato `+55` sem `#ERROR!` e horário de Brasília. Um pedido enviado
+  pelo formulário real do site, pelo celular (execução nº 5 do n8n, 05/11/2026 05:55), também passou
+  pelo fluxo e gravou na linha 68, sem `status` e com espaços na frente da `data_envio` (o defeito
+  conhecido acima).
+- Tabela da planilha ampliada para `A1:L1000`: o n8n não aumenta a tabela sozinho e as linhas novas
+  ficavam fora dela.
+- Não testado: reiniciar a instância com os contêineres no ar, o acesso do Google depois de
+  12/11/2026, o campo-isca em produção e o fluxo de erro (ainda não existe). Slack ainda não
+  construído.
+
 ### Changed (01/11/2026, manutenção pelo fabricante)
 - O site deixou de dizer "revisão a cada 250 h" (topo, slide de serviços, cards e pedido). Cada card
   da Frota ganhou o bloco "Manutenção recomendada pelo fabricante" (fechado; abre ao toque), com o

@@ -9,10 +9,14 @@ arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico
 **Camada 1 (site do cliente) publicada em 31/10/2026:**
 <https://kaekoff-ux.github.io/rental-machinery-analytics/site/> (GitHub Pages, branch `main`,
 pasta raiz). Cada push na `main` republica no mesmo endereço em 1 a 2 minutos. Passo a passo e
-status em `docs/plano_camada1_site.md`. Falta concluir o Apps Script (passo 5): a planilha e o
-projeto já foram criados na conta Google do usuário em 31/10/2026, mas falta autorizar e
-implantar (ver o plano); até lá o formulário funciona em modo de teste. Fotos da frota:
-`docs/prompts_imagens_frota.md`. Power BI segue em paralelo, sem depender disso.
+status em `docs/plano_camada1_site.md`. **Formulário ligado desde 05/11/2026:** o site envia o pedido
+para um Webhook do n8n (Docker em uma instância EC2 da AWS, endereço fixo pelo ngrok), que grava na
+planilha Google `LocaMaq - Leads`. O Apps Script foi descartado (commit `7370dbd`, 02/11/2026). Como o
+servidor foi montado e como operá-lo: `docs/servidor_n8n_aws/` (só no computador do usuário, fora do
+GitHub por decisão dele: não versionar nem dar push). Cópia do fluxo, sem IDs:
+`src/n8n/leads_locamaq.json`. Política de privacidade do site:
+`site/privacidade.html`. Fotos da frota: `docs/prompts_imagens_frota.md`. Power BI segue em
+paralelo, sem depender disso.
 
 **Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem
 pedidos e requisições. Ainda não construída e com escopo a discutir: ver `spec.md`, seção 9. No
@@ -43,6 +47,36 @@ Carlos, engenheiro mecânico com experiência em manutenção, gestão de ativos
 4. Nomes de colunas em português, `snake_case`, sem acento. Seguir o dicionário em `docs/dicionario_dados.csv`.
 5. KPIs seguem as definições em `docs/kpis.csv`. Se uma fórmula mudar, atualizar o arquivo.
 6. Textos públicos (README, case, posts) devem dizer que é um case com dados fictícios e não declarar experiência profissional inexistente.
+7. Leads e indicadores seguem a seção "Leads e indicadores" abaixo (diretriz de 05/11/2026).
+
+## Leads e indicadores (diretriz de 05/11/2026)
+Decisão do usuário: o funil de leads e os indicadores dele fazem parte do projeto, e os dados de 2026
+precisam fazer sentido com a disponibilidade das máquinas.
+- **Onde ficam os leads:** planilha Google `LocaMaq - Leads`, aba `Leads` (recurso Tabela, `A1:L1000`).
+  Colunas: as 9 que o n8n grava (`data_envio` a `status`) mais `data_desfecho`, `id_contrato` e
+  `motivo_perda`, que a equipe preenche (e, depois, a automação do Slack). Etapas do `status`: `Novo`,
+  `Em Contato`, `Orçado`, `Fechado`, `Perdidos` (lista suspensa da aba; usar exatamente esses nomes).
+- **Entrada:** formulário do site → Webhook do n8n → Google Sheets (fluxo em
+  `src/n8n/leads_locamaq.json`; instalação em `docs/servidor_n8n_aws/`, só local). O n8n
+  não aumenta a Tabela: ao passar de 1000 linhas, ajustar o intervalo (menu da tabela).
+- **Indicadores de leads** (5, em `docs/kpis.csv`): taxa de conversão, tempo médio de fechamento,
+  leads por origem, perdas por motivo e perda por indisponibilidade. Tabela `leads` em
+  `docs/dicionario_dados.csv`. Se uma fórmula mudar, atualizar o CSV (regra 5). A aba `Indicadores` da
+  planilha calcula tudo com 4 fórmulas de matriz (células A4, A15, A23 e A32, sobre `Leads!2:1000`);
+  pedido do site sem `status` conta como `Novo`. Ainda não há versão no Power BI.
+- **Disponibilidade primeiro:** contrato novo só entra com a máquina ativa e livre (sem sobreposição e
+  fora de OS aberta). Lead perdido por "Indisponibilidade de máquina" precisa ser provável nos dados:
+  todas as unidades do modelo alugadas na data do lead. `tests/conferir_extensao_2026.py` confere isso
+  e deve passar antes de qualquer commit que toque a extensão.
+- **Dados de 2026 (extensão):** `data/processed/extensao_2026/`, em arquivos separados (os 6 CSVs de
+  2024-2025 não mudam): 35 contratos, 76 faturas e 66 leads (35 Fechado, 21 Perdidos, 10 em aberto).
+  "Hoje" da extensão: 05/11/2026. Gerar com `python src/gerador_dados/gerar_extensao_2026.py`;
+  premissas em `docs/extensao_2026_leads.md`. Não há telemetria, OS nem inspeção de devolução em 2026.
+- **Marca do histórico fictício:** toda observação de lead gerada por script começa com
+  `[histórico fictício]`; lead real, vindo do site, não leva a marca. Contatos fictícios usam `.example`
+  ou telefone inexistente: nunca pôr e-mail ou telefone reais.
+- **A taxa de conversão do histórico (62,5%) é amostra**, não resultado real: não usar como número de
+  portfólio sem dizer isso.
 
 ## Estrutura do repositório
 ```
@@ -91,7 +125,7 @@ Rodar a partir da raiz do repositório. Novos comandos entram aqui conforme as f
 - `python src/gerador_dados/gerar_dim_calendario.py` gera `dim_calendario.csv` (1277 dias, 2023-01-01 a 2026-06-30 — mais largo que a janela de histórico de propósito, ver docstring do script). Sem sujeira, sem seed (determinístico). Marcar como tabela de datas no Power BI.
 - **Fase 2 (ETL e modelo) em andamento.** Modelo estrela rascunhado em `docs/modelo_dados.md` (3 dimensões + 4 fatos). Checklist de limpeza por fonte em `powerbi/checklist_power_query.md`. Nenhum dos dois foi testado no Power BI ainda — são planos, não resultado. O trabalho de Power Query em si acontece na interface do Power BI Desktop, fora do que o Claude Code executa diretamente.
 - Funções repetidas entre os geradores (sorteio ponderado, gravação de CSV) ficam em `src/gerador_dados/utils.py`.
-- Janela de histórico: 2024-01-01 a 2025-12-31 (24 meses). Todas as tabelas devem usar a mesma janela.
+- Janela de histórico: 2024-01-01 a 2025-12-31 (24 meses). Todas as tabelas devem usar a mesma janela. **Exceção documentada:** a extensão 2026 (contratos, faturas e leads, de jan a 05/11/2026) fica em arquivos separados em `data/processed/extensao_2026/`, sem tocar nos 6 CSVs. Gerar: `python src/gerador_dados/gerar_extensao_2026.py` (não usar `-I`, ele importa dos geradores vizinhos). Conferir: `python tests/conferir_extensao_2026.py`. Detalhes e premissas: `docs/extensao_2026_leads.md`.
 - **Site (Camada 1):** abrir `site/index.html` direto no navegador, ou rodar
   `python -m http.server 8765` dentro de `site/` e abrir `http://127.0.0.1:8765` (igual ao GitHub
   Pages). Telefones/endereços genéricos ficam no objeto `CONTATO` e a URL do formulário em

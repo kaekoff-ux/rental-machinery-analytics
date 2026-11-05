@@ -15,6 +15,7 @@ Locadoras de máquinas pesadas costumam ter dados espalhados em várias planilha
 - Modelo preditivo de risco de parada e previsão de demanda
 - App de ordens de serviço de manutenção com agentes de IA
 - Site de apresentação da locadora fictícia, com pedido de orçamento
+- Captura de leads do site com n8n e Google Sheets, funil de vendas e indicadores de leads (conversão, tempo de fechamento, perdas por motivo e por falta de máquina)
 
 ## Site da LocaMaq
 Página da locadora fictícia, com frota, unidades, história e pedido de orçamento:
@@ -22,11 +23,13 @@ Página da locadora fictícia, com frota, unidades, história e pedido de orçam
 
 Textos, números, contatos e imagens são ilustrativos; as imagens e a animação foram geradas por IA. O código está em `site/`.
 
+O pedido de orçamento chega a um fluxo do n8n (em um servidor na AWS) que grava os leads em uma planilha Google (cópia do fluxo em `src/n8n/leads_locamaq.json`; a instalação do servidor não é versionada). A política de privacidade do site: [site/privacidade.html](https://kaekoff-ux.github.io/rental-machinery-analytics/site/privacidade.html).
+
 ## Stack
-Power BI Desktop, Excel (Power Query e Power Pivot), Python, HTML, CSS e JavaScript (GitHub Pages), Claude Code, Google Sheets, GitHub.
+Power BI Desktop, Excel (Power Query e Power Pivot), Python, HTML, CSS e JavaScript (GitHub Pages), n8n, Docker, AWS (EC2), ngrok, Claude Code, Google Sheets, GitHub.
 
 ## Status
-Fase 1 (base fictícia) completa e Fase 2 (tratamento e modelo de dados) em andamento. O site da LocaMaq está publicado; o formulário de orçamento ainda funciona em modo de teste. Veja o roadmap em `docs/roadmap.md`.
+Fase 1 (base fictícia) completa e Fase 2 (tratamento e modelo de dados) em andamento. O site da LocaMaq está publicado e o formulário de orçamento grava os leads numa planilha Google pelo n8n (desde 05/11/2026). Os dados de 2026 (contratos, faturas e leads) estão em `data/processed/extensao_2026/`, separados da base de 2024-2025. Veja o roadmap em `docs/roadmap.md`.
 
 ## Autor
 Carlos - engenheiro mecânico em transição para dados, automação e IA aplicada a operações industriais.

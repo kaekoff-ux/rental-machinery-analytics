@@ -30,24 +30,31 @@ só, permitindo mostrar progresso de portfólio ao longo do caminho.
 | Camada | Funcionalidade |
 |---|---|
 | 1 | Site institucional + formulário de orçamento/contato |
+| 1 (leads) | Funil de leads na planilha Google (Novo → Em Contato → Orçado → Fechado/Perdidos), captura pelo formulário via n8n e indicadores de leads (diretriz de 05/11/2026) |
 | 2 | Fluxo interno: recebido → vendedor → atendimento → oficina → contratação |
 | 2 (cliente) | Área do cliente com login: o cliente acompanha os próprios pedidos e requisições (planejada em 31/10/2026; escopo a discutir, ver seção 9) |
 | 3 | Orquestração via N8N e canal Telegram (ferramenta exata a decidir módulo por módulo) |
-| 4 | Dashboard Power BI com os 18 KPIs de `docs/kpis.csv` |
+| 4 | Dashboard Power BI com os KPIs de `docs/kpis.csv` (22 hoje, incluindo os 5 de leads) |
 | 5 | Camada de inteligência: DuckDB + RAG (dicionário/KPIs) + servidor MCP + agente de texto-para-SQL + app Streamlit (gráficos + chat) + agentes de regra (preventiva, qualidade de dados, resumo semanal) |
 
 ## 4. Recursos essenciais (MVP)
 
 Primeiro incremento (Camada 1, em construção): página institucional da LocaMaq (história,
 missão, visão, valores, frota em destaque) + formulário de orçamento, publicados no GitHub
-Pages, com captura real de leads via Google Apps Script → Google Sheet. Sem backend de
-orquestração ainda — esse é o ponto exato onde a Camada 3 vai plugar depois.
+Pages, com captura real de leads por um Webhook do n8n → Google Sheet (desde 05/11/2026; o
+Apps Script foi descartado). A orquestração já começou aqui: o n8n está no ar e é onde a
+Camada 3 vai crescer.
 
 Situação em 31/10/2026: a página (`site/`) está publicada no GitHub Pages, em
 <https://kaekoff-ux.github.io/rental-machinery-analytics/site/>, com animação no topo, capítulos
 em pop-ups com slides, simulador de locação dentro do pedido de orçamento e botões de Telegram
-e Área do cliente que ainda abrem avisos de "em breve". Falta publicar o Apps Script (passo 5);
-até lá o formulário funciona em modo de teste. Detalhes em `docs/plano_camada1_site.md`.
+e Área do cliente que ainda abrem avisos de "em breve". O formulário estava em modo de teste
+(resolvido em 05/11/2026, abaixo). Detalhes em `docs/plano_camada1_site.md`.
+
+Situação em 05/11/2026: o formulário grava os pedidos numa planilha Google pelo n8n (servidor na
+AWS), o site ganhou uma política de privacidade e há um funil de leads (Novo, Em Contato, Orçado,
+Fechado, Perdidos) com 66 leads fictícios de 2026 e 5 indicadores definidos em `docs/kpis.csv`.
+Ver `docs/extensao_2026_leads.md` (a instalação do n8n na AWS não é versionada neste repositório).
 
 ## 5. Público-alvo e perfis
 
@@ -65,7 +72,7 @@ até lá o formulário funciona em modo de teste. Detalhes em `docs/plano_camada
 | Camada | Stack |
 |---|---|
 | 1 | HTML + CSS + JavaScript puro, hospedagem GitHub Pages |
-| 1 (backend do form) | Google Apps Script (Web App) → Google Sheet |
+| 1 (backend do form) | Webhook do n8n (Docker em EC2 na AWS, exposto pelo ngrok) → Google Sheets. O Apps Script foi descartado em 02/11/2026 |
 | 2 (área do cliente) | A definir. O site no GitHub Pages é estático: a área precisa de login e de um lugar onde os pedidos tenham status. Opções a comparar na discussão: Google Apps Script + Sheets (mesma base do formulário), Supabase (login + Postgres) ou Firebase (login + Firestore) |
 | 3 | N8N (Community Edition self-hosted, gratuito) + API do Telegram — decisão de escopo exato em aberto |
 | 4 | Power BI Desktop, modelo estrela (3 dimensões + 4 fatos) sobre `data/processed/*.csv` |

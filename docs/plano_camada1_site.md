@@ -17,8 +17,15 @@ tecnologias — passos pequenos, cada um terminando em algo visível no navegado
 - Backend do formulário: **formulário HTML próprio** (não Google Forms embutido, para manter
   o visual integrado ao site) enviando para um **Google Apps Script publicado como Web App**,
   que grava numa Google Sheet. Motivo: Formspree e Web3Forms só liberam webhook no plano
-  pago; Google Apps Script é gratuito e sem limite relevante.
+  pago; Google Apps Script é gratuito e sem limite relevante. **Decisão trocada pelo usuário em
+  02/11/2026:** o backend passou a ser o n8n (ver a atualização de 05/11/2026 abaixo).
 - Todo texto público deve deixar claro que é case com dados fictícios.
+
+> **Atualização de 05/11/2026:** o passo 5 (backend do formulário) foi feito com **n8n em vez de Apps
+> Script**, por decisão do usuário (o script foi removido no commit `7370dbd`, 02/11/2026). O
+> formulário grava na planilha `LocaMaq - Leads` por um Webhook do n8n que roda em uma instância EC2
+> da AWS (a instalação não é versionada neste repositório). As partes abaixo que falam de Apps Script ficam
+> como histórico. Também foi publicada a política de privacidade (`site/privacidade.html`).
 
 ## Status em 31/10/2026
 
@@ -28,7 +35,7 @@ tecnologias — passos pequenos, cada um terminando em algo visível no navegado
 | 2. Estrutura completa | Feito (capítulos em pop-ups com slides) | Pop-ups abertos e conferidos no Chrome |
 | 3. Formulário | Feito (pop-up em dois passos) | Validação testada: campos obrigatórios e "telefone ou e-mail" |
 | 4. Captura local | Feito | Envio mostra confirmação com resumo e imprime os dados no console (F12) |
-| 5. Apps Script | **Parado na autorização** (31/10/2026): planilha `LocaMaq - Leads` e projeto `LocaMaq - Receber orçamento` já criados na conta do usuário, com o código colado e a implantação configurada, mas **nenhuma implantação existe ainda** (falta o clique do usuário em "Autorizar acesso") | Código colado conferido por hash (igual ao arquivo); lógica testada só em simulação (Node); Google de verdade não testado |
+| 5. Backend do formulário (n8n, no lugar do Apps Script) | **Feito em 05/11/2026:** Webhook do n8n (servidor na AWS) → planilha `LocaMaq - Leads`. O Apps Script foi descartado | Pedidos fictícios pelo endereço de produção: resposta 200 e linha gravada na aba `Leads` (acentos, contato `+55` e horário de Brasília certos). Não testado: reiniciar a instância e o acesso do Google depois de 12/11/2026 |
 | 6. Visual | Feito, revisado três vezes | 320, 390, 768, 1024, 1120, 1200, 1366×657, 1440 e 1920 px: sem rolagem lateral e cabeçalho em uma linha; também sem JavaScript. Pop-ups cabem sem rolar em tablet e notebook; no celular (folha que sobe de baixo) alguns rolam por dentro, de propósito. Mais 12 telas de tablet, em pé e deitado (ver abaixo) |
 | 7. GitHub Pages | Feito em 31/10/2026 (opção A: branch `main`, pasta raiz) | Build sem erro; página, CSS, JS, 7 imagens e vídeo respondendo 200; no Chrome do computador, vídeo tocando, 9 pop-ups abrindo e console sem erros. Não testado em celular ou tablet de verdade |
 | 8. Link no CLAUDE/README | Feito em 31/10/2026 | Link em `README.md` e `CLAUDE.md` |
@@ -242,10 +249,8 @@ Python ou marque a rede de casa como "Privada". Feche com Ctrl+C ao terminar.
 
 ## Pendências e decisões em aberto
 
-- Concluir o Apps Script (passo 5), em outra sessão: a planilha e o projeto já existem na conta
-  do usuário; falta Implantar > Nova implantação, o clique do usuário em "Autorizar acesso", copiar
-  a URL `/exec`, pôr em `URL_APPS_SCRIPT`, publicar e testar com um pedido fictício. O GitHub
-  Pages (passo 7) foi publicado em 31/10/2026.
+- Passo 5 resolvido em 05/11/2026 com o n8n (ver a atualização no topo). Pendente dele: Slack para
+  avisar a equipe e fluxo de erro. O GitHub Pages (passo 7) foi publicado em 31/10/2026.
 - Abrir o site publicado num celular e num tablet de verdade (até agora só simulado).
 - Área do cliente: discutir escopo, login e onde ficam os pedidos (`spec.md`, seção 9).
 - Fotos da frota: gerar as 7 imagens (`docs/prompts_imagens_frota.md`).
