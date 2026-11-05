@@ -54,3 +54,15 @@ faturamento;data_emissao;data;Emissão da fatura;01/04/2025;Formatos mistos
 faturamento;data_vencimento;data;Vencimento;15/04/2025;Formatos mistos
 faturamento;data_pagamento;data;Pagamento efetivo;28/04/2025;Nulo se não paga
 faturamento;status_pagamento;texto;Pago/Em aberto/Vencido;Pago;Caixa mista
+leads;data_envio;data/hora;Quando o lead chegou (horário de Brasília);16/01/2026 08:18:14;Sem sujeira (aba Leads do Google Sheets, e as linhas do formulário entram como texto)
+leads;nome;texto;Nome de quem pediu o orçamento (no histórico fictício, a razão social do cliente);Incorporadora Capital ME;Sem sujeira
+leads;contato;texto;E-mail ou telefone (no histórico fictício: e-mail em .example ou telefone inexistente);obras@incorporadora-capital-me.example;Sem sujeira
+leads;cidade;texto;Cidade informada;São Paulo;Sem sujeira
+leads;equipamento;texto;Máquina pedida (segmento – fabricante modelo);Guindaste – Grove RT540E;Sem sujeira
+leads;prazo;texto;Modalidade e dias pedidos;Mensal, 87 dias;Sem sujeira
+leads;observacao;texto;Texto livre, e no histórico fictício começa com [histórico fictício];[histórico fictício] Contrato CT-01212 fechado.;Sem sujeira
+leads;origem;texto;Canal do lead (site, whatsapp, telegram, telefone, indicação);site;Sem sujeira
+leads;status;texto;Etapa do funil: Novo/Em Contato/Orçado/Fechado/Perdidos (lista suspensa da aba);Fechado;Sem sujeira
+leads;data_desfecho;data;Quando o lead fechou ou foi perdido (vazio se em aberto);04/02/2026;Nulo se em aberto
+leads;id_contrato;texto;Contrato gerado pelo lead Fechado (liga a contratos_locacao);CT-01212;Nulo se não fechou
+leads;motivo_perda;texto;Por que o lead foi perdido (ex.: Indisponibilidade de máquina);Indisponibilidade de máquina;Nulo se não foi perdido

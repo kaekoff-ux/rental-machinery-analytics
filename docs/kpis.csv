@@ -16,3 +16,8 @@ Atraso médio de pagamento;Dias médios de atraso das faturas pagas;média de (d
 Receita mês a mês;Variação da receita contra o mês anterior;(receita do mês - receita do mês anterior) / receita do mês anterior;mês;faturamento;Avançado (DATEADD ou PREVIOUSMONTH)
 Receita acumulada no ano;Soma da receita desde janeiro;receita acumulada de 1º de janeiro até a data;mês;faturamento;Avançado (TOTALYTD)
 Receita vs mesmo mês do ano anterior;Comparação anual;receita do mês / receita do mesmo mês do ano anterior - 1;mês;faturamento;Avançado (SAMEPERIODLASTYEAR)
+Taxa de conversão de leads;Percentual dos leads com desfecho que viraram contrato;leads Fechado / (leads Fechado + leads Perdidos);mês de data_desfecho;leads;Básico (DIVIDE + CALCULATE)
+Tempo médio de fechamento;Dias entre a chegada do lead e o fechamento do contrato;média de (data_desfecho - data_envio) nos leads Fechado;mês de data_desfecho;leads;Intermediário (AVERAGEX + DATEDIFF)
+Leads por origem;Quantidade de leads e taxa de conversão por canal;contagem de leads por origem (e conversão dentro de cada origem);origem-mês;leads;Básico (COUNTROWS + CALCULATE)
+Perdas por motivo;Participação de cada motivo nos leads perdidos;leads Perdidos por motivo_perda / total de leads Perdidos;motivo-mês;leads;Básico (COUNTROWS + CALCULATE)
+Perda por indisponibilidade;Leads perdidos por falta de máquina sobre os leads com desfecho, para comparar com a utilização física do segmento;leads Perdidos com motivo "Indisponibilidade de máquina" / (Fechado + Perdidos);segmento-mês;leads + contratos + cadastro;Intermediário (CALCULATE + relacionamento com utilização)

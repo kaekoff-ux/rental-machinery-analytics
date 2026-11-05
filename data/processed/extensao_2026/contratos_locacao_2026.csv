@@ -1,0 +1,36 @@
+﻿id_contrato;id_cliente;id_equipamento;data_inicio;data_fim_prevista;data_devolucao;modalidade;valor_diaria;valor_mensal;obra_local;status
+CT-01211;CL-0030;EQ-0099;2026-02-04;2026-02-13;2026-02-13;Semanal;8380.00;;Pátio industrial Rodovia dos Bandeirantes km 80;Encerrado
+CT-01212;CL-0032;EQ-0115;2026-02-04;2026-05-02;2026-05-02;Mensal;;55500.00;Reforma Terminal de cargas;Encerrado
+CT-01213;CL-0046;EQ-0135;2026-03-08;2026-06-09;2026-06-09;Mensal;;10600.00;Reforma Setor B da mina;Encerrado
+CT-01214;CL-0066;EQ-0124;2026-03-23;2026-06-17;2026-06-20;Mensal;;11700.00;Pátio industrial Vila Nova;Encerrado
+CT-01215;CL-0070;EQ-0083;2026-03-29;2026-05-17;2026-05-15;Mensal;;3500.00;Ampliação Parque Industrial Sul;Encerrado
+CT-01216;CL-0055;EQ-0080;2026-04-03;2026-04-04;2026-04-04;Diária;5370.00;;Pátio industrial Residencial Alto da Serra;Encerrado
+CT-01217;CL-0023;EQ-0113;2026-04-05;2026-07-04;2026-07-04;Mensal;;5600.00;Reforma Residencial Alto da Serra;Encerrado
+CT-01218;CL-0049;EQ-0016;2026-04-09;2026-07-12;2026-07-14;Mensal;;27200.00;Condomínio Rodovia Washington Luís km 230;Encerrado
+CT-01219;CL-0039;EQ-0078;2026-04-09;2026-07-28;2026-07-28;Mensal;;33400.00;Canteiro Parque Industrial Sul;Encerrado
+CT-01220;CL-0015;EQ-0047;2026-04-11;2026-07-11;2026-07-20;Mensal;;25500.00;Obra Terminal de cargas;Encerrado
+CT-01221;CL-0009;EQ-0017;2026-05-09;2026-05-17;2026-05-22;Semanal;1070.00;;Obra Rodovia Washington Luís km 230;Encerrado
+CT-01222;CL-0026;EQ-0029;2026-05-09;2026-08-21;2026-08-29;Mensal;;13800.00;Reforma Setor B da mina;Encerrado
+CT-01223;CL-0065;EQ-0005;2026-05-11;2026-08-04;2026-08-04;Mensal;;103000.00;Reforma Setor B da mina;Encerrado
+CT-01224;CL-0032;EQ-0084;2026-05-12;2026-07-28;2026-07-28;Mensal;;10200.00;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-01225;CL-0006;EQ-0099;2026-05-27;2026-06-01;2026-06-06;Diária;7510.00;;Loteamento Vila Nova;Encerrado
+CT-01226;CL-0025;EQ-0067;2026-06-08;2026-09-01;2026-09-01;Mensal;;5600.00;Loteamento Parque Industrial Sul;Encerrado
+CT-01227;CL-0013;EQ-0106;2026-06-08;2026-09-14;2026-09-09;Mensal;;5300.00;Pátio industrial Jardim das Acácias;Encerrado
+CT-01228;CL-0028;EQ-0119;2026-06-14;2026-09-22;2026-09-22;Mensal;;8000.00;Canteiro Distrito Industrial Norte;Encerrado
+CT-01229;CL-0068;EQ-0042;2026-06-15;2026-11-04;;Mensal;;12200.00;Condomínio Setor B da mina;Ativo
+CT-01230;CL-0055;EQ-0132;2026-06-17;2026-09-13;2026-09-11;Mensal;;7400.00;Pátio industrial Rodovia Washington Luís km 230;Encerrado
+CT-01231;CL-0052;EQ-0011;2026-06-22;2026-07-30;2026-08-03;Mensal;;9600.00;Ampliação Terminal de cargas;Encerrado
+CT-01232;CL-0063;EQ-0085;2026-06-26;2026-07-01;2026-06-28;Diária;1480.00;;Pátio industrial Marginal do rio;Encerrado
+CT-01233;CL-0009;EQ-0013;2026-07-04;2026-09-16;2026-09-16;Mensal;;23000.00;Obra Complexo Logístico Oeste;Encerrado
+CT-01234;CL-0067;EQ-0072;2026-07-04;2026-10-08;2026-10-08;Mensal;;18900.00;Reforma Terminal de cargas;Encerrado
+CT-01235;CL-0059;EQ-0134;2026-07-06;2026-10-03;2026-10-13;Mensal;;21300.00;Obra Jardim das Acácias;Encerrado
+CT-01236;CL-0027;EQ-0075;2026-07-14;2026-07-15;2026-07-22;Diária;330.00;;Condomínio Marginal do rio;Encerrado
+CT-01237;CL-0015;EQ-0009;2026-08-04;2026-10-29;2026-10-29;Mensal;;4800.00;Canteiro Rodovia Anhanguera km 112;Encerrado
+CT-01238;CL-0053;EQ-0017;2026-08-16;2026-09-03;2026-09-03;Semanal;830.00;;Reforma Setor B da mina;Encerrado
+CT-01239;CL-0019;EQ-0101;2026-09-03;2026-09-09;2026-09-09;Diária;510.00;;Ampliação Rodovia Washington Luís km 230;Encerrado
+CT-01240;CL-0049;EQ-0117;2026-09-05;2026-09-17;2026-09-23;Semanal;530.00;;Reforma Rodovia Washington Luís km 230;Encerrado
+CT-01241;CL-0032;EQ-0025;2026-09-11;2027-03-06;;Mensal;;16600.00;Canteiro Vila Nova;Ativo
+CT-01242;CL-0009;EQ-0096;2026-09-17;2026-09-18;2026-09-18;Diária;2380.00;;Canteiro Parque Industrial Sul;Encerrado
+CT-01243;CL-0063;EQ-0075;2026-09-27;2027-01-02;;Mensal;;3800.00;Obra Vila Nova;Ativo
+CT-01244;CL-0034;EQ-0026;2026-09-28;2026-12-21;;Mensal;;18200.00;Obra Rodovia dos Bandeirantes km 80;Ativo
+CT-01245;CL-0008;EQ-0046;2026-10-16;2026-10-21;2026-10-20;Diária;410.00;;Ampliação Avenida Dom Pedro I;Encerrado
