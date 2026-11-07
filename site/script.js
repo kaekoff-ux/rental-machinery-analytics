@@ -175,17 +175,37 @@ function abrirModal(id, dados = {}) {
   // Sem campo para focar, o foco vai para o próprio pop-up (sem anel no botão de fechar).
   if (!focarDepois) modal.focus();
 
-  // Depois de visível, cada carrossel volta ao primeiro slide e recalcula os controles.
+  // Depois de visível, cada carrossel volta ao primeiro slide (ou ao segmento pedido) e recalcula os controles.
   modal.querySelectorAll("[data-carrossel]").forEach((raiz) => {
-    raiz.carrossel.irPara(0, true);
+    let indiceInicial = 0;
+    if (dados.segmento) {
+      const slides = [...raiz.querySelector(".slides").children];
+      const achado = slides.findIndex((s) => s.dataset.nome === dados.segmento || s.dataset.rotulo === dados.segmento);
+      if (achado >= 0) indiceInicial = achado;
+    }
+    raiz.carrossel.irPara(indiceInicial, true);
     raiz.carrossel.atualizar();
   });
   if (focarDepois) focarDepois.focus();
   return true;
 }
 
+function irParaUnidadeDoMapa(elemento) {
+  const modal = elemento.closest("dialog");
+  const raiz = modal ? modal.querySelector("[data-carrossel]") : null;
+  if (!raiz || !raiz.carrossel) return;
+  const slides = [...raiz.querySelector(".slides").children];
+  const indice = slides.findIndex((s) => s.dataset.rotulo === elemento.dataset.irUnidade);
+  if (indice >= 0) raiz.carrossel.irPara(indice);
+}
+
 function iniciarModais() {
   document.addEventListener("click", (evento) => {
+    const noMapa = evento.target.closest("[data-ir-unidade]");
+    if (noMapa) {
+      irParaUnidadeDoMapa(noMapa);
+      return;
+    }
     const gatilho = evento.target.closest("[data-abrir]");
     if (gatilho) {
       if (abrirModal(gatilho.dataset.abrir, { ...gatilho.dataset })) evento.preventDefault();
@@ -193,6 +213,15 @@ function iniciarModais() {
     }
     const fechar = evento.target.closest("[data-fechar]");
     if (fechar) fechar.closest("dialog").close();
+  });
+
+  document.addEventListener("keydown", (evento) => {
+    if (evento.key !== "Enter" && evento.key !== " ") return;
+    const noMapa = evento.target.closest("[data-ir-unidade]");
+    if (noMapa) {
+      evento.preventDefault();
+      irParaUnidadeDoMapa(noMapa);
+    }
   });
 
   document.querySelectorAll("dialog.modal").forEach((modal) => {

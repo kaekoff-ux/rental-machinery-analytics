@@ -99,22 +99,22 @@
     <div class="letreiro">
       <div class="letreiro-trilho">
         <ul class="letreiro-lista">
-          <li>Escavadeiras</li>
-          <li>Retroescavadeiras</li>
-          <li>Pás-carregadeiras</li>
-          <li>Guindastes</li>
-          <li>Empilhadeiras</li>
-          <li>Plataformas elevatórias</li>
-          <li>Geradores</li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Escavadeira">Escavadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Retroescavadeira">Retroescavadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Pá-carregadeira">Pás-carregadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Guindaste">Guindastes</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Empilhadeira">Empilhadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Plataforma elevatória">Plataformas elevatórias</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Gerador">Geradores</a></li>
         </ul>
         <ul class="letreiro-lista" aria-hidden="true">
-          <li>Escavadeiras</li>
-          <li>Retroescavadeiras</li>
-          <li>Pás-carregadeiras</li>
-          <li>Guindastes</li>
-          <li>Empilhadeiras</li>
-          <li>Plataformas elevatórias</li>
-          <li>Geradores</li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Escavadeira" tabindex="-1">Escavadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Retroescavadeira" tabindex="-1">Retroescavadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Pá-carregadeira" tabindex="-1">Pás-carregadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Guindaste" tabindex="-1">Guindastes</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Empilhadeira" tabindex="-1">Empilhadeiras</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Plataforma elevatória" tabindex="-1">Plataformas elevatórias</a></li>
+          <li><a href="#modal-frota" data-abrir="modal-frota" data-segmento="Gerador" tabindex="-1">Geradores</a></li>
         </ul>
       </div>
     </div>
@@ -681,6 +681,12 @@
                     <line x1="90" y1="300" x2="250" y2="300"/>
                     <line x1="250" y1="300" x2="335" y2="215"/>
                   </g>
+                  <g class="rodovias-centro" aria-hidden="true">
+                    <line x1="130" y1="60" x2="250" y2="180"/>
+                    <line x1="250" y1="180" x2="250" y2="300"/>
+                    <line x1="90" y1="300" x2="250" y2="300"/>
+                    <line x1="250" y1="300" x2="335" y2="215"/>
+                  </g>
                   <g class="rodovia-nomes">
                     <text x="178" y="128" text-anchor="end">Anhanguera</text>
                     <text x="240" y="247" text-anchor="end">Bandeirantes</text>
@@ -688,26 +694,42 @@
                     <text x="300" y="275">Dutra</text>
                   </g>
                   <g class="pontos">
-                    <circle cx="130" cy="60" r="17"/>
-                    <circle cx="250" cy="180" r="18"/>
-                    <circle cx="250" cy="300" r="20"/>
-                    <circle class="matriz" cx="90" cy="300" r="19"/>
-                    <circle cx="335" cy="215" r="12"/>
+                    <g class="mapa-no" data-ir-unidade="Ribeirão Preto" role="button" tabindex="0" aria-label="Ver unidade de Ribeirão Preto (22 máquinas ativas)">
+                      <circle cx="130" cy="60" r="19"/>
+                      <text class="ponto-qtd" x="130" y="65" text-anchor="middle">22</text>
+                    </g>
+                    <g class="mapa-no" data-ir-unidade="Campinas" role="button" tabindex="0" aria-label="Ver unidade de Campinas (24 máquinas ativas)">
+                      <circle cx="250" cy="180" r="20"/>
+                      <text class="ponto-qtd" x="250" y="185" text-anchor="middle">24</text>
+                    </g>
+                    <g class="mapa-no" data-ir-unidade="São Paulo" role="button" tabindex="0" aria-label="Ver unidade de São Paulo (31 máquinas ativas)">
+                      <circle cx="250" cy="300" r="22"/>
+                      <text class="ponto-qtd" x="250" y="305" text-anchor="middle">31</text>
+                    </g>
+                    <g class="mapa-no" data-ir-unidade="Sorocaba" role="button" tabindex="0" aria-label="Ver unidade matriz de Sorocaba (29 máquinas ativas)">
+                      <circle class="matriz-pulso" cx="90" cy="300" r="25"/>
+                      <circle class="matriz" cx="90" cy="300" r="21"/>
+                      <text class="ponto-qtd" x="90" y="305" text-anchor="middle">29</text>
+                    </g>
+                    <g class="mapa-no" data-ir-unidade="São José dos Campos" role="button" tabindex="0" aria-label="Ver unidade de São José dos Campos (11 máquinas ativas)">
+                      <circle cx="335" cy="215" r="16"/>
+                      <text class="ponto-qtd" x="335" y="220" text-anchor="middle">11</text>
+                    </g>
                   </g>
                   <g class="cidades">
-                    <text x="157" y="67">Ribeirão Preto</text>
-                    <text x="222" y="188" text-anchor="end">Campinas</text>
-                    <text x="250" y="347" text-anchor="middle">São Paulo</text>
-                    <text x="90" y="346" text-anchor="middle">Sorocaba</text>
-                    <text class="matriz-rotulo" x="90" y="369" text-anchor="middle">matriz</text>
-                    <text x="355" y="210">São José</text>
-                    <text x="355" y="234">dos Campos</text>
+                    <text data-ir-unidade="Ribeirão Preto" x="159" y="67">Ribeirão Preto</text>
+                    <text data-ir-unidade="Campinas" x="220" y="188" text-anchor="end">Campinas</text>
+                    <text data-ir-unidade="São Paulo" x="250" y="347" text-anchor="middle">São Paulo</text>
+                    <text data-ir-unidade="Sorocaba" x="90" y="346" text-anchor="middle">Sorocaba</text>
+                    <text class="matriz-rotulo" data-ir-unidade="Sorocaba" x="90" y="369" text-anchor="middle">matriz</text>
+                    <text data-ir-unidade="São José dos Campos" x="358" y="210">São José</text>
+                    <text data-ir-unidade="São José dos Campos" x="358" y="234">dos Campos</text>
                   </g>
                 </svg>
               </figure>
               <div>
-                <p>Escolha uma unidade acima para ver endereço, telefone e as máquinas que ela tem hoje.</p>
-                <p class="nota">Esquema fora de escala. O tamanho de cada círculo acompanha o número de máquinas ativas da unidade.</p>
+                <p>Toque em uma cidade no mapa ou nos botões acima para ver endereço, telefone e as máquinas que ela tem hoje.</p>
+                <p class="nota">Esquema fora de escala. O número e o tamanho de cada círculo acompanham as máquinas ativas da unidade.</p>
               </div>
             </article>
 

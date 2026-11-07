@@ -25,6 +25,13 @@ site há só um botão que abre um aviso de "em planejamento".
 **Padrão visual das páginas públicas:** o do usuário (moderno, pop-ups com slides, vidro e brilho
 suaves, página inicial enxuta, celular sem imagens no Quem somos) vale mais que as regras da
 skill de design; ver `spec.md`, seção 7.
+- **Refinamentos visuais aplicados pela Antigravity (07/11/2026, somente camada visual, sem alterar dados nem webhook):**
+  1. **Contraste de seções na página inicial (`.numeros`):** fundo claro em `--areia` com cartões `.numero` em vidro translúcido claro (`rgb(255 255 255 / 0.58)`), números em `--verde` e links em `--laranja-texto`, quebrando a sequência de dois blocos verdes escuros seguidos antes de `.orcamento`.
+  2. **Letreiro de LED interativo (`.letreiro-lista a`):** cada categoria do letreiro abre `#modal-frota` já posicionado no slide correspondente (`data-segmento`).
+  3. **Vitrine para a foto do modelo (`.maquina-foto`):** moldura com fundo suave e borda translúcida alinhada ao bloco `.maquina-onde-bloco` na coluna direita dos cards da Frota.
+  4. **Mapa das Unidades interativo (`#modal-unidades`):** rodovias com faixa tracejada central (`.rodovias-centro`), nós das cidades clicáveis/acessíveis por teclado (`[data-ir-unidade]`), quantidade de máquinas ativas dentro de cada círculo (`.ponto-qtd`) e anel pulsante na matriz em Sorocaba (`.matriz-pulso`).
+  5. **Linha do tempo em "Como funciona" (`.etapa-marca::after`):** trilha horizontal conectando visualmente as 5 etapas (`Recebido` → `Contratação`).
+  6. **Controles de formulário customizados (`.campo select` e `.sim-campo input[type="range"]`):** seletor com seta SVG própria (`appearance: none`) e sliders do simulador com trilha e pino laranja estilizados.
 
 ## O que é este projeto
 Case de portfólio sobre gestão de locação de máquinas pesadas, inspirado em um anúncio público do Workana. **Todos os dados são fictícios** e gerados por script. A empresa fictícia se chama **LocaMaq**.

@@ -5,6 +5,19 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Changed (07/11/2026, refinamentos visuais do site via Antigravity)
+- `site/estilo.css`, `site/index.html` e `site/script.js` (somente camada visual, sem alterar dados
+  nem `URL_WEBHOOK`):
+  - Seção `.numeros` em fundo claro (`--areia`) com cartões `.numero` em vidro translúcido, criando
+    contraste entre o topo escuro e a seção `.orcamento`.
+  - Letreiro de LED (`.letreiro-lista a`) clicável, abrindo `#modal-frota` diretamente no slide da
+    categoria escolhida (`data-segmento`).
+  - Moldura de vitrine em `.maquina-foto`, alinhada à coluna direita dos cards da Frota.
+  - Mapa de `#modal-unidades` interativo (`[data-ir-unidade]`), com faixa tracejada nas rodovias,
+    contagem de máquinas dentro dos círculos e pulso na matriz em Sorocaba.
+  - Trilha horizontal (`.etapa-marca::after`) conectando as 5 etapas em `#modal-como`.
+  - Acabamento customizado em `.campo select` (seta SVG) e `.sim-campo input[type="range"]`.
+
 ### Added (05/11/2026, extensão 2026: contratos, faturas e leads)
 - `src/gerador_dados/gerar_extensao_2026.py` (semente 42, só biblioteca padrão): 35 contratos fechados
   em 2026 (5 por categoria, `CT-01211` a `CT-01245`), 76 faturas e 66 leads, em

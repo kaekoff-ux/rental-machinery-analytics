@@ -808,7 +808,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1.75rem;
-  padding: 0.75rem 1.75rem 0.75rem 0;
+  padding: 0.55rem 1.75rem 0.55rem 0;
   font-size: clamp(0.875rem, 0.75rem + 0.45vw, 1.125rem);
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -817,6 +817,25 @@ h3 {
   white-space: nowrap;
   color: var(--led);
   text-shadow: 0 0 3px rgb(255 160 80 / 0.55), 0 0 12px rgb(200 101 27 / 0.35);
+}
+
+.letreiro-lista a {
+  position: relative;
+  z-index: 3;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color 0.2s var(--suave),
+    background-color 0.2s var(--suave),
+    text-shadow 0.2s var(--suave);
+}
+
+.letreiro-lista a:hover {
+  background: rgb(255 184 119 / 0.14);
+  color: #ffe2c4;
+  text-shadow: 0 0 8px rgb(255 184 119 / 0.9), 0 0 18px rgb(200 101 27 / 0.65);
 }
 
 .letreiro-lista li::after {
@@ -844,13 +863,14 @@ h3 {
 /* ---------- Números (cada um abre um pop-up) ---------- */
 
 .numeros {
-  --foco: var(--papel);
+  --foco: var(--tinta);
   padding-block: clamp(3rem, 2rem + 4vw, 5rem);
+  border-bottom: 1px solid rgb(21 23 15 / 0.08);
   background:
-    radial-gradient(50% 90% at 0% 0%, rgb(255 255 255 / 0.08), transparent 70%),
-    radial-gradient(40% 80% at 100% 100%, rgb(200 101 27 / 0.18), transparent 70%),
-    var(--verde);
-  color: var(--papel);
+    radial-gradient(50% 90% at 0% 0%, rgb(255 255 255 / 0.55), transparent 70%),
+    radial-gradient(40% 80% at 100% 100%, rgb(200 101 27 / 0.12), transparent 70%),
+    var(--areia);
+  color: var(--tinta);
 }
 
 .numeros-lista {
@@ -865,11 +885,14 @@ h3 {
   gap: 0.4rem;
   height: 100%;
   padding: clamp(1rem, 2vw, 1.5rem);
-  border: 1px solid var(--vidro-escuro-borda);
+  border: 1px solid var(--vidro-borda);
   border-radius: var(--raio);
-  background: var(--vidro-escuro);
+  background: rgb(255 255 255 / 0.58);
   color: inherit;
   text-decoration: none;
+  box-shadow: var(--sombra), inset 0 1px 0 rgb(255 255 255 / 0.85);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition:
     background-color 0.25s var(--suave),
     border-color 0.25s var(--suave),
@@ -878,10 +901,10 @@ h3 {
 }
 
 .numero:hover {
-  border-color: rgb(255 255 255 / 0.24);
-  background: rgb(255 255 255 / 0.12);
-  box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.55);
-  translate: 0 -2px;
+  border-color: rgb(200 101 27 / 0.45);
+  background: rgb(255 255 255 / 0.88);
+  box-shadow: var(--sombra-alta), 0 12px 28px -16px rgb(200 101 27 / 0.35), inset 0 1px 0 #fff;
+  translate: 0 -3px;
 }
 
 .numero-valor {
@@ -891,22 +914,20 @@ h3 {
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: var(--areia);
-  text-shadow: 0 0 22px rgb(232 220 196 / 0.2);
+  color: var(--verde);
 }
 
 .numero-rotulo {
   max-width: 24ch;
   font-size: 0.875rem;
-  color: rgb(244 238 226 / 0.88);
+  color: var(--tinta-suave);
 }
 
-/* Âmbar mais claro que o do letreiro: sobre o vidro verde o --led não passava de 4,5:1 de contraste. */
 .numero-link {
   margin-top: 0.35rem;
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #ffd3a8;
+  color: var(--laranja-texto);
 }
 
 .numero-link::after {
@@ -915,7 +936,7 @@ h3 {
 
 .numeros-nota {
   margin-top: 1.5rem;
-  color: rgb(232 220 196 / 0.8);
+  color: var(--tinta-suave);
 }
 
 @media (min-width: 60rem) {
@@ -1576,7 +1597,17 @@ h3 {
   font-stretch: 85%;
 }
 
-/* Foto do modelo escolhido: no tamanho dela (máquina inteira, sem cortar), centralizada. */
+/* Foto do modelo escolhido: vitrine alinhada ao bloco "Onde está" abaixo, com a máquina inteira. */
+.maquina-foto {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.75);
+  border-radius: var(--raio-m);
+  background: radial-gradient(65% 80% at 50% 50%, rgb(255 255 255 / 0.78), rgb(232 220 196 / 0.52));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.85), 0 10px 24px -18px rgb(21 23 15 / 0.35);
+}
+
 .maquina-foto img,
 .sim-foto img {
   display: block;
@@ -1585,7 +1616,11 @@ h3 {
   height: auto;
   max-height: 10.5rem;
   margin-inline: auto;
-  border-radius: var(--raio-m);
+  border-radius: calc(var(--raio-m) - 4px);
+}
+
+.maquina-foto img {
+  box-shadow: 0 8px 20px -12px rgb(21 23 15 / 0.35);
 }
 
 .maquina-modelo {
@@ -1770,19 +1805,78 @@ h3 {
 }
 
 .mapa .rodovias line {
-  stroke: rgb(220 205 174 / 0.9);
-  stroke-width: 9;
+  stroke: rgb(195 178 144 / 0.95);
+  stroke-width: 11;
   stroke-linecap: round;
+}
+
+.mapa .rodovias-centro line {
+  stroke: rgb(255 255 255 / 0.65);
+  stroke-width: 2;
+  stroke-dasharray: 6 7;
+  stroke-linecap: round;
+}
+
+.mapa .mapa-no {
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.2s var(--suave);
+}
+
+.mapa .mapa-no:hover,
+.mapa .mapa-no:focus-visible {
+  outline: none;
+  transform: scale(1.1);
 }
 
 .mapa .pontos circle {
   fill: var(--verde);
-  filter: drop-shadow(0 0 6px rgb(74 93 58 / 0.5));
+  stroke: rgb(255 255 255 / 0.85);
+  stroke-width: 2;
+  filter: drop-shadow(0 3px 8px rgb(74 93 58 / 0.5));
+  transition: fill 0.2s var(--suave);
+}
+
+.mapa .mapa-no:hover circle:not(.matriz-pulso) {
+  fill: #38492b;
 }
 
 .mapa .pontos .matriz {
   fill: var(--laranja);
-  filter: drop-shadow(0 0 7px rgb(200 101 27 / 0.55));
+  filter: drop-shadow(0 3px 9px rgb(200 101 27 / 0.6));
+}
+
+.mapa .mapa-no:hover .matriz {
+  fill: #b15614;
+}
+
+.mapa .pontos .matriz-pulso {
+  fill: none;
+  stroke: rgb(200 101 27 / 0.45);
+  stroke-width: 2;
+  filter: none;
+  animation: pulso-matriz 2.8s ease-out infinite;
+}
+
+@keyframes pulso-matriz {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.38);
+  }
+}
+
+.mapa .ponto-qtd {
+  fill: var(--papel);
+  font-size: 13px;
+  font-weight: 800;
+  font-stretch: 85%;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
 }
 
 .mapa .cidades text {
@@ -1790,6 +1884,12 @@ h3 {
   font-size: 22px;
   font-weight: 700;
   font-stretch: 85%;
+  cursor: pointer;
+  transition: fill 0.2s var(--suave);
+}
+
+.mapa .cidades text:hover {
+  fill: var(--laranja-texto);
 }
 
 .mapa .cidades .matriz-rotulo {
@@ -1861,11 +1961,21 @@ h3 {
 
 .etapa-marca::before {
   content: "";
+  flex: 0 0 auto;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
   background: var(--verde);
   box-shadow: 0 0 0 4px rgb(74 93 58 / 0.15), 0 0 12px rgb(74 93 58 / 0.35);
+}
+
+.etapa-marca::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  margin-left: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgb(74 93 58 / 0.38), rgb(74 93 58 / 0.06));
 }
 
 .slide-etapa-final .etapa-marca {
@@ -1875,6 +1985,10 @@ h3 {
 .slide-etapa-final .etapa-marca::before {
   background: var(--laranja);
   box-shadow: 0 0 0 4px rgb(200 101 27 / 0.16), 0 0 14px rgb(200 101 27 / 0.45);
+}
+
+.slide-etapa-final .etapa-marca::after {
+  background: linear-gradient(90deg, rgb(200 101 27 / 0.45), transparent);
 }
 
 .slide-etapa h3 {
@@ -2261,6 +2375,22 @@ h3 {
   transition: border-color 0.2s var(--suave), box-shadow 0.2s var(--suave), background-color 0.2s var(--suave);
 }
 
+.campo select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 2.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%2315170f' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  cursor: pointer;
+}
+
+.campo select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .campo textarea {
   min-height: 5rem;
   resize: vertical;
@@ -2271,7 +2401,7 @@ h3 {
 .campo textarea:focus-visible {
   outline: none;
   border-color: var(--laranja);
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 0 0 4px rgb(200 101 27 / 0.2);
 }
 
@@ -2301,12 +2431,62 @@ h3 {
 }
 
 .sim-campo input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
   grid-column: 1 / -1;
   width: 100%;
   height: 1.75rem;
   margin: 0;
+  background: transparent;
   accent-color: var(--laranja);
   cursor: pointer;
+}
+
+.sim-campo input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgb(21 23 15 / 0.14);
+  box-shadow: inset 0 1px 2px rgb(21 23 15 / 0.22);
+}
+
+.sim-campo input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: -0.4rem;
+  border: 2px solid var(--papel);
+  border-radius: 50%;
+  background: var(--laranja);
+  box-shadow: 0 2px 8px rgb(200 101 27 / 0.55);
+  transition: transform 0.15s var(--suave), box-shadow 0.15s var(--suave);
+}
+
+.sim-campo input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.1);
+  box-shadow: 0 3px 12px rgb(200 101 27 / 0.75);
+}
+
+.sim-campo input[type="range"]::-moz-range-track {
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgb(21 23 15 / 0.14);
+  box-shadow: inset 0 1px 2px rgb(21 23 15 / 0.22);
+}
+
+.sim-campo input[type="range"]::-moz-range-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--papel);
+  border-radius: 50%;
+  background: var(--laranja);
+  box-shadow: 0 2px 8px rgb(200 101 27 / 0.55);
+  transition: transform 0.15s var(--suave), box-shadow 0.15s var(--suave);
+}
+
+.sim-campo input[type="range"]:hover::-moz-range-thumb {
+  transform: scale(1.1);
+  box-shadow: 0 3px 12px rgb(200 101 27 / 0.75);
 }
 
 /* O total aparece como um horímetro de LED. */
