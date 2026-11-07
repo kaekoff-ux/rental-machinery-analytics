@@ -59,7 +59,7 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
   planilha, da instância e da credencial, e com `active: false`. Não traz o Cell Format "RAW" do nó
   do Sheets, aplicado à mão depois no servidor (sem ele, contato começando com `+` vira `#ERROR!`).
   Defeito conhecido, ainda não corrigido: o valor de `data_envio` no Edit Fields tem dois espaços
-  antes do `{{`, então a data entra na planilha como texto com dois espaços na frente. O fluxo também
+  antes das chaves da expressão, então a data entra na planilha como texto com dois espaços na frente. O fluxo também
   não preenche `status` (a coluna fica vazia).
 - n8n e ngrok em Docker numa instância EC2 da AWS, com o domínio fixo gratuito do ngrok: o endereço
   do formulário não depende do PC ligado. A documentação e o script de instalação ficam só no
