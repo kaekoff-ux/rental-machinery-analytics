@@ -173,7 +173,7 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
   segmento, modelos de cada card, unidades, 117 ativas, contratos, preventivas, inspeções e
   telemetria).
 - Fora do repositório: os 4 arquivos de `00_Fase_0_Fundacao` que citavam abastecimento foram
-  ajustados, com cópia em `00_Fase_0_Fundacao/_backup_2026-11-01_antes_de_tirar_abastecimento/`.
+  ajustados, com cópia em `_obsoletos/backup_2026-11-01_antes_de_tirar_abastecimento/` (movida em 08/11/2026).
 
 ### Changed (31/10/2026, Apps Script)
 - `src/apps_script/receber_orcamento.gs` passou a usar `LockService`: dois pedidos ao mesmo
