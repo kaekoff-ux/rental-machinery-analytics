@@ -249,8 +249,8 @@ Python ou marque a rede de casa como "Privada". Feche com Ctrl+C ao terminar.
 
 ## Pendências e decisões em aberto
 
-- Passo 5 resolvido em 05/11/2026 com o n8n (ver a atualização no topo). Pendente dele: Slack para
-  avisar a equipe e fluxo de erro. O GitHub Pages (passo 7) foi publicado em 31/10/2026.
+<!-- Atualizado em 08/11/2026 -->
+- Passo 5 resolvido em 05/11/2026 com o n8n, e alertas no Slack por categoria de equipamento concluídos em 08/11/2026. Pendente: fluxo dedicado de tratamento de erro (`Error Trigger`). O GitHub Pages (passo 7) foi publicado em 31/10/2026.
 - Abrir o site publicado num celular e num tablet de verdade (até agora só simulado).
 - Área do cliente: discutir escopo, login e onde ficam os pedidos (`spec.md`, seção 9).
 - Fotos da frota: gerar as 7 imagens (`docs/prompts_imagens_frota.md`).

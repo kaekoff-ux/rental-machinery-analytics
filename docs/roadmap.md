@@ -29,7 +29,8 @@ Utilização física, disponibilidade física, utilização financeira, receita 
 - Power BI Desktop (gratuito): entregável principal
 - Excel com Power Query e Power Pivot: versão espelho do que o anúncio pede
 - Google Sheets: cadastro e apontamentos (não tem Power Query, não é o centro da análise)
-- Python + Claude Code: geração da base fictícia, modelo preditivo, app e agentes
+- Python + Claude Code + Google Antigravity: geração da base fictícia, site, modelo preditivo, app, automações e agentes
+- n8n + Docker + AWS (EC2) + ngrok + Slack + Gmail: captura de leads, confirmação por e-mail e alertas por categoria de equipamento
 - GitHub: repositório público do projeto
 Decisão de arquitetura: os dados ficam em pasta local/repositório (CSV). Isso evita o problema de atualização do Power Query via SharePoint. Documentar isso no case.
 

@@ -1,6 +1,6 @@
 # CLAUDE.md - Rental Machinery Analytics (LocaMaq)
 
-Este arquivo orienta o Claude Code neste repositório. Leia antes de qualquer tarefa.
+Este arquivo orienta o Claude Code e o Google Antigravity neste repositório. Leia antes de qualquer tarefa.
 
 PRD do projeto (dor do usuário, proposta de valor, funcionalidades, MVP, personas,
 arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico de mudanças em
@@ -9,11 +9,11 @@ arquitetura, direção visual) em `spec.md`, na raiz do repositório. Histórico
 **Camada 1 (site do cliente) publicada em 31/10/2026:**
 <https://kaekoff-ux.github.io/rental-machinery-analytics/site/> (GitHub Pages, branch `main`,
 pasta raiz). Cada push na `main` republica no mesmo endereço em 1 a 2 minutos. Passo a passo e
-status em `docs/plano_camada1_site.md`. **Formulário ligado desde 05/11/2026:** o site envia o pedido
-para um Webhook do n8n (Docker em uma instância EC2 da AWS, endereço fixo pelo ngrok), que grava na
-planilha Google `LocaMaq - Leads`. O Apps Script foi descartado (commit `7370dbd`, 02/11/2026). Como o
+status em `docs/plano_camada1_site.md`. **Formulário ligado desde 05/11/2026 (e Slack em 08/11/2026):** o site envia o pedido
+para um Webhook do n8n (Docker em uma instância EC2 da AWS, endereço fixo pelo ngrok), que gera o `id_lead`, grava na
+planilha Google `LocaMaq - Leads`, envia e-mail de confirmação ao cliente (se informou e-mail) e notifica a equipe comercial no Slack separando automaticamente por categoria de equipamento (`#orcamento-escavadeiras`, `#orcamento-retroescavadeiras`, `#orcamento-pas-carregadeiras`, `#orcamento-guindastes`, `#orcamento-empilhadeiras`, `#orcamento-plataformas`, `#orcamento-geradores` e `#lead-locamaq`). O Apps Script foi descartado (commit `7370dbd`, 02/11/2026). Como o
 servidor foi montado e como operá-lo: `docs/servidor_n8n_aws/` (só no computador do usuário, fora do
-GitHub por decisão dele: não versionar nem dar push). Cópia do fluxo, sem IDs:
+GitHub por decisão dele: não versionar nem dar push). Cópia do fluxo, sem IDs nem tokens:
 `src/n8n/leads_locamaq.json`. Política de privacidade do site:
 `site/privacidade.html`. Fotos da frota: `docs/prompts_imagens_frota.md`. Power BI segue em
 paralelo, sem depender disso.
@@ -63,7 +63,7 @@ precisam fazer sentido com a disponibilidade das máquinas.
   Colunas: as 9 que o n8n grava (`data_envio` a `status`) mais `data_desfecho`, `id_contrato` e
   `motivo_perda`, que a equipe preenche (e, depois, a automação do Slack). Etapas do `status`: `Novo`,
   `Em Contato`, `Orçado`, `Fechado`, `Perdidos` (lista suspensa da aba; usar exatamente esses nomes).
-- **Entrada:** formulário do site → Webhook do n8n → Google Sheets (fluxo em
+- **Entrada:** formulário do site → Webhook do n8n → `Insert row` (`id_lead`) → `Edit Fields` (`status = Novo`) → Google Sheets + Gmail (confirmação ao cliente) + Slack por categoria de equipamento (fluxo em
   `src/n8n/leads_locamaq.json`; instalação em `docs/servidor_n8n_aws/`, só local). O n8n
   não aumenta a Tabela: ao passar de 1000 linhas, ajustar o intervalo (menu da tabela).
 - **Indicadores de leads** (5, em `docs/kpis.csv`): taxa de conversão, tempo médio de fechamento,

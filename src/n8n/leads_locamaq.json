@@ -21,71 +21,6 @@
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "f5a2c9ef-5c30-4add-a2b2-ab12d9e150b4",
-              "name": "=data_envio",
-              "value": "=  {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm:ss') }}",
-              "type": "string"
-            },
-            {
-              "id": "cf9635c1-e159-4de3-93bf-d7ab09411a02",
-              "name": "nome",
-              "value": "={{ $json.body.nome }}",
-              "type": "string"
-            },
-            {
-              "id": "60f92409-d03a-4854-8dfa-9575061bd699",
-              "name": "contato",
-              "value": "={{ $json.body.contato }}",
-              "type": "string"
-            },
-            {
-              "id": "a1939288-75d9-44af-8d21-0d0b34899c02",
-              "name": "cidade",
-              "value": "={{ $json.body.cidade }}",
-              "type": "string"
-            },
-            {
-              "id": "dcd67691-669a-43df-bdc5-96003f9cd3ad",
-              "name": "equipamento",
-              "value": "={{ $json.body.equipamento }}",
-              "type": "string"
-            },
-            {
-              "id": "41a97f4d-5ff1-47e8-a78f-53ec7026e4cc",
-              "name": "prazo",
-              "value": "={{ $json.body.prazo }}",
-              "type": "string"
-            },
-            {
-              "id": "158acb61-b9d2-4be4-872f-f3ba53aa8310",
-              "name": "observacao",
-              "value": "={{ $json.body.observacao }}",
-              "type": "string"
-            },
-            {
-              "id": "4ff536d0-faca-4680-ace8-7bce3b0fe161",
-              "name": "origem",
-              "value": "={{ $json.body.origem }}",
-              "type": "string"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.5,
-      "position": [
-        -256,
-        -96
-      ],
-      "id": "51766bd7-c6ef-4216-afaa-aa21682d2a96",
-      "name": "Edit Fields"
-    },
-    {
-      "parameters": {
         "conditions": {
           "options": {
             "caseSensitive": true,
@@ -116,7 +51,98 @@
         -208
       ],
       "id": "d70c31f6-66a0-4bcc-b0e8-7fdc4fb550e8",
-      "name": "If"
+      "name": "Campo-isca"
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "tableId": "ID_TABELA_LEADS"
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        -192
+      ],
+      "id": "8c6137c5-61b8-4210-9144-4d04a1f62100",
+      "name": "Insert row"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f5a2c9ef-5c30-4add-a2b2-ab12d9e150b4",
+              "name": "data_envio",
+              "value": "={{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm:ss') }}",
+              "type": "string"
+            },
+            {
+              "id": "cf9635c1-e159-4de3-93bf-d7ab09411a02",
+              "name": "nome",
+              "value": "={{ $('Webhook').item.json.body.nome }}",
+              "type": "string"
+            },
+            {
+              "id": "60f92409-d03a-4854-8dfa-9575061bd699",
+              "name": "contato",
+              "value": "={{ $('Webhook').item.json.body.contato }}",
+              "type": "string"
+            },
+            {
+              "id": "a1939288-75d9-44af-8d21-0d0b34899c02",
+              "name": "cidade",
+              "value": "={{ $('Webhook').item.json.body.cidade }}",
+              "type": "string"
+            },
+            {
+              "id": "dcd67691-669a-43df-bdc5-96003f9cd3ad",
+              "name": "equipamento",
+              "value": "={{ $('Webhook').item.json.body.equipamento }}",
+              "type": "string"
+            },
+            {
+              "id": "41a97f4d-5ff1-47e8-a78f-53ec7026e4cc",
+              "name": "prazo",
+              "value": "={{ $('Webhook').item.json.body.prazo }}",
+              "type": "string"
+            },
+            {
+              "id": "158acb61-b9d2-4be4-872f-f3ba53aa8310",
+              "name": "observacao",
+              "value": "={{ $('Webhook').item.json.body.observacao }}",
+              "type": "string"
+            },
+            {
+              "id": "4ff536d0-faca-4680-ace8-7bce3b0fe161",
+              "name": "origem",
+              "value": "={{ $('Webhook').item.json.body.origem }}",
+              "type": "string"
+            },
+            {
+              "id": "9a1436d0-faca-4680-ace8-7bce3b0fe222",
+              "name": "status",
+              "value": "Novo",
+              "type": "string"
+            },
+            {
+              "id": "7b2536d0-faca-4680-ace8-7bce3b0fe333",
+              "name": "id_lead",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -32,
+        -64
+      ],
+      "id": "51766bd7-c6ef-4216-afaa-aa21682d2a96",
+      "name": "Edit Fields"
     },
     {
       "parameters": {
@@ -143,7 +169,9 @@
             "equipamento": "={{ $json.equipamento }}",
             "prazo": "={{ $json.prazo }}",
             "observacao": "={{ $json.observacao }}",
-            "origem": "={{ $json.origem }}"
+            "origem": "={{ $json.origem }}",
+            "status": "={{ $json.status }}",
+            "id_lead": "={{ $json.id_lead }}"
           },
           "matchingColumns": [],
           "schema": [
@@ -227,24 +255,118 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true
+            },
+            {
+              "id": "id_lead",
+              "displayName": "id_lead",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
             }
           ],
           "attemptToConvertTypes": false,
           "convertFieldsToString": false
         },
-        "options": {}
+        "options": {
+          "cellFormat": "RAW"
+        }
       },
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -32,
-        -96
+        160,
+        -64
       ],
       "id": "fcaa67f1-7818-45b4-a6d2-9ee65d80fe83",
       "name": "LocaMaq_Leads",
       "credentials": {
         "googleSheetsOAuth2Api": {
           "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e1234567-89ab-4cde-f012-3456789abcde",
+              "leftValue": "={{ $json.contato }}",
+              "rightValue": "@",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        368,
+        -64
+      ],
+      "id": "c4567890-12ab-4cde-f012-3456789abcde",
+      "name": "e-mail"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.contato }}",
+        "subject": "Recebemos seu pedido de orçamento — LocaMaq",
+        "message": "={{ 'Olá, ' + $json.nome + '! Recebemos seu pedido de orçamento (#' + $json.id_lead + ') para ' + $json.equipamento + ' pelo prazo de ' + $json.prazo + '. Nossa equipe comercial entrará em contato em breve.' }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        560,
+        -192
+      ],
+      "id": "d5678901-23ab-4cde-f012-3456789abcde",
+      "name": "Enviar e-mail",
+      "credentials": {
+        "gmailOAuth2": {
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "accessToken",
+        "resource": "message",
+        "operation": "post",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "={{\n  {\n    \"Escavadeira\": \"orcamento-escavadeiras\",\n    \"Retroescavadeira\": \"orcamento-retroescavadeiras\",\n    \"Pá-carregadeira\": \"orcamento-pas-carregadeiras\",\n    \"Guindaste\": \"orcamento-guindastes\",\n    \"Empilhadeira\": \"orcamento-empilhadeiras\",\n    \"Plataforma elevatória\": \"orcamento-plataformas\",\n    \"Gerador\": \"orcamento-geradores\"\n  }[($json.equipamento || \"\").split(\" – \")[0]] || \"lead-locamaq\"\n}}",
+          "mode": "name"
+        },
+        "messageType": "text",
+        "text": "={{ \"📋 *Novo pedido de orçamento #\" + $json.id_lead + \" — LocaMaq*\\n\" +\n\"• *Cliente:* \" + $json.nome + \"\\n\" +\n\"• *Contato:* \" + $json.contato + \"\\n\" +\n\"• *Cidade:* \" + ($json.cidade || \"Não informada\") + \"\\n\" +\n\"• *Equipamento:* \" + $json.equipamento + \"\\n\" +\n\"• *Prazo:* \" + $json.prazo + \"\\n\" +\n\"• *Observação:* \" + ($json.observacao || \"—\") + \"\\n\" +\n\"• *Data:* \" + ($json.data_envio || \"\").trim() }}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        368,
+        112
+      ],
+      "id": "b3456789-01ab-4cde-f012-3456789abcde",
+      "name": "Send a message",
+      "credentials": {
+        "slackApi": {
+          "name": "Slack LocaMaq"
         }
       }
     }
@@ -255,16 +377,27 @@
       "main": [
         [
           {
-            "node": "If",
+            "node": "Campo-isca",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "If": {
+    "Campo-isca": {
       "main": [
         [],
+        [
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert row": {
+      "main": [
         [
           {
             "node": "Edit Fields",
@@ -283,6 +416,34 @@
             "index": 0
           }
         ]
+      ]
+    },
+    "LocaMaq_Leads": {
+      "main": [
+        [
+          {
+            "node": "e-mail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e-mail": {
+      "main": [
+        [
+          {
+            "node": "Enviar e-mail",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
       ]
     }
   },

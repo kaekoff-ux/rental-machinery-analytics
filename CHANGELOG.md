@@ -5,6 +5,13 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (08/11/2026, roteamento de leads por categoria no Slack e atualização da Stack com Google Antigravity)
+- Workspace do Slack (`LocaMaq`) estruturado com 7 canais públicos por categoria de equipamento (`#orcamento-escavadeiras`, `#orcamento-retroescavadeiras`, `#orcamento-pas-carregadeiras`, `#orcamento-guindastes`, `#orcamento-empilhadeiras`, `#orcamento-plataformas`, `#orcamento-geradores`), além de `#lead-locamaq` como canal de triagem para pedidos com `"Ainda não sei"`.
+- App do Slack (`locamaq orcamentos`) configurado com escopos de bot (`chat:write`, `chat:write.public`, `channels:read`, `groups:read`) e conectado ao n8n via credencial `Slack API` (`Access Token`).
+- Fluxo n8n `Leads_LocaMaq` na AWS atualizado: após gravar no Google Sheets (`LocaMaq_Leads`, já com `id_lead` gerado por `Insert row` e `status = Novo`), um único nó do Slack (`Send a message`) seleciona dinamicamente o canal da categoria a partir do campo `equipamento` (`split(" – ")[0]`) e envia o resumo formatado do orçamento com o número `#id_lead`, em paralelo ao filtro e envio de e-mail de confirmação pelo Gmail (`e-mail` → `Enviar e-mail`).
+- `src/n8n/leads_locamaq.json` atualizado (sem IDs nem chaves sensíveis) refletindo a arquitetura completa em produção.
+- Stack atualizada em `README.md`, `spec.md`, `CLAUDE.md` e `docs/roadmap.md` incluindo **Slack**, **Gmail** e **Google Antigravity**.
+
 ### Changed (07/11/2026, refinamentos visuais do site via Antigravity)
 - `site/estilo.css`, `site/index.html` e `site/script.js` (somente camada visual, sem alterar dados
   nem `URL_WEBHOOK`):

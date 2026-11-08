@@ -30,7 +30,7 @@ só, permitindo mostrar progresso de portfólio ao longo do caminho.
 | Camada | Funcionalidade |
 |---|---|
 | 1 | Site institucional + formulário de orçamento/contato |
-| 1 (leads) | Funil de leads na planilha Google (Novo → Em Contato → Orçado → Fechado/Perdidos), captura pelo formulário via n8n e indicadores de leads (diretriz de 05/11/2026) |
+| 1 (leads) | Funil de leads na planilha Google (Novo → Em Contato → Orçado → Fechado/Perdidos), captura pelo formulário via n8n, confirmação por e-mail, alerta por categoria no Slack e indicadores de leads (diretriz de 05/11/2026; Slack em 08/11/2026) |
 | 2 | Fluxo interno: recebido → vendedor → atendimento → oficina → contratação |
 | 2 (cliente) | Área do cliente com login: o cliente acompanha os próprios pedidos e requisições (planejada em 31/10/2026; escopo a discutir, ver seção 9) |
 | 3 | Orquestração via N8N e canal Telegram (ferramenta exata a decidir módulo por módulo) |
@@ -72,7 +72,7 @@ Ver `docs/extensao_2026_leads.md` (a instalação do n8n na AWS não é versiona
 | Camada | Stack |
 |---|---|
 | 1 | HTML + CSS + JavaScript puro, hospedagem GitHub Pages |
-| 1 (backend do form) | Webhook do n8n (Docker em EC2 na AWS, exposto pelo ngrok) → Google Sheets. O Apps Script foi descartado em 02/11/2026 |
+| 1 (backend do form) | Webhook do n8n (Docker em EC2 na AWS, exposto pelo ngrok) → Tabela de IDs + Google Sheets + Gmail (confirmação ao cliente) + Slack API (roteamento por categoria de máquina). O Apps Script foi descartado em 02/11/2026 |
 | 2 (área do cliente) | A definir. O site no GitHub Pages é estático: a área precisa de login e de um lugar onde os pedidos tenham status. Opções a comparar na discussão: Google Apps Script + Sheets (mesma base do formulário), Supabase (login + Postgres) ou Firebase (login + Firestore) |
 | 3 | N8N (Community Edition self-hosted, gratuito) + API do Telegram — decisão de escopo exato em aberto |
 | 4 | Power BI Desktop, modelo estrela (3 dimensões + 4 fatos) sobre `data/processed/*.csv` |
