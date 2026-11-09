@@ -1,0 +1,14 @@
+{% extends "crm/base.html" %}
+{% load static %}
+{% block titulo %}Painel{% endblock %}
+{% block cabeca %}<link rel="stylesheet" href="{% static 'crm/painel.css' %}">{% endblock %}
+{% block conteudo %}
+<p class="nota" style="margin:0">Operação de 2024 e 2025 calculada a partir do banco do sistema (mesmas fórmulas do dashboard do Cowork). Leads de 2026, faturas e contratos a vencer refletem o que está cadastrado hoje ({{ hoje|date:"d/m/Y" }}). Os números são atualizados a cada 5 minutos.</p>
+{% include "crm/_painel_cowork.html" %}
+{{ dados|json_script:"dados-painel" }}
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'crm/vendor/d3.v7.9.0.min.js' %}"></script>
+<script src="{% static 'crm/painel_dash.js' %}"></script>
+<script src="{% static 'crm/painel_cowork.js' %}"></script>
+{% endblock %}

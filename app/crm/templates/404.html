@@ -1,0 +1,9 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Não encontrado{% endblock %}
+{% block conteudo %}
+<section class="card" style="max-width:40rem">
+  <p class="eyebrow">Página não encontrada</p>
+  <h1 style="margin:.3rem 0 .6rem">Este endereço não existe ou o registro foi removido</h1>
+  <p style="margin-top:1rem"><a class="btn" href="{% url 'crm:inicio' %}">Voltar ao início</a></p>
+</section>
+{% endblock %}

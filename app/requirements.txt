@@ -1,0 +1,5 @@
+# Sistema de gestão LocaMaq (case fictício). Versões fixadas em 09/11/2026.
+Django==5.2.19
+whitenoise==6.12.0
+# Servidor de produção (Linux/Docker). No Windows, use "python manage.py runserver".
+gunicorn==23.0.0

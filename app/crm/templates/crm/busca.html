@@ -1,0 +1,21 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Busca{% endblock %}
+{% block conteudo %}
+<div class="cab">
+  <div class="cab-titulo">
+    <span class="icone-obj">{% include "crm/_icone.html" with nome="busca" %}</span>
+    <div><p class="eyebrow">Busca global</p><h1>{% if q %}Resultados para “{{ q }}”{% else %}Buscar{% endif %}</h1></div>
+  </div>
+</div>
+{% if q|length < 2 %}
+<p class="vazio">Digite pelo menos 2 letras na busca do topo (código, nome, modelo, CNPJ, obra…).</p>
+{% elif not grupos %}
+<section class="card"><p class="vazio">Nada encontrado para “{{ q }}”.</p></section>
+{% endif %}
+{% for g in grupos %}
+<section class="card">
+  <div class="card-topo"><h2>{{ g.titulo }} <span class="contagem">({{ g.total }})</span></h2>{% if g.total > 8 %}<span class="nota">Mostrando 8. Refine a busca para ver os outros.</span>{% endif %}</div>
+  {% include "crm/_tabela.html" with cabecalho=g.cabecalho linhas=g.linhas %}
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+<div class="tabela-caixa">
+  <table class="tabela">
+    <thead><tr>{% for h in cabecalho %}<th scope="col"{% if h.num %} class="num"{% endif %}{% if h.estado == "asc" %} aria-sort="ascending"{% elif h.estado == "desc" %} aria-sort="descending"{% endif %}>{% if h.url %}<a href="{{ h.url }}">{{ h.rotulo }}</a>{% else %}{{ h.rotulo }}{% endif %}</th>{% endfor %}</tr></thead>
+    <tbody>
+      {% for linha in linhas %}
+      <tr>{% for cel in linha.celulas %}<td{% if cel.num %} class="num"{% endif %}>{% include "crm/_celula.html" with c=cel.v %}</td>{% endfor %}</tr>
+      {% empty %}
+      <tr><td colspan="{{ cabecalho|length }}" class="vazio">Nenhum registro encontrado.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

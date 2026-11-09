@@ -1,0 +1,10 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Trocar senha{% endblock %}
+{% block conteudo %}
+<div class="cab"><div class="cab-titulo"><div><p class="eyebrow">Minha conta</p><h1>Trocar senha</h1></div></div></div>
+<form class="card" method="post" style="max-width:40rem">
+  {% csrf_token %}
+  {% include "crm/_campos_form.html" %}
+  <div class="form-rodape"><a class="btn" href="{% url 'crm:inicio' %}">Cancelar</a><button class="btn btn-prim" type="submit">Salvar nova senha</button></div>
+</form>
+{% endblock %}

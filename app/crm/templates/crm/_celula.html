@@ -1,0 +1,1 @@
+{% if c.url %}<a href="{{ c.url }}">{{ c.texto }}</a>{% elif c.selo %}<span class="selo {{ c.selo }}">{{ c.texto }}</span>{% elif c.texto %}{{ c.texto }}{% else %}{{ c|default_if_none:"—" }}{% endif %}

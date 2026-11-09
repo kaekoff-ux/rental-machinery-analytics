@@ -1,0 +1,9 @@
+# Só entram na imagem o app e a base fictícia tratada.
+*
+!app/
+!data/processed/
+app/.venv
+app/db.sqlite3*
+app/staticfiles
+**/__pycache__
+**/*.pyc

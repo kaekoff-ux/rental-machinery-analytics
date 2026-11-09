@@ -1,0 +1,84 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Início{% endblock %}
+{% block conteudo %}
+<div class="cab">
+  <div class="cab-titulo">
+    <span class="icone-obj">{% include "crm/_icone.html" with nome="inicio" %}</span>
+    <div><p class="eyebrow">{{ hoje|date:"l, d \d\e F \d\e Y" }}</p><h1>Olá, {{ user.first_name|default:user.username }}</h1></div>
+  </div>
+  <div class="acoes">
+    {% if perms.crm.add_lead %}<a class="btn btn-prim" href="{% url 'crm:lead_novo' %}">{% include "crm/_icone.html" with nome="mais" %}Novo lead</a>{% endif %}
+    {% if perms.crm.add_ordemservico %}<a class="btn" href="{% url 'crm:os_nova' %}">Abrir OS</a>{% endif %}
+    <a class="btn" href="{% url 'crm:painel' %}">Ver painel</a>
+  </div>
+</div>
+
+<section class="tiles" aria-label="Resumo de hoje">
+  {% for t in tiles %}
+  <a class="tile{% if t.alerta %} alerta{% endif %}" href="{{ t.url }}"><span class="tile-rot">{{ t.rotulo }}</span><span class="tile-val">{{ t.valor }}</span><span class="tile-nota">{{ t.nota }}</span></a>
+  {% endfor %}
+</section>
+
+<div class="grade-inicio">
+  <section class="card">
+    <div class="card-topo"><h2>Minhas tarefas</h2><span class="contagem">{{ tarefas|length }} pendentes</span></div>
+    {% if tarefas %}
+    <ul class="linha-tempo">
+      {% for t in tarefas %}
+      <li>
+        <span class="marcador tarefa" aria-hidden="true">✓</span>
+        <div>
+          <div class="assunto">{{ t.assunto }}</div>
+          <div class="meta">{% if t.vencimento %}<span{% if t.vencimento < hoje %} class="atraso"{% endif %}>vence {{ t.vencimento|date:"d/m/Y" }}</span> · {% endif %}{% if t.registro %}<a href="{{ t.registro.get_absolute_url }}">{{ t.registro }}</a>{% endif %}</div>
+          {% if perms.crm.change_atividade %}
+          <form method="post" action="{% url 'crm:atividade_concluir' t.pk %}" style="margin-top:.3rem">{% csrf_token %}<button class="btn btn-pequeno" type="submit">Concluir</button></form>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vazio">Nenhuma tarefa pendente. Tarefas criadas em leads, clientes e contratos aparecem aqui.</p>{% endif %}
+  </section>
+
+  <section class="card">
+    <div class="card-topo"><h2>Leads recentes</h2><a href="{% url 'crm:leads_kanban' %}">Abrir o Kanban</a></div>
+    <ul class="linha-tempo">
+      {% for l in leads_recentes %}
+      <li>
+        <span class="marcador" aria-hidden="true">L</span>
+        <div>
+          <div class="assunto"><a href="{{ l.get_absolute_url }}">{{ l.nome }}</a> <span class="selo {% if l.status == 'Fechado' %}verde{% elif l.status == 'Perdidos' %}ruim{% elif l.status == 'Novo' %}petroleo{% else %}laranja{% endif %}">{{ l.status }}</span></div>
+          <div class="meta">{{ l.codigo }} · {{ l.segmento|default:"Equipamento não informado" }}{% if l.modelo %} · {{ l.modelo }}{% endif %} · {{ l.data_envio|date:"d/m/Y H:i" }}</div>
+        </div>
+      </li>
+      {% empty %}<li><p class="vazio">Nenhum lead ainda.</p></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-topo"><h2>Contratos que terminam em 30 dias</h2><a href="{% url 'crm:contratos' %}?visao=vencer">Ver todos</a></div>
+    {% if a_vencer %}
+    <ul class="linha-tempo">
+      {% for c in a_vencer %}
+      <li><span class="marcador etapa" aria-hidden="true">C</span>
+        <div><div class="assunto"><a href="{{ c.get_absolute_url }}">{{ c.codigo }}</a> · {{ c.cliente.razao_social }}</div>
+        <div class="meta">{{ c.equipamento }} · fim previsto {{ c.data_fim_prevista|date:"d/m/Y" }}</div></div></li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="vazio">Nenhum contrato ativo termina nos próximos 30 dias.</p>{% endif %}
+  </section>
+
+  <section class="card">
+    <div class="card-topo"><h2>OS abertas há mais tempo</h2><a href="{% url 'crm:oficina' %}">Quadro da oficina</a></div>
+    <ul class="linha-tempo">
+      {% for o in os_antigas %}
+      <li><span class="marcador nota" aria-hidden="true">OS</span>
+        <div><div class="assunto"><a href="{{ o.get_absolute_url }}">{{ o.codigo }}</a> · {{ o.descricao }}</div>
+        <div class="meta">{{ o.equipamento }} · aberta em {{ o.data_abertura|date:"d/m/Y" }} · {{ o.status }}</div></div></li>
+      {% empty %}<li><p class="vazio">Nenhuma OS aberta.</p></li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% load static %}<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{% block titulo %}LocaMaq{% endblock %} · LocaMaq Gestão</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234a5d3a'/%3E%3Cpath d='M6 25h20M9 25V13l7-5 7 5v12' fill='none' stroke='%23fffaf2' stroke-width='2.4' stroke-linejoin='round'/%3E%3Crect x='6' y='27' width='20' height='2' fill='%23c8651b'/%3E%3C/svg%3E">
+  <script>
+    // Tema salvo neste navegador (claro/escuro); sem escolha, segue o sistema.
+    try { var t = localStorage.getItem("lm-tema"); if (t) document.documentElement.dataset.tema = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+  <link rel="stylesheet" href="{% static 'crm/locamaq.css' %}">
+  {% block cabeca %}{% endblock %}
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  {% if user.is_authenticated %}
+  <header class="topo">
+    <div class="topo-linha">
+      <a class="marca" href="{% url 'crm:inicio' %}">
+        <span class="marca-sinal">{% include "crm/_icone.html" with nome="marca" %}</span>
+        <span>LocaMaq<small>Gestão</small></span>
+      </a>
+      <form class="busca-global" role="search" action="{% url 'crm:busca' %}" method="get">
+        {% include "crm/_icone.html" with nome="busca" %}
+        <label class="so-leitor" for="busca-global">Buscar em todo o sistema</label>
+        <input id="busca-global" type="search" name="q" value="{{ q|default:'' }}" placeholder="Buscar leads, clientes, máquinas, contratos…" autocomplete="off">
+      </form>
+      <div class="topo-acoes">
+        <button type="button" class="botao-icone" data-alternar-tema aria-label="Alternar tema claro ou escuro" title="Tema claro ou escuro">
+          <span data-icone-tema="claro">{% include "crm/_icone.html" with nome="lua" %}</span>
+          <span data-icone-tema="escuro" hidden>{% include "crm/_icone.html" with nome="sol" %}</span>
+        </button>
+        <details class="usuario">
+          <summary><span class="avatar" aria-hidden="true">{{ usuario_iniciais }}</span><span class="nome">{{ usuario_nome }}</span></summary>
+          <div class="usuario-menu">
+            <div class="perfil">{{ usuario_nome }}<br>{{ usuario_perfis }}</div>
+            {% if user.is_staff %}<a href="{% url 'admin:index' %}">Usuários e cadastros (admin)</a>{% endif %}
+            <a href="{% url 'trocar_senha' %}">Trocar senha</a>
+            <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button type="submit">Sair</button></form>
+          </div>
+        </details>
+      </div>
+    </div>
+    <nav class="abas" aria-label="Seções">
+      {% for aba in abas %}<a href="{{ aba.url }}"{% if aba.ativa %} aria-current="page"{% endif %}>{{ aba.rotulo }}</a>{% endfor %}
+    </nav>
+  </header>
+  {% endif %}
+
+  <main id="conteudo" class="pagina">
+    {% block conteudo %}{% endblock %}
+  </main>
+
+  <footer class="rodape">LocaMaq é uma empresa fictícia: case de portfólio com dados gerados para estudo, sem relação com uma operação real.</footer>
+
+  {% if messages %}
+  <div class="avisos" role="status" aria-live="polite">
+    {% for m in messages %}<div class="aviso {{ m.tags }}">{{ m }}</div>{% endfor %}
+  </div>
+  {% endif %}
+  <script src="{% static 'crm/app.js' %}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

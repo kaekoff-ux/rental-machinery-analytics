@@ -1,0 +1,358 @@
+{# Miolo do dashboard do Cowork (07/11/2026), gerado por portar_painel.py. #}
+<div class="lm" id="lm">
+<div class="lm-wrap">
+
+<header class="lm-topo" id="topo">
+  <div>
+    <p class="lm-marca">LocaMaq · case fictício de portfólio</p>
+    <h1 class="lm-titulo">Indicadores da frota LocaMaq</h1>
+    <p class="lm-resumo">Em 2025 a LocaMaq faturou <b data-draw="v" data-source="kpi_ano" data-field="receita" data-where="ano=2025" data-fmt="brl">—</b> (<b data-draw="v" data-source="kpi_var" data-field="receita" data-row="0" data-fmt="spct">—</b> sobre 2024), com a frota locada em <b data-draw="v" data-source="kpi_ano" data-field="util_fisica" data-where="ano=2025" data-fmt="pct">—</b> dos dias. <b data-draw="v" data-source="seg_top" data-field="segmento" data-row="0" data-fmt="txt">—</b> é o segmento que mais fatura, com <b data-draw="v" data-source="seg_top" data-field="participacao" data-row="0" data-fmt="pct">—</b> da receita. No comercial de 2026, <b data-draw="v" data-source="leads_kpi" data-field="perda_indisponibilidade" data-row="0" data-fmt="pct">—</b> dos leads com desfecho foram perdidos por falta de máquina. Clique em qualquer card para detalhar por segmento, filial e máquina.</p>
+  </div>
+</header>
+
+<section class="lm-tiles" id="kpis" aria-label="Indicadores de 2025">
+  <button type="button" class="lm-tile" data-abrir="receita" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Receita faturada · 2025</span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="receita" data-where="ano=2025" data-fmt="brl">—</span><span class="lm-tile-var"><span data-draw="v" data-source="kpi_var" data-field="receita" data-row="0" data-fmt="spct" data-bom="sobe">—</span> vs 2024</span><span class="lm-dica">Detalhar ›</span></button>
+  <button type="button" class="lm-tile" data-abrir="uso" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Utilização e disponibilidade · 2025</span><span class="lm-tile-duplo"><span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="util_fisica" data-where="ano=2025" data-fmt="pct">—</span><small>utilização <span data-draw="v" data-source="kpi_var" data-field="util_fisica" data-row="0" data-fmt="pp" data-bom="sobe">—</span></small></span><span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="disponibilidade" data-where="ano=2025" data-fmt="pct">—</span><small>disponib. <span data-draw="v" data-source="kpi_var" data-field="disponibilidade" data-row="0" data-fmt="pp" data-bom="sobe">—</span></small></span></span><span class="lm-dica">Detalhar ›</span></button>
+  <button type="button" class="lm-tile" data-abrir="margem" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Margem da frota · 2025</span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="margem" data-where="ano=2025" data-fmt="pct">—</span><span class="lm-tile-var"><span data-draw="v" data-source="kpi_var" data-field="margem" data-row="0" data-fmt="pp" data-bom="sobe">—</span> vs 2024</span><span class="lm-dica">Detalhar ›</span></button>
+  <button type="button" class="lm-tile" data-abrir="custo" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Custo de manutenção por hora · 2025</span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="custo_hora" data-where="ano=2025" data-fmt="brl2">—</span><span class="lm-tile-var"><span data-draw="v" data-source="kpi_var" data-field="custo_hora" data-row="0" data-fmt="spct" data-bom="desce">—</span> vs 2024</span><span class="lm-dica">Detalhar ›</span></button>
+  <button type="button" class="lm-tile" data-abrir="manut" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">OS corretivas · 2025</span><span class="lm-tile-val" data-draw="v" data-source="kpi_ano" data-field="pct_corretiva" data-where="ano=2025" data-fmt="pct">—</span><span class="lm-tile-var">MTBF <span data-draw="v" data-source="kpi_ano" data-field="mtbf" data-where="ano=2025" data-fmt="h">—</span> · MTTR <span data-draw="v" data-source="kpi_ano" data-field="mttr" data-where="ano=2025" data-fmt="h1">—</span></span><span class="lm-dica">Detalhar ›</span></button>
+  <button type="button" class="lm-tile" data-abrir="inad" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Inadimplência · faturas de 2025</span><span class="lm-tile-val" data-draw="v" data-source="inad" data-field="inadimplencia" data-where="ano=2025" data-fmt="pct">—</span><span class="lm-tile-var"><span data-draw="v" data-source="kpi_var" data-field="inadimplencia" data-row="0" data-fmt="pp" data-bom="desce">—</span> vs 2024</span><span class="lm-dica">Detalhar ›</span></button>
+</section>
+
+<section class="lm-detalhe" id="detalhe" hidden aria-live="polite">
+  <div class="lm-detalhe-topo">
+    <div>
+      <p class="lm-marca">Detalhamento · 2025</p>
+      <h2 data-kpi="receita" hidden>Receita faturada</h2>
+      <h2 data-kpi="uso" hidden>Utilização e disponibilidade da frota</h2>
+      <h2 data-kpi="margem" hidden>Margem da frota</h2>
+      <h2 data-kpi="custo" hidden>Custo de manutenção por hora</h2>
+      <h2 data-kpi="manut" hidden>Manutenção: corretivas, MTBF e MTTR</h2>
+      <h2 data-kpi="inad" hidden>Inadimplência</h2>
+      <h2 data-kpi="leads" hidden>Leads e conversão · 2026</h2>
+    </div>
+    <button type="button" class="lm-pilula" data-fechar>Fechar ✕</button>
+  </div>
+
+  <div class="lm-barra-ctrl" role="group" aria-label="Detalhar por">
+    <button type="button" class="lm-pilula" data-dim="S" aria-pressed="true">Por segmento</button>
+    <button type="button" class="lm-pilula" data-dim="F" aria-pressed="false"><span data-so="frota">Por filial</span><span data-so="leads" hidden>Por cidade</span></button>
+    <button type="button" class="lm-pilula" data-dim="M" aria-pressed="false"><span data-so="frota">Todas as máquinas</span><span data-so="leads" hidden>Todos os modelos</span></button>
+  </div>
+  <nav class="lm-migalha" aria-label="Caminho">
+    <button type="button" data-ir="raiz"><span data-so="frota">Toda a frota</span><span data-so="leads" hidden>Todos os leads</span></button>
+    <span data-draw="migalha" data-source="drill"></span>
+  </nav>
+
+  <!-- Receita -->
+  <div data-kpi="receita" hidden>
+    <div class="lm-mini">
+      <div><span>Receita 2025</span><b data-draw="dv" data-source="drill" data-field="receita" data-fmt="brl">—</b></div>
+      <div><span>vs 2024</span><b data-draw="dv" data-source="drill" data-field="d_receita" data-fmt="spct" data-bom="sobe">—</b></div>
+      <div><span>Participação na receita</span><b data-draw="dv" data-source="drill" data-field="part_receita" data-fmt="pct">—</b></div>
+      <div><span>Receita por máquina</span><b data-draw="dv" data-source="drill" data-field="receita_maquina" data-fmt="brl">—</b></div>
+      <div><span>Máquinas</span><b data-draw="dv" data-source="drill" data-field="maquinas" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-receita-serie">
+        <h3>Receita mês a mês</h3>
+        <p class="lm-nota">Jan/2024 a dez/2025, da seleção atual.</p>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="receita"></div>
+      </div>
+      <div class="lm-card" id="drill-receita-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">Clique numa linha para descer um nível. Receita por máquina compara grupos de tamanhos diferentes.</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="receita" data-fmt="brl" data-barra="1"><button type="button" data-ordem="receita">Receita</button></th>
+          <th data-field="d_receita" data-fmt="spct" data-bom="sobe"><button type="button" data-ordem="d_receita">vs 2024</button></th>
+          <th data-field="part_receita" data-fmt="pct"><button type="button" data-ordem="part_receita">Particip.</button></th>
+          <th data-field="receita_maquina" data-fmt="brl"><button type="button" data-ordem="receita_maquina">Por máquina</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="receita"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Utilização e disponibilidade -->
+  <div data-kpi="uso" hidden>
+    <div class="lm-mini">
+      <div><span>Utilização física</span><b data-draw="dv" data-source="drill" data-field="util_fisica" data-fmt="pct">—</b> <em data-draw="dv" data-source="drill" data-field="d_util" data-fmt="pp" data-bom="sobe">—</em></div>
+      <div><span>Disponibilidade física</span><b data-draw="dv" data-source="drill" data-field="disponibilidade" data-fmt="pct">—</b> <em data-draw="dv" data-source="drill" data-field="d_disp" data-fmt="pp" data-bom="sobe">—</em></div>
+      <div><span>Dias locados</span><b data-draw="dv" data-source="drill" data-field="dias_locados" data-fmt="int">—</b></div>
+      <div><span>Dias de frota</span><b data-draw="dv" data-source="drill" data-field="dias_frota" data-fmt="int">—</b></div>
+      <div><span>Máquinas</span><b data-draw="dv" data-source="drill" data-field="maquinas" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-uso-serie">
+        <h3>Utilização e disponibilidade por mês</h3>
+        <ul class="lm-legenda"><li><i class="lm-cor-1"></i>Disponibilidade</li><li><i class="lm-cor-2"></i>Utilização</li></ul>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="uso"></div>
+      </div>
+      <div class="lm-card" id="drill-uso-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">A distância entre as duas taxas é a máquina disponível que ficou parada no pátio.</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="util_fisica" data-fmt="pct" data-barra="1"><button type="button" data-ordem="util_fisica">Utilização</button></th>
+          <th data-field="d_util" data-fmt="pp" data-bom="sobe"><button type="button" data-ordem="d_util">vs 2024</button></th>
+          <th data-field="disponibilidade" data-fmt="pct"><button type="button" data-ordem="disponibilidade">Disponib.</button></th>
+          <th data-field="d_disp" data-fmt="pp" data-bom="sobe"><button type="button" data-ordem="d_disp">vs 2024</button></th>
+          <th data-field="ociosidade" data-fmt="pct"><button type="button" data-ordem="ociosidade">Ociosa</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="util_fisica"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Margem -->
+  <div data-kpi="margem" hidden>
+    <div class="lm-mini">
+      <div><span>Margem</span><b data-draw="dv" data-source="drill" data-field="margem" data-fmt="pct">—</b> <em data-draw="dv" data-source="drill" data-field="d_margem" data-fmt="pp" data-bom="sobe">—</em></div>
+      <div><span>Receita</span><b data-draw="dv" data-source="drill" data-field="receita" data-fmt="brl">—</b></div>
+      <div><span>Custo de manutenção</span><b data-draw="dv" data-source="drill" data-field="custo_manut" data-fmt="brl">—</b></div>
+      <div><span>Depreciação</span><b data-draw="dv" data-source="drill" data-field="depreciacao" data-fmt="brl">—</b></div>
+      <div><span>Máquinas</span><b data-draw="dv" data-source="drill" data-field="maquinas" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-margem-serie">
+        <h3>Margem por mês</h3>
+        <p class="lm-nota">Mês a mês oscila com o faturamento de contratos semanais e diários.</p>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="margem"></div>
+      </div>
+      <div class="lm-card" id="drill-margem-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">Margem negativa: a máquina ou o grupo custou mais do que faturou no ano.</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="margem" data-fmt="pct" data-negativo="1"><button type="button" data-ordem="margem">Margem</button></th>
+          <th data-field="d_margem" data-fmt="pp" data-bom="sobe"><button type="button" data-ordem="d_margem">vs 2024</button></th>
+          <th data-field="receita" data-fmt="brl"><button type="button" data-ordem="receita">Receita</button></th>
+          <th data-field="custo_manut" data-fmt="brl"><button type="button" data-ordem="custo_manut">Manutenção</button></th>
+          <th data-field="depreciacao" data-fmt="brl"><button type="button" data-ordem="depreciacao">Depreciação</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="margem"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custo por hora -->
+  <div data-kpi="custo" hidden>
+    <div class="lm-mini">
+      <div><span>Custo por hora</span><b data-draw="dv" data-source="drill" data-field="custo_hora" data-fmt="brl2">—</b> <em data-draw="dv" data-source="drill" data-field="d_custo_hora" data-fmt="spct" data-bom="desce">—</em></div>
+      <div><span>Custo de manutenção</span><b data-draw="dv" data-source="drill" data-field="custo_manut" data-fmt="brl">—</b></div>
+      <div><span>Horas trabalhadas</span><b data-draw="dv" data-source="drill" data-field="horas_trab" data-fmt="int">—</b></div>
+      <div><span>Máquinas</span><b data-draw="dv" data-source="drill" data-field="maquinas" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-custo-serie">
+        <h3>Custo de manutenção por hora, por mês</h3>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="custo"></div>
+      </div>
+      <div class="lm-card" id="drill-custo-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">Máquina com poucas horas no ano tende a ter custo por hora alto: confira a coluna de horas.</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="custo_hora" data-fmt="brl2" data-barra="1"><button type="button" data-ordem="custo_hora">R$/h</button></th>
+          <th data-field="d_custo_hora" data-fmt="spct" data-bom="desce"><button type="button" data-ordem="d_custo_hora">vs 2024</button></th>
+          <th data-field="custo_manut" data-fmt="brl"><button type="button" data-ordem="custo_manut">Custo</button></th>
+          <th data-field="horas_trab" data-fmt="int"><button type="button" data-ordem="horas_trab">Horas</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="custo_hora"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manutenção -->
+  <div data-kpi="manut" hidden>
+    <div class="lm-mini">
+      <div><span>OS corretivas</span><b data-draw="dv" data-source="drill" data-field="pct_corretiva" data-fmt="pct">—</b> <em data-draw="dv" data-source="drill" data-field="d_pct_corretiva" data-fmt="pp" data-bom="desce">—</em></div>
+      <div><span>MTBF</span><b data-draw="dv" data-source="drill" data-field="mtbf" data-fmt="h">—</b></div>
+      <div><span>MTTR</span><b data-draw="dv" data-source="drill" data-field="mttr" data-fmt="h1">—</b></div>
+      <div><span>Total de OS</span><b data-draw="dv" data-source="drill" data-field="os_total" data-fmt="int">—</b></div>
+      <div><span>Máquinas</span><b data-draw="dv" data-source="drill" data-field="maquinas" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-manut-serie">
+        <h3>Participação das corretivas por mês</h3>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="manut"></div>
+      </div>
+      <div class="lm-card" id="drill-manut-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">MTBF alto é bom (mais horas entre falhas); MTTR alto é ruim (reparo demorado).</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="pct_corretiva" data-fmt="pct" data-barra="1"><button type="button" data-ordem="pct_corretiva">Corretivas</button></th>
+          <th data-field="os_total" data-fmt="int"><button type="button" data-ordem="os_total">OS</button></th>
+          <th data-field="mtbf" data-fmt="h"><button type="button" data-ordem="mtbf">MTBF</button></th>
+          <th data-field="mttr" data-fmt="h1"><button type="button" data-ordem="mttr">MTTR</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="pct_corretiva"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inadimplência -->
+  <div data-kpi="inad" hidden>
+    <div class="lm-mini">
+      <div><span>Inadimplência</span><b data-draw="dv" data-source="drill" data-field="inadimplencia" data-fmt="pct">—</b> <em data-draw="dv" data-source="drill" data-field="d_inad" data-fmt="pp" data-bom="desce">—</em></div>
+      <div><span>Vencido em aberto</span><b data-draw="dv" data-source="drill" data-field="vencido" data-fmt="brl">—</b></div>
+      <div><span>Faturado</span><b data-draw="dv" data-source="drill" data-field="receita" data-fmt="brl">—</b></div>
+      <div><span>Atraso médio</span><b data-draw="dv" data-source="drill" data-field="atraso_medio" data-fmt="dias">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-inad-serie">
+        <h3>Inadimplência por mês de competência</h3>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill" data-serie="inad"></div>
+      </div>
+      <div class="lm-card" id="drill-inad-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">Pela filial e segmento da máquina locada, na posição atual das faturas no sistema.</p>
+        <div class="lm-tab-box"><table data-source="drill" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="maquinas" data-fmt="int"><button type="button" data-ordem="maquinas">Máq.</button></th>
+          <th data-field="inadimplencia" data-fmt="pct" data-barra="1"><button type="button" data-ordem="inadimplencia">Inadimpl.</button></th>
+          <th data-field="d_inad" data-fmt="pp" data-bom="desce"><button type="button" data-ordem="d_inad">vs 2024</button></th>
+          <th data-field="vencido" data-fmt="brl"><button type="button" data-ordem="vencido">Vencido</button></th>
+          <th data-field="receita" data-fmt="brl"><button type="button" data-ordem="receita">Faturado</button></th>
+          <th data-field="atraso_medio" data-fmt="dias"><button type="button" data-ordem="atraso_medio">Atraso</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="inadimplencia"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leads -->
+  <div data-kpi="leads" hidden>
+    <div class="lm-mini">
+      <div><span>Leads</span><b data-draw="dv" data-source="drill_leads" data-field="leads" data-fmt="int">—</b></div>
+      <div><span>Conversão</span><b data-draw="dv" data-source="drill_leads" data-field="conversao" data-fmt="pct">—</b></div>
+      <div><span>Perda por falta de máquina</span><b data-draw="dv" data-source="drill_leads" data-field="perda_indisp" data-fmt="pct">—</b></div>
+      <div><span>Tempo médio de fechamento</span><b data-draw="dv" data-source="drill_leads" data-field="tempo_medio" data-fmt="dias">—</b></div>
+      <div><span>Com desfecho</span><b data-draw="dv" data-source="drill_leads" data-field="desfecho" data-fmt="int">—</b></div>
+    </div>
+    <div class="lm-grid">
+      <div class="lm-card" id="drill-leads-serie">
+        <h3>Leads por mês de envio</h3>
+        <ul class="lm-legenda"><li><i class="lm-cor-1"></i>Leads</li><li><i class="lm-cor-2"></i>Fechados</li></ul>
+        <div class="lm-chart dash-skeleton" data-draw="serie" data-source="drill_leads" data-serie="leads"></div>
+      </div>
+      <div class="lm-card" id="drill-leads-tab">
+        <h3>Abertura</h3>
+        <p class="lm-nota">Conversão = fechados ÷ (fechados + perdidos). Com poucos leads, uma venda muda muito a taxa.</p>
+        <div class="lm-tab-box"><table data-source="drill_leads" data-row-key="id"><thead><tr>
+          <th data-field="rotulo"><button type="button" data-ordem="rotulo">Nome</button></th>
+          <th data-field="leads" data-fmt="int" data-barra="1"><button type="button" data-ordem="leads">Leads</button></th>
+          <th data-field="fechados" data-fmt="int"><button type="button" data-ordem="fechados">Fechados</button></th>
+          <th data-field="perdidos" data-fmt="int"><button type="button" data-ordem="perdidos">Perdidos</button></th>
+          <th data-field="conversao" data-fmt="pct"><button type="button" data-ordem="conversao">Conversão</button></th>
+          <th data-field="perda_indisp" data-fmt="pct"><button type="button" data-ordem="perda_indisp">Falta máq.</button></th>
+        </tr></thead><tbody data-draw="drilltab" data-ordem-padrao="leads"></tbody></table></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="lm-aviso"><span data-so="frota">Linhas esmaecidas têm menos de 3 máquinas: leia como indício, não como tendência.</span><span data-so="leads" hidden>Linhas esmaecidas têm menos de 5 leads com desfecho: leia como indício, não como tendência.</span></p>
+</section>
+
+<section class="lm-secao" id="operacao">
+  <h2 class="lm-secao-tit">Receita e uso da frota</h2>
+  <div class="lm-grid">
+    <div class="lm-card" id="receita-mensal" data-abrir="receita" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+      <div class="lm-card-topo"><h3>Receita mês a mês, 2025 contra 2024</h3><span class="lm-dica">Detalhar ›</span></div>
+      <p class="lm-nota">Faturamento por mês de competência, em reais.</p>
+      <ul class="lm-legenda"><li><i class="lm-cor-3"></i>2024</li><li><i class="lm-cor-1"></i>2025</li></ul>
+      <div class="lm-chart dash-skeleton" data-draw="receita" data-source="mensal"></div>
+    </div>
+    <div class="lm-card" id="uso-mensal" data-abrir="uso" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+      <div class="lm-card-topo"><h3>Utilização e disponibilidade por mês</h3><span class="lm-dica">Detalhar ›</span></div>
+      <p class="lm-nota">Utilização: dias locados sobre dias de frota. Disponibilidade: horas sem parada de oficina sobre horas do período.</p>
+      <ul class="lm-legenda"><li><i class="lm-cor-1"></i>Disponibilidade física</li><li><i class="lm-cor-2"></i>Utilização física</li></ul>
+      <div class="lm-chart dash-skeleton" data-draw="uso" data-source="mensal_kpi"></div>
+    </div>
+  </div>
+  <div class="lm-card" id="segmentos">
+    <div class="lm-card-topo"><h3>Desempenho por segmento · 2025</h3><span class="lm-dica">Clique num segmento para detalhar ›</span></div>
+    <p class="lm-nota">Margem = (receita − custo de manutenção − depreciação por horas) ÷ receita. MTBF e MTTR em horas.</p>
+    <div class="lm-tab-box">
+      <table data-source="seg_kpi" data-row-key="segmento">
+        <thead><tr>
+          <th data-field="segmento">Segmento</th>
+          <th data-field="equipamentos">Máquinas</th>
+          <th data-field="receita">Receita</th>
+          <th data-field="util_fisica">Utilização</th>
+          <th data-field="disponibilidade">Disponib.</th>
+          <th data-field="margem">Margem</th>
+          <th data-field="custo_hora">Manut. R$/h</th>
+          <th data-field="mtbf">MTBF</th>
+          <th data-field="mttr">MTTR</th>
+        </tr></thead>
+        <tbody data-draw="segtab"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="lm-secao" id="manutencao-financeiro">
+  <h2 class="lm-secao-tit">Manutenção e financeiro</h2>
+  <div class="lm-grid">
+    <div class="lm-card" id="manutencao" data-abrir="manut" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+      <div class="lm-card-topo"><h3>Mix de ordens de serviço por mês</h3><span class="lm-dica">Detalhar ›</span></div>
+      <p class="lm-nota">Quantidade de OS abertas por tipo, 2024 e 2025.</p>
+      <ul class="lm-legenda"><li><i class="lm-cor-1"></i>Preventiva</li><li><i class="lm-cor-4"></i>Preditiva</li><li><i class="lm-cor-2"></i>Corretiva</li></ul>
+      <div class="lm-chart dash-skeleton" data-draw="mix" data-source="mensal"></div>
+    </div>
+    <div class="lm-card" id="financeiro">
+      <div data-abrir="inad" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+        <div class="lm-card-topo"><h3>Inadimplência por ano de competência</h3><span class="lm-dica">Detalhar ›</span></div>
+        <p class="lm-nota">Valor vencido e não pago sobre o valor faturado, na posição atual das faturas no sistema. 2026 é o ano em curso.</p>
+        <div class="lm-hbar dash-skeleton" data-draw="hbar" data-source="inad" data-label="ano" data-value="inadimplencia" data-fmt="pct" data-max="0.15" data-note="atraso_medio_dias" data-note-fmt="atraso"></div>
+      </div>
+      <h3 style="margin-top: var(--cds-gap-lg)">Contratos ativos a vencer</h3>
+      <p class="lm-nota">Contratos ativos pelo fim previsto, contado a partir de hoje.</p>
+      <div class="lm-hbar dash-skeleton" data-draw="hbar" data-source="contratos_vencer" data-label="janela" data-value="contratos" data-fmt="int"></div>
+    </div>
+  </div>
+</section>
+
+<section class="lm-secao" id="comercial">
+  <h2 class="lm-secao-tit">Comercial · leads de 2026</h2>
+  <div class="lm-tiles">
+    <button type="button" class="lm-tile" data-abrir="leads" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Taxa de conversão</span><span class="lm-tile-val" data-draw="v" data-source="leads_kpi" data-field="conversao" data-row="0" data-fmt="pct">—</span><span class="lm-tile-var">fechados sobre leads com desfecho</span><span class="lm-dica">Detalhar ›</span></button>
+    <button type="button" class="lm-tile" data-abrir="leads" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Tempo médio de fechamento</span><span class="lm-tile-val" data-draw="v" data-source="leads_status" data-field="tempo_medio_fechamento_dias" data-where="status=Fechado" data-fmt="dias">—</span><span class="lm-tile-var">do envio do lead ao contrato</span><span class="lm-dica">Detalhar ›</span></button>
+    <button type="button" class="lm-tile" data-abrir="leads" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Leads recebidos</span><span class="lm-tile-val" data-draw="v" data-source="leads_kpi" data-field="total" data-row="0" data-fmt="int">—</span><span class="lm-tile-var"><span data-draw="v" data-source="leads_kpi" data-field="em_andamento" data-row="0" data-fmt="int">—</span> ainda em andamento</span><span class="lm-dica">Detalhar ›</span></button>
+    <button type="button" class="lm-tile" data-abrir="leads" aria-expanded="false" aria-controls="detalhe"><span class="lm-tile-rot">Perda por indisponibilidade</span><span class="lm-tile-val" style="color: var(--lm-laranja)" data-draw="v" data-source="leads_kpi" data-field="perda_indisponibilidade" data-row="0" data-fmt="pct">—</span><span class="lm-tile-var">leads perdidos por falta de máquina</span><span class="lm-dica">Detalhar ›</span></button>
+  </div>
+  <div class="lm-grid">
+    <div class="lm-card" id="leads-origem" data-abrir="leads" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+      <div class="lm-card-topo"><h3>Leads por origem</h3><span class="lm-dica">Detalhar ›</span></div>
+      <p class="lm-nota">Quantidade de leads e conversão dentro de cada canal.</p>
+      <div class="lm-hbar dash-skeleton" data-draw="hbar" data-source="origem_kpi" data-label="origem" data-value="leads" data-fmt="int" data-note="conversao" data-note-fmt="conv"></div>
+    </div>
+    <div class="lm-card" id="leads-perdas" data-abrir="leads" tabindex="0" role="button" aria-expanded="false" aria-controls="detalhe">
+      <div class="lm-card-topo"><h3>Leads perdidos por motivo</h3><span class="lm-dica">Detalhar ›</span></div>
+      <p class="lm-nota">Falta de máquina lidera: sinal de frota curta nos modelos mais pedidos.</p>
+      <div class="lm-hbar dash-skeleton" data-draw="hbar" data-source="leads_motivo" data-label="motivo" data-value="leads" data-fmt="int" data-destaque="Indisponibilidade de máquina"></div>
+    </div>
+  </div>
+</section>
+
+<details id="metodo">
+  <summary>Definições e premissas</summary>
+  <dl>
+    <dt>Utilização física</dt><dd>Dias em que a máquina esteve em contrato (início até devolução, sem cancelados) sobre os dias em que já fazia parte da frota.</dd>
+    <dt>Disponibilidade física</dt><dd>(Horas do período − horas de parada em OS) ÷ horas do período, contando 24 h por dia.</dd>
+    <dt>Ociosa</dt><dd>Disponibilidade − utilização: parcela do tempo em que a máquina podia trabalhar e não estava locada.</dd>
+    <dt>Margem da frota</dt><dd>(Receita − peças e mão de obra das OS − depreciação) ÷ receita. Depreciação linear por horas: valor de aquisição ÷ vida útil em horas × horas trabalhadas.</dd>
+    <dt>Custo de manutenção por hora</dt><dd>Peças e mão de obra das OS ÷ horas trabalhadas pelo horímetro.</dd>
+    <dt>MTBF e MTTR</dt><dd>Horas trabalhadas ÷ OS corretivas, e horas paradas em corretivas ÷ OS corretivas.</dd>
+    <dt>Inadimplência</dt><dd>Faturas com status Vencido sobre o total faturado da competência. O atraso médio considera só faturas pagas depois do vencimento.</dd>
+    <dt>Conversão de leads</dt><dd>Leads Fechado ÷ (Fechado + Perdidos), sem os leads ainda em andamento.</dd>
+  </dl>
+  <p>Fora do cálculo: horímetro e ordens de serviço de 2026, que não existem na base, por isso os indicadores operacionais vão até dezembro de 2025. Máquinas vendidas ou baixadas contam na frota desde a aquisição, porque a base não traz a data de saída. Contratos marcados como ativos com fim previsto já passado aparecem no sistema como "devolução atrasada" e não entram em "a vencer". Os leads de 2026 são lidos do sistema e incluem os que chegarem pelo site. No detalhamento, a localização é a filial dona da máquina; nos leads, é a cidade de quem pediu.</p>
+</details>
+
+<p class="lm-rodape">LocaMaq é uma empresa fictícia. Todos os dados foram gerados para estudo e portfólio, sem relação com uma operação real.</p>
+
+</div>
+</div>

@@ -5,6 +5,32 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (09/11/2026, sistema de gestão LocaMaq em `app/`, incremento 1)
+- Pedido do usuário: transformar o dashboard do Cowork num sistema operacional fora do Claude,
+  parecido com o Salesforce, com as cores do dashboard. Plano e decisões em
+  `docs/plano_sistema_gestao.md`; como rodar em `app/README.md`.
+- Django 5.2 + SQLite: leads (lista, Kanban por etapa, conversão em cliente e contrato), clientes,
+  frota (situação calculada), contratos (bloqueia máquina já contratada no período), oficina
+  (quadro e lista de OS, horímetro que não volta), faturas, atividades e tarefas, busca global,
+  exportação CSV, perfis Gestor, Vendedor, Atendimento e Oficina (`criar_perfis`).
+- `importar_base`: carrega os CSVs de `data/processed/` e da extensão 2026 sem duplicar; os 66
+  leads históricos recebem `LEAD_0001/26` a `LEAD_0066/26` pela data de envio.
+- Painel: código do dashboard do Cowork (07/11/2026) portado sem mudar fórmulas; `crm/kpis.py`
+  monta as tabelas a partir do banco. Conferido contra os CSVs do Cowork: 3.107 linhas
+  máquina × mês e 15 medidas sem divergência, além de mensal, segmentos, faturas e leads.
+  Regra de horas trabalhadas descoberta na conferência: cada intervalo do horímetro conta no mês
+  da leitura seguinte, e o trecho antes da primeira leitura é estimado pela taxa do primeiro
+  intervalo.
+- API `POST /api/leads/` para o n8n: aceita só chamada direta da rede interna do Docker
+  (`LOCAMAQ_API_REDE_INTERNA=1`) ou com chave (`LOCAMAQ_API_TOKEN`); sem `id_lead`, o sistema gera
+  o número, nunca abaixo de `LOCAMAQ_LEAD_PISO` (último número já usado na planilha).
+- `app/Dockerfile` (gunicorn + WhiteNoise, prefixo `/crm`), testado no PC atrás de um Caddy.
+- `app/abrir_sistema.bat`: duplo clique prepara o ambiente, pede o administrador na primeira vez
+  e abre o sistema no navegador.
+- 29 testes (`manage.py test crm`) passando em 09/11/2026.
+- Não feito: publicar na AWS e ligar o n8n à API (dependem de confirmação do usuário; roteiro
+  só local em `docs/servidor_n8n_aws/03_sistema_gestao.md`).
+
 ### Added (08/11/2026, roteamento de leads por categoria no Slack e atualização da Stack com Google Antigravity)
 - Workspace do Slack (`LocaMaq`) estruturado com 7 canais públicos por categoria de equipamento (`#orcamento-escavadeiras`, `#orcamento-retroescavadeiras`, `#orcamento-pas-carregadeiras`, `#orcamento-guindastes`, `#orcamento-empilhadeiras`, `#orcamento-plataformas`, `#orcamento-geradores`), além de `#lead-locamaq` como canal de triagem para pedidos com `"Ainda não sei"`.
 - App do Slack (`locamaq orcamentos`) configurado com escopos de bot (`chat:write`, `chat:write.public`, `channels:read`, `groups:read`) e conectado ao n8n via credencial `Slack API` (`Access Token`).

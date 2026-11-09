@@ -18,6 +18,12 @@ GitHub por decisão dele: não versionar nem dar push). Cópia do fluxo, sem IDs
 `site/privacidade.html`. Fotos da frota: `docs/prompts_imagens_frota.md`. Power BI segue em
 paralelo, sem depender disso.
 
+**Sistema de gestão (09/11/2026):** em `app/`, Django + SQLite, no estilo do Salesforce (leads,
+Kanban, clientes, frota, contratos, oficina, faturas, atividades, painel do Cowork portado).
+Como rodar: `app/README.md`; plano e próximos passos: `docs/plano_sistema_gestao.md`. Ambiente
+Python próprio em `app/.venv` (fora do Git). Testes: `manage.py test crm` (devem passar antes de
+commit que toque `app/`). Publicar na AWS e ligar o n8n à API só com confirmação do usuário.
+
 **Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem
 pedidos e requisições. Ainda não construída e com escopo a discutir: ver `spec.md`, seção 9. No
 site há só um botão que abre um aviso de "em planejamento".

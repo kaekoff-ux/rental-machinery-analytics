@@ -1,0 +1,65 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Kanban de leads{% endblock %}
+{% block conteudo %}
+<div class="cab">
+  <div class="cab-titulo">
+    <span class="icone-obj lead">{% include "crm/_icone.html" with nome="lead" %}</span>
+    <div><p class="eyebrow">Funil comercial</p><h1>Kanban de leads</h1>
+    <p class="sub">Arraste o cartão para mudar a etapa. Fechados e perdidos mostram só os últimos 60 dias.</p></div>
+  </div>
+  <div class="acoes">
+    <a class="btn" href="{% url 'crm:leads' %}">Ver em lista</a>
+    {% if perms.crm.add_lead %}<a class="btn btn-prim" href="{% url 'crm:lead_novo' %}">{% include "crm/_icone.html" with nome="mais" %}Novo lead</a>{% endif %}
+  </div>
+</div>
+
+<form class="filtros" method="get">
+  <label class="so-leitor" for="k-seg">Segmento</label>
+  <select id="k-seg" name="segmento" data-enviar>
+    <option value="">Segmento: todos</option>
+    {% for s in segmentos %}<option value="{{ s }}"{% if s == segmento %} selected{% endif %}>{{ s }}</option>{% endfor %}
+  </select>
+  <label class="btn"><input type="checkbox" name="meus" value="1" data-enviar{% if meus %} checked{% endif %}> Só os meus</label>
+</form>
+
+<div class="kanban" data-kanban data-tipo="lead">
+  {% for col in colunas %}
+  <section class="coluna {{ col.cor }}" data-coluna="{{ col.etapa }}" aria-label="{{ col.etapa }}">
+    <div class="coluna-topo">{{ col.etapa }} <span>{{ col.total }}</span></div>
+    {% for l in col.itens %}
+    <article class="kcard" draggable="{% if pode %}true{% else %}false{% endif %}" data-url="{% url 'crm:lead_etapa' l.pk %}" data-cartao>
+      <span class="cod">{{ l.codigo }}</span>
+      <a href="{{ l.get_absolute_url }}">{{ l.nome }}</a>
+      <span class="meta"><span>{{ l.segmento|default:"Sem segmento" }}</span>{% if l.modelo %}<span>{{ l.modelo }}</span>{% endif %}</span>
+      <span class="meta"><span>{{ l.cidade|default:"—" }}</span><span>{{ l.origem }}</span><span>{{ l.data_envio|date:"d/m" }}</span>{% if l.responsavel %}<span>{{ l.responsavel.get_full_name|default:l.responsavel.username }}</span>{% endif %}</span>
+      {% if l.motivo_perda %}<span class="meta"><span class="selo ruim">{{ l.motivo_perda }}</span></span>{% endif %}
+      {% if pode %}
+      <form class="mover" method="post" action="{% url 'crm:lead_etapa' l.pk %}">{% csrf_token %}
+        <label class="so-leitor" for="mv-{{ l.pk }}">Mover {{ l.codigo }} para</label>
+        <select id="mv-{{ l.pk }}" name="status" data-enviar-mover>{% for c in colunas %}<option value="{{ c.etapa }}"{% if c.etapa == col.etapa %} selected{% endif %}>{{ c.etapa }}</option>{% endfor %}</select>
+      </form>
+      {% endif %}
+    </article>
+    {% empty %}
+    <p class="vazio">Nenhum lead nesta etapa.</p>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
+
+<dialog id="dialogo-perda">
+  <form method="dialog" data-form-perda>
+    <h2>Motivo da perda</h2>
+    <p class="nota">Este dado alimenta o indicador "perda por indisponibilidade" do painel.</p>
+    <div class="form-linha" style="margin:.8rem 0">
+      <label for="motivo-perda">Motivo</label>
+      <select id="motivo-perda" name="motivo_perda" required>
+        <option value="">Escolha…</option>
+        {% for m in motivos %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="form-rodape"><button class="btn" value="cancelar" formnovalidate>Cancelar</button><button class="btn btn-prim" value="ok">Marcar como perdido</button></div>
+  </form>
+</dialog>
+{% csrf_token %}
+{% endblock %}

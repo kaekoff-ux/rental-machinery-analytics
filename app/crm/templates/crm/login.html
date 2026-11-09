@@ -1,0 +1,24 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Entrar{% endblock %}
+{% block conteudo %}
+<div class="login">
+  <form class="card login-cartao" method="post">
+    {% csrf_token %}
+    <a class="marca" href="#" aria-hidden="true" tabindex="-1">
+      <span class="marca-sinal">{% include "crm/_icone.html" with nome="marca" %}</span>
+      <span>LocaMaq<small>Gestão</small></span>
+    </a>
+    <div>
+      <h1>Entrar no sistema</h1>
+      <p class="nota">Leads, frota, contratos, oficina e faturamento num só lugar.</p>
+    </div>
+    {% if form.errors %}<p class="erro" role="alert">Usuário ou senha incorretos. Confira e tente de novo.</p>{% endif %}
+    <div class="form-campo"><label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>{{ form.username }}</div>
+    <div class="form-campo"><label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>{{ form.password }}</div>
+    <input type="hidden" name="next" value="{{ next }}">
+    <button class="btn btn-prim" type="submit" style="justify-content:center;padding:.7rem 1rem">Entrar</button>
+    <p class="nota">Case fictício de portfólio. O acesso é criado pelo administrador do sistema.</p>
+  </form>
+</div>
+<style>.login .form-campo input { width: 100%; padding: .6rem .8rem; border-radius: 10px; border: 1px solid var(--lm-pilula-borda); background: var(--lm-campo); }</style>
+{% endblock %}

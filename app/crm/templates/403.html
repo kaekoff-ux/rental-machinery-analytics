@@ -1,0 +1,10 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Sem acesso{% endblock %}
+{% block conteudo %}
+<section class="card" style="max-width:40rem">
+  <p class="eyebrow">Acesso negado</p>
+  <h1 style="margin:.3rem 0 .6rem">Seu perfil não permite esta ação</h1>
+  <p class="nota">Peça ao administrador para incluir seu usuário no perfil certo (Gestor, Vendedor, Atendimento ou Oficina).</p>
+  <p style="margin-top:1rem"><a class="btn" href="{% url 'crm:inicio' %}">Voltar ao início</a></p>
+</section>
+{% endblock %}

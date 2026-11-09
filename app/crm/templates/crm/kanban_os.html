@@ -1,0 +1,52 @@
+{% extends "crm/base.html" %}
+{% block titulo %}Oficina{% endblock %}
+{% block conteudo %}
+<div class="cab">
+  <div class="cab-titulo">
+    <span class="icone-obj os">{% include "crm/_icone.html" with nome="os" %}</span>
+    <div><p class="eyebrow">Oficina</p><h1>Quadro de ordens de serviço</h1>
+    <p class="sub">Arraste a OS entre as colunas. Concluídas mostra as 20 mais recentes.</p></div>
+  </div>
+  <div class="acoes">
+    <a class="btn" href="{% url 'crm:ordens' %}">Ver em lista</a>
+    {% if perms.crm.add_ordemservico %}<a class="btn btn-prim" href="{% url 'crm:os_nova' %}">{% include "crm/_icone.html" with nome="mais" %}Abrir OS</a>{% endif %}
+  </div>
+</div>
+
+<form class="filtros" method="get">
+  <label class="so-leitor" for="o-filial">Filial</label>
+  <select id="o-filial" name="filial" data-enviar>
+    <option value="">Filial: todas</option>
+    {% for f in filiais %}<option value="{{ f }}"{% if f == filial %} selected{% endif %}>{{ f }}</option>{% endfor %}
+  </select>
+</form>
+
+<div class="kanban" data-kanban data-tipo="os">
+  {% for col in colunas %}
+  <section class="coluna {{ col.cor }}" data-coluna="{{ col.etapa }}" aria-label="{{ col.etapa }}">
+    <div class="coluna-topo">{{ col.etapa }} <span>{{ col.total }}</span></div>
+    {% for o in col.itens %}
+    <article class="kcard" draggable="{% if pode %}true{% else %}false{% endif %}" data-url="{% url 'crm:os_status' o.pk %}" data-cartao>
+      <span class="cod">{{ o.codigo }} · {{ o.tipo }}</span>
+      <a href="{{ o.get_absolute_url }}">{{ o.descricao }}</a>
+      <span class="meta"><span>{{ o.equipamento.codigo }} · {{ o.equipamento.fabricante }} {{ o.equipamento.modelo }}</span><span>{{ o.equipamento.filial }}</span></span>
+      <span class="meta">
+        <span>aberta {{ o.data_abertura|date:"d/m/Y" }}</span>
+        {% if o.dias_aberta is not None %}<span{% if o.dias_aberta > 7 %} class="atraso"{% endif %}>{{ o.dias_aberta }} dia{{ o.dias_aberta|pluralize }}</span>{% endif %}
+        {% if o.data_conclusao %}<span>concluída {{ o.data_conclusao|date:"d/m/Y" }}</span>{% endif %}
+      </span>
+      {% if pode %}
+      <form class="mover" method="post" action="{% url 'crm:os_status' o.pk %}">{% csrf_token %}
+        <label class="so-leitor" for="mvo-{{ o.pk }}">Mover {{ o.codigo }} para</label>
+        <select id="mvo-{{ o.pk }}" name="status" data-enviar-mover>{% for c in colunas %}<option value="{{ c.etapa }}"{% if c.etapa == col.etapa %} selected{% endif %}>{{ c.etapa }}</option>{% endfor %}</select>
+      </form>
+      {% endif %}
+    </article>
+    {% empty %}
+    <p class="vazio">Nenhuma OS.</p>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
+{% csrf_token %}
+{% endblock %}

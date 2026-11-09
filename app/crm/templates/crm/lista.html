@@ -1,0 +1,54 @@
+{% extends "crm/base.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+{% block conteudo %}
+<div class="cab">
+  <div class="cab-titulo">
+    <span class="icone-obj {{ objeto }}">{% include "crm/_icone.html" with nome=objeto %}</span>
+    <div><p class="eyebrow">Lista</p><h1>{{ titulo }}</h1><p class="sub">{{ total }} registro{{ total|pluralize }}</p></div>
+  </div>
+  <div class="acoes">
+    {% for b in botoes %}<a class="btn" href="{{ b.url }}">{{ b.rotulo }}</a>{% endfor %}
+    <a class="btn" href="{{ url_csv }}">{% include "crm/_icone.html" with nome="baixar" %}Exportar CSV</a>
+    {% if url_novo %}<a class="btn btn-prim" href="{{ url_novo }}">{% include "crm/_icone.html" with nome="mais" %}Novo</a>{% endif %}
+  </div>
+</div>
+
+<section class="card">
+  <form class="barra-lista" method="get">
+    <div class="filtros">
+      <div class="campo-busca">
+        {% include "crm/_icone.html" with nome="busca" %}
+        <label class="so-leitor" for="q">Buscar nesta lista</label>
+        <input id="q" type="search" name="q" value="{{ q }}" placeholder="Buscar nesta lista">
+      </div>
+      {% for f in filtros %}
+      <label class="so-leitor" for="f-{{ f.param }}">{{ f.rotulo }}</label>
+      <select id="f-{{ f.param }}" name="{{ f.param }}" data-enviar>
+        <option value="">{{ f.rotulo }}: todos</option>
+        {% for valor, rotulo in f.opcoes %}<option value="{{ valor }}"{% if valor == f.valor %} selected{% endif %}>{{ rotulo }}</option>{% endfor %}
+      </select>
+      {% endfor %}
+      {% for nome, valor in ocultos %}<input type="hidden" name="{{ nome }}" value="{{ valor }}">{% endfor %}
+      <button class="btn" type="submit">Filtrar</button>
+      {% if request.GET %}<a class="btn" href="{{ request.path }}">Limpar</a>{% endif %}
+    </div>
+    {% if visoes %}
+    <nav class="visoes" aria-label="Visões da lista">
+      {% for v in visoes %}<a href="{{ v.url }}"{% if v.ativa %} aria-current="true"{% endif %}>{{ v.rotulo }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+  </form>
+
+  <div style="margin-top:.8rem">{% include "crm/_tabela.html" %}</div>
+
+  {% if is_paginated %}
+  <div class="rodape-lista">
+    <span>Página {{ page_obj.number }} de {{ paginator.num_pages }} · {{ total }} registros</span>
+    <nav class="paginacao" aria-label="Páginas">
+      {% if page_obj.has_previous %}<a class="btn btn-pequeno" href="?{% if querystring %}{{ querystring }}&amp;{% endif %}page={{ page_obj.previous_page_number }}">‹ Anterior</a>{% endif %}
+      {% if page_obj.has_next %}<a class="btn btn-pequeno" href="?{% if querystring %}{{ querystring }}&amp;{% endif %}page={{ page_obj.next_page_number }}">Próxima ›</a>{% endif %}
+    </nav>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}
