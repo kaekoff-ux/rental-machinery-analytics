@@ -30,16 +30,21 @@ ambiente Python, cria o banco com a base fictícia e pede para você criar o usu
 administrador (a senha não aparece enquanto você digita). Depois abre
 <http://127.0.0.1:8000> no navegador. Fechar a janela preta desliga o sistema.
 
+O ambiente Python fica **fora da pasta do projeto**, em `%USERPROFILE%\.venvs\locamaq-gestao`,
+porque a pasta do projeto é sincronizada pelo Google Drive e o ambiente tem milhares de arquivos
+regeneráveis.
+
 Passo a passo manual (PowerShell, dentro de `app\`):
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe manage.py migrate
-.\.venv\Scripts\python.exe manage.py criar_perfis
-.\.venv\Scripts\python.exe manage.py importar_base
-.\.venv\Scripts\python.exe manage.py createsuperuser
-.\.venv\Scripts\python.exe manage.py runserver
+$py = "$env:USERPROFILE\.venvs\locamaq-gestao\Scripts\python.exe"
+python -m venv "$env:USERPROFILE\.venvs\locamaq-gestao"
+& $py -m pip install -r requirements.txt
+& $py manage.py migrate
+& $py manage.py criar_perfis
+& $py manage.py importar_base
+& $py manage.py createsuperuser
+& $py manage.py runserver
 ```
 
 Abra <http://127.0.0.1:8000>. O `createsuperuser` pede usuário e senha: quem digita é você.
@@ -53,7 +58,7 @@ Abra <http://127.0.0.1:8000>. O `createsuperuser` pede usuário e senha: quem di
 ## Testes
 
 ```powershell
-.\.venv\Scripts\python.exe manage.py test crm
+& "$env:USERPROFILE\.venvs\locamaq-gestao\Scripts\python.exe" manage.py test crm
 ```
 
 29 testes: importação, indicadores contra os CSVs do dashboard do Cowork

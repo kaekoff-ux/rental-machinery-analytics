@@ -1,16 +1,20 @@
 @echo off
 rem Abre o sistema de gestao LocaMaq no computador. Duplo clique neste arquivo.
 rem Fechar esta janela desliga o sistema.
+rem O ambiente Python fica fora da pasta do projeto (sincronizada pelo Google Drive):
+rem %USERPROFILE%\.venvs\locamaq-gestao
 chcp 65001 >nul
 title LocaMaq Gestao - servidor local
 cd /d "%~dp0"
+set "VENV=%USERPROFILE%\.venvs\locamaq-gestao"
+set "PY=%VENV%\Scripts\python.exe"
+set "PYTHONDONTWRITEBYTECODE=1"
 
-if not exist ".venv\Scripts\python.exe" (
+if not exist "%PY%" (
   echo Preparando o ambiente Python, so na primeira vez...
-  python -m venv .venv || goto erro
-  ".venv\Scripts\python.exe" -m pip install -r requirements.txt || goto erro
+  python -m venv "%VENV%" || goto erro
+  "%PY%" -m pip install -r requirements.txt || goto erro
 )
-set "PY=.venv\Scripts\python.exe"
 
 "%PY%" manage.py migrate --noinput || goto erro
 "%PY%" manage.py criar_perfis >nul || goto erro

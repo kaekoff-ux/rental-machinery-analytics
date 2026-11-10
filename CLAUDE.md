@@ -35,7 +35,8 @@ base: as OS abertas no fim não têm conclusão, o painel avisa isso.
 **Sistema de gestão (09/11/2026):** em `app/`, Django + SQLite, no estilo do Salesforce (leads,
 Kanban, clientes, frota, contratos, oficina, faturas, atividades, painel do Cowork portado).
 Como rodar: `app/README.md`; plano e próximos passos: `docs/plano_sistema_gestao.md`. Ambiente
-Python próprio em `app/.venv` (fora do Git). Testes: `manage.py test crm` (devem passar antes de
+Python próprio em `C:\Users\Admin\.venvs\locamaq-gestao` (fora da pasta sincronizada pelo Drive
+desde 10/11/2026; não recriar `app/.venv`). Testes: `manage.py test crm` (devem passar antes de
 commit que toque `app/`). A publicação na AWS ficou suspensa em 10/11/2026 (o usuário quer só
 consulta, atendida pelo `painel/`); retomar só com novo pedido.
 
