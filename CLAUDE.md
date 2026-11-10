@@ -21,8 +21,10 @@ paralelo, sem depender disso.
 **Painel de consulta (10/11/2026):** em `painel/`, página estática (HTML, CSS, JS e d3 local) no
 estilo Salesforce Lightning com a paleta LocaMaq, publicada pelo GitHub Pages em
 <https://kaekoff-ux.github.io/rental-machinery-analytics/painel/>. Decisão do usuário: o painel é só
-para consulta, então não precisa de servidor (AWS/Docker). Setores Resumo, Receita, Frota,
-Oficina, Manutenção, Financeiro e Comercial, painel de setores à direita, filtros (filial ou
+para consulta, então não precisa de servidor (AWS/Docker). Barra de setores no topo, na ordem de
+leitura de um CEO (Resumo, Receita, Comercial, Financeiro, Frota, Manutenção, Oficina); o Resumo é
+dividido em faixas de 4 cards (Receita e resultado, Comercial, Financeiro, Operação) com minigráfico
+mês a mês em cada card; filtros (filial ou
 cidade, segmento, período ano/mês, comparar com mês anterior ou mesmo mês do ano anterior) e
 tabela de comparação mês a mês; o estado fica no endereço (`#frota?filial=Sorocaba&periodo=2025-03`).
 Dados: `python src/painel/gerar_dados_painel.py` gera `painel/dados.js` (máquina × mês, OS e leads,

@@ -5,6 +5,16 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Changed (10/11/2026, painel: setores no topo e Resumo na ordem do CEO)
+- Pedido do usuário: o painel lateral deixava espaço vazio. Os setores viraram uma barra no topo,
+  no mesmo estilo da barra de filtros, e o conteúdo passou a usar a largura toda.
+- Ordem de leitura de um CEO: Resumo, Receita, Comercial, Financeiro, Frota, Manutenção, Oficina.
+- Resumo em faixas de 4 cards: Receita e resultado (meta, receita, margem, receita por máquina),
+  Comercial (leads, conversão, perda por falta de máquina, tempo até fechar), Financeiro
+  (inadimplência, vencido, atraso, custo de manutenção) e Operação (utilização, disponibilidade,
+  corretivas, oficina).
+- Minigráfico mês a mês em cada card de indicador, com o período escolhido destacado.
+
 ### Fixed (10/11/2026, painel: lista dos filtros ilegível no tema escuro)
 - `painel/estilo.css`: com um filtro ativo, a lista aberta herdava o fundo laranja translúcido da
   caixa e virava bege claro com texto claro por cima. As opções agora têm fundo e texto próprios

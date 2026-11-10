@@ -99,9 +99,11 @@
       serie: [['inadimplencia', 'Inadimplência', 'var(--sf-acento)', 'pct']], y: 'pct0', tabela: ['inadimplencia', 'Inadimplência', 'pct', 'pp', -1],
     },
   };
+  // Ordem de leitura de um CEO: visão geral, depois o que mexe no caixa (receita, vendas, cobrança),
+  // depois a operação que sustenta isso (frota, manutenção, oficina).
   const SETORES = [
-    ['resumo', 'Resumo'], ['receita', 'Receita'], ['frota', 'Frota'], ['oficina', 'Oficina'],
-    ['manutencao', 'Manutenção'], ['financeiro', 'Financeiro'], ['comercial', 'Comercial'],
+    ['resumo', 'Resumo'], ['receita', 'Receita'], ['comercial', 'Comercial'], ['financeiro', 'Financeiro'],
+    ['frota', 'Frota'], ['manutencao', 'Manutenção'], ['oficina', 'Oficina'],
   ];
 
   // ---------- Estado (fica no endereço: #frota?filial=Sorocaba&periodo=2025-03&comparar=ano) ----------
@@ -143,11 +145,34 @@
     h('div', {class: 'sf-comp-cab'}, h('h2', {}, titulo, sub ? h('span', {class: 'sub'}, sub) : null), h('div', {class: 'sf-leg'}, acoes)),
     h('div', {class: 'sf-comp-corpo'}, corpo), rodape ? h('div', {class: 'sf-comp-rodape'}, rodape) : null);
 
-  const kpi = ({rot, valor, formato, delta, tipo, bom, dica, extra, ir}) => {
+  // Minigráfico mês a mês dentro do card, com o período escolhido destacado.
+  const spark = (valores, marcar = []) => {
+    const el = h('div', {class: 'sf-spark', 'aria-hidden': 'true'});
+    requestAnimationFrame(() => {
+      const ok = valores.filter((v) => v != null && isFinite(v));
+      if (ok.length < 2) return;
+      const W = Math.max(60, el.clientWidth), H = el.clientHeight - 8 || 34;
+      const x = d3.scaleLinear([0, valores.length - 1], [3, W - 3]);
+      const [lo, hi] = d3.extent(ok);
+      const y = d3.scaleLinear(lo === hi ? [lo - 1, hi + 1] : [lo, hi], [H - 3, 3]);
+      const passo = (W - 6) / Math.max(1, valores.length - 1);
+      const svg = d3.create('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`);
+      marcar.forEach((i) => svg.append('rect').attr('x', x(i) - passo / 2).attr('width', passo).attr('height', H).style('fill', 'var(--sf-acento-tinta)'));
+      svg.append('path').attr('d', d3.line().defined((v) => v != null && isFinite(v)).x((_, i) => x(i)).y((v) => y(v))(valores))
+        .attr('fill', 'none').style('stroke', 'var(--sf-marca)').attr('stroke-width', 1.6).attr('stroke-linejoin', 'round');
+      const ult = marcar.length ? marcar[marcar.length - 1] : valores.length - 1;
+      if (valores[ult] != null && isFinite(valores[ult])) svg.append('circle').attr('cx', x(ult)).attr('cy', y(valores[ult])).attr('r', 3).style('fill', 'var(--sf-acento)');
+      el.append(svg.node());
+    });
+    return el;
+  };
+
+  const kpi = ({rot, valor, formato, delta, tipo, bom, dica, extra, ir, serie, marcar}) => {
     const d = h('span', {class: 'sf-delta ' + classeDelta(delta, bom, tipo)}, textoDelta(tipo, delta));
     const comparar = tipo && !nomeComp().startsWith('sem');
     const filhos = [h('span', {class: 'rot'}, rot), h('span', {class: 'val'}, fmt(formato, valor)),
-      h('span', {class: 'det'}, comparar ? [d, h('span', {}, nomeComp())] : null, extra || null)];
+      h('span', {class: 'det'}, comparar ? [d, h('span', {}, nomeComp())] : null, extra || null),
+      serie ? spark(serie, marcar) : null];
     return ir ? h('button', {type: 'button', class: 'sf-kpi', title: dica, onclick: () => mudar({setor: ir})}, filhos)
       : h('div', {class: 'sf-kpi', title: dica}, filhos);
   };
@@ -324,11 +349,12 @@
   const telaOp = (id, titulo) => {
     const cfg = OP[id], f = filtrosOp(), per = perAtual(), comp_ = perComp();
     const atual = C.op(f, per) || {}, antes = C.op(f, comp_) || {};
-    const cartoes = cfg.kpis.map(([c, rot, formato, tipo, bom, dica]) => kpi({rot, valor: atual[c], formato, tipo, bom, dica, delta: variacao(tipo, atual[c], antes[c])}));
-    const [campo, tituloNivel] = nivel();
-    const grupos = C.opPor(f, per, campo).sort((a, b) => (b[cfg.barra[0]] ?? -1) - (a[cfg.barra[0]] ?? -1));
     const mensal = C.opMensal(f);
     const idx = C.meses(per, C.MESES_OP).map((m) => C.MESES_OP.indexOf(m));
+    const cartoes = cfg.kpis.map(([c, rot, formato, tipo, bom, dica]) => kpi({rot, valor: atual[c], formato, tipo, bom, dica,
+      delta: variacao(tipo, atual[c], antes[c]), serie: mensal.map((r) => r[c]), marcar: idx}));
+    const [campo, tituloNivel] = nivel();
+    const grupos = C.opPor(f, per, campo).sort((a, b) => (b[cfg.barra[0]] ?? -1) - (a[cfg.barra[0]] ?? -1));
     const [bc, bf, bn, bnf, bmax] = cfg.barra;
     const csvCols = ['mes', 'maquinas', 'receita', 'margem', 'util_fisica', 'disponibilidade', 'ociosidade', 'pct_corretiva', 'mtbf', 'mttr', 'custo_hora', 'inadimplencia', 'vencido', 'atraso_medio'];
     return [
@@ -346,30 +372,54 @@
     ];
   };
 
+  // Uma faixa do Resumo: título do tema e quatro cards.
+  const secao = (titulo, sub, cards) => h('section', {class: 'sf-secao'},
+    h('h2', {class: 'sf-secao-tit'}, titulo, h('span', {}, sub)), h('div', {class: 'sf-linha'}, cards));
+
+  // Resumo na ordem de leitura de um CEO: resultado, vendas, caixa, operação.
   const telaResumo = () => {
     const f = filtrosOp(), per = est.periodo, comp_ = perComp();
     const a = C.op(f, per) || {}, b = C.op(f, comp_) || {};
-    const of = C.oficina(f, per), ofb = C.oficina(f, comp_), ld = C.leads({segmento: est.segmento}, '2026');
-    const t = (c, rot, formato, tipo, bom, ir, dica) => kpi({rot, valor: a[c], formato, tipo, bom, ir, dica, delta: variacao(tipo, a[c], b[c])});
     const mensal = C.opMensal(f), por = new Map(mensal.map((r) => [r.mes, r]));
+    const idx = C.meses(per, C.MESES_OP).map((m) => C.MESES_OP.indexOf(m));
+    const t = (c, rot, formato, tipo, bom, ir, dica, extra) => kpi({rot, valor: a[c], formato, tipo, bom, ir, dica, extra,
+      delta: variacao(tipo, a[c], b[c]), serie: mensal.map((r) => r[c]), marcar: idx});
+    const of = C.oficina(f, per), ofb = C.oficina(f, comp_), ofm = C.oficinaMensal(f);
+    const fl = {segmento: est.segmento}, ld = C.leads(fl, '2026') || {}, ldm = C.leadsMensal(fl);
+    const tl = (c, rot, formato, dica, extra) => kpi({rot, valor: ld[c], formato, ir: 'comercial', dica, extra, serie: ldm.map((r) => r[c])});
     const ano = (y) => Array.from({length: 12}, (_, i) => (por.get(`${y}-${String(i + 1).padStart(2, '0')}`) || {}).receita ?? null);
     const marcar = per.length === 4 ? [] : [+per.slice(5, 7) - 1];
     const filiais = C.opPor({segmento: est.segmento}, per, 'filial').sort((x, y) => y.receita - x.receita);
     return [
-      h('div', {class: 'sf-meta'},
-        comp('Meta de vendas', nomePer(per), velocimetro(C.meta(f, per)), [], 'Meta = receita do mesmo período do ano anterior + 5%'),
-        h('div', {class: 'sf-kpis'},
-          t('receita', 'Receita', 'brl', 'rel', 1, 'receita'),
-          t('margem', 'Margem', 'pct', 'pp', 1, 'receita', '(Receita − manutenção − depreciação) ÷ receita'),
-          t('util_fisica', 'Utilização da frota', 'pct', 'pp', 1, 'frota', 'Dias locados ÷ dias de frota'),
-          t('disponibilidade', 'Disponibilidade', 'pct', 'pp', 1, 'frota', 'Horas sem parada de oficina ÷ horas do período'),
-          kpi({rot: 'Na oficina (fim do período)', valor: of.na_oficina, formato: 'int', tipo: 'abs', bom: -1, ir: 'oficina',
-            dica: per.endsWith('2025') || per === '2025-12' ? AVISO_FIM_BASE : 'OS abertas até o fim do período e ainda não concluídas',
-            delta: variacao('abs', of.na_oficina, ofb.na_oficina), extra: h('span', {}, `${F.int(of.maquinas)} máquinas`)}),
-          t('pct_corretiva', 'OS corretivas', 'pct', 'pp', -1, 'manutencao', 'OS corretivas ÷ total de OS'),
-          t('inadimplencia', 'Inadimplência', 'pct', 'pp', -1, 'financeiro', 'Faturas vencidas ÷ faturado'),
-          kpi({rot: 'Conversão de leads · 2026', valor: ld ? ld.conversao : null, formato: 'pct', ir: 'comercial', dica: 'Fechados ÷ (fechados + perdidos)',
-            extra: h('span', {}, ld ? `n = ${ld.desfecho} leads com desfecho` : '')}))),
+      secao('Receita e resultado', nomePer(per), [
+        h('section', {class: 'sf-comp', title: 'Meta = receita do mesmo período do ano anterior + 5%'},
+          h('div', {class: 'sf-comp-cab'}, h('h2', {}, 'Meta de vendas', h('span', {class: 'sub'}, 'ano anterior + 5%'))),
+          h('div', {class: 'sf-comp-corpo'}, velocimetro(C.meta(f, per)))),
+        t('receita', 'Receita', 'brl', 'rel', 1, 'receita'),
+        t('margem', 'Margem', 'pct', 'pp', 1, 'receita', '(Receita − manutenção − depreciação) ÷ receita'),
+        t('receita_maquina', 'Receita por máquina', 'brl', 'rel', 1, 'receita', null, h('span', {}, `${F.int(a.maquinas || 0)} máquinas`)),
+      ]),
+      secao('Comercial', 'leads de 2026, ano todo', [
+        tl('leads', 'Leads recebidos', 'int', null, h('span', {}, `${F.int(ld.em_andamento || 0)} em andamento`)),
+        tl('conversao', 'Conversão', 'pct', 'Fechados ÷ (fechados + perdidos)', h('span', {}, `n = ${ld.desfecho || 0} com desfecho`)),
+        tl('perda_indisp', 'Perdidos por falta de máquina', 'pct', 'Perdidos por indisponibilidade ÷ leads com desfecho'),
+        tl('tempo_medio', 'Tempo até fechar', 'dias', 'Dias do envio do lead ao contrato', h('span', {}, `n = ${ld.fechados || 0} fechados`)),
+      ]),
+      secao('Financeiro', nomePer(per), [
+        t('inadimplencia', 'Inadimplência', 'pct', 'pp', -1, 'financeiro', 'Faturas vencidas ÷ faturado'),
+        t('vencido', 'Vencido em aberto', 'brl', 'rel', -1, 'financeiro'),
+        t('atraso_medio', 'Atraso médio', 'dias', 'rel', -1, 'financeiro', 'Dias de atraso das faturas pagas depois do vencimento'),
+        t('custo_manut', 'Custo de manutenção', 'brl', 'rel', -1, 'manutencao', 'Peças e mão de obra das OS abertas no período'),
+      ]),
+      secao('Operação', nomePer(per), [
+        t('util_fisica', 'Utilização da frota', 'pct', 'pp', 1, 'frota', 'Dias locados ÷ dias de frota'),
+        t('disponibilidade', 'Disponibilidade', 'pct', 'pp', 1, 'frota', 'Horas sem parada de oficina ÷ horas do período'),
+        t('pct_corretiva', 'OS corretivas', 'pct', 'pp', -1, 'manutencao', 'OS corretivas ÷ total de OS', h('span', {}, `MTBF ${fmt('h', a.mtbf)}`)),
+        kpi({rot: 'Na oficina (fim do período)', valor: of.na_oficina, formato: 'int', tipo: 'abs', bom: -1, ir: 'oficina',
+          dica: per === '2025' || per === '2025-12' ? AVISO_FIM_BASE : 'OS abertas até o fim do período e ainda não concluídas',
+          delta: variacao('abs', of.na_oficina, ofb.na_oficina), extra: h('span', {}, `${F.int(of.maquinas)} máquinas`),
+          serie: ofm.map((r) => r.na_oficina), marcar: idx}),
+      ]),
       h('div', {class: 'sf-grade'},
         comp('Receita mês a mês', '2024 × 2025', linhasGraf([
           {nome: '2024', cor: 'var(--sf-terra)', values: ano('2024'), tipFmt: F.brlc, tracejada: true},
@@ -383,12 +433,13 @@
   const telaOficina = () => {
     const f = filtrosOp(), per = perAtual(), comp_ = perComp();
     const a = C.oficina(f, per), b = C.oficina(f, comp_);
-    const k = (c, rot, formato, tipo, bom, dica, extra) => kpi({rot, valor: a[c], formato, tipo, bom, dica, extra, delta: tipo ? variacao(tipo, a[c], b[c]) : null});
+    const mensal = C.oficinaMensal(f);
+    const idx = C.meses(per, C.MESES_OP).map((m) => C.MESES_OP.indexOf(m));
+    const k = (c, rot, formato, tipo, bom, dica, extra) => kpi({rot, valor: a[c], formato, tipo, bom, dica, extra,
+      delta: tipo ? variacao(tipo, a[c], b[c]) : null, serie: mensal.map((r) => r[c]), marcar: idx});
     const [campo, tituloNivel] = nivel();
     const grupos = C.oficinaPor(f, per, campo).filter((r) => r.na_oficina > 0)
       .sort((x, y) => (campo === 'id_equipamento' ? y.dias_aberta - x.dias_aberta : y.na_oficina - x.na_oficina));
-    const mensal = C.oficinaMensal(f);
-    const idx = C.meses(per, C.MESES_OP).map((m) => C.MESES_OP.indexOf(m));
     const serie = [['abertas', 'Abertas', 'var(--sf-terra)', 'int'], ['concluidas', 'Concluídas', 'var(--sf-marca)', 'int']];
     return [
       h('div', {class: 'sf-kpis'},
@@ -419,11 +470,12 @@
   const telaComercial = () => {
     const f = filtrosLead(), per = perAtual(), comp_ = perComp();
     const a = C.leads(f, per) || {}, b = C.leads(f, comp_) || {};
-    const k = (c, rot, formato, tipo, bom, dica, extra) => kpi({rot, valor: a[c], formato, tipo, bom, dica, extra, delta: variacao(tipo, a[c], b[c])});
-    const [campo, tituloNivel] = nivel();
-    const grupos = C.leadsPor(f, per, campo).sort((x, y) => y.leads - x.leads);
     const mensal = C.leadsMensal(f);
     const idx = C.meses(per, C.MESES_LEADS).map((m) => C.MESES_LEADS.indexOf(m));
+    const k = (c, rot, formato, tipo, bom, dica, extra) => kpi({rot, valor: a[c], formato, tipo, bom, dica, extra,
+      delta: variacao(tipo, a[c], b[c]), serie: mensal.map((r) => r[c]), marcar: idx});
+    const [campo, tituloNivel] = nivel();
+    const grupos = C.leadsPor(f, per, campo).sort((x, y) => y.leads - x.leads);
     const serie = [['leads', 'Leads', 'var(--sf-marca)', 'int'], ['fechados', 'Fechados', 'var(--sf-acento)', 'int']];
     return [
       h('div', {class: 'sf-kpis'},

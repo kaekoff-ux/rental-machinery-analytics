@@ -24,16 +24,15 @@
   <div class="sf-banda" aria-hidden="true"></div>
 
   <div class="sf-corpo">
-    <main class="sf-principal" id="conteudo" tabindex="-1"></main>
-
-    <aside class="sf-lateral" aria-label="Setores">
-      <p class="sf-lateral-tit">LocaMaq</p>
-      <nav class="sf-nav" id="nav"></nav>
+    <nav class="sf-setores" aria-label="Setores">
+      <span class="sf-filtros-tit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>Setores</span>
+      <div class="sf-setores-lista" id="nav"></div>
       <div class="sf-tema" role="group" aria-label="Tema">
         <button type="button" data-tema="claro" aria-label="Tema claro" title="Tema claro"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
         <button type="button" data-tema="escuro" aria-label="Tema escuro" title="Tema escuro"><svg class="ic" viewBox="0 0 24 24"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg></button>
       </div>
-    </aside>
+    </nav>
+    <main class="sf-principal" id="conteudo" tabindex="-1"></main>
   </div>
 
   <footer class="sf-rodape">LocaMaq é uma empresa fictícia: case de portfólio com dados gerados para estudo, sem relação com uma operação real. Dados gerados em <span id="gerado">—</span>.</footer>
