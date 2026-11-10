@@ -521,6 +521,11 @@
   }));
   pintarTema();
 
+  // Altura da barra de setores, para a barra de filtros grudar logo abaixo dela ao rolar.
+  const barraSetores = document.querySelector('.sf-setores');
+  const medirSetores = () => raiz.style.setProperty('--sf-h-setores', barraSetores.offsetHeight + 'px');
+  if (barraSetores) { medirSetores(); if (window.ResizeObserver) new ResizeObserver(medirSetores).observe(barraSetores); }
+
   let largura = innerWidth, espera;
   addEventListener('resize', () => { if (innerWidth !== largura) { largura = innerWidth; clearTimeout(espera); espera = setTimeout(desenhar, 150); } });
   addEventListener('hashchange', () => { lerEndereco(); desenhar(); });

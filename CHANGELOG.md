@@ -5,6 +5,11 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Changed (10/11/2026, painel: barras de setores e de filtros fixas ao rolar)
+- Pedido do usuário: o painel fica fixo enquanto os dados rolam. A barra de setores gruda logo
+  abaixo da barra global e a de filtros logo abaixo dos setores (altura medida pelo `app.js`).
+  Abaixo de 60 rem (celular) só os setores ficam fixos; os filtros rolam com a página.
+
 ### Changed (10/11/2026, painel: setores no topo e Resumo na ordem do CEO)
 - Pedido do usuário: o painel lateral deixava espaço vazio. Os setores viraram uma barra no topo,
   no mesmo estilo da barra de filtros, e o conteúdo passou a usar a largura toda.

@@ -71,6 +71,10 @@ svg.ic { width: 1rem; height: 1rem; flex: none; fill: none; stroke: currentColor
 
 /* Barra de setores (abas, como a barra de navegação do Lightning) */
 .sf-setores { background: var(--sf-card); border: 1px solid var(--sf-borda); border-radius: var(--sf-raio-card); box-shadow: var(--sf-sombra); padding: 0 var(--sf-e4); display: flex; align-items: center; gap: var(--sf-e3); min-width: 0; }
+/* Fixas ao rolar: setores logo abaixo da barra global; filtros logo abaixo dos setores.
+   --sf-h-setores é medida pelo app.js (a altura muda com o tamanho da tela). */
+.sf-setores { position: sticky; top: 3rem; z-index: 9; }
+.sf-filtros { position: sticky; top: calc(3rem + var(--sf-h-setores, 3rem)); z-index: 8; }
 .sf-setores .sf-filtros-tit { padding-bottom: 0; }
 .sf-setores-lista { display: flex; gap: 2px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
 .sf-setores-lista::-webkit-scrollbar { display: none; }
@@ -198,6 +202,7 @@ table.sf-tabela { width: 100%; border-collapse: collapse; font-size: var(--sf-t2
   .sf-linha { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 60rem) {
+  .sf-filtros { position: static; } /* no celular só os setores ficam fixos: os filtros ocupariam a tela */
   .sf-corpo { padding: var(--sf-e2); }
   .sf-setores { padding: 0 var(--sf-e2); gap: var(--sf-e1); }
   .sf-setores .sf-filtros-tit { display: none; }
