@@ -1,5 +1,10 @@
 # Sistema de gestão LocaMaq (estilo Salesforce): plano e situação
 
+> **Atualização de 10/11/2026:** o usuário decidiu que, por ora, basta um painel **só para
+> consulta**. Ele foi feito como página estática em `painel/` e publicado pelo GitHub Pages, sem
+> servidor. A publicação deste sistema (Django) na AWS ficou **suspensa**; o código continua em
+> `app/` e roda no computador (`app/abrir_sistema.bat`). Nada abaixo sobre AWS está em andamento.
+
 Pedido do usuário em 09/11/2026: transformar os dashboards feitos no Cowork em um sistema
 operacional de verdade, aberto fora do Claude, parecido com o Salesforce, com as cores do
 dashboard, e rodando também na AWS. Case de portfólio: **todos os dados são fictícios**.

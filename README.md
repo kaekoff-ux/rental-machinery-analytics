@@ -25,6 +25,14 @@ Textos, números, contatos e imagens são ilustrativos; as imagens e a animaçã
 
 O pedido de orçamento chega a um fluxo do n8n (em um servidor na AWS) que gera o número do lead, grava na planilha Google, envia e-mail de confirmação ao cliente e avisa a equipe comercial no Slack no canal específico da categoria do equipamento (cópia do fluxo em `src/n8n/leads_locamaq.json`; a instalação do servidor não é versionada). A política de privacidade do site: [site/privacidade.html](https://kaekoff-ux.github.io/rental-machinery-analytics/site/privacidade.html).
 
+## Painel de consulta
+Painel de indicadores no estilo Salesforce, só para consulta (receita, frota, oficina, manutenção,
+financeiro e comercial), com filtros por filial, segmento e período e comparação mês a mês:
+[kaekoff-ux.github.io/rental-machinery-analytics/painel](https://kaekoff-ux.github.io/rental-machinery-analytics/painel/)
+
+Dados fictícios. O código está em `painel/`; os dados são gerados de `data/processed/` por
+`python src/painel/gerar_dados_painel.py` e conferidos por `python tests/conferir_painel.py`.
+
 ## Stack
 Power BI Desktop, Excel (Power Query e Power Pivot), Python, HTML, CSS e JavaScript (GitHub Pages), n8n, Docker, AWS (EC2), ngrok, Slack, Google Sheets, Gmail, Claude Code, Google Antigravity, GitHub.
 

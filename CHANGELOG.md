@@ -5,6 +5,25 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Added (10/11/2026, painel de consulta no GitHub Pages)
+- Pedido do usuário: publicar o dashboard novo do Cowork (setores Resumo, Receita, Frota, Oficina,
+  Manutenção, Financeiro e Comercial) só para consulta, no estilo Salesforce, com filtros e
+  comparação mês a mês e o painel de setores à direita, sem precisar de AWS ou Docker.
+- `painel/`: página estática (index.html, estilo.css, calcs.js, app.js, d3 v7.9.0 local) no padrão
+  Salesforce Lightning (barra global, cabeçalho de página, barra de filtros, cards de componente,
+  métricas com variação, tabela de dados, navegação vertical) com a paleta LocaMaq, claro e escuro.
+  Filtros: filial (cidade no Comercial), segmento, período (ano ou mês) e comparação com o mês
+  anterior ou o mesmo mês do ano anterior. Barras clicáveis descem de filial para segmento e
+  máquina; a tabela "Comparação mês a mês" mostra cada mês com a variação; o estado fica no endereço.
+- `src/painel/gerar_dados_painel.py` gera `painel/dados.js` de `data/processed/` (só biblioteca
+  padrão). Conferido contra os CSVs do dashboard do Cowork de 09/11/2026: 3.107 linhas máquina × mês,
+  3.922 OS e 66 leads sem divergência. MTTR usa só corretivas com horas registradas (`os_corretiva_h`).
+- `tests/conferir_painel.py` (12 conferências, incluindo se `painel/dados.js` está em dia com a base).
+- Cuidados de leitura no painel: o n aparece junto das taxas, grupos com poucos casos ficam
+  esmaecidos, variações de leads por mês são em quantidade (não em %), e dez/2025 traz o aviso de
+  fim da base (76 OS sem conclusão registrada, contra 5 a 16 nos outros meses).
+- Publicação do sistema Django na AWS suspensa (roteiro local marcado como suspenso).
+
 ### Added (09/11/2026, sistema de gestão LocaMaq em `app/`, incremento 1)
 - Pedido do usuário: transformar o dashboard do Cowork num sistema operacional fora do Claude,
   parecido com o Salesforce, com as cores do dashboard. Plano e decisões em

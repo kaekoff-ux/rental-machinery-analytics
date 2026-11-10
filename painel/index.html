@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel LocaMaq · consulta</title>
+  <meta name="description" content="Painel de consulta da LocaMaq, locadora fictícia de máquinas pesadas: receita, frota, oficina, manutenção, financeiro e comercial, com filtros e comparação mês a mês. Case de portfólio com dados fictícios.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234a5d3a'/%3E%3Cpath d='M7 23V15M13 23V9M19 23v-6M25 23V12' stroke='%23fffaf2' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='5' y='26' width='22' height='2' fill='%23c8651b'/%3E%3C/svg%3E">
+  <script>
+    // Tema escolhido neste navegador; sem escolha, segue o sistema.
+    try { var t = localStorage.getItem("lm-painel-tema"); if (t) document.documentElement.dataset.tema = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="sf-global">
+    <span class="sf-waffle" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="sf-app">
+      <span class="marca" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><path d="M5 19V12M10 19V6M15 19v-5M20 19V9"/></svg></span>
+      LocaMaq <small>Painel de gestão</small>
+    </span>
+    <span class="sf-selos"><span class="sf-selo acento">Somente consulta</span><span class="sf-selo">Dados fictícios</span></span>
+  </header>
+  <div class="sf-banda" aria-hidden="true"></div>
+
+  <div class="sf-corpo">
+    <main class="sf-principal" id="conteudo" tabindex="-1"></main>
+
+    <aside class="sf-lateral" aria-label="Setores">
+      <p class="sf-lateral-tit">LocaMaq</p>
+      <nav class="sf-nav" id="nav"></nav>
+      <div class="sf-tema" role="group" aria-label="Tema">
+        <button type="button" data-tema="claro" aria-label="Tema claro" title="Tema claro"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
+        <button type="button" data-tema="escuro" aria-label="Tema escuro" title="Tema escuro"><svg class="ic" viewBox="0 0 24 24"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg></button>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="sf-rodape">LocaMaq é uma empresa fictícia: case de portfólio com dados gerados para estudo, sem relação com uma operação real. Dados gerados em <span id="gerado">—</span>.</footer>
+
+  <script src="vendor/d3.v7.9.0.min.js"></script>
+  <script src="dados.js"></script>
+  <script src="calcs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

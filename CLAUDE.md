@@ -18,11 +18,24 @@ GitHub por decisão dele: não versionar nem dar push). Cópia do fluxo, sem IDs
 `site/privacidade.html`. Fotos da frota: `docs/prompts_imagens_frota.md`. Power BI segue em
 paralelo, sem depender disso.
 
+**Painel de consulta (10/11/2026):** em `painel/`, página estática (HTML, CSS, JS e d3 local) no
+estilo Salesforce Lightning com a paleta LocaMaq, publicada pelo GitHub Pages em
+<https://kaekoff-ux.github.io/rental-machinery-analytics/painel/>. Decisão do usuário: o painel é só
+para consulta, então não precisa de servidor (AWS/Docker). Setores Resumo, Receita, Frota,
+Oficina, Manutenção, Financeiro e Comercial, painel de setores à direita, filtros (filial ou
+cidade, segmento, período ano/mês, comparar com mês anterior ou mesmo mês do ano anterior) e
+tabela de comparação mês a mês; o estado fica no endereço (`#frota?filial=Sorocaba&periodo=2025-03`).
+Dados: `python src/painel/gerar_dados_painel.py` gera `painel/dados.js` (máquina × mês, OS e leads,
+sem nome nem contato); conferir com `python tests/conferir_painel.py` (deve passar antes de commit
+que toque `painel/` ou os geradores). Regras dos números: docstring do gerador. Dez/2025 é o fim da
+base: as OS abertas no fim não têm conclusão, o painel avisa isso.
+
 **Sistema de gestão (09/11/2026):** em `app/`, Django + SQLite, no estilo do Salesforce (leads,
 Kanban, clientes, frota, contratos, oficina, faturas, atividades, painel do Cowork portado).
 Como rodar: `app/README.md`; plano e próximos passos: `docs/plano_sistema_gestao.md`. Ambiente
 Python próprio em `app/.venv` (fora do Git). Testes: `manage.py test crm` (devem passar antes de
-commit que toque `app/`). Publicar na AWS e ligar o n8n à API só com confirmação do usuário.
+commit que toque `app/`). A publicação na AWS ficou suspensa em 10/11/2026 (o usuário quer só
+consulta, atendida pelo `painel/`); retomar só com novo pedido.
 
 **Área do cliente (logada):** pedida pelo usuário em 31/10/2026 para os clientes acompanharem
 pedidos e requisições. Ainda não construída e com escopo a discutir: ver `spec.md`, seção 9. No
