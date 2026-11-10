@@ -5,6 +5,12 @@ histórico do Git (`git log`) e nas notas de sessão; nada aqui é inventado.
 
 ## [Não lançado]
 
+### Fixed (10/11/2026, painel: lista dos filtros ilegível no tema escuro)
+- `painel/estilo.css`: com um filtro ativo, a lista aberta herdava o fundo laranja translúcido da
+  caixa e virava bege claro com texto claro por cima. As opções agora têm fundo e texto próprios
+  (contraste 14,2 no escuro e 17,8 no claro) e o fundo do filtro ativo ficou opaco. Relatado pelo
+  usuário com print.
+
 ### Added (10/11/2026, painel de consulta no GitHub Pages)
 - Pedido do usuário: publicar o dashboard novo do Cowork (setores Resumo, Receita, Frota, Oficina,
   Manutenção, Financeiro e Comercial) só para consulta, no estilo Salesforce, com filtros e

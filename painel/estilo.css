@@ -99,7 +99,11 @@ svg.ic { width: 1rem; height: 1rem; flex: none; fill: none; stroke: currentColor
 .sf-campo label { font-size: var(--sf-t1); color: var(--sf-fraco); }
 .sf-campo select { appearance: none; height: 2rem; padding: 0 2rem 0 .65rem; border: 1px solid var(--sf-borda-forte); border-radius: var(--sf-raio); background: var(--sf-card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c8651b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right .6rem center / .65rem; cursor: pointer; }
 .sf-campo select:hover { border-color: var(--sf-acento); }
-.sf-campo select.ativo { border-color: var(--sf-acento); background-color: var(--sf-acento-tinta); font-weight: 600; }
+/* Fundo do filtro ativo opaco: a lista aberta herda o fundo da caixa, e um fundo translúcido
+   virava bege claro no tema escuro, com o texto claro por cima (ilegível). */
+.sf-campo select.ativo { border-color: var(--sf-acento); background-color: color-mix(in srgb, var(--sf-acento) 14%, var(--sf-card)); font-weight: 600; }
+.sf-campo select option, .sf-campo select optgroup { background-color: var(--sf-card); color: var(--sf-texto); font-weight: 400; }
+.sf-campo select optgroup { color: var(--sf-fraco); font-weight: 700; }
 .sf-limpar { border: 0; background: none; color: var(--sf-acento-texto); font-weight: 600; cursor: pointer; padding: .45rem .25rem; }
 .sf-limpar:disabled { color: var(--sf-sutil); cursor: default; }
 .sf-comparando { margin-left: auto; font-size: var(--sf-t1); color: var(--sf-fraco); padding-bottom: .45rem; text-align: right; }
